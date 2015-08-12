@@ -1,7 +1,7 @@
-Structure XML de la DRM pour les douanes
-========================================
+Structure XML de la DRM des douanes
+===================================
 
-Accès à l'arborescence complète
+[Arborescence complète (format text/plain)](https://github.com/24eme/mutualisation-douane/blob/master/xml/drm/arbo.md)
 
 Récapitulatif
 -------------
@@ -18,9 +18,9 @@ Produits acquités
 
 ![Produits acquités](arbo-produits-acquites.jpg) - 
 
-Compte CRD
+Comptes CRD
 ----------
 
-![Compte CRD](arbo-compte-crd.jpg) - 
+![Comptes CRD](arbo-comptes-crd.jpg) - 
 
 
