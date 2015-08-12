@@ -83,6 +83,21 @@
                     * Destructions
                     * Manquants
                 * Stock fin période
-        * **Document accompagnement**
+        * **Document accompagnement** (x3)
+          * Empreinte
+             * début
+             * Fin
+          * DAA/DCA
+             * début
+             * Fin
+          * DSA/DSAC
+             * début
+             * Fin
         * **Relevé non apurement**
+          * Numéro DAA/DAC/DAE
+          * Date expédition
+          * Numéro ascise destinataire
         * **Statistiques**
+          * Quantité Jus
+          * Quantité Mout MCR
+          * Quantité Vin vinaigre
