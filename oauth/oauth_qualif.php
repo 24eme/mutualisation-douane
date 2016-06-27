@@ -16,7 +16,6 @@ $corps = '{"iss":"'.$iss.'","scope":"'.$oauth_service.'","aud":"'.$oauth_url.'",
 $base = base64safe_encode($entete).'.'.base64safe_encode($corps);
 
 $encrypted = '';
-//if (! openssl_private_encrypt(hash('sha256', $base), $encrypted, $key)) {
 if (! openssl_sign($base, $encrypted, $key, 'SHA256')) {
     print('ERROR: '.openssl_error_string()."\n");
 }
