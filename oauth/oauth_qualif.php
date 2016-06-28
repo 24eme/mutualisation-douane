@@ -29,7 +29,7 @@ $data = array('grant_type'=> 'urn:ietf:params:oauth:grant-type:jwt-bearer' , 'as
 
 $options = array(
     'http' => array(
-        'header'  => "Host: 10.253.161.5\nContent-Type: application/x-www-form-urlencoded\n",
+        'header'  => "Content-Type: application/x-www-form-urlencoded\n",
         'method'  => 'POST',
         'protocol_version' => 1.1,
         'ignore_errors' => true,
@@ -40,4 +40,26 @@ $context  = stream_context_create($options);
 
 $result = file_get_contents('http://10.253.161.5/authtokenqualif/oauth2/v1/token', false, $context);
 
-echo "JWT answer: \n".$result ."\n";
+echo "JWT answer: \n".$result ."\n\n";
+
+$jwt = json_decode($result);
+
+if ($jwt->error) {
+	exit;
+}
+
+$auth_token = $jwt->access_token;
+
+
+$options = array(
+    'http' => array(
+        'header'  => "Authorization: Bearer ".$auth_token."\n",
+        'method'  => 'POST',
+        'protocol_version' => 1.1,
+        'ignore_errors' => true,
+    )
+);
+$context  = stream_context_create($options);
+$result = file_get_contents('http://10.253.161.5/cielqualifinterpro/ws/1.0/declarations', false, $context);
+
+echo "Application server answer: \n".$result."\n";
