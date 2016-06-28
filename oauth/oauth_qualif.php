@@ -7,7 +7,7 @@ function base64safe_encode($str) {
 }
 
 $oauth_url = 'https://douane.finances.gouv.fr/oauth2/v1/auth';
-$oauth_service = 'http://10.253.161.5/cielqualifinterpro/ws/1.0/declarations';
+$oauth_service = 'https://douane.finances.gouv.fr/ciel/interprofession/v1';
 
 $entete = '{"alg":"RS256"}';
 
