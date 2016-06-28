@@ -6,12 +6,13 @@ function base64safe_encode($str) {
     return str_replace('=', '', strtr(base64_encode($str), '+/', '-_'));
 }
 
-$oauth_url = 'http://10.253.161.5/authtokenqualif/oauth2/v1';
+$oauth_url = 'https://douane.finances.gouv.fr/oauth2/v1/auth';
 $oauth_service = 'http://10.253.161.5/cielqualifinterpro/ws/1.0/declarations';
 
 $entete = '{"alg":"RS256"}';
 
-$corps = '{"iss":"'.$iss.'","scope":"'.$oauth_service.'","aud":"'.$oauth_url.'","iat":"'.time().'000"}';
+$corps = '{"iss":"'.$iss.'","scope":"'.$oauth_service.'","aud":"'.$oauth_url.'","iat":'.time().'000}';
+echo "json: \n$corps\n\n";
 
 $base = base64safe_encode($entete).'.'.base64safe_encode($corps);
 
@@ -37,6 +38,6 @@ $options = array(
 );
 $context  = stream_context_create($options);
 
-$result = file_get_contents($oauth_url.'/token', false, $context);
+$result = file_get_contents('http://10.253.161.5/authtokenqualif/oauth2/v1/token', false, $context);
 
 echo "JWT answer: \n".$result ."\n";
