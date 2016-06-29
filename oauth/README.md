@@ -10,22 +10,22 @@ Pour faire fonctionner la démo :
 
      php oauth_qualif.php
 
-Qui donne comme résultat :
+Qui donne comme résultat lors que l'authentification fonctionne :
 
+    json: 
+    {"iss":"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx","scope":"https://douane.finances.gouv.fr/ciel/interprofession/v1","aud":"https://douane.finances.gouv.fr/oauth2/v1/auth","iat":1467205278000}
+    
     JWT String : 
-    eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiI2ZTBmZmE5OC0zYzYxLTExZTYtODYzOS1lNDFmMTM0NDc5NGMiLCJzY29wZSI6Imh0dHA6Ly8xMC4yNTMuMTYxLjUvY2llbHF1YWxpZmludGVycHJvL3dzLzEuMC9kZWNsYXJhdGlvbnMiLCJhdWQiOiJodHRwczovL2RvdWFuZS5maW5hbmNlcy5nb3V2LmZyL29hdXRoMi92MS9hdXRoIiwiaWF0IjoxNDY3MDk5Nzg2MDAwfQ.K-86s5IQRQ4ZMlryvpC2Mqv-K728vLIiK_tyOoJZl9rnxBFoDhEN4GwhTc7Pph1XUjpeSwF1BGw0a4PUueosp-tZZjoT4hLUdrrtyVrk4aY04N24xArrwcbyb1RXWpXVecWVGfc7aAY1OgydWcpKtSjT-ure-JZOeP55J2lLyhIeLwleFj6mXwYErENN1MgClXn6U8yBpWNk_NLj3UueJIBVvk5GJvmIexq5YguX426YqsmzvfDhvzxCe8gKfunQlDeNFvthQ5O5nvF2VFoBq6EoJcQR7ElNDJLyX35I7H2lZv8CnjXVkBT-wiOccb8v6zHYn-tT6DVHaxK-hIrTMQ
-
+    eyJhbGciOiJSUzI1NiJ9.eyxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    
     JWT answer: 
-    {"timestamp":"2016-06-28T09:43:06.42","error":"INVALID_CERTIFICATE","message":"invalid certificate"}
-
-
-La requete HTTP envoyée est la suivante :
-
-    POST /authtokenqualif/oauth2/v1/token HTTP/1.1
-    Connection: close
-    Content-Length: 695
-    Host: 10.253.161.5
-    Content-Type: application/x-www-form-urlencoded
-
-    grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiI2ZTBmZmE5OC0zYzYxLTExZTYtODYzOS1lNDFmMTM0NDc5NGMiLCJzY29wZSI6Imh0dHA6Ly8xMC4yNTMuMTYxLjUvY2llbHF1YWxpZmludGVycHJvL3dzLzEuMC9kZWNsYXJhdGlvbnMiLCJhdWQiOiJodHRwczovL2RvdWFuZS5maW5hbmNlcy5nb3V2LmZyL29hdXRoMi92MS9hdXRoIiwiaWF0IjoxNDY3MDk5Nzg2MDAwfQ.K-86s5IQRQ4ZMlryvpC2Mqv-K728vLIiK_tyOoJZl9rnxBFoDhEN4GwhTc7Pph1XUjpeSwF1BGw0a4PUueosp-tZZjoT4hLUdrrtyVrk4aY04N24xArrwcbyb1RXWpXVecWVGfc7aAY1OgydWcpKtSjT-ure-JZOeP55J2lLyhIeLwleFj6mXwYErENN1MgClXn6U8yBpWNk_NLj3UueJIBVvk5GJvmIexq5YguX426YqsmzvfDhvzxCe8gKfunQlDeNFvthQ5O5nvF2VFoBq6EoJcQR7ElNDJLyX35I7H2lZv8CnjXVkBT-wiOccb8v6zHYn-tT6DVHaxK-hIrTMQ
+    {"access_token":"eyJhbGciOiJSUzI1NiJ9.eyxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx","token_type":"Bearer","expires_in":3600000}
+    
+    Application server answer: 
+    <?xml version="1.0" encoding="UTF-8"?>
+    <reponse-ciel xmlns="http://douane.finances.gouv.fr/app/ciel/interprofession/echanges/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://douane.finances.gouv.fr/app/ciel/interprofession/echanges/1.0 echanges-interprofession-1.5.xsd">
+    	<erreur-technique>
+    		<message-erreur>La requête envoie un message dont le type MIME n'est pas supporté (code 415).</message-erreur>
+    	</erreur-technique>
+    </reponse-ciel>
 
