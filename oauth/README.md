@@ -4,7 +4,7 @@ Pour configurer la démo :
 
      cp config.inc.example config.inc
 
-Puis éditer le fichier.
+Puis éditer le fichier '''config.inc''' pour y mettre votre clé privée et votre iss.
 
 Pour faire fonctionner la démo :
 
