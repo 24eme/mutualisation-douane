@@ -1,6 +1,7 @@
 <?php
 
 include('config.inc');
+include('httpQuerry.inc');
 
 function base64safe_encode($str) {
     return str_replace('=', '', strtr(base64_encode($str), '+/', '-_'));
@@ -29,22 +30,22 @@ $data = array('grant_type'=> 'urn:ietf:params:oauth:grant-type:jwt-bearer' , 'as
 
 $options = array(
     'http' => array(
-        'header'  => "Content-Type: application/x-www-form-urlencoded\n",
+        'headers'  => array("Content-Type: application/x-www-form-urlencoded"),
         'method'  => 'POST',
         'protocol_version' => 1.1,
         'ignore_errors' => true,
         'content' => http_build_query($data)
     )
 );
-$context  = stream_context_create($options);
 
-$result = file_get_contents('http://10.253.161.5/authtokenqualif/oauth2/v1/token', false, $context);
+$result = httpQuerry('http://10.253.161.5/authtokenqualif/oauth2/v1/token', $options);
 
 echo "JWT answer: \n".$result ."\n\n";
 
 $jwt = json_decode($result);
 
-if ($jwt->error) {
+if (! isset($jwt->access_token)) {
+	print "ERROR: access_token not found\n";
 	exit;
 }
 
@@ -53,13 +54,12 @@ $auth_token = $jwt->access_token;
 
 $options = array(
     'http' => array(
-        'header'  => "Authorization: Bearer ".$auth_token."\n",
+        'headers'  => array("Authorization: Bearer ".$auth_token),
         'method'  => 'POST',
         'protocol_version' => 1.1,
         'ignore_errors' => true,
     )
 );
-$context  = stream_context_create($options);
-$result = file_get_contents('http://10.253.161.5/cielqualifinterpro/ws/1.0/declarations', false, $context);
+$result = httpQuerry('http://10.253.161.5/cielqualifinterpro/ws/1.0/declarations', $options);
 
 echo "Application server answer: \n".$result."\n";
