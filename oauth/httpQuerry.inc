@@ -8,10 +8,9 @@ function httpQuerry($url, $options) {
 }
 
 function httpQuerryFgc($url, $options) {
-        return httpQuerryCurl($url, $options);
         if (isset($options['http']['headers'])) {
                 $options['http']['header'] = join('\n', $options['http']['headers']);
-                unset($otions['http']['headers']);
+                unset($options['http']['headers']);
         }
         $context  = stream_context_create($options);
         return file_get_contents($url, false, $context);
