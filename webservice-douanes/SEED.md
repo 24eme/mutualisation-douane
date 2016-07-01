@@ -10,8 +10,7 @@ SOAP impose que le nom de la méthode soit fourni dans l'entête de la requête 
 
 Voici un exemple d'implémentation avec la commande unix ``curl`` :
 
-    $ curl --header "Authorization: Bearer TICKET_JWT"
-           --header "Content-Type: text/xml;charset=UTF-8"
+    $ curl --header "Content-Type: text/xml;charset=UTF-8"
            --header "SOAPAction: getInformation"
            --data @getInformation.xml
            https://pro.douane.gouv.fr/seedWS/SeedWS
@@ -36,7 +35,6 @@ Ce qui produit la requête HTTP suivante :
     Host: pro.douane.gouv.fr
     User-Agent: curl/7.47.0
     Accept: */*
-    Authorization: Bearer TICKET_JWT
     Content-Type: text/xml;charset=UTF-8
     SOAPAction: getInformation
     Content-Length: 210
