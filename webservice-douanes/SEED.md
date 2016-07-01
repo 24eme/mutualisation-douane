@@ -1,10 +1,10 @@
 #Détail du WebService SOAP SEED
 
-Le WebService SEED est un webservice des douanes qui permet de connaitre les informations relatives à un numero d'ascise.
+Le WebService SEED est un webservice des douanes qui permet de connaitre les informations relatives à un numero d'accise.
 
 Il répond au protocol HTTP/SOAP dont le WSDL est disponible à l'adresse [https://pro.douane.gouv.fr/seedWS/SeedWS?wsdl](https://pro.douane.gouv.fr/seedWS/SeedWS?wsdl)
 
-La méthode getInformation permet de connaitre les produits autorisée pour un numéro d'ascise ainsi que sa localisation.
+La méthode getInformation permet de connaitre les produits autorisée pour un numéro d'accise ainsi que sa localisation.
 
 SOAP impose que le nom de la méthode soit fourni dans l'entête de la requête HTTP là où les parametres passent en information POST sous la forme d'un XML.
 
@@ -52,7 +52,7 @@ Ce qui produit la requête HTTP suivante :
     </soapenv:Body>
     </soapenv:Envelope>
 
-En réponse, le serveur fourni les informations relatives à ce numéro d'ascise :
+En réponse, le serveur fourni les informations relatives à ce numéro d'accise :
 
     <?xml version="1.0" ?><S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
     <S:Body><ns2:getInformationResponse xmlns:ns2="http://ws.seed.douane.finances.gouv.fr/">
