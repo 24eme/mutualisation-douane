@@ -4,17 +4,17 @@ Le WebService SEED est un webservice des douanes qui permet de connaitre les inf
 
 Il répond au protocol HTTP/SOAP dont le WSDL est disponible à l'adresse [https://pro.douane.gouv.fr/seedWS/SeedWS?wsdl](https://pro.douane.gouv.fr/seedWS/SeedWS?wsdl)
 
-La méthode getInformation permet de connaitre les produits autorisée pour un numéro d'accise ainsi que sa localisation.
+La méthode ``getInformation`` permet de connaitre les produits autorisée pour un numéro d'accise ainsi que sa localisation.
 
 SOAP impose que le nom de la méthode soit fourni dans l'entête de la requête HTTP là où les parametres passent en information POST sous la forme d'un XML.
 
-Voici un exemple d'implémentation avec la commande curl :
+Voici un exemple d'implémentation avec la commande unix ``curl`` :
 
-    curl --header "Authorization: Bearer TICKET_JWT"
-         --header "Content-Type: text/xml;charset=UTF-8"
-         --header "SOAPAction: getInformation"
-         --data @getInformation.xml
-         https://pro.douane.gouv.fr/seedWS/SeedWS
+    $ curl --header "Authorization: Bearer TICKET_JWT"
+           --header "Content-Type: text/xml;charset=UTF-8"
+           --header "SOAPAction: getInformation"
+           --data @getInformation.xml
+           https://pro.douane.gouv.fr/seedWS/SeedWS
 
 où le fichier ``getInformation.xml`` contient :
 
@@ -87,11 +87,9 @@ En réponse, le serveur fourni les informations relatives à ce numéro d'accise
 
 Si la requête HTTP/SOAP/XML est malformée ou si tous les attributs d'une balise ne sont pas sur la même ligne, le serveur renvoie l'erreur 500 enigmatique suivante :
 
-    HTTP Status 500 -
+    HTTP Status 500 - type Status report
     
-    **type Status report**
-    
-    **message**
+    message:
 
-    **description** The server encountered an internal error () that prevented it from fulfilling this request.
+    description: The server encountered an internal error () that prevented it from fulfilling this request.
 
