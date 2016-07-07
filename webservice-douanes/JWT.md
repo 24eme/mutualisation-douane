@@ -77,7 +77,7 @@ Certaines autorités de certification intègrent leur propre certificat dans ce 
 
 Copier/coller chacune des sections PEM dans des fichiers ditincts, on aurait donc :
 
- - certificat-client.crt ayant pour contenu :
+ ``certificat-client.crt`` ayant pour contenu :
 
 
     -----BEGIN CERTIFICATE-----
@@ -89,8 +89,7 @@ Copier/coller chacune des sections PEM dans des fichiers ditincts, on aurait don
     YYYYYYYYYYY
     -----END CERTIFICATE-----
 
- - cleprivee-client.pem
-
+``cleprivee-client.pem`` :
 
     -----BEGIN ENCRYPTED PRIVATE KEY-----
     XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
