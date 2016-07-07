@@ -1,8 +1,10 @@
 #Accès PASTEUR via le VPN CNIV
 
-Les accès à la ligne spécialisée PASTEUR a été mutualisé grace à l'intervention du CNIV. Un serveur offrant un accès mutualisé à l'infrastructure des douanes a été mis en place. La technologie retenue est [OpenVPN](https://openvpn.net/), un projet libre de vpn logiciel qui supporte une dixaine de système d'exploitation.
+Les accès à la ligne spécialisée PASTEUR a été mutualisé grace à l'intervention du CNIV. Un serveur offrant un accès mutualisé à l'infrastructure des douanes a été mis en place. La technologie retenue est [OpenVPN](https://openvpn.net/), un projet libre de vpn logiciel qui supporte une dixaine de systèmes d'exploitation.
 
-Lors de livraison de l'accès, une archive contenant quatre fichiers sont livrés :
+## Fichiers livrés
+
+Lors de livraison de l'accès, une archive contenant quatre fichiers est mise à disposition :
  - ``moninterpro.ovpn`` : le fichier de configuration du client OpenVPN. Ce fichier fait référence aux trois autres fichiers, il convient donc de stocker tous ces fichiers dans le même répertoire ou d'éditer cette configuration pour faire référence au chemin absolu des fichiers ;
  - ``moninterpro.crt`` : le certificat contenant la clé publique permettant à l'OpenVPN de vous identifier ;
  - ``moninterpro.key`` : la clé privée permettant à l'OpenVPN de vous identifier. Cette clé est protégée par un mot de passe ;
@@ -14,11 +16,15 @@ En plus de l'archive, deux mots de passe seront donc fournis :
  - celui permettant d'exploiter l'archive zip contenant les quatres fichiers ;
  - celui permettant de protéger la clé privée.
 
-Une fois la clé privée installée, si vous ne souhaitez pas saisir son mot de passe à chaque démarrage, il est possible de la stocker en clair. Toute fois procédez à cette opération en ayant conscience que ca réduit le niveau de sécurité de votre accès. Il ne faut donc pas transférer votre clé privée dans un fichier non chiffré. Avec toutes ces réserves, une fois sur le serveur, OpenSSL permet de déchiffre ce fichier grace à la commande unix suivante :
+## Sécurité de la clé privée
+
+Une fois la clé privée installée, si vous ne souhaitez pas saisir son mot de passe à chaque démarrage, il est possible de la stocker en clair. Toute fois procédez à cette opération en ayant conscience que ca réduit le niveau de sécurité de votre accès. Il ne faut donc pas transférer votre clé privée dans un fichier non chiffré. Avec toutes ces réserves, une fois sur le serveur, OpenSSL permet de déchiffrer ce fichier grace à la commande unix suivante :
 
     $ openssl rsa -in moninterpro.key  -out moninterpro.nocrypt.key
 
 Si vous choisisez cette option, vous devez modifier le fichier de configuration ``moninterpro.ovpn`` en faisant référence au nouveau fichier (dans notre exemple ``moninterpro.nocrypt.key``).
+
+## Lancer OpenVPN
 
 Une fois ces quatres fichiers mis dans le même répertoire (ou après avoir modifié le fichier de configuration), vous pouvez lancer openvpn en y faisant référence. Sous un unix, la commande suivante permet de le faire :
 
@@ -35,6 +41,8 @@ La connexion s'établie correctement au moment où openvpn affiche le message ``
     Thu Jan  1 00:00:02 1970 Initialization Sequence Completed
 
 Pour fonctionner, votre client OpenVPN doit pouvoir dialoguer avec le port **udp** ``1194`` à la machine ``vpn-cniv.msp.fr.clara.net``. Si les logs n'indiquent pas ``Peer Connection Initiated`` comme dans l'exemple ci-dessus, c'est que ce flux n'est pas autorisé.
+
+## Test de la connexion
 
 Tant que votre client OpenVPN sera opérationnel, vous pourrez interroger le serveur du CNIV via l'url :
 
