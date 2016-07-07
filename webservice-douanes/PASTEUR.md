@@ -22,34 +22,32 @@ Si vous choisisez cette option, vous devez modifier le fichier de configuration 
 
 Une fois ces quatres fichiers mis dans le même répertoire (ou après avoir modifié le fichier de configuration), vous pouvez lancer openvpn en y faisant référence. Sous un unix, la commande suivante permet de le faire :
 
-   $ sudo openvpn --config moninterpro.opvn
+    $ sudo openvpn --config moninterpro.opvn
 
 La connexion s'établie correctement au moment où openvpn affiche le message ``Initialization Sequence Completed`` comme dans l'exemple suivant :
 
-   Thu Jan  1 00:00:00 1970 OpenVPN X.Y.Z [SSL (OpenSSL)] [LZO] [EPOLL] [PKCS11] [MH] [IPv6] ...
-   Thu Jan  1 00:00:00 1970 bla bla bla bla 
-   [...]
-   Thu Jan  1 00:00:00 1970 [vpn-cniv.msp.fr.clara.net] Peer Connection Initiated with [AF_INET]89.185.41.66:1194
-   [...]
-   Thu Jan  1 00:00:02 1970 bla bla bla bla
-   Thu Jan  1 00:00:02 1970 Initialization Sequence Completed
+    Thu Jan  1 00:00:00 1970 OpenVPN X.Y.Z [SSL (OpenSSL)] [LZO] [EPOLL] [PKCS11] [MH] [IPv6] ...
+    Thu Jan  1 00:00:00 1970 bla bla bla bla 
+    [...]
+    Thu Jan  1 00:00:00 1970 [vpn-cniv.msp.fr.clara.net] Peer Connection Initiated with [AF_INET]89.185.41.66:1194
+    [...]
+    Thu Jan  1 00:00:02 1970 bla bla bla bla
+    Thu Jan  1 00:00:02 1970 Initialization Sequence Completed
 
 Pour fonctionner, votre client OpenVPN doit pouvoir dialoguer avec le port **udp** ``1194`` à la machine ``vpn-cniv.msp.fr.clara.net``. Si les logs n'indiquent pas ``Peer Connection Initiated`` comme dans l'exemple ci-dessus, c'est que ce flux n'est pas autorisé.
 
 Tant que votre client OpenVPN sera opérationnel, vous pourrez interroger le serveur du CNIV via l'url :
 
-   $ curl http://10.222.223.1/
-   <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-   <html><head>
-   [...]
-
+    $ curl http://10.222.223.1/
+    <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+    <html><head>
+    [...]
 
 De même si les routes sont bien installées par OpenVPN, vous pourrez avoir accès à la machine des douanes :
 
-   $ curl http://10.253.161.5/
-   <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-   <html><head>
-   <title>302 Found</title>
-   [...]
-
+    $ curl http://10.253.161.5/
+    <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+    <html><head>
+    <title>302 Found</title>
+    [...]
 
