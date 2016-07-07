@@ -77,7 +77,8 @@ Certaines autorités de certification intègrent leur propre certificat dans ce 
 
 Copier/coller chacune des sections PEM dans des fichiers ditincts, on aurait donc :
 
- - certificat-client.crt ayant pour contenu :
+ ``certificat-client.crt`` ayant pour contenu :
+
 
     -----BEGIN CERTIFICATE-----
     YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY
@@ -88,7 +89,7 @@ Copier/coller chacune des sections PEM dans des fichiers ditincts, on aurait don
     YYYYYYYYYYY
     -----END CERTIFICATE-----
 
- - cleprivee-client.pem
+``cleprivee-client.pem`` :
 
     -----BEGIN ENCRYPTED PRIVATE KEY-----
     XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
@@ -101,7 +102,8 @@ Copier/coller chacune des sections PEM dans des fichiers ditincts, on aurait don
 
 Si vous souhaitez stocker la clée privée sans protection par mot de passe, vous pouvez la convertir via la commande :
 
-    openssl
+    $ openssl rsa -in cleprivee-client.pem  -out cleprivee-client.nocryptkey.pem
+
 
 En plus de votre certificat client, vous devrez fournir aux douanes le fichier de révocation émis par l'autorité de certification que vous avez choisi. Sa localiation est en générale indiquée dans le certificat. Pour le lire :
 
@@ -120,7 +122,7 @@ Sa localiation est en générale indiquée dans le certificat. Pour le lire :
 
     $ openssl x509 -in certificat-client.crt -text | grep -A 5 crl
             X509v3 CRL Distribution Points: 
-
+            
                 Full Name:
                   URI:http://crl.chambersign.fr/crl/rgs/lcr-directes/crl-1.crl
 
