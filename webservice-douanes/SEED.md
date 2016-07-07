@@ -8,10 +8,11 @@ La méthode ``getInformation`` permet de connaitre les produits autorisée pour 
 
 SOAP impose que le nom de la méthode soit fourni dans l'entête de la requête HTTP là où les parametres passent en information POST sous la forme d'un XML.
 
+## Exemple de requête via curl
+
 Voici un exemple d'implémentation avec la commande unix ``curl`` :
 
-    $ curl --header "Authorization: Bearer TICKET_JWT"
-           --header "Content-Type: text/xml;charset=UTF-8"
+    $ curl --header "Content-Type: text/xml;charset=UTF-8"
            --header "SOAPAction: getInformation"
            --data @getInformation.xml
            https://pro.douane.gouv.fr/seedWS/SeedWS
@@ -29,6 +30,7 @@ où le fichier ``getInformation.xml`` contient :
     </soapenv:Body>
     </soapenv:Envelope>
 
+## Résultat de la requête HTTP
 
 Ce qui produit la requête HTTP suivante :
 
@@ -36,7 +38,6 @@ Ce qui produit la requête HTTP suivante :
     Host: pro.douane.gouv.fr
     User-Agent: curl/7.47.0
     Accept: */*
-    Authorization: Bearer TICKET_JWT
     Content-Type: text/xml;charset=UTF-8
     SOAPAction: getInformation
     Content-Length: 210
@@ -51,6 +52,8 @@ Ce qui produit la requête HTTP suivante :
     </ws:getInformation>
     </soapenv:Body>
     </soapenv:Envelope>
+
+## Le document retourné par le webservice
 
 En réponse, le serveur fourni les informations relatives à ce numéro d'accise :
 
@@ -84,6 +87,8 @@ En réponse, le serveur fourni les informations relatives à ce numéro d'accise
       </traderAuthorisation>
     </root></ns2:getInformationResponse>
     </S:Body></S:Envelope>
+
+## Erreur connue
 
 Si la requête HTTP/SOAP/XML est malformée ou si tous les attributs d'une balise ne sont pas sur la même ligne, le serveur renvoie l'erreur 500 enigmatique suivante :
 
