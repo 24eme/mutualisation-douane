@@ -16,6 +16,8 @@ En plus de l'archive, deux mots de passe seront donc fournis :
  - celui permettant d'exploiter l'archive zip contenant les quatres fichiers ;
  - celui permettant de protéger la clé privée.
 
+Pour obtenir ces fichiers, il suffit de s'adresser à <vins@actualys.com>. Lors de cette demande, il est préférablei, afin de rendre l'accès directement opérationnel d'**adresser avec la demande l'adresse ip publique** qui sera utilisé par le client pour accéder à ce VPN afin que les flux soient ouverts chez l'hébergeur.
+
 ## Sécurité de la clé privée
 
 Une fois la clé privée installée, si vous ne souhaitez pas saisir son mot de passe à chaque démarrage, il est possible de la stocker en clair. Toute fois procédez à cette opération en ayant conscience que ca réduit le niveau de sécurité de votre accès. Il ne faut donc pas transférer votre clé privée dans un fichier non chiffré. Avec toutes ces réserves, une fois sur le serveur, OpenSSL permet de déchiffrer ce fichier grace à la commande unix suivante :
