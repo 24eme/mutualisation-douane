@@ -133,3 +133,7 @@ Une fois que ces deux fichiers installés, les douanes fournirront un identifian
 Une fois le numéro ISS installé et à condition qu'un accès [PASTER](PASTER.md) soit opérationel, il est possible d'obtenir un token JWT afin de pouvoir s'authentifier auprès du webservice.
 
 Un script PHP de test a été développé afin de valider l'accès JWT douanier : [OAuth](https://github.com/24eme/mutualisation-douane/tree/master/oauth). Pour pouvoir l'exploiter, il faudra copier le contenu de la clée privée et indiquer l'identifiant ``ISS`` dans le fichier de configuration ``config.inc``.
+
+Le site officiel du projet [JWT.io](http://jwt.io) références les implémentations disponibles pour de très nombreux languages de programmation. Vérifiez bien que la librairie choisir supporte les certificats RSA254 (certaines ne proposent que les clés HS256, technologie non supportée par les douanes).
+
+**Attention** : Les douanes n'autorise qu'une 50aine de requêtes quotidiennes. Il faut donc prévoir un mécanisme de cache des tickets JWT pour éviter de se faire couper les accès pendant plusieurs heures.

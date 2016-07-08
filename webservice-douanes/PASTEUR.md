@@ -46,18 +46,24 @@ Pour fonctionner, votre client OpenVPN doit pouvoir dialoguer avec le port **udp
 
 ## Test de la connexion
 
-Tant que votre client OpenVPN sera opérationnel, vous pourrez interroger le serveur du CNIV via l'url :
+Tant que votre client OpenVPN sera opérationnel, vous pourrez interroger le serveur du CNIV via l'url [http://10.222.223.1/](http://10.222.223.1/) qui renvoie pour l'instant un message « 403 FORBIDDEN ».
 
     $ curl http://10.222.223.1/
     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
     <html><head>
     [...]
 
-De même si les routes sont bien installées par OpenVPN, vous pourrez avoir accès à la machine des douanes :
+De même si les routes sont bien installées par OpenVPN, vous pourrez avoir accès à la machine des douanes [http://10.253.161.5/](http://10.253.161.5/) qui renvoie sur le portail ProDouane : 
 
     $ curl http://10.253.161.5/
     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
     <html><head>
     <title>302 Found</title>
     [...]
+
+##Installation sous Windows
+
+L'outil [OpenVPN GUI](https://community.openvpn.net/openvpn/wiki/OpenVPN-GUI) permet une installation simple d'un client OpenVPN.
+
+Une fois qualifiée, l'installation peut être facilement installée comme service en suivant la documentation suivante : [Running OpenVPN as a Windows Service](https://openvpn.net/index.php/open-source/documentation/install.html?start=1#running_as_windows_service)
 
