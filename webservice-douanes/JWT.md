@@ -136,4 +136,4 @@ Un script PHP de test a été développé afin de valider l'accès JWT douanier 
 
 Le site officiel du projet [JWT.io](http://jwt.io) références les implémentations disponibles pour de très nombreux languages de programmation. Vérifiez bien que la librairie choisir supporte les certificats RSA254 (certaines ne proposent que les clés HS256, technologie non supportée par les douanes).
 
-**Attention** : Les douanes n'autorise qu'une 50aine de requêtes quotidiennes. Il faut donc prévoir un mécanisme de cache des tickets JWT pour éviter de se faire couper les accès pendant plusieurs heures.
+**Attention** : Les douanes n'autorisent qu'une 50aine de requêtes quotidiennes. Il faut donc prévoir un mécanisme de cache des tickets JWT pour éviter de se faire couper les accès pendant plusieurs heures.
