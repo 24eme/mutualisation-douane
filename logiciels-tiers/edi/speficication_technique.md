@@ -1,4 +1,4 @@
-#Spécifications techniques de l'EDI DRM d'Interloire
+#Spécifications techniques de l'EDI DRM des portails Déclarvins (InterRhone, CIVP, IVSE), CIVA, InterLoire, IVBD et IVSO.
 
 ##Architecture technique de sécurité
 
@@ -12,9 +12,13 @@ Sur l'application, les utilisateurs seront reconnus via un cookie de session fou
 
 Les informations relatives aux identifiants/mots de passe, aux cookies ou aux authentifications HTTP seront transférées en HTTPS [3] comme tout le reste des informations.
 
+###Authentification - DTI
+
+Les fichiers CSV provenant des logiciels de gestion cave pourront être « uploadé » sur l'espace DRM du ressortissant. Dans ce cas, l'utilisateur s'authentifiera de manière classique au portail de son interpro.
+
 ###Authentification - EDI
 
-L'interface EDI n'est accessible qu'après authentification. L'authentification nécessite que l'utilisateur possède un compte sur la plateforme de télédéclaration d'Interloire. Une fois ce compte créé, l'utilisateur pourra s'identifier sur la plateforme EDI en fournissant son login et mot de passe via le protocole d'authentification HTTP (HTTP Authentication Basic [2]).
+L'interface EDI n'est accessible qu'après authentification. L'authentification nécessite que l'utilisateur possède un compte sur la plateforme de télédéclaration des interpros. Une fois ce compte créé, l'utilisateur pourra s'identifier sur la plateforme EDI en fournissant son login et mot de passe via le protocole d'authentification HTTP (HTTP Authentication Basic [2]).
 
 ###Protocole technique utilisé
 
@@ -37,7 +41,7 @@ Toutes les connexions réalisées sur l'interface de saisie des DRM se feront vi
 
 ##Description de l'interfaces DRM
 
-La création d'une DRM préremplie sur la plateforme de télédéclaration d'Interloire peut se faire de deux manières :
+La création d'une DRM préremplie sur la plateforme de télédéclaration des interpros peut se faire de deux manières :
 
  - par envoi automatique depuis un logiciel tiers : c'est l'interface EDI
  - par dépot manuel par les utilisateurs de la plateforme via un formulaire HTML d'*upload* : c'est l'interface DTI+
@@ -46,9 +50,7 @@ La création d'une DRM préremplie sur la plateforme de télédéclaration d'Int
 
 Un nom de domaine est dédié aux tests et un autre à la production, les URL fournies dans ce document font abstraction du nom de domaine à utiliser.
 
-Les noms de domaine de production et de production sont les suivants :
- - production : https://edi.teledeclaration.vinsvaldeloire.pro/
- - preproduction : https://edi.teledeclaration.preproduction.vinsvaldeloire.pro/
+Un nom de domaine de production et un de production sont mis à disposition sur le portail des interpros.
 
 ###Envoi des informations par EDI
 
@@ -62,17 +64,21 @@ Voici les détails téchnique pour accéder au webservice d'envoi EDI d'une DRM 
  - Type de requete : POST x-www-form-urlencoded
  - URL : /edi/etablissement/drm/:id_chais:/:datedrm:
    avec :
-   - *:id_chais:* : l'identifiant interloire du chai
+   - *:id_chais:* : l'identifiant interpro du chai
    - *:datedrm:* : la date de la DRM au format AAAAMM (soit pour la DRM d'aout 2015, 201508)
 
-###Format du fichier CSV
+##Fichier attendu par les interfaces DTI+ et EDI
+
+Le fichier décrivant les éléments constitutifs de la DRM qui devra être fourni par les logiciels de gestion de cave est un fichier CSV.
+
+###Organisation générale 
 
 Le fichier CSV permet de déclarer les différentes informations liée à la DRM.
 
 Les premiers champs de chaque ligne sont des champs communs pour tout le fichier, ils décrivent :
  - le type de ligne concernée (CAVE, CRD, ANNEXE, comme décrit plus bas)
  - la date de la DRM courrante (format AAAAMM)
- - l'identifiant interloire du champs (8 chiffres constitué de l'identifiant interloire sur 6 chiffres et un identifiant du chai sur deux chiffres, si le ressortissant concerné n'a qu'un chai et que sont compte interloire est 800999, son identifiant de chais sera 80099901)
+ - l'identifiant interpro du champs (8 chiffres constitué de l'identifiant interpro sur 6 chiffres et un identifiant du chai sur deux chiffres, si le ressortissant concerné n'a qu'un chai et que sont compte interpro est 800999, son identifiant de chais sera 80099901)
  - le numéro d'ascise du ressortisant
 
 Le fichier CSV est constitué de trois types de lignes :
@@ -130,7 +136,7 @@ Les lignes de CAVE se constituents des champs suivants :
 
 Le CVS peut contenir plusieurs mouvements de même type. Dans ce cas ils seront additionnés.
 
-[Voici un exemple ne contenant que quelques lignes de type CAVE](https://github.com/24eme/vinsdeloire/blob/master/doc/edi/exemple_cave.csv "csv_de_type_cave")
+[Voici un exemple ne contenant que quelques lignes de type CAVE](https://github.com/24eme/mutualisation-douane/blob/master/logiciels-tiers/edi/exemple_cave.csv "csv_de_type_cave")
 
 ###Description des lignes CRD
 
@@ -164,7 +170,7 @@ Il n'y a pas de champs compléments pour les CRD.
 
 Comme pour les mouvements de Cave, il est possible d'indiquer plusieurs mouvements identiques de CRD. Dans ce cas, les quantités sont additionnées.
 
-[Voici un exemple ne contenant que quelques lignes de type CRD](https://github.com/24eme/vinsdeloire/blob/master/doc/edi/exemple_crd.csv "csv_de_type_crd")
+[Voici un exemple ne contenant que quelques lignes de type CRD](https://github.com/24eme/mutualisation-douane/blob/master/logiciels-tiers/edi/exemple_crd.csv "csv_de_type_crd")
 
 ###Description des lignes ANNEXE
 
@@ -201,11 +207,11 @@ Comme pour les mouvements de Cave, il est possible d'indiquer plusieurs mouvemen
  17. le numéro de document d'accompagnement (pour les documents DAADAC, DSADSAC, EMPREINTE et non apurement)
  18. les observations (si la ligne est "OBSERVATIONS" en cas de saut de ligne, les remplacer par des \\n)
 
-[Voici un exemple ne contenant que quelques lignes de type ANNEXE](https://github.com/24eme/vinsdeloire/blob/master/doc/edi/exemple_annexe.csv "csv_de_type_annexe")
+[Voici un exemple ne contenant que quelques lignes de type ANNEXE](https://github.com/24eme/mutualisation-douane/blob/master/logiciels-tiers/edi/exemple_annexe.csv "csv_de_type_annexe")
 
 ###Exemple de CSV complet
 
-[Vous trouverez ici un exemple complet possèdant plusieurs produits, crds et annexes différentes](https://github.com/24eme/vinsdeloire/blob/master/doc/edi/export_edi_complet.csv "csv_complet")
+[Vous trouverez ici un exemple complet possèdant plusieurs produits, crds et annexes différentes](https://github.com/24eme/mutualisation-douane/blob/master/logiciels-tiers/edi/export_edi_complet.csv "csv_complet")
 
    [1]: https://jasig.github.io/cas/4.0.x/index.html
    [2]: https://fr.wikipedia.org/wiki/Authentification_HTTP
