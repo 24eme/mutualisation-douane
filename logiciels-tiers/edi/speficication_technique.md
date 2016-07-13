@@ -133,6 +133,7 @@ Les lignes de CAVE se constituents des champs suivants :
  16. le pays de l'export (Code ISO 3166 https://fr.wikipedia.org/wiki/ISO_3166) (si le mouvement est un export, sinon vide)
  17. le numéro du contrat (si le mouvement est une sortie vrac sous contrat, sinon vide)
  18. le numéro de document d'accompagnement (si le mouvement fait l'objet d'un document d'accompagnement douanier)
+ 19. les observations (si la ligne est "OBSERVATIONS" en cas de saut de ligne, les remplacer par des \\n)
 
 Le CVS peut contenir plusieurs mouvements de même type. Dans ce cas ils seront additionnés.
 
@@ -159,12 +160,13 @@ Le CVS peut contenir plusieurs mouvements de même type. Dans ce cas ils seront 
  
  **Pour le type de mouvement :**
  
- 12. La catégorie du mouvement (stock_debut, entrée, sortie, stock _fin)
- 13. le nom du mouvement (perte, achat, utilisations, ...)
+ 12. Type de capsule (suspendue collective, acquittee collective, personnalisee)
+ 13. La catégorie du mouvement (stock_debut, entrée, sortie, stock _fin)
+ 14. le nom du mouvement (perte, achat, utilisations, ...)
  
  **Pour la quantité :**
  
- 14. nombre de CRD 
+ 15. nombre de CRD 
 
 Il n'y a pas de champs compléments pour les CRD.
 
@@ -193,19 +195,20 @@ Comme pour les mouvements de Cave, il est possible d'indiquer plusieurs mouvemen
  
  **Pour le type de mouvement :**
  
- 12. Type d'annexe (DAADAC, DSADSAC, EMPREINTE, NONAPUREMENT, SUCRE ou OBSERVATIONS) 
- 13. "debut" ou "fin" (pour les numeros d'empruntes, DAA, DSA, ...)
+ 12. vide
+ 13. Type d'annexe (DAADAC, DSADSAC, EMPREINTE, NONAPUREMENT, SUCRE ou OBSERVATIONS) 
+ 14. "debut" ou "fin" (pour les numeros d'empruntes, DAA, DSA, ...)
  
  **Pour la quantité :**
  
- 14. quantité (en kg pour les sucres)
+ 15. quantité (en kg pour les sucres)
  
  **Pour les compléments :**
  
- 15. date d'envoi (pour le type non apurement)
- 16. numero d'ascise du destinataire (pour le non apurement)
- 17. le numéro de document d'accompagnement (pour les documents DAADAC, DSADSAC, EMPREINTE et non apurement)
- 18. les observations (si la ligne est "OBSERVATIONS" en cas de saut de ligne, les remplacer par des \\n)
+ 16. date d'envoi (pour le type non apurement)
+ 17. numero d'ascise du destinataire (pour le non apurement)
+ 18. le numéro de document d'accompagnement (pour les documents DAADAC, DSADSAC, EMPREINTE et non apurement)
+ 19. les observations (si la ligne est "OBSERVATIONS" en cas de saut de ligne, les remplacer par des \\n)
 
 [Voici un exemple ne contenant que quelques lignes de type ANNEXE](https://github.com/24eme/mutualisation-douane/blob/master/logiciels-tiers/edi/exemple_annexe.csv "csv_de_type_annexe")
 
