@@ -239,7 +239,6 @@ Type : Complexe ordonné
 
 Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Facultatif |  Règles  |
 :------------|:--------|:----:|:------------|:------------|:----------------------:|:---------|
-
 IIP1-E2.4.1.7.1 | stock-debut-periode | volumeStock | 1 | Stock de début de période (en hL), systématiquement repris du stock théorique total de fin de la période de la DRM ou DRA précédente. Si 1ère DRM de la campagne vitivinicole, doit être indiqué le stock réel (physique) tel qu'il résulte de l'inventaire des stocks. | O
 IIP1-E2.4.1.7.2 | entrees-periode | entrees-periode |  0..1 | Entrées sur la période en droits suspendus, pour le produit concerné | F
 IIP1-E2.4.1.7.3 | sorties­-periode | sorties­-periode | 0..1 | Sorties sur la période en droits suspendus, pour le produit concerné | F | 
@@ -251,7 +250,6 @@ Type : Complexe ordonné
 
 Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Facultatif |  Règles  |
 :------------|:--------|:----:|:------------|:------------|:----------------------:|:---------|
-
 IIP1-E2.4.1.7.2.1  | volume-produit | volumeType | 0..1 | Produits issus des vendanges (récoltants) ou de la déclaration SV12 (négociants vinificateurs), ou produits par assemblage de deux produits ou plus (ratafia, cartagène, floc de Gascogne, pineau des Charentes, etc.), ou ayant fait l'objet d'une déclaration de revendication, ou issus des différentes manipulations possibles sur les vins (soutirages, désalcoolisation...) pour ce qui concerne les lies ou alcools, ou issus d'une activité accessoire (distillation de fruits) (en hL). | F | Si saisi, alors >=0 |
 IIP1-E2.4.1.7.2.2 | achats-reintegrations | volumeType | 0..1 | Achat de produits en vrac, ou en bouteilles nues sur pile, réintégrations de produits sortis en suspension de droits (en hL) | F | Si saisi, alors >=0
 IIP1-E2.4.1.7.2.3  | mouvements-temporaires | mouvements-temporaires | 0..1 | Prestations de service, relogement, ou pour élaboration à façon de vins mousseux, ou pour distillation de cognac, par exemple. Retour obligatoire à la propriété (en hL) | F |
@@ -315,7 +313,6 @@ Type : Complexe ordonné
 
 Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Facultatif |  Règles  |
 :------------|:--------|:----:|:------------|:------------|:----------------------:|:---------|
-
 IIP1-E2.4.1.7.3.3.1 | sorties-definitives | volumeType | 0..1 | Sorties définitives du produit en droits suspendus : ventes vrac au négoce, en intracommunautaire, à l'export, sous DAE, DAA et DCA ainsi que sorties de lies et DRA (en hL) | F | Si saisi, alors > 0 | IIP1RG26 Si saisi, alors >0
 IIP1-E2.4.1.7.3.3.2 | consommation-familiale-degustation | volumeType | 0..1 | Consommation familiale du produit et / ou dégustation à l'exploitation (en hL) | F | Si saisi, alors >0
 IIP1-E2.4.1.7.3.3.3 | mouvements-temporaires | mouvements-temporaires | 0..1 | Mouvements temporaires du produit (en hL) Prestations de service, relogement, ou pour élaboration à façon de vins mousseux, ou pour distillation de cognac, par exemple. Retour obligatoire à la propriété | F | IIP1-E2.4.1.7.3.3.4
@@ -384,7 +381,6 @@ Type : Complexe ordonné
 
 Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Facultatif |  Règles  |
 :------------|:--------|:----:|:------------|:------------|:----------------------:|:---------|
-
 IIP1-E2.6.1.2.2.1 | achats | volumeType | 0..1 | Achats du produit (en hL) | F | Si saisi, alors >=0
 IIP1-E2.6.1.2.2.2 | autres-entrees | volumeType | 0..1 | Autres entrées du produit (en hL) | F | IIP1RG25 Si saisi, alors >=0
 
