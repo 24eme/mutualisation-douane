@@ -15,8 +15,6 @@
                 * libellé personnalisé (string)
                 * Balance stocks
                     * Stock début période
-                        * Stock
-                        * Stock Warranté
                     * Entrées période
                         * Volume produit
                         * Achats Réintégrations
@@ -51,13 +49,9 @@
                                 * Replis Déclassements Transfert Changement appellation
                                 * Fabrication autre produit
                                 * Revendication VCI
-                                * Autres mouvements
+                                * Autres mouvements internes
                             * Autres sorties
-                        * Année précédente
-                        * Année courante
                     * Stock fin de période
-                        * Stock
-                        * Stock Warranté
                 * tav (2 digits)
                 * premix (boolean)
                 * observation (string)
