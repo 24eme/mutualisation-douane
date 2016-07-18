@@ -239,7 +239,6 @@ Type : Complexe ordonné
 
 Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Facultatif |  Règles  |
 :------------|:--------|:----:|:------------|:------------|:----------------------:|:---------|
-
 IIP1-­E­2.5.1.2.1 | stock­-debut­-periode | stock­-debut­-periode | 1 | Conteneur des stocks en début de période |O
 IIP1­-E­2.5.1.2.2 | entrees­-periode | entrees­-periode | 0..1 | Entrées sur la période en droits suspendus, pour le produit concerné | F
 IIP1­-E­2.5.1.2.3 | sorties­-periode | sorties­-periode | 0..1 | Sorties sur la période en droits suspendus, pour le produit concerné | F
