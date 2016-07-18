@@ -51,10 +51,8 @@
                                 * Replis Déclassements Transfert Changement appellation
                                 * Fabrication autre produit
                                 * Revendication VCI
-                                * Autres mouvements
+                                * Autres mouvements internes
                             * Autres sorties
-                        * Année précédente
-                        * Année courante
                     * Stock fin de période
                         * Stock
                         * Stock Warranté
