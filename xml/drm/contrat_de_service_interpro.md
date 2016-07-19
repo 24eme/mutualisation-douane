@@ -361,7 +361,7 @@ IIP1-E2.5.1.2 | libelle-fiscal | LibelleFiscalType | 0..1 | Libellé fiscal du p
 IIP1-E2.5.1.3 | libelle-personnalise | string | 1 | Libellé personnalisé du produit | O | IIP1RG37 |
 IIP1-E2.5.1.4 | tav | tavType | 0..1 | TAV du produit | F | IIP1RG21 IIP1RG22
 IIP1-E2.5.1.3 | premix | boolean | 0..1 | Indique si le produit considéré est un premix ou pas | F | IIP1RG21 IIP1RG22
-IIP1-E2.5.1.4 | balancestocks | balancestocks | 1 | Balance des stocks en droits acquittés | O | 
+IIP1-E2.5.1.4 | balance-stocks | balance-stocks | 1 | Balance des stocks en droits acquittés | O | 
 IIP1-E2.5.1.5 | observations | string | 0..1 | Observations apportées par le déclarant concernant la balance des stocks en droits acquittés | F | IIP1RG25 IIP1RG26 IIP1RG38
 
 #####Élément balance-stocks (Droits acquittés)
@@ -373,7 +373,7 @@ Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Fac
 IIP1-E2.6.1.2.1 | stock-debut-periode | volumeStockType | 1 | Stock de début de période (en hL), systématiquement repris du stock théorique total de fin de la période de la DRM ou DRA précédente. Si 1ère DRM de la campagne vitivinicole, doit être indiqué le stock réel (physique) tel qu'il résulte de l'inventaire des stocks. | O | IIP1RG17 IIP1RG18
 IIP1-E2.6.1.2.2 | entrees-periode | entrees-periode | 0..1 | Entrées sur la période en droits acquittés, pour le produit concerné | F | 
 IIP1-E2.6.1.2.3 | sorties-periode | sorties-periode | 0..1 | Sorties sur la période en droits acquittés, pour le produit concerné | F | 
-IIP1-E2.6.1.2.4 | stock-fin-periode | volumeStockType | 1 | Stock de fin de période (en hL), correspondant à la différence entre les entrées et les sorties de période. | O | 1 | IIP1RG14 Si saisi, alors >=0
+IIP1-E2.6.1.2.4 | stock-fin-periode | volumeStockType | 1 | Stock de fin de période (en hL), correspondant à la différence entre les entrées et les sorties de période. | O | IIP1RG14 Si saisi, alors >=0
 
 #####Élément entrees-periode
 
