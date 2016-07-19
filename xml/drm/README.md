@@ -1,7 +1,7 @@
 Structure XML de la DRM des douanes
 ===================================
 
-[Consulter le contrat de service (en changeant de branch, il est possible d'y accéder avec différentes version]][contrat_de_service_interpro.md]
+[Consulter le contrat de service](contrat_de_service_interpro.md) (en changeant de branch, il est possible d'y accéder avec différentes version)
 
 Exemples : 
 
