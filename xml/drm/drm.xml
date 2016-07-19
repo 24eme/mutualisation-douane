@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<message-interprofession xmlns="http://douane.finances.gouv.fr/app/ciel/interprofession/echanges/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://douane.finances.gouv.fr/app/ciel/interprofession/echanges/1.0 echanges-interprofession-1.7.xsd">
+	<siren-interprofession>999999999</siren-interprofession>
+	<declaration-recapitulative>
+		<identification-declarant>
+			<numero-agrement>FR000000E0000</numero-agrement>
+			<numero-cvi>99999999999</numero-cvi>
+		</identification-declarant>
+		<periode>
+			<mois>08</mois>
+			<annee>2015</annee>
+		</periode>
+		<declaration-neant>false</declaration-neant>
+		<droits-suspendus>
+			<produit>
+				<code-inao>1R539S</code-inao>
+				<libelle-personnalise>Tranquilles Beaumes de Venise cru Rouge</libelle-personnalise>
+				<balance-stocks>
+					<stock-debut-periode>39.82</stock-debut-periode>
+					<sorties-periode>
+						<sorties-sans-paiement-droits>
+							<mouvements-internes>
+						<replis-declassement-transfert-changement-appellation>10.00</replis-declassement-transfert-changement-appellation>
+						</mouvements-internes>
+					</sorties-sans-paiement-droits>
+					</sorties-periode>
+					<stock-fin-periode>29.82</stock-fin-periode>
+				</balance-stocks>
+			</produit>
+			<produit>
+				<code-inao>1R535S</code-inao>
+				<libelle-personnalise>Tranquilles Gigondas Rouge</libelle-personnalise>
+				<balance-stocks>
+					<stock-debut-periode>482.22</stock-debut-periode>
+					<sorties-periode>
+						<sorties-sans-paiement-droits>
+							<mouvements-temporaires>
+						<embouteillage>80.00</embouteillage>
+						</mouvements-temporaires>
+					</sorties-sans-paiement-droits>
+					</sorties-periode>
+					<stock-fin-periode>402.22</stock-fin-periode>
+				</balance-stocks>
+			</produit>
+			<produit>
+				<code-inao>1R538S</code-inao>
+				<libelle-personnalise>Tranquilles Vacqueyras Rouge</libelle-personnalise>
+				<balance-stocks>
+					<stock-debut-periode>165.37</stock-debut-periode>
+					<entrees-periode>
+						<mouvements-internes>
+							<replis-declassement-transfert-changement-appellation>10.00</replis-declassement-transfert-changement-appellation>
+						</mouvements-internes>
+					</entrees-periode>
+					<stock-fin-periode>175.37</stock-fin-periode>
+				</balance-stocks>
+			</produit>
+			<produit>
+				<code-inao>1R530 </code-inao>
+				<libelle-personnalise>Tranquilles Cotes du Rhone Regional Rouge</libelle-personnalise>
+				<balance-stocks>
+					<stock-debut-periode>0.14</stock-debut-periode>
+					<entrees-periode>
+						<achats-reintegrations>300.00</achats-reintegrations>
+					</entrees-periode>
+					<sorties-periode>
+						<sorties-sans-paiement-droits>
+							<mouvements-internes>
+						<replis-declassement-transfert-changement-appellation>40.00</replis-declassement-transfert-changement-appellation>
+						</mouvements-internes>
+					</sorties-sans-paiement-droits>
+					</sorties-periode>
+					<stock-fin-periode>260.14</stock-fin-periode>
+				</balance-stocks>
+			</produit>
+			<produit>
+				<code-inao>3R842 </code-inao>
+				<libelle-personnalise>Tranquilles Vaucluse Principauté d'Orange Rouge</libelle-personnalise>
+				<balance-stocks>
+					<stock-debut-periode>122.00</stock-debut-periode>
+					<stock-fin-periode>122.00</stock-fin-periode>
+				</balance-stocks>
+			</produit>
+			<produit>
+				<code-inao>4R999 </code-inao>
+				<libelle-personnalise>Tranquilles Rouge</libelle-personnalise>
+				<balance-stocks>
+					<stock-debut-periode>21.59</stock-debut-periode>
+					<entrees-periode>
+						<mouvements-internes>
+							<replis-declassement-transfert-changement-appellation>40.00</replis-declassement-transfert-changement-appellation>
+						</mouvements-internes>
+					</entrees-periode>
+					<stock-fin-periode>61.59</stock-fin-periode>
+				</balance-stocks>
+			</produit>
+			<stockEpuise>false</stockEpuise>
+		</droits-suspendus>
+    	<compte-crd>
+      		<categorie-fiscale-capsules>T</categorie-fiscale-capsules>
+      		<type-capsule>PERSONNALISEES</type-capsule>
+      		<centilisation volume="CL_75">
+        		<stock-debut-periode>140</stock-debut-periode>
+        		<stock-fin-periode>140</stock-fin-periode>
+      		</centilisation>
+    	</compte-crd>
+    	<document-accompagnement>
+      		<numero-empreintes>
+        		<debut-periode>1</debut-periode>
+        		<fin-periode>2</fin-periode>
+      		</numero-empreintes>
+    	</document-accompagnement>
+  	</declaration-recapitulative>
+</message-interprofession>
