@@ -217,7 +217,7 @@ Type : Complexe ordonné
 Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Facultatif |  Règles  |
 :------------|:--------|:----:|:------------|:------------|:----------------------:|:---------|
 IIP-1­-E-­2.4.1| produit | produit | 0..* | Produit concerné par la déclaration en droits suspendus | F | IIP1­RG10 |
-IIP-1­-E-­2.4.2| stockEpuise | boolean | 1 | Booléen indiquant si le stock en droits suspendus est épuisé O | IIP1­RG13 |
+IIP-1­-E-­2.4.2| stockEpuise | boolean | 1 | Booléen indiquant si le stock en droits suspendus est épuisé | O | IIP1­RG13 |
 
 #####Élément produit
 
@@ -239,10 +239,10 @@ Type : Complexe ordonné
 
 Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Facultatif |  Règles  |
 :------------|:--------|:----:|:------------|:------------|:----------------------:|:---------|
-IIP1-E2.4.1.7.1 | stock-debut-periode | volumeStock | 1 | Stock de début de période (en hL), systématiquement repris du stock théorique total de fin de la période de la DRM ou DRA précédente. Si 1ère DRM de la campagne vitivinicole, doit être indiqué le stock réel (physique) tel qu'il résulte de l'inventaire des stocks. | O
+IIP1-E2.4.1.7.1 | stock-debut-periode | volumeStock | 1 | Stock de début de période (en hL), systématiquement repris du stock théorique total de fin de la période de la DRM ou DRA précédente. Si 1ère DRM de la campagne vitivinicole, doit être indiqué le stock réel (physique) tel qu'il résulte de l'inventaire des stocks. | O | IIP1RG14 Si saisi, alors >=0
 IIP1-E2.4.1.7.2 | entrees-periode | entrees-periode |  0..1 | Entrées sur la période en droits suspendus, pour le produit concerné | F
 IIP1-E2.4.1.7.3 | sorties­-periode | sorties­-periode | 0..1 | Sorties sur la période en droits suspendus, pour le produit concerné | F | 
-IIP1-E2.4.1.7.4 | stock­-fin­-periode | stock­-fin­-periode | Stock de fin de période (en hL), correspondant à la différence entre les entrées et les sorties de période. | O | 1 | IIP1RG14 Si saisi, alors >=0 IIP1RG17 IIP1RG18
+IIP1-E2.4.1.7.4 | stock­-fin­-periode | stock­-fin­-periode | 1 | Stock de fin de période (en hL), correspondant à la différence entre les entrées et les sorties de période. | O | IIP1RG17 IIP1RG18
 
 #####Élément entrees-periode
 
@@ -284,9 +284,9 @@ Type : Complexe ordonné
 
 Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Facultatif |  Règles  |
 :------------|:--------|:----:|:------------|:------------|:----------------------:|:---------|
-IIP1-E2.4.1.7.2.6.1 | mois | int | 1 | Mois de la sortie taxable ou de la réception en droits acquittés de ce produit | IIP1RG40 |
-IIP1-E2.4.1.7.2.6.2 | annee | int | 1 | Année de la sortie taxable ou de la réception en droits acquittés de ce produit | O | |
-IIP1-E2.4.1.7.2.6.3 | volume | volumeType | 1 | Volume du produit replacé en suspension | O | IIP1RG40 
+IIP1-E2.4.1.7.2.6.1 | mois | int | 1 | Mois de la sortie taxable ou de la réception en droits acquittés de ce produit | O | IIP1RG40 |
+IIP1-E2.4.1.7.2.6.2 | annee | int | 1 | Année de la sortie taxable ou de la réception en droits acquittés de ce produit | O | IIP1RG40 |
+IIP1-E2.4.1.7.2.6.3 | volume | volumeType | 1 | Volume du produit replacé en suspension | O | 
 
 #####Élément sorties-periode
 
@@ -296,7 +296,7 @@ Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Fac
 :------------|:--------|:----:|:------------|:------------|:----------------------:|:---------|
 IIP1-E2.4.1.7.3.1  | ventes-france-crd-suspendus | ventes-france-crd-suspendus  | 0..1 | Ventes France sous CRD personnalisées ou collectives achetées en droits suspendus, sous DSA ou sous facture (en hL) | F | IIP1RG35 IIP1RG20 Si saisi, alors >=0
 IIP1-E2.4.1.7.3.2 | france-crdacquittes | ventesvolumeType | 0..1 | Ventes France sous CRD collectives achetées en droits acquittés Les droits ont été acquittés auprès du répartiteur de capsules au moment de l'achat des CRD Dans CIEL, cette donnée n'alimente pas la liquidation de la déclaration mais a une vocation seulement statistique | F | IIP1RG20 Si saisi, alors >=0
-IIP1-E2.4.1.7.3.3 | sorties-sans-paiement-droits | 0..1 | Sorties du produit sans paiement des droits (en hL) | F | sorties-sanspaiementdroits |
+IIP1-E2.4.1.7.3.3 | sorties-sans-paiement-droits | sorties-sans-paiement-droits | 0..1 | Sorties du produit sans paiement des droits (en hL) | F |
 
 #####Élément ventes-france-crd-suspendus
 
@@ -315,9 +315,9 @@ Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Fac
 :------------|:--------|:----:|:------------|:------------|:----------------------:|:---------|
 IIP1-E2.4.1.7.3.3.1 | sorties-definitives | volumeType | 0..1 | Sorties définitives du produit en droits suspendus : ventes vrac au négoce, en intracommunautaire, à l'export, sous DAE, DAA et DCA ainsi que sorties de lies et DRA (en hL) | F | Si saisi, alors > 0 | IIP1RG26 Si saisi, alors >0
 IIP1-E2.4.1.7.3.3.2 | consommation-familiale-degustation | volumeType | 0..1 | Consommation familiale du produit et / ou dégustation à l'exploitation (en hL) | F | Si saisi, alors >0
-IIP1-E2.4.1.7.3.3.3 | mouvements-temporaires | mouvements-temporaires | 0..1 | Mouvements temporaires du produit (en hL) Prestations de service, relogement, ou pour élaboration à façon de vins mousseux, ou pour distillation de cognac, par exemple. Retour obligatoire à la propriété | F | IIP1-E2.4.1.7.3.3.4
-IIP1-E2.4.1.7.3.3.4 |  | mouvements-internes | mouvements-internes | 0..1 | Mouvements internes du produit (en hL) | F | 
-IIP1-E2.4.1.7.3.3.5 | autres-sorties | volumeType | 0..1 | Destruction par exemple (en hL) Toute saisie dans cette ligne requiert un commentaire obligatoire dans la rubrique « Observations » | F | 
+IIP1-E2.4.1.7.3.3.3 | mouvements-temporaires | mouvements-temporaires | 0..1 | Mouvements temporaires du produit (en hL) Prestations de service, relogement, ou pour élaboration à façon de vins mousseux, ou pour distillation de cognac, par exemple. Retour obligatoire à la propriété | F | 
+IIP1-E2.4.1.7.3.3.4 | mouvements-internes | mouvements-internes | 0..1 | Mouvements internes du produit (en hL) | F | 
+IIP1-E2.4.1.7.3.3.5 | autres-sorties | volumeType | 0..1 | Destruction par exemple (en hL) Toute saisie dans cette ligne requiert un commentaire obligatoire dans la rubrique « Observations » | F | IIP1RG26 Si saisi, alors >0
 
 #####Élément mouvements-temporaires
 
@@ -358,11 +358,11 @@ Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Fac
 :------------|:--------|:----:|:------------|:------------|:----------------------:|:---------|
 IIP1-E2.5.1.1 | code-inao | codeInaoType | 1 | Code INAO du produit | O |  IIP1RG19 IIP1RG20 IIP1RG23
 IIP1-E2.5.1.2 | libelle-fiscal | LibelleFiscalType | 0..1 | Libellé fiscal du produit (liste des libellés en annexes) | F | IIP1RG36
-IIP1-E2.5.1.3 | libelle-personnalise | string | Libellé personnalisé du produit | O | IIP1RG37 |
+IIP1-E2.5.1.3 | libelle-personnalise | string | 1 | Libellé personnalisé du produit | O | IIP1RG37 |
 IIP1-E2.5.1.4 | tav | tavType | 0..1 | TAV du produit | F | IIP1RG21 IIP1RG22
 IIP1-E2.5.1.3 | premix | boolean | 0..1 | Indique si le produit considéré est un premix ou pas | F | IIP1RG21 IIP1RG22
 IIP1-E2.5.1.4 | balancestocks | balancestocks | 1 | Balance des stocks en droits acquittés | O | 
-IIP1-E2.5.1.5 | observations | string | Observations apportées par le déclarant concernant la balance des stocks en droits acquittés | F | 0..1 | IIP1RG25 IIP1RG26 IIP1RG38
+IIP1-E2.5.1.5 | observations | string | 0..1 | Observations apportées par le déclarant concernant la balance des stocks en droits acquittés | F | IIP1RG25 IIP1RG26 IIP1RG38
 
 #####Élément balance-stocks (Droits acquittés)
 
@@ -392,7 +392,7 @@ Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Fac
 :------------|:--------|:----:|:------------|:------------|:----------------------:|:---------|
 IIP1-E2.6.1.2.3.1  | ventes | volumeType | 0..1 | Ventes de produit (en hL) | F | Si saisi, alors >=0 
 IIP1-E2.6.1.2.3.2 | replacement-suspension | volumeType | 0..1 | Replacement en suspension du produit (en hL) | F | Si saisi, alors >=0
-IIP1-E2.6.1.2.3.3 | autres-sorties | volumeType | 0..1 | Autres sorties du produits (en hL) | IIP1RG26 Si saisi, alors >=0 |
+IIP1-E2.6.1.2.3.3 | autres-sorties | volumeType | 0..1 | Autres sorties du produits (en hL) | F | IIP1RG26 Si saisi, alors >=0 |
 
 #####Élément compte-crd
 
@@ -401,7 +401,7 @@ Type : Complexe ordonné
 Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Facultatif |  Règles  |
 :------------|:--------|:----:|:------------|:------------|:----------------------:|:---------|
 IIP1-E2.7.1 | categorie-fiscale-capsules | categorieFiscaleCapsuleType | 1 | Catégorie fiscale de capsules représentatives de droits | O | IIP1RG27
-IIP1-E2.7.2 | type-capsule | typeCapsulesType | 1 | Type de capsules représentatives de droits | O | 
+IIP1-E2.7.2 | type-capsule | typeCapsulesType | 1 | Type de capsules représentatives de droits | O | IIP1RG28
 IIP1-E2.7.3 | centilisation | centilisation | 1..21 | Centilisation des capsules déclarées | O | IIP1RG29 IIP1RG31 | 
 
 #####Élément centilisation
@@ -410,10 +410,10 @@ Type : Complexe ordonné
 
 Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Facultatif |  Règles  |
 :------------|:--------|:----:|:------------|:------------|:----------------------:|:---------|
-IIP1-E2.7.3.1 | stock-debut-periode | nonNegativeInteger | 0..1 | Stock de capsules du début de la période | O | |
-IIP1-E2.7.3.2 | entrees-capsules | entrees-capsules | 0..1 | Entrées de capsules | F | IIP1RG31 IIP1RG39
-IIP1-E2.7.3.3 | sorties-capsules | sorties-capsules | 0..1 | Sorties de capsules | F | IIP1RG30 IIP1RG39
-IIP1-E2.7.3.4 | stock-fin-periode | nonNegativeInteger | 1 | Stock de capsules de la fin de la période | O | |
+IIP1-E2.7.3.1 | stock-debut-periode | nonNegativeInteger | 0..1 | Stock de capsules du début de la période | O | IIP1RG31 IIP1RG39 |
+IIP1-E2.7.3.2 | entrees-capsules | entrees-capsules | 0..1 | Entrées de capsules | F | 
+IIP1-E2.7.3.3 | sorties-capsules | sorties-capsules | 0..1 | Sorties de capsules | F | 
+IIP1-E2.7.3.4 | stock-fin-periode | nonNegativeInteger | 1 | Stock de capsules de la fin de la période | O | IIP1RG30 IIP1RG39 |
 
 #####Élément entrees-capsules
 
@@ -460,9 +460,9 @@ Type : Complexe ordonné
 
 Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Facultatif |  Règles  |
 :------------|:--------|:----:|:------------|:------------|:----------------------:|:---------|
-IIP1-E2.9.1 | numero-daa-dac-dae | numeroRnaType | 0..1 | Numéro de DAA/DAC/DAE | F
+IIP1-E2.9.1 | numero-daa-dac-dae | numeroRnaType | 0..1 | Numéro de DAA/DAC/DAE | F | IIP1RG12
 IIP1-E2.9.2 | date-expedition | date | 0..1 | Date d’expédition (doit être de la forme AAAA-MM-JJ) | F
-IIP1-E2.9.3 | numero-accise | String (13 caractères destinataire maximum) | 0..1 | Numéro d’accise du destinataire | F | IIP1RG12 IIP1RG42
+IIP1-E2.9.3 | numero-accise | String (13 caractères destinataire maximum) | 0..1 | Numéro d’accise du destinataire | F | IIP1RG42
 
 #####Élément statistiques
 
@@ -489,16 +489,16 @@ tavType | 2 | 0                         | Représente le TAV d’un produit
 
 Type    | Longueur minimale | Longueur maximale | valeurs possibles | format | Description |
 :-------|:-----------------:|:-----------------:|:------------------|:-------|:------------|
-sirenType | 9 | 9                               | Nombres entiers | Représente le numéro SIREN d'une interprofession strictement positifs
-codeInaoType | 6 | 8                            |                 | Représente le code INAO d’un produit. Un code INAO doit contenir entre 6 et 8 digits. Si le code est sur 5 digits, l'interprofession émettrice doit ajouter un espace avant envoi à CIEL.
-LibelleFiscalType | |                           |                 | Représente le libellé fiscal d’un produit
-numeroAcciseType |13 | 13                       | [A­Za­z]{2}[0­9A­Za­z]{11} | Représente un numéro d’agrément
-numeroCviType | 10 | 10 | 10 chiffres | Représente un numéro CVI
-typeCapsulesType | |    |  PERSONNALISEES COLLECTIVES_DROITS_SUSPENDUS COLLECTIVES_DROITS_ACQUITTES | Représente un type de capsules représentatives de droits
-categorieFiscaleCapsuleType | | | « M » (vin mousseux) « T » (vin tranquille) « PI » (produit intermédiaire) COGNACARMAGNAC ALCOOLS | Représente une catégorie fiscale de capsule représentative de droits
-numeroDocumentType | 1 | 9 | Nombre entier positif | Numéro de référence de document d'accompagnement d'une DRM
-numeroRnaType | 1 | 21 | Chaîne caractères | Numéro de référence du daa­ de dac­dae
-Attribut « volume de l’élément » | | | centilisation | CL_10 CL_12_5 CL_18_7 CL_20 CL_25 CL_35 CL_37_5 CL_50 CL_62 CL_70 CL_75 CL_100 CL_150 CL_175 CL_200 BIB_225 BIB_300 BIB_400 BIB_500 BIB_800 BIB_1000 | |Représente la centilisation de capsules représentatives de droits
+sirenType | 9 | 9                               |          | Nombres entiers | Représente le numéro SIREN d'une interprofession strictement positifs
+codeInaoType | 6 | 8                            |          |       | Représente le code INAO d’un produit. Un code INAO doit contenir entre 6 et 8 digits. Si le code est sur 5 digits, l'interprofession émettrice doit ajouter un espace avant envoi à CIEL.
+LibelleFiscalType | |                           |          |       | Représente le libellé fiscal d’un produit
+numeroAcciseType |13 | 13                  |     | [A­Za­z]{2}[0­9A­Za­z]{11} | Représente un numéro d’agrément
+numeroCviType | 10 | 10 | | 10 chiffres | Représente un numéro CVI
+typeCapsulesType | |    |  PERSONNALISEES COLLECTIVES_DROITS_SUSPENDUS COLLECTIVES_DROITS_ACQUITTES | | Représente un type de capsules représentatives de droits
+categorieFiscaleCapsuleType | | | « M » (vin mousseux) « T » (vin tranquille) « PI » (produit intermédiaire) COGNACARMAGNAC ALCOOLS | | Représente une catégorie fiscale de capsule représentative de droits
+numeroDocumentType | 1 | 9 | | Nombre entier positif | Numéro de référence de document d'accompagnement d'une DRM
+numeroRnaType | 1 | 21 | | Chaîne caractères | Numéro de référence du daa­ de dac­dae
+Attribut « volume de l’élément » centilisation | | | CL_10 CL_12_5 CL_18_7 CL_20 CL_25 CL_35 CL_37_5 CL_50 CL_62 CL_70 CL_75 CL_100 CL_150 CL_175 CL_200 BIB_225 BIB_300 BIB_400 BIB_500 BIB_800 BIB_1000 | |Représente la centilisation de capsules représentatives de droits
 
 ####RÈGLES DE GESTION
 
@@ -545,7 +545,7 @@ dépannage du problème.
 
 Code RG | Test et condition(s) | Code erreur | Message si erreur |
 :-------|:---------------------|:------------|:------------------|
-IIP1RG1 | Le flux transmis doit respecter le schéma XSD prévu.
+IIP1RG1 | Le flux transmis doit respecter le schéma XSD prévu. NB : si cette condition n’est pas vérifiée, les contrôles suivants ne seront pas exécutés. | 001 | Le flux ne répond pas au schéma de transmission défini. Message technique &lt;message erreur xsd>. |
 IIP1RG2 | Le flux transmis par l'interprofession doit contenir un seul fichier par déclaration. NB : si cette condition n’est pas vérifiée, les contrôles suivants ne seront pas exécutés.
 IIP1RG3 | Le numéro d’agrément d'entrepositaire agréé fourni par le SI de l’interprofession vitivinicole doit exister et être actif dans ROSA. NB : si cette condition n’est pas vérifiée, les contrôles suivants ne seront pas exécutés. | 002 | Le numéro d’agrément d'entrepositaire agréé n’existe pas ou n’est pas actif.
 IIP1RG4 | L’agrément considéré, récupéré dans ROSA, doit reprendre une activité « EA viti » (les données transmises reprennent uniquement ce format). | 003 | Le numéro d’agrément d'entrepositaire agréé ne correspond à une activité vitivinicole. NB : si cette condition n’est pas vérifiée, les contrôles suivants ne seront pas exécutés. NB : si cette condition n’est pas vérifiée, les contrôles suivants ne seront pas exécutés. 
