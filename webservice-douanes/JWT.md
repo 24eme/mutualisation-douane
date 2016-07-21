@@ -27,7 +27,7 @@ Dans ce cas, allez dans les préférences de votre navigateur pour « Sauvegarde
 
 ## Extraire les certificats du fichier p12
 
-La suite [OpenSLL](https://www.openssl.org/) permet assez facilement d'exploiter les fichiers ``p12`` et notamment d'en extraire les deux certificats ainsi que la clée privée.
+La suite [OpenSLL](https://www.openssl.org/) permet assez facilement d'exploiter les fichiers ``p12`` et notamment d'en extraire les deux certificats ainsi que la clée privée. Un installeur pour windows est disponible sur le site [slproweb.com](http://slproweb.com/products/Win32OpenSSL.html).
 
 Il faut d'abord convertir le fichier ``pkcs12`` au format ``pem``. Vu que le fichier original est protégé par un mot de passe, openssl vous demandera un mot de passe. Le fichier ``pem`` contiendra la clée, openssl vous demandera donc par deux fois un mot de passe pour protéger cette clée :
 
@@ -116,6 +116,8 @@ Pour avoir accès au webservice d'authentification JWT, il faut envoyer deux fic
  - le certificat X509 RGS* (*certificat-client.crt*) dans notre exemple ;
  - le fichier de révocation émis par l'autorité de certification.
 
+Le point de contact du bureau F3 en charge de cette reception est  ciel-f3(a)douane .finances .gouv .fr
+
 L'url du fichier de révocation est en général cité dans le certificat. Voici une commande openssl qui permet de visualiser cette information :
 
 Sa localiation est en générale indiquée dans le certificat. Pour le lire :
@@ -134,6 +136,6 @@ Une fois le numéro ISS installé et à condition qu'un accès [PASTER](PASTER.m
 
 Un script PHP de test a été développé afin de valider l'accès JWT douanier : [OAuth](https://github.com/24eme/mutualisation-douane/tree/master/oauth). Pour pouvoir l'exploiter, il faudra copier le contenu de la clée privée et indiquer l'identifiant ``ISS`` dans le fichier de configuration ``config.inc``.
 
-Le site officiel du projet [JWT.io](http://jwt.io) références les implémentations disponibles pour de très nombreux languages de programmation. Vérifiez bien que la librairie choisir supporte les certificats RSA254 (certaines ne proposent que les clés HS256, technologie non supportée par les douanes).
+Le site officiel du projet [JWT.io](http://jwt.io) références les implémentations disponibles pour de très nombreux languages de programmation. Vérifiez bien que la librairie choisir supporte les certificats RSA256 (certaines ne proposent que les clés HS256, technologie non supportée par les douanes).
 
 **Attention** : Les douanes n'autorisent qu'une 50aine de requêtes quotidiennes. Il faut donc prévoir un mécanisme de cache des tickets JWT pour éviter de se faire couper les accès pendant plusieurs heures.
