@@ -462,7 +462,7 @@ Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Fac
 :------------|:--------|:----:|:------------|:------------|:----------------------:|:---------|
 IIP1-E2.9.1 | numero-daa-dac-dae | numeroRnaType | 0..1 | Numéro de DAA/DAC/DAE | F | IIP1RG12
 IIP1-E2.9.2 | date-expedition | date | 0..1 | Date d’expédition (doit être de la forme AAAA-MM-JJ) | F
-IIP1-E2.9.3 | numero-accise | String (13 caractères destinataire maximum) | 0..1 | Numéro d’accise du destinataire | F | IIP1RG42
+IIP1-E2.9.3 | numero-accise-destinataire | String (13 caractères destinataire maximum) | 0..1 | Numéro d’accise du destinataire | F | IIP1RG42
 
 #####Élément statistiques
 
