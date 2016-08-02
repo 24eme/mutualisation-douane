@@ -78,7 +78,7 @@ Le fichier CSV permet de déclarer les différentes informations liée à la DRM
 Les premiers champs de chaque ligne sont des champs communs pour tout le fichier, ils décrivent :
  - le type de ligne concernée (CAVE, CRD, ANNEXE, comme décrit plus bas)
  - la date de la DRM courrante (format AAAAMM)
- - l'identifiant interpro du champs (8 chiffres constitué de l'identifiant interpro sur 6 chiffres et un identifiant du chai sur deux chiffres, si le ressortissant concerné n'a qu'un chai et que sont compte interpro est 800999, son identifiant de chais sera 80099901)
+ - l'identifiant interpro du champs (chiffres constitué de l'identifiant interpro (6 à 10 chiffres) et d'un identifiant du chai sur deux chiffres, si le ressortissant concerné n'a qu'un chai et que sont compte interpro est 800999, son identifiant de chais sera 80099901)
  - le numéro d'ascise du ressortisant
 
 Le fichier CSV est constitué de trois types de lignes :
@@ -90,10 +90,10 @@ L'idée du fichier CSV est de permettre d'autres exploitations que celles liées
 
 Les 3 types de lignes se basent toutes les trois sur une structure commune. Cette structure s'organise autour des 5 sections de champs :
  - la partie commune (4 champs) qui fournit les informations liée à la DRM et permet d'identifier le type de ligne
- - la partie identification du produit (7 champs) qui permet d'identifier le vin déclaré, le type de CRD ou d'annexe)
- - la partie identification du mouvement (2 champs) qui permet d'idenfifier si le type de mouvement ou de stock concerné
+ - la partie identification du produit (9 champs) qui permet d'identifier le vin déclaré, le type de CRD ou d'annexe)
+ - la partie identification du mouvement (3 champs) qui permet d'idenfifier si le type de mouvement ou de stock concerné
  - la quantité de produit concernée (1 champs) qui permet de connaître le volume ou le nombre de CRD associé au mouvement concerné
- - la partie complément (3 champs) qui permet d'indiquer les informations complémentaire nécessaire à la déclaration du mouvement (pays d'export, n° de contrat concerné, ...)
+ - la partie détails (3 champs) qui permet d'indiquer les détails nécessaires à la déclaration du mouvement (pays d'export, n° de contrat concerné, ...)
 
 La partie identification du produit peut être utilisé soit de manière éclaté (qui permet de faire des exploitations statistiques sur les appellations, les couleurs, ...), soit de manière agrégé en indiquant le nom complet du produit ou du type de CRD dans le premier champs de cette section.
 
@@ -111,31 +111,36 @@ Les lignes de CAVE se constituents des champs suivants :
  **Pour l'identification du vin :**
 
  5. Certification du vin (AOC, IGP, Sans IG, ...) ou nom du produit complet
- 6. Genre du vin (Tranquille, Effervecent, ...)
- 7. Appellation du vin (Anjou, Touraine, St Nicolas de Bourgueil, ...)
- 8. Mention du vin (Primeur, ...)
- 9. Lieu du vin (par exemple "Gorges" ou "Clisson" pour le Muscadet Sèvre et Maine)
- 10. Couleur du vin (Blanc, Rouge ou Rosé)
- 11. Le cépage du vin (Melon, Chenin, ...)
- 
+ 6. Genre du vin (Tranquille, Effervecent, ...) ou vide
+ 7. Appellation du vin (Anjou, Alsace Grand Cru, Côtes-du-rhône, ...) ou vide
+ 8. Mention du vin (Primeur, ...) ou vide
+ 9. Lieu du vin (par exemple "Gorges" pour le Muscadet Sèvre et Maine, "Sommerberg" pour Grand Cru Alsace) ou vide
+ 10. Couleur du vin (Blanc, Rouge ou Rosé) ou vide
+ 11. Le cépage du vin (Melon, Gewurztraminer, ...) ou vide
+ 12. Complément produit (AB, Millesime, ...) ou vide
+ 13. Libellé personnalisé du produit (Chaine de caractère libre)
+
  **Pour le type de mouvement :**
  
- 12. Le type de la DRM (suspendu ou acquitte)
- 13. La catégorie du mouvement (stock_debut, entrée, sortie, stock _fin)
- 14. Le nom du mouvement (renvendiqué, achat, ...)
- 
+ 14. Le type de la DRM (suspendu ou acquitte)
+ 15. La catégorie du mouvement (stock_debut, entrée, sortie, stock _fin)
+ 16. Le nom du mouvement (renvendiqué, achat, ...)
+
  **Pour la quantité :**
  
- 15. volume en hl
+ 17. volume en hl (ou valeur information complémentaire)
  
- **Pour les compléments :**
+ **Pour les détails :**
  
- 16. le pays de l'export (Code ISO 3166 https://fr.wikipedia.org/wiki/ISO_3166) (si le mouvement est un export, sinon vide)
- 17. le numéro du contrat (si le mouvement est une sortie vrac sous contrat, sinon vide)
- 18. le numéro de document d'accompagnement (si le mouvement fait l'objet d'un document d'accompagnement douanier)
- 19. les observations (si la ligne est "OBSERVATIONS" en cas de saut de ligne, les remplacer par des \\n)
+ 18. le pays de l'export (Code ISO 3166 https://fr.wikipedia.org/wiki/ISO_3166) (si le mouvement est un export, sinon vide)
+ 19. le numéro du contrat (si le mouvement est une sortie vrac sous contrat, sinon vide)
+ 20. le numéro de document d'accompagnement (si le mouvement fait l'objet d'un document d'accompagnement douanier)
 
 Le CVS peut contenir plusieurs mouvements de même type. Dans ce cas ils seront additionnés.
+
+**Cas des informations complémentaires**
+
+La douane demande parfois des informations complémentaires afin de déclarer pour un produit son **taux d'alcool volume (TAV)**, le **premix** ou des **observations**. Dans ce cas ces informations sont transmises via un mouvement "complément". Le champs 17 indiquera la valeur pour ces informations (entier pour TAV, boolean pour premix et chaine de caractère pour observation)
 
 [Voici un exemple ne contenant que quelques lignes de type CAVE](https://github.com/24eme/mutualisation-douane/blob/master/logiciels-tiers/edi/exemple_cave.csv "csv_de_type_cave")
 
@@ -150,8 +155,8 @@ Le CVS peut contenir plusieurs mouvements de même type. Dans ce cas ils seront 
  
  **Pour l'identification de la CRD :**
  
- 5. Genre de la CDR (tranquille, mousseux, vdn, ...)
- 6. Couleur de la CDR (vert, bleu ou lie de vin)
+ 5. Couleur de la CDR (vert, bleu ou lie de vin)
+ 6. Genre de la CDR (tranquille, mousseux, vdn, ...)
  7. centilitrage
  8. vide
  9. vide
@@ -196,8 +201,8 @@ Comme pour les mouvements de Cave, il est possible d'indiquer plusieurs mouvemen
  **Pour le type de mouvement :**
  
  12. vide
- 13. Type d'annexe (DAADAC, DSADSAC, EMPREINTE, NONAPUREMENT, SUCRE ou OBSERVATIONS) 
- 14. "debut" ou "fin" (pour les numeros d'empruntes, DAA, DSA, ...)
+ 13. Type d'annexe (DAADAC, DSADSAC, EMPREINTE, NONAPUREMENT, STATS EUROPEENNES) 
+ 14. "debut" ou "fin" (pour les numeros d'empruntes, DAA, DSA, ...), JUS, MCR et VINAIGRE pour l'annexe STATS EUROPEENNES
  
  **Pour la quantité :**
  
@@ -208,7 +213,6 @@ Comme pour les mouvements de Cave, il est possible d'indiquer plusieurs mouvemen
  16. date d'envoi (pour le type non apurement)
  17. numero d'ascise du destinataire (pour le non apurement)
  18. le numéro de document d'accompagnement (pour les documents DAADAC, DSADSAC, EMPREINTE et non apurement)
- 19. les observations (si la ligne est "OBSERVATIONS" en cas de saut de ligne, les remplacer par des \\n)
 
 [Voici un exemple ne contenant que quelques lignes de type ANNEXE](https://github.com/24eme/mutualisation-douane/blob/master/logiciels-tiers/edi/exemple_annexe.csv "csv_de_type_annexe")
 
