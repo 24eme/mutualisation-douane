@@ -63,3 +63,7 @@ $options = array(
 $result = httpQuerry('http://10.253.161.5/cielqualifinterpro/ws/1.0/declarations', $options);
 
 echo "Application server answer: \n".$result."\n";
+
+if (preg_match('/reponse-ciel/', $result)) {
+	echo "TEST OK !! :)\n";
+}
