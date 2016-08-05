@@ -40,7 +40,7 @@ CRD,201509,11223301,FR01234567890,BLEU,MOUSSEUX,Bouteille 75 cl,,,,,,,collective
 CRD,201509,11223301,FR01234567890,BLEU,MOUSSEUX,Bouteille 75 cl,,,,,,,collective suspendu,stock_fin,fin,6,,,,
 CRD,201509,11223301,FR01234567890,VERT,TRANQ,Bouteille 75 cl,,,,,,,collective suspendu,stock_debut,debut,5,,,,
 CRD,201509,11223301,FR01234567890,VERT,TRANQ,Bouteille 75 cl,,,,,,,collective suspendu,stock_fin,fin,5,,,,
-CRD,201509,11223301,FR01234567890,LIEDEVIN,TRANQ,Bouteille 75 cl,,,,,,,collective suspendu,stock_debut,debug,30000,,,,
+CRD,201509,11223301,FR01234567890,LIEDEVIN,TRANQ,Bouteille 75 cl,,,,,,,collective suspendu,stock_debut,debut,30000,,,,
 CRD,201509,11223301,FR01234567890,LIEDEVIN,TRANQ,Bouteille 75 cl,,,,,,,collective suspendu,entrees,achats,1500,,,,
 CRD,201509,11223301,FR01234567890,LIEDEVIN,TRANQ,Bouteille 75 cl,,,,,,,collective suspendu,entrees,excedents,90,,,,
 CRD,201509,11223301,FR01234567890,LIEDEVIN,TRANQ,Bouteille 75 cl,,,,,,,collective suspendu,sorties,utilisations,3800,,,,
