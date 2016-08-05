@@ -89,7 +89,7 @@ Copier/coller chacune des sections PEM dans des fichiers ditincts, on aurait don
     YYYYYYYYYYY
     -----END CERTIFICATE-----
 
-``cleprivee-client.pem`` :
+``cleprivee-client.key`` :
 
     -----BEGIN ENCRYPTED PRIVATE KEY-----
     XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
@@ -102,13 +102,17 @@ Copier/coller chacune des sections PEM dans des fichiers ditincts, on aurait don
 
 Si vous souhaitez stocker la clée privée sans protection par mot de passe, vous pouvez la convertir via la commande :
 
-    $ openssl rsa -in cleprivee-client.pem  -out cleprivee-client.nocryptkey.pem
+    $ openssl rsa -in cleprivee-client.key  -out cleprivee-client.nocryptkey.key
 
 
 En plus de votre certificat client, vous devrez fournir aux douanes le fichier de révocation émis par l'autorité de certification que vous avez choisi. Sa localiation est en générale indiquée dans le certificat. Pour le lire :
 
     $ openssl x509 -in certificat-client.crt -text | grep crl
                       URI:http://crl.chambersign.fr/crl/rgs/lcr-directes/crl-1.crl
+
+Si vous avez besoin de convertir le certificat au format der, voici la commande qui permet de le faire :
+
+    $ openssl x509 -outform der -in certificat-client.crt -out certificat-client.der
 
 ## Envoi de certificat et du crl aux dounaes
 
