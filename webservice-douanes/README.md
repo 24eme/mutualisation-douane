@@ -3,6 +3,6 @@ Cette section à pour vocation de documenter les différents accès ou webservic
  - [l'accès mutualisé par le CNIV à la ligne PASTEUR via OpenVPN](PASTEUR.md)
  - [le service d'authentification JWT](JWT.md)
  - [le service d'annuaire des numéros accises SEED](SEED.md)
- - le webservice de déclaration dématérialisée des DRM
+ - [le webservice de déclaration dématérialisée des DRM](DRMXML.md)
 
 
