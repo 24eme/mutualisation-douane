@@ -33,7 +33,7 @@ Il faut noter toute fois, qu'en cas d'utilisation de caractères accentués, ces
 
 Débuter une ligne par le caractère « # » permet de définir des commentaires. Elles ne sont donc pas prises en compte par la plateforme.
 
-Les nombres décimaux peuvent avoir pour séparateur décimal une virgule « , » ou un point « . ». Dans le cas ou la virgule « , » est choisi, bien faire attention qu'il n'y ai pas de confusion avec le séparateur du CSV.
+Les nombres décimaux peuvent avoir pour séparateur décimal une virgule « , » ou un point « . ». Dans le cas ou la virgule « , » est choisi, bien faire attention qu'il n'y ait pas de confusion avec le séparateur du CSV.
 
 ###Sécurité des transferts
 
@@ -72,7 +72,7 @@ Le fichier décrivant les éléments constitutifs de la DRM qui devra être four
 
 Le fichier CSV permet de déclarer les différentes informations liées à la DRM.
 
-Les premiers champs de chaque ligne sont des champs communs pour tout le fichier, ils décrivent :
+Les premiers champ de chaque ligne sont des champs communs pour tout le fichier, ils décrivent :
  - le type de ligne concernée (CAVE, CRD, ANNEXE, comme décrit plus bas)
  - la période de la DRM courante (format AAAAMM)
  - l'identifiant interpro du chai
@@ -81,18 +81,18 @@ Les premiers champs de chaque ligne sont des champs communs pour tout le fichier
 Le fichier CSV est constitué de trois types de lignes :
  - CAVE : pour déclarer le stock et les mouvements de cave ;
  - CRD : pour déclarer le stock et les mouvements de CRD ;
- - ANNEXE : pour les informations demandées en annexe par les douanes (documents d'accompagnement, taux de sucre, observations, ...)
+ - ANNEXE : pour les informations demandées en annexe par les douanes (documents d'accompagnement, observations, ...)
 
-L'idée du fichier CSV est de permettre d'autres exploitations que celles liées à la télédéclaration des DRM. Certaines informations peuvent être éclatées en plusieurs champs afin par exemple de permettre des utilisation statistique (c'est le cas notamment pour la description des produits).
+L'idée du fichier CSV est de permettre d'autres exploitations que celles liées à la télédéclaration des DRM. Certaines informations peuvent être éclatées en plusieurs champs afin par exemple de permettre des utilisations statistiques (c'est le cas notamment pour la description des produits).
 
 Les trois types de lignes se basent sur une structure commune. Cette structure s'organise autour de cinq sections de champs :
  - la partie commune (4 champs) qui fournit les informations liées à la DRM et permet d'identifier le type de ligne
  - la partie identification du produit (9 champs) qui permet d'identifier le vin déclaré, le type de CRD ou d'annexe)
  - la partie identification du mouvement (3 champs) qui permet d'idenfifier le type de mouvement ou le stock concerné
- - la quantité de produit concerné (1 champs) qui permet de connaître le volume ou la quantité associée au mouvement
+ - la quantité de produit concerné (1 champ) qui permet de connaître le volume ou la quantité associée au mouvement
  - la partie détail (3 champs) qui permet d'indiquer les détails nécessaires à la déclaration du mouvement (pays d'export, n° de contrat concerné, ...)
 
-La partie identification du produit peut être utilisé soit de manière éclaté (qui permet de faire des exploitations statistiques sur les appellations, les couleurs, ...), soit de manière agrégé en indiquant le nom complet du produit ou du type de CRD dans le premier champs de cette section.
+La partie identification du produit peut être utilisé soit de manière éclaté (qui permet de faire des exploitations statistiques sur les appellations, les couleurs, ...), soit de manière agrégé en indiquant le nom complet du produit ou du type de CRD dans le premier champ de cette section.
 
 ###Description des lignes CAVE
 
@@ -100,28 +100,28 @@ Les lignes de CAVE se constituents des champs suivants :
 
  **Pour la section commune :**
  
- 1. CAVE (champs obligatoire à valeur fixe) 
- 2. La période de la DRM (champs obligatoire au format AAAA-MM)  
- 3. L'identification de l'établissement (champs alpha-numérique obligatoire)
- 4. Le numéro d'accise (champs alpha-numérique de 13 caractères obligatoire)
+ 1. CAVE (champ obligatoire à valeur fixe) 
+ 2. La période de la DRM (champ obligatoire au format AAAA-MM)  
+ 3. L'identification de l'établissement (champ alpha-numérique obligatoire)
+ 4. Le numéro d'accise (champ alpha-numérique de 13 caractères obligatoire)
 
  **Pour l'identification du vin :**
 
- 5. Le code certification du vin (champs obligatoire)  
- 6. Le code genre du vin (champs obligatoire)  
- 7. Le code appellation du vin (champs facultatif)  
- 8. Le code mention du vin (champs facultatif)  
- 9. Le code lieu du vin (champs facultatif)
- 10. Le code couleur du vin (champs obligatoire)
- 11. Le code cépage du vin (champs facultatif)
- 12. Le libellé personnalisé du vin (champs facultatif)
- 13. Le complément du vin (champs facultatif)
+ 5. Le code certification du vin (champ obligatoire)  
+ 6. Le code genre du vin (champ obligatoire)  
+ 7. Le code appellation du vin (champ facultatif)
+ 8. Le code mention du vin (champ facultatif)  
+ 9. Le code lieu du vin (champ facultatif)
+ 10. Le code couleur du vin (champ obligatoire)
+ 11. Le code cépage du vin (champ facultatif)
+ 12. Le libellé personnalisé du vin (champ facultatif)
+ 13. Le complément du vin (champ facultatif)
 
  **Pour le type de mouvement :**
  
- 14. Le type de la DRM : (champs obligatoire, ex: suspendu, acquitte)
- 15. La catégorie de mouvement : (champs obligatoire, ex: stocks, stock_debut, entrée, sortie, stock _fin ...)
- 16. Le type de mouvement (champs obligatoire, ex: renvendiqué, achat, ...)
+ 14. Le type de la DRM : (champ obligatoire, ex: suspendu, acquitte)
+ 15. La catégorie de mouvement : (champ obligatoire, ex: stocks, stock_debut, entrée, sortie, stock _fin ...)
+ 16. Le type de mouvement (champ obligatoire, ex: renvendiqué, achat, ...)
 
  **Pour la quantité :**
  
@@ -129,14 +129,14 @@ Les lignes de CAVE se constituents des champs suivants :
  
  **Pour les détails :**
  
- 18. Le pays d'export (Code ISO 3166 https://fr.wikipedia.org/wiki/ISO_3166) si le mouvement est un export / la période au format AAAAMM si le mouvement est une entrée replacement en suspension CRD / sinon vide
+ 18. Le pays d'export ([Code ISO 3166](https://fr.wikipedia.org/wiki/ISO_3166)) si le mouvement est un export / la période au format AAAAMM si le mouvement est une entrée replacement en suspension CRD / sinon vide
  19. Le numéro du contrat (si le mouvement est une sortie vrac sous contrat, sinon vide)
  20. Le numéro de document d'accompagnement (si le mouvement fait l'objet d'un document d'accompagnement douanier, sinon vide)
 
 
 **Cas des informations complémentaires**
 
-La douane demande parfois des informations complémentaires pour un produit afin de déclarer son **taux d'alcool volume (TAV)**, le **premix** ou des **observations**. Dans ce cas ces informations sont transmises via un mouvement "complement". Le champs 17 indiquera la valeur pour ces informations (flottant pour TAV, boolean pour premix et chaine de caractère pour observation)
+La douane demande parfois des informations complémentaires pour un produit afin de déclarer son **taux d'alcool volume (TAV)**, le **premix** ou des **observations**. Dans ce cas ces informations sont transmises via un mouvement "complement". Le champ 17 indiquera la valeur pour ces informations (flottant pour TAV, boolean pour premix et chaine de caractère pour observation)
 
 [Voici un exemple ne contenant que quelques lignes de type CAVE](https://github.com/24eme/mutualisation-douane/blob/master/logiciels-tiers/edi/exemple_cave.csv "csv_de_type_cave")
 
@@ -144,16 +144,16 @@ La douane demande parfois des informations complémentaires pour un produit afin
 
  **Pour la section commune :**
  
- 1. CRD (champs obligatoire à valeur fixe)  
- 2. La période de la DRM (champs obligatoire au format AAAAMM)
- 3. L'identification de l'établissement (champs alpha-numérique obligatoire)
- 4. Le numéro d'accise (champs alpha-numérique de 13 caractères obligatoire)
+ 1. CRD (champ obligatoire à valeur fixe)  
+ 2. La période de la DRM (champ obligatoire au format AAAAMM)
+ 3. L'identification de l'établissement (champ alpha-numérique obligatoire)
+ 4. Le numéro d'accise (champ alpha-numérique de 13 caractères obligatoire)
  
  **Pour l'identification de la CRD :**
  
- 5. La couleur de la CDR (champs facultatif)
- 6. La catégorie fiscale de la CRD (champs obligatoire)
- 7. Le centilitrage de la CRD (champs obligatoire)
+ 5. La couleur de la CRD (champ facultatif)
+ 6. La catégorie fiscale de la CRD (champ obligatoire)
+ 7. Le centilitrage de la CRD (champ obligatoire)
  8. vide
  9. vide
  10. vide
@@ -163,13 +163,13 @@ La douane demande parfois des informations complémentaires pour un produit afin
  
  **Pour le type de mouvement :**
  
- 14. Type de la CDR (champs obligatoire)
- 15. La catégorie de mouvement : (champs obligatoire, ex: stock_debut, entrée, sortie, stock _fin)
- 16. Le type de mouvement (champs obligatoire, ex: perte, achat, utilisations, ...)
+ 14. Type de la CDR (champ obligatoire)
+ 15. La catégorie de mouvement : (champ obligatoire, ex: stock_debut, entrée, sortie, stock _fin)
+ 16. Le type de mouvement (champ obligatoire, ex: perte, achat, utilisations, ...)
  
  **Pour la quantité :**
  
- 17. La quantité de CRD (champs obligatoire au format nombre entier)
+ 17. La quantité de CRD (champ obligatoire au format nombre entier)
 
  **Pour les détails :**
  
@@ -183,10 +183,10 @@ La douane demande parfois des informations complémentaires pour un produit afin
 
  **Pour la section commune :**
  
- 1. ANNEXE (champs obligatoire à valeur fixe)  
- 2. La Période de la DRM (champs obligatoire au format AAAAMM)
- 3. L'identification de l'établissement (champs alpha-numérique obligatoire)
- 4. Le numéro d'accise (champs alpha-numérique de 13 caractères obligatoire)
+ 1. ANNEXE (champ obligatoire à valeur fixe)  
+ 2. La Période de la DRM (champ obligatoire au format AAAAMM)
+ 3. L'identification de l'établissement (champ alpha-numérique obligatoire)
+ 4. Le numéro d'accise (champ alpha-numérique de 13 caractères obligatoire)
  
  **Pour la description du produit :**
  
@@ -203,18 +203,18 @@ La douane demande parfois des informations complémentaires pour un produit afin
  **Pour le type de mouvement :**
  
  14. vide
- 15. La catégorie d'annexe (champs obligatoire, ex: empreinte, daa, dsa, rna, statistiques, ...)
- 16. Le type lié à la catégorie d'annexe (champs facultatif, ex: debut, fin, jus, mcr, vinaigre ...)
+ 15. La catégorie d'annexe (champ obligatoire, ex: empreinte, daa, dsa, rna, statistiques, ...)
+ 16. Le type lié à la catégorie d'annexe (champ facultatif, ex: debut, fin, jus, mcr, vinaigre ...)
  
  **Pour la quantité :**
  
- 17. La Valeur d'annexe (champs facultatif)
+ 17. La Valeur d'annexe (champsfacultatif)
  
  **Pour les compléments :**
  
- 18. La date d'expédition (champs obligatoire au format AAAA-MM-DD si l'annexe est un relevé de non apurement, sinon vide)
- 19. Le numéro d'accise du destinataire (champs obligatoire au format alpha-numérique de 13 caractères si l'annexe est un relevé de non apurement, sinon vide)
- 20. Le numéro DAA/DAC/DAE (champs obligatoire au format nombre entier si l'annexe est un relevé de non apurement, sinon vide)
+ 18. La date d'expédition (champ obligatoire au format AAAA-MM-DD si l'annexe est un relevé de non apurement, sinon vide)
+ 19. Le numéro d'accise du destinataire (champ obligatoire au format alpha-numérique de 13 caractères si l'annexe est un relevé de non apurement, sinon vide)
+ 20. Le numéro DAA/DAC/DAE (champ obligatoire au format nombre entier si l'annexe est un relevé de non apurement, sinon vide)
 
 [Voici un exemple ne contenant que quelques lignes de type ANNEXE](https://github.com/24eme/mutualisation-douane/blob/master/logiciels-tiers/edi/exemple_annexe.csv "csv_de_type_annexe")
 
