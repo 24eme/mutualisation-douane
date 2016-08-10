@@ -101,7 +101,7 @@ Les lignes de CAVE se constituent des champs suivants :
  **Pour la section commune :**
  
  1. CAVE (champ obligatoire à valeur fixe) 
- 2. La période de la DRM (champ obligatoire au format AAAA-MM)  
+ 2. La période de la DRM (champ obligatoire au format AAAAMM)  
  3. L'identification de l'établissement (champ alpha-numérique obligatoire)
  4. Le numéro d'accise (champ alpha-numérique de 13 caractères obligatoire)
 
