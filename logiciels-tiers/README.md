@@ -1,4 +1,4 @@
-#Spécifications techniques de l'EDI DRM des portails Déclarvins (InterRhone, CIVP, IVSE), CIVA, InterLoire, IVBD et IVSO.
+#Spécifications techniques du format « webservice DRM » des portails Déclarvins (InterRhone, CIVP, IVSE), CIVA, InterLoire, IVBD et IVSO.
 
 ##Architecture technique de sécurité
 
@@ -96,7 +96,7 @@ La partie identification du produit peut être utilisé soit de manière éclat�
 
 ###Description des lignes CAVE
 
-Les lignes de CAVE se constituents des champs suivants :
+Les lignes de CAVE se constituent des champs suivants :
 
  **Pour la section commune :**
  
@@ -138,7 +138,7 @@ Les lignes de CAVE se constituents des champs suivants :
 
 La douane demande parfois des informations complémentaires pour un produit afin de déclarer son **taux d'alcool volume (TAV)**, le **premix** ou des **observations**. Dans ce cas ces informations sont transmises via un mouvement "complement". Le champ 17 indiquera la valeur pour ces informations (flottant pour TAV, boolean pour premix et chaine de caractère pour observation)
 
-[Voici un exemple ne contenant que quelques lignes de type CAVE](https://github.com/24eme/mutualisation-douane/blob/master/logiciels-tiers/edi/exemple_cave.csv "csv_de_type_cave")
+[Voici un exemple ne contenant que quelques lignes de type CAVE](exemple_cave.csv "csv_de_type_cave")
 
 ###Description des lignes CRD
 
@@ -163,7 +163,7 @@ La douane demande parfois des informations complémentaires pour un produit afin
  
  **Pour le type de mouvement :**
  
- 14. Type de la CDR (champ obligatoire)
+ 14. Type de la CRD (champ obligatoire)
  15. La catégorie de mouvement : (champ obligatoire, ex: stock_debut, entrée, sortie, stock _fin)
  16. Le type de mouvement (champ obligatoire, ex: perte, achat, utilisations, ...)
  
@@ -177,7 +177,7 @@ La douane demande parfois des informations complémentaires pour un produit afin
  19. vide
  20. vide
 
-[Voici un exemple ne contenant que quelques lignes de type CRD](https://github.com/24eme/mutualisation-douane/blob/master/logiciels-tiers/edi/exemple_crd.csv "csv_de_type_crd")
+[Voici un exemple ne contenant que quelques lignes de type CRD](exemple_crd.csv "csv_de_type_crd")
 
 ###Description des lignes ANNEXE
 
@@ -208,7 +208,7 @@ La douane demande parfois des informations complémentaires pour un produit afin
  
  **Pour la quantité :**
  
- 17. La Valeur d'annexe (champsfacultatif)
+ 17. La Valeur d'annexe (champ facultatif)
  
  **Pour les compléments :**
  
@@ -216,11 +216,11 @@ La douane demande parfois des informations complémentaires pour un produit afin
  19. Le numéro d'accise du destinataire (champ obligatoire au format alpha-numérique de 13 caractères si l'annexe est un relevé de non apurement, sinon vide)
  20. Le numéro DAA/DAC/DAE (champ obligatoire au format nombre entier si l'annexe est un relevé de non apurement, sinon vide)
 
-[Voici un exemple ne contenant que quelques lignes de type ANNEXE](https://github.com/24eme/mutualisation-douane/blob/master/logiciels-tiers/edi/exemple_annexe.csv "csv_de_type_annexe")
+[Voici un exemple ne contenant que quelques lignes de type ANNEXE](exemple_annexe.csv "csv_de_type_annexe")
 
 ###Exemple de CSV complet
 
-[Vous trouverez ici un exemple complet possèdant plusieurs produits, crds et annexes différentes](https://github.com/24eme/mutualisation-douane/blob/master/logiciels-tiers/edi/export_edi_complet.csv "csv_complet")
+[Vous trouverez ici un exemple complet possèdant plusieurs produits, crds et annexes différentes](export_edi_complet.csv "csv_complet")
 
    [1]: https://jasig.github.io/cas/4.0.x/index.html
    [2]: https://fr.wikipedia.org/wiki/Authentification_HTTP
