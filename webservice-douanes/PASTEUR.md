@@ -67,3 +67,16 @@ L'outil [OpenVPN GUI](https://community.openvpn.net/openvpn/wiki/OpenVPN-GUI) pe
 
 Une fois qualifiée, l'installation peut être facilement installée comme service en suivant la documentation suivante : [Running OpenVPN as a Windows Service](https://openvpn.net/index.php/open-source/documentation/install.html?start=1#running_as_windows_service)
 
+##Résolutions d'erreur
+
+### RESOLVE: Cannot resolve host address
+
+Suite à l'installation d'un client OpenVPN, le serveur du CNIV est accessible, mais adresse des douanes qui tombe en erreur (``ERR_CONNECTION_TIMED_OUT``). Dans les logs produits par le client OpenVPN, on peut voir cette ligne :
+
+    00:00:00 2016 RESOLVE: Cannot resolve host address: 10.253.161.5 255.255.255.255: Hôte inconnu.
+
+*Résolution* : Le problème rencontré est lié à la définition de route. L'instruction du fichier de configuration openvpn qui indique que les requêtes vers 10.253.161.5 doivent passées par la liaison VPN sont ignorées. En effet le client OpenVPN prend la chaine de caractère ``10.253.161.5 255.255.255.255`` comme un nom de domaine et non pour un ip suivi de son masque.
+
+Il faut bien vérifier que le fichier de configuration du client OpenVPN contient une ligne ``route`` où l'ip ``10.253.161.5`` et le masque ``255.255.255.255`` sont renseignés sans guillemets et sans espace inséquable :
+
+    route 10.253.161.5 255.255.255.255
