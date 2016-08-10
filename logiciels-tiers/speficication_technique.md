@@ -96,7 +96,7 @@ La partie identification du produit peut être utilisé soit de manière éclat�
 
 ###Description des lignes CAVE
 
-Les lignes de CAVE se constituents des champs suivants :
+Les lignes de CAVE se constituent des champs suivants :
 
  **Pour la section commune :**
  
@@ -163,7 +163,7 @@ La douane demande parfois des informations complémentaires pour un produit afin
  
  **Pour le type de mouvement :**
  
- 14. Type de la CDR (champ obligatoire)
+ 14. Type de la CRD (champ obligatoire)
  15. La catégorie de mouvement : (champ obligatoire, ex: stock_debut, entrée, sortie, stock _fin)
  16. Le type de mouvement (champ obligatoire, ex: perte, achat, utilisations, ...)
  
@@ -208,7 +208,7 @@ La douane demande parfois des informations complémentaires pour un produit afin
  
  **Pour la quantité :**
  
- 17. La Valeur d'annexe (champsfacultatif)
+ 17. La Valeur d'annexe (champ facultatif)
  
  **Pour les compléments :**
  
