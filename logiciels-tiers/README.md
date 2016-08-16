@@ -129,7 +129,7 @@ Les lignes de CAVE se constituent des champs suivants :
  
  **Pour les détails :**
  
- 18. Le pays d'export ([Code ISO 3166](https://fr.wikipedia.org/wiki/ISO_3166)) si le mouvement est un export / la période au format AAAAMM si le mouvement est une entrée replacement en suspension CRD / sinon vide
+ 18. Le pays d'export (nom du pays ou [Code ISO 3166](https://fr.wikipedia.org/wiki/ISO_3166)) si le mouvement est un export / la période au format AAAAMM si le mouvement est une entrée replacement en suspension CRD / sinon vide
  19. Le numéro du contrat (si le mouvement est une sortie vrac sous contrat, sinon vide)
  20. Le numéro de document d'accompagnement (si le mouvement fait l'objet d'un document d'accompagnement douanier, sinon vide)
 
@@ -222,7 +222,7 @@ La douane demande parfois des informations complémentaires pour un produit afin
 
 [Vous trouverez ici un exemple complet possèdant plusieurs produits, crds et annexes différentes](export_edi_complet.csv "csv_complet")
 
-   [1]: https://jasig.github.io/cas/4.0.x/index.html
+   [1]: https://artduweb.com/tutoriels/cas-sso
    [2]: https://fr.wikipedia.org/wiki/Authentification_HTTP
    [3]: https://tools.ietf.org/html/rfc2818
    [4]: http://www.w3.org/TR/html401/interact/forms.html#h-17.13.4.1
