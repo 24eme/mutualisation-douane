@@ -9,13 +9,13 @@ Voici les différents éléments contenu dans cet espace documentaire :
 
 ##Avancement des différentes interpros
 
-| Nom du projet | Interpros       | Prestataire |  URL      | Accès PASTEUR | SEED | XML DRM recetté | XML en Prod | Retour XML |
-|---------------|-----------------|-------------|-----------|---------------|------|-----------------|-------------|------------|
-| Declarvins    | InterRhone, CIVP, IVSE | actualys | http://declarvins.net  |OK|OK| OK              |             |            |
-| vinvaldeloire.pro | InterLoire         | actualys | http://vinsvaldeloire.pro |OK|OK|OK            |             |            |
-| vinsalsace.pro| CIVA                   | actualys | http://vinsalsace.pro  |OK|OK|OK               |             |            |
-| ivbdpro       | IVBD                   | actualys | http://ivbdpro.fr |OK |      |                 |             |            |
-| ivsopro       | IVSO + Cahors/Floc/Armangnac| actualys | http://ivsopro.com|OK|  |                 |             |            |
-| Registre de cave Extranet| Inter Beaujolais | RMSI| http://ivsopro.com  |OK|OK   |Acces fconntionel|             |            |
-| DeclaViti     | CIVR, Oc, InterSud     | Infodial | https://declaviti.fr/|infos envoyées|  |       |             |            |
-| DematVin      | BIVB             |estalis HelixDev|       | OK            |      |                 |             |            |
+| Nom du projet | Interpros       | Prestataire |  PASTEUR | SEED | XML DRM recetté | XML en Prod | Retour XML | URL du projet | 
+|---------------|-----------------|-------------|----------|------|-----------------|-------------|------------|---------------|
+| Declarvins    | InterRhone, CIVP, IVSE | Actualys | OK   | OK   | OK              |             |            | [declarvins.net](http://declarvins.net/) |
+| VinsValDeLoire.pro | InterLoire         | Actualys | OK   | OK   | OK             |             |            | [vinsvaldeloire.pro](http://vinsvaldeloire.pro) |
+| VinsAlsace.pro| CIVA                   | Actualys | OK   | OK   | OK              |             |            | [vinsalsace.pro](http://vinsalsace.pro)  |
+| IVBDpro       | IVBD                   | Actualys | OK   |      |                 |             |            | [ivbdpro.fr](http://ivbdpro.fr) |
+| IVSOpro       | IVSO + Cahors / Floc / Armangnac| Actualys |OK| |                 |             |            | [ivsopro.com](http://ivsopro.com) |
+| Registre de cave Extranet de Beaujolais | Inter Beaujolais | RMSI| OK |OK|Acces fonctionnel|    |            | [ivsopro.com](http://ivsopro.com)  |
+| DeclaViti     | CIVR, Oc, InterSud     | Infodial |infos envoyées|  |             |             |            | [declaviti.fr](https://declaviti.fr/)|
+| DematVin      | BIVB             | Estalis - HelixDev|OK |      |                 |             |            |               | 
