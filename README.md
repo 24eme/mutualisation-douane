@@ -9,7 +9,7 @@ Voici les différents éléments contenu dans cet espace documentaire :
 
 ##Avancement des différentes interpros
 
-| Nom du projet | Interpros       | Prestataire |  PASTEUR | SEED | XML DRM recetté | XML en Prod | Retour XML | URL du projet | 
+| Nom du projet | Interpros       | Prestataire |  PASTEUR | Tocken JWT  | XML DRM recetté | XML en Prod | Retour XML | URL du projet | 
 |---------------|-----------------|-------------|----------|------|-----------------|-------------|------------|---------------|
 | Declarvins    | InterRhone, CIVP, IVSE | Actualys | OK   | OK   | OK              |             |            | [declarvins.net](http://declarvins.net/) |
 | VinsValDeLoire.pro | InterLoire         | Actualys | OK   | OK   | OK             |             |            | [vinsvaldeloire.pro](http://vinsvaldeloire.pro) |
@@ -18,4 +18,4 @@ Voici les différents éléments contenu dans cet espace documentaire :
 | IVSOpro       | IVSO + Cahors / Floc / Armangnac| Actualys |OK| |                 |             |            | [ivsopro.com](http://ivsopro.com) |
 | Registre de cave Extranet de Beaujolais | Inter Beaujolais | RMSI| OK |OK|Acces fonctionnel|    |            | [ivsopro.com](http://ivsopro.com)  |
 | DeclaViti     | CIVR, Oc, InterSud     | Infodial |infos envoyées|  |             |             |            | [declaviti.fr](https://declaviti.fr/)|
-| DematVin      | BIVB             | Estalis - HelixDev|OK |      |                 |             |            |               | 
+| DematVin      | BIVB             | Estalis - HelixDev|OK | OK     |                 |             |            |               | 
