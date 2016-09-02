@@ -226,7 +226,7 @@ Type : Complexe ordonné
 Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Facultatif |  Règles  |
 :------------|:--------|:----:|:------------|:------------|:----------------------:|:---------|
 IIP-1-E2.4.1.2 | code­-inao | codeInaoType | 0..1 | Code INAO du produit | F | IIP1RG19 IIP1RG20 IIP1RG23 |
-IIP1-E2.4.1.1 | libelle-fiscal | LibelleFiscalType | 0..1 | Libellé fiscal du produit (liste des libellés en annexes) | F |  IIP1RG36 |
+IIP1-E2.4.1.1 | libelle-fiscal | LibelleFiscalType | 0..1 | Libellé fiscal du produit (liste des libellés en annexes) | F |  IIP1RG36 IIP1RG41 IIP1RG42 |
 IIP1-E2.4.1.3 | libelle-personnalise | string | 1 | Libellé personnalisé du produit | O | IIP1RG37 |
 IIP1-E2.4.1.7 | balance-stocks | balance-stocks | 1 | Balance des stocks en droits suspendus | O | |
 IIP1-E2.4.1.4 | tav | tavType | 0..1 | TAV du produit | F |  IIP1RG21 IIP1RG22
@@ -240,7 +240,7 @@ Type : Complexe ordonné
 Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Facultatif |  Règles  |
 :------------|:--------|:----:|:------------|:------------|:----------------------:|:---------|
 IIP1-E2.4.1.7.1 | stock-debut-periode | volumeStock | 1 | Stock de début de période (en hL), systématiquement repris du stock théorique total de fin de la période de la DRM ou DRA précédente. Si 1ère DRM de la campagne vitivinicole, doit être indiqué le stock réel (physique) tel qu'il résulte de l'inventaire des stocks. | O | IIP1RG14 Si saisi, alors >=0
-IIP1-E2.4.1.7.2 | entrees-periode | entrees-periode |  0..1 | Entrées sur la période en droits suspendus, pour le produit concerné | F
+IIP1-E2.4.1.7.2 | entrees-periode | entrees-periode |  0..1 | Entrées sur la période en droits suspendus, pour le produit concerné | F | IIP1RG14 Si saisi, alors >= 0
 IIP1-E2.4.1.7.3 | sorties­-periode | sorties­-periode | 0..1 | Sorties sur la période en droits suspendus, pour le produit concerné | F | 
 IIP1-E2.4.1.7.4 | stock­-fin­-periode | stock­-fin­-periode | 1 | Stock de fin de période (en hL), correspondant à la différence entre les entrées et les sorties de période. | O | IIP1RG17 IIP1RG18
 
@@ -254,8 +254,8 @@ IIP1-E2.4.1.7.2.1  | volume-produit | volumeType | 0..1 | Produits issus des ven
 IIP1-E2.4.1.7.2.2 | achats-reintegrations | volumeType | 0..1 | Achat de produits en vrac, ou en bouteilles nues sur pile, réintégrations de produits sortis en suspension de droits (en hL) | F | Si saisi, alors >=0
 IIP1-E2.4.1.7.2.3  | mouvements-temporaires | mouvements-temporaires | 0..1 | Prestations de service, relogement, ou pour élaboration à façon de vins mousseux, ou pour distillation de cognac, par exemple. Retour obligatoire à la propriété (en hL) | F |
 IIP1-E2.4.1.7.2.4 | ouvements-internes | mouvements-internes | 0..1 | Mouvements internes du produit (en hL) | F | 
-IIP1-E-2.4.1.7.2.6 | replacement-suspension | replacement-suspension | 0..1 | Exemple : retour de marchandises, transfert de comptabilité matières Toute saisie dans cette ligne requiert un commentaire obligatoire dans la rubrique « Observations » (en hL) | F | IIP1RG38
-IIP1-E2.4.1.7.2.5 | autres-entrees | volumeType | 0..1 | Excédent suite à inventaire ou contrôle du service des douanes. Toute saisie dans cette ligne requiert un commentaire obligatoire dans la rubrique « Observations » (en hL) | F | IIP1RG25 Si saisi, alors >=0
+IIP1-E-2.4.1.7.2.6 | replacement | complexe | 0..1 | Exemple : retour de marchandises, transfert de comptabilité matières. Toute saisie dans cette ligne requiert un commentaire obligatoire dans la rubrique « Observations » (en hL) | F | IIP1RG38
+IIP1-E2.4.1.7.2.5 | autres-entrees | volumeType | 0..1 | Excédent suite à inventaire ou contrôle du service des douanes. Toute saisie requiert un commentaire obligatoire dans la rubrique « Observations » (en hL) | F | IIP1RG25 Si saisi, alors >=0
 
 #####Élément mouvements-temporaires
 
@@ -284,9 +284,9 @@ Type : Complexe ordonné
 
 Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Facultatif |  Règles  |
 :------------|:--------|:----:|:------------|:------------|:----------------------:|:---------|
-IIP1-E2.4.1.7.2.6.1 | mois | int | 1 | Mois de la sortie taxable ou de la réception en droits acquittés de ce produit | O | IIP1RG40 |
-IIP1-E2.4.1.7.2.6.2 | annee | int | 1 | Année de la sortie taxable ou de la réception en droits acquittés de ce produit | O | IIP1RG40 |
-IIP1-E2.4.1.7.2.6.3 | volume | volumeType | 1 | Volume du produit replacé en suspension | O | 
+IIP1-E2.4.1.7.2.6.1 | mois | int | 1 | Mois de la sortie taxable ou de la réception en droits acquittés de ce produit. Entre 1 et 12. | O | IIP1RG40 |
+IIP1-E2.4.1.7.2.6.2 | annee | int | 1 | Année de la sortie taxable ou de la réception en droits acquittés de ce produit.  Sur 4 positions. | O | IIP1RG40 |
+IIP1-E2.4.1.7.2.6.3 | volume | volumeType | 1 | Volume du produit replacé en suspension | O | >=0 | 
 
 #####Élément sorties-periode
 
@@ -451,8 +451,10 @@ Type : Complexe non ordonné
 
 Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Facultatif |  Règles  |
 :------------|:--------|:----:|:------------|:------------|:----------------------:|:---------|
-IIP1-E2.8.1.1 | debut-periode | numeroDocumentType | 1 | Numéro d’empreintes utilisées pour le début de la période | O | IIP1RG33
-IIP1-E2.8.1.2 | fin-periode  | numeroDocumentType | 1 | Numéro d’empreintes utilisées pour la fin de la période | O | IIP1RG33
+IIP1-E2.8.1.1 | debut-periode | numeroDocumentType | 1 | Référence du premier document de la période | O | 
+IIP1-E2.8.1.2 | fin-periode  | numeroDocumentType | 1 | Référence du dernier document de la période | O | 
+IIP1-E2.8.1.2 | nombre-document-empreinte | int | 1 | Nombre de références sur la période | O | >0 |
+
 
 #####Élément releve-non-apurement
 
@@ -460,9 +462,9 @@ Type : Complexe ordonné
 
 Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Facultatif |  Règles  |
 :------------|:--------|:----:|:------------|:------------|:----------------------:|:---------|
-IIP1-E2.9.1 | numero-daa-dac-dae | numeroRnaType | 0..1 | Numéro de DAA/DAC/DAE | F | IIP1RG12
-IIP1-E2.9.2 | date-expedition | date | 0..1 | Date d’expédition (doit être de la forme AAAA-MM-JJ) | F
-IIP1-E2.9.3 | numero-accise-destinataire | String (13 caractères destinataire maximum) | 0..1 | Numéro d’accise du destinataire | F | IIP1RG42
+IIP1-E2.9.1 | numero-daa-dac-dae | numeroRnaType | 0..1 | Numéro de DAA/DAC/DAE | O | IIP1RG12
+IIP1-E2.9.2 | date-expedition | date | 0..1 | Date d’expédition (doit être de la forme AAAA-MM-JJ) | O
+IIP1-E2.9.3 | numero-accise-destinataire | String (13 caractères destinataire maximum) | 0..1 | Numéro d’accise du destinataire  ou référence du bureau d’export | F | IIP1RG42
 
 #####Élément statistiques
 
@@ -482,7 +484,7 @@ Type    | Nombre de décimales | Minimum | Description |
 :-------|:-------------------:|:-------:|:------------|
 volumeType | 4 | 0                      | Représente un volume positif ou nul |
 volumeStockType | 4 |                   | Représente un volume positif, négatif ou nul |
-tavType | 2 | 0                         | Représente le TAV d’un produit
+tavType | 2 | 0                         | Représente le TAV d’un produit. Un tav ne peut être <=0.5 ou ≥ 100.
 
 
 #####TYPES SIMPLES BASÉS SUR LE TYPE PRIMITIF STRING
@@ -496,9 +498,9 @@ numeroAcciseType |13 | 13                  |     | [A­Za­z]{2}[0­9A­Za­z]{1
 numeroCviType | 10 | 10 | | 10 chiffres | Représente un numéro CVI
 typeCapsulesType | |    |  PERSONNALISEES COLLECTIVES_DROITS_SUSPENDUS COLLECTIVES_DROITS_ACQUITTES | | Représente un type de capsules représentatives de droits
 categorieFiscaleCapsuleType | | | « M » (vin mousseux) « T » (vin tranquille) « PI » (produit intermédiaire) COGNACARMAGNAC ALCOOLS | | Représente une catégorie fiscale de capsule représentative de droits
-numeroDocumentType | 1 | 9 | | Nombre entier positif | Numéro de référence de document d'accompagnement d'une DRM
+numeroDocumentType | 1 | 9 | | Nombre entier positif | Numéro de référence de document d'accompagnement d'une DRM. En cas de valeur numérique indiquée, seul les entiers positifs sont autorisés.
 numeroRnaType | 1 | 21 | | Chaîne caractères | Numéro de référence du daa­ de dac­dae
-Attribut « volume de l’élément » centilisation | | | CL_10 CL_12_5 CL_18_7 CL_20 CL_25 CL_35 CL_37_5 CL_50 CL_62 CL_70 CL_75 CL_100 CL_150 CL_175 CL_200 BIB_225 BIB_300 BIB_400 BIB_500 BIB_800 BIB_1000 | |Représente la centilisation de capsules représentatives de droits
+Attribut « volume de l’élément » centilisation | | | CL_10 CL_12_5 CL_18_7 CL_20 CL_25 CL_35 CL_37_5 CL_50 CL_62 CL_70 CL_75 CL_100 CL_150 CL_175 CL_200 BIB_225 BIB_300 BIB_400 BIB_500 BIB_800 BIB_1000 | |Représente la centilisation de capsules représentatives de droits. Valeur obligatoire.
 
 ####RÈGLES DE GESTION
 
@@ -551,12 +553,18 @@ IIP1RG3 | Le numéro d’agrément d'entrepositaire agréé fourni par le SI de 
 IIP1RG4 | L’agrément considéré, récupéré dans ROSA, doit reprendre une activité « EA viti » (les données transmises reprennent uniquement ce format). | 003 | Le numéro d’agrément d'entrepositaire agréé ne correspond à une activité vitivinicole. NB : si cette condition n’est pas vérifiée, les contrôles suivants ne seront pas exécutés. NB : si cette condition n’est pas vérifiée, les contrôles suivants ne seront pas exécutés. 
 IIP1RG5 | L'ensemble des informations nécessaires au fonctionnement de CIEL doivent être disponibles et cohérentes dans le référentiel des opérateurs de la DGDDI (ROSA) pour le numéro d'agrément concerné.
 IIP1RG6 | Le portail interprofessionnel indiqué pour l’envoi des données économiques (IIP1) doit correspondre au portail de référence de l'interprofession principale de Le flux ne répond pas au schéma de transmission défini. Message technique <message erreur xsd>. | 004 | Le portail interprofessionnel émetteur ne correspond pas au portail de référence de rattachement du numéro d'agrément pour lequel il envoie les données économiques à CIEL. NB : même erreur si aucune relation OVNI associée. l'interprofession d'appartenance pour ce numéro d'agrément. NB : si cette condition n’est pas vérifiée, les contrôles suivants ne seront pas exécutés. |
-IIP1RG7 | La période de taxation doit être obligatoirement antérieure au mois courant. | 005 | La déclaration ne peut pas être déposée pour la période indiquée.
+IIP1RG7 | La période de taxation doit être obligatoirement antérieure ou égale au mois courant. | 005 | La déclaration ne peut pas être déposée pour la période indiquée.
 IIP1RG8 | La période de taxation de la déclaration doit être celle suivant la période de la déclaration précédente (mois + 1 pour les DRM et année + 1 dans le cas des DRA). Dans le cas des DRM, ce contrôle ne s’applique que sur les 6 derniers mois si une DRM existe pour le numéro d’agrément considéré. NB : si cette condition n’est pas vérifiée, les contrôles suivants ne seront pas exécutés. | 006 | Les données économiques n'ont pas été reçues pour la période précédente.
 IIP1RG9 | Un opérateur déclarant mensuellement ou annuellement ne peut saisir qu'une DRM/DRA par numéro d'agrément et par mois/année de taxation. Il ne doit pas y avoir de déclaration validée pour la période de taxation transmise (mois et année pour les DRM ou année pour les DRA), quelle que soit son origine (intranet ou internet). NB : si cette condition n’est pas vérifiée, les contrôles suivants ne seront pas exécutés. | 007 | Les données économiques ont déjà été reçues pour la période.
 IIP1RG37 | Un nouveau produit dans une déclaration doit être identifié soit pas son code INAO s’il s’agit d’un vin mousseux ou d’un vin tranquille, soit par son libellé fiscal. Pour chaque nouveau produit déclaré, un libellé personnalisé doit être défini par l’opérateur. Le libellé personnalisé servira d’unique identifiant produit pour les déclarations futures, et n’est par conséquent plus modifiable une fois définie. Le code INAO ou le libellé fiscal, ainsi que le libellé personnalisé devront être transmis dans tous les cas, CIEL vérifiera que le produit (retrouvé par son libellé personnalisé) a bien les mêmes caractéristiques. | 030 | Le produit <libellé personnalisé> transmis ne correspond pas au produit indiqué dans la précédente déclaration. |
+
+
+#### Balance des stocks
+
+Code RG | Test et condition(s) | Code erreur | Message si erreur |
+:-------|:---------------------|:------------|:------------------|
 IIP1RG10 | Si la déclaration précédente pour ce numéro d’agrément existe, CIEL pré remplit la déclaration avec les produits renseignés dans la déclaration précédente. | / | / |
-IIP1RG11 | Si l’indicateur « déclaration-néant » est vrai, alors les objets « droits-suspendus » et « droits-acquittes » ne peuvent pas contenir de « produit » (liste vide ou nulle). | 008 | Des éléments de la balance des stocks en droits suspendus et/ou acquittés ont été saisis alors que l'opérateur a indiqué effectuer une déclaration néant. Par exemple, si le flux arrive le 03 avril, la période de taxation est au plus tard le mois de mars. NB : si cette condition n’est pas vérifiée, les contrôles suivants ne seront pas exécutés. |
+IIP1RG11 | Si l’indicateur « déclaration-néant » est vrai, alors les objets « droits-suspendus » et « droits-acquittes » ne peuvent pas contenir de « produit » (liste vide ou nulle). | 008 | Des éléments de la balance des stocks en droits suspendus et/ou acquittés ont été saisis alors que l'opérateur a indiqué effectuer une déclaration néant. Par exemple, si le flux arrive le 30 mai, la période de taxation est au plus tard le mois de mai. NB : si cette condition n’est pas vérifiée, les contrôles suivants ne seront pas exécutés. |
 IIP1RG12 | Si l’agrément n’autorise pas les mouvements de stock en droits suspendus (agrément de type « Entrepositaire national en droits acquittés », contient la lettre « A »), alors l’objet « droits-suspendus » ne peut pas contenir de « produit » (liste vide ou nulle). De même dans ce cas, il ne doit pas y avoir de « relevé-non-apurement ». | 009 | Des mouvements de stocks en droits suspendus ou des relevés de non apurement ont été saisis alors que l'agrément ne l’autorise pas. |
 IIP1RG13 | Si la déclaration précédente indique un stock épuisé pour la balance des stocks en droits suspendus, alors l’objet « droits-suspendus » ne peut pas contenir de « produit » (liste vide ou nulle). | 010 | Des éléments de la balance des stocks en droits suspendus ont été saisis alors que l'opérateur a déclaré que son stock était épuisé sur la précédente déclaration. |
 IIP1RG14 | Avec la déclaration précédente, CIEL effectue un contrôle de correspondance avec les produits (identifiés par leur libellé personnalisé), pour la balance des stocks en droits suspendus. Pour chaque produit retrouvé, la valeur de « stockdébut-période » doit être égale au stock de fin de période de la déclaration précédente. Si le mois de taxation de la déclaration est août (début de la campagne viti-vinicole), cette règle ne doit pas être appliquée. | 011 | Le stock de début de période du produit <libellé personnalisé> de la balance des stocks en droits suspendus ne correspond pas au stock de fin de période du même produit de la déclaration précédente. |
@@ -573,9 +581,18 @@ IIP1RG23 | Les balances des stocks en droits suspendus et en droits acquittés n
 IIP1RG24 | Si un produit existe dans la déclaration précédente et n’a pas été repris dans la déclaration transmise, alors le | 016 | Le produit <libellé personnalisé> n’est pas repris stock de fin de période de ce produit pour la déclaration précédente doit être de 0. dans la déclaration alors que son stock théorique de fin de période précédente n’est pas nul. |
 IIP1RG25 | Si le champ « autres-entrées » contient une valeur positive dans une balance des stocks (droits suspendus ou droits acquittés), alors la zone observations de la balance des stocks en question ne doit pas être vide. | 017 | Si d’autres entrées ont été indiquées, merci de remplir la case ‘observations’. |
 IIP1RG26 | Si le champ « autres-sorties» contient une valeur positive dans une balance des stocks (droits suspendus ou droits acquittés), alors la zone observations de la balance des stocks en question ne doit pas être vide. | 018 | Si d’autres sorties ont été indiquées, merci de remplir la case ‘observations’. |
-IIP1RG38 | Si le champ "replacement-suspension" est valorisé, alors la zone observations de la balance des stocks en question ne doit pas être vide. | 031 | Si un replacement en suspension a été indiqué, merci de remplir la case ‘observations’. |
+IIP1RG38 | Si le champ "replacements" est valorisé, alors la zone observations de la balance des stocks en question ne doit pas être vide. | 031 | Si un replacement en suspension a été indiqué, merci de remplir la case ‘observations’. |
 IIP1RG40 | Le mois et l’année du replacement en suspension saisi ne peuvent dater de plus de deux ans à compter du mois et de l’année de taxation en cours. | 032 | Un replacement en suspension datant de plus de deux ans n’est pas possible. |
 IIP1RG35 | Si l'exercice commercial de l'opérateur ne correspond pas à l'année civile alors l'opérateur bénéficiant de la DRA doit saisir en double le champs : Vente en France sous CRD  ; Compte CRD | / | / |
+IIP1RG41 | Pour les libellés fiscaux  « MATIERES_PREMIERES_SPIRITUEUX » et « MATIERES_PREMIERES_ALCOOLS », les balises « replacements » et « ventes-france-crd-suspendus » doivent être vides. | 038 |  Les libellés fiscaux de matières premières interdisent l’utilisation de replacements et les sorties avec paiement de droits.
+IIP1RG42 | Pour les libellés fiscaux « MATIERES_PREMIERES_SPIRITUEUX » et « MATIERES_PREMIERES_ALCOOLS », il faut avoir une des activités suivantes précisées dans le référentiel des opérateurs « distillateurs/producteurs d’alcools », « régénérateurs », « dénaturateurs d’alcools », « utilisateurs d’alcools en exonération », « fournisseurs à UT », « récoltants vinificateurs », « négociants vinificateurs », « caves coopératives » | 039 | L’activité de l’agrément douanier n’autorise pas l’utilisation des libellés fiscaux de matières premières.
+IIP1RG43 | Les libellés fiscaux « MATIERES_PREMIERES_SPIRITUEUX » et « MATIERES_PREMIERES_ALCOOLS » ne sont pas autorisés dans les balances de stocks en droits acquittés. | 040 | Les matières premières ne sont pas autorisées dans la balance des stocks en droits acquittés.
+
+##### Compte CRD
+
+
+Code RG | Test et condition(s) | Code erreur | Message si erreur |
+:-------|:---------------------|:------------|:------------------|
 IIP1RG27 | Une même catégorie fiscale de capsules ne peut apparaître que deux fois maximum dans un même compte CRD. Pour les EA en acquittés (l'agrément contient la lettre "A"), il ne doit pas y avoir de compte CRD. | 019 | La catégorie de capsule <catégorie> ne devrait être présente que 2 fois maximum dans le compte CRD, ou un compte CRD a été saisi alors que l’agrément ne l’autorise pas. |
 IIP1RG28 | Pour chaque catégorie de produits, il n'est possible d'avoir dans les comptes CRD que les types de capsules suivants : capsules personnalisées en DS ; capsules collectives en DS ; capsules personnalisées + collectives en DS (2 comptes distincts) ; capsules collectives en DA ; capsules collectives en DA + collectives en DS (2 comptes distincts) | 020 | Erreur sur le type de capsules déclarées. |
 IIP1RG29 | Dans un même compte CRD, une centilisation ne peut apparaître qu’une seule fois (unicité de l’attribut « volume » de la centilisation pour une catégorie fiscale donnée et un type de capsules donné)  | 021  | La centilisation <volume> pour la catégorie <catégorie> (<type de capsule>) devrait être unique dans un même compte CRD. |
@@ -585,6 +602,9 @@ IIP1RG39 | Avec la déclaration précédente, CIEL effectue un contrôle de corr
 IIP1RG33 | Pour les documents d’accompagnement, chaque numéro de fin de période doit être strictement supérieur au numéro de début de période. | 025 | Erreur sur les numéros de période des documents d'accompagnement. |
 IIP1RG34 | Si le numéro d’agrément contient la lettre « A », alors le type de document ne peut être que « DSA/DSAC ». Dans le cas contraire, il ne peut s’agir que du type de document « DAA/DAC » ou « DSA/DSAC ». | 026 | L'agrément n'autorise pas les types de documents d'accompagnement saisis. |
 IIP1RG42 | Le champ « Numéro d’accise destinataire » accepte : soit un numéro d’accises alphanumérique de 13 caractères ; soit un alphanumérique de 8 caractères commençant par « FR » Si le numéro d’accise commence par « FR » et contient 13 caractères, alors une vérification de l’existence de l’opérateur destinataire dans ROSA est effectuée. | 034 | Le numéro d’accise destinataire saisi dans le relevé de non apurement n’est pas correct ou n’existe pas dans le référentiel des opérateurs de la DGDDI. |
+IIP1RG43 | Pour les documents d’accompagnement, les champs « Première référence de la période » et « Dernière référence de la période » acceptent :  soit une chaîne de caractères ; soit un numérique strictement positif. Dans le cas de la chaîne de caractères, toute valeur est acceptée. | 036 | Les références des documents d'accompagnement ne peuvent
+pas être des nombres négatifs, nuls ou décimaux. |
+IIP1RG44 | Pour les documents d’accompagnement, le champ «Nombre de référence(s) dans la période » accepte uniquement un entier strictement positif. | 037 | Le nombre de référence dans la période doit être un entier strictement positif.
 
 ####FICHIER XSD
 
@@ -876,3 +896,6 @@ string | Chaîne de caractères | Ceci est un exemple.
  - AUTRES_ALCOOLS_SUP_18
  - AUTRES_ALCOOLS_INF_18
  - AUTRES_ALCOOLS_INF_18_PREMIX
+ - MATIERES_PREMIERES_SPIRITUEUX
+ - MATIERES_PREMIERES_ALCOOLS
+
