@@ -1,7 +1,7 @@
 #Projet CIEL Contrat de service avec les interprofessions vitivinicoles
 
-Version 2.1 du 13/04/2016
-[Valable pour la version 1.7 du schéma XSD]
+Version 2.3 du 25/07/2016
+[Valable pour la version 1.8 du schéma XSD]
 
 État : Validé
 
