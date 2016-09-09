@@ -14,8 +14,8 @@ Voici les différents éléments contenu dans cet espace documentaire :
 | Declarvins    | InterRhone, CIVP, IVSE | Actualys | OK   | OK          | OK              | OK   |             |            | [declarvins.net](http://declarvins.net/) |
 | VinsValDeLoire.pro | InterLoire         | Actualys | OK  | OK          | OK              | OK   |             |            | [vinsvaldeloire.pro](http://vinsvaldeloire.pro) |
 | VinsAlsace.pro| CIVA                   | Actualys | OK   | OK          | OK              | OK   |             |            | [vinsalsace.pro](http://vinsalsace.pro)  |
-| IVBDpro       | IVBD                   | Actualys | OK   |             |                 | OK   |             |            | [ivbdpro.fr](http://ivbdpro.fr) |
-| IVSOpro       | IVSO + Cahors / Floc / Armangnac| Actualys |OK|        |                 | OK   |             |            | [ivsopro.com](http://ivsopro.com) |
+| IVBDpro       | IVBD                   | Actualys | OK   | OK          |                 | OK   |             |            | [ivbdpro.fr](http://ivbdpro.fr) |
+| IVSOpro       | IVSO + Cahors / Floc / Armangnac| Actualys |OK| OK     |                 | OK   |             |            | [ivsopro.com](http://ivsopro.com) |
 | Registre de cave Extranet de Beaujolais | Inter Beaujolais | RMSI| OK |OK|Acces fonctionnel| OK |             |            | [ivsopro.com](http://ivsopro.com)  |
 | DeclaViti     | CIVR, Oc, InterSud     | Infodial | OK    |   OK       |       OK       |  OK   |             |            | [declaviti.fr](https://declaviti.fr/)|
 | DematVin      | BIVB             | Estalis - HelixDev|OK | OK          |                 |      |             |            | 
