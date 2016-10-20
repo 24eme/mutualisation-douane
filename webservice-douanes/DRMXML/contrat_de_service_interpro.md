@@ -500,7 +500,7 @@ typeCapsulesType | |    |  PERSONNALISEES COLLECTIVES_DROITS_SUSPENDUS COLLECTIV
 categorieFiscaleCapsuleType | | | « M » (vin mousseux) « T » (vin tranquille) « PI » (produit intermédiaire) COGNACARMAGNAC ALCOOLS | | Représente une catégorie fiscale de capsule représentative de droits
 numeroDocumentType | 1 | 9 | | Nombre entier positif | Numéro de référence de document d'accompagnement d'une DRM. En cas de valeur numérique indiquée, seul les entiers positifs sont autorisés.
 numeroRnaType | 1 | 21 | | Chaîne caractères | Numéro de référence du daa­ de dac­dae
-Attribut « volume de l’élément » centilisation | | | CL_10 CL_12_5 CL_18_7 CL_20 CL_25 CL_35 CL_37_5 CL_50 CL_62 CL_70 CL_75 CL_100 CL_150 CL_175 CL_200 BIB_225 BIB_300 BIB_400 BIB_500 BIB_800 BIB_1000 AUTRE| |Représente la centilisation de capsules représentatives de droits. Valeur obligatoire.
+Attribut « volume » de l’élément centilisation | | | CL_10 CL_12_5 CL_18_7 CL_20 CL_25 CL_35 CL_37_5 CL_50 CL_62 CL_70 CL_75 CL_100 CL_150 CL_175 CL_200 BIB_225 BIB_300 BIB_400 BIB_500 BIB_800 BIB_1000 AUTRE| |Représente la centilisation de capsules représentatives de droits. Valeur obligatoire.
 volumePersonnalise |  |  |  | Nombre décimal (1 chiffre après la virgule) | Volume indiqué pour une centilisation AUTRE
 bib |  |  | Vrai / Faux | Booléen | Indique si la centilisation AUTRE est de type Bag-in-box
 
