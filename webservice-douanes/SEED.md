@@ -90,6 +90,8 @@ En réponse, le serveur fourni les informations relatives à ce numéro d'accise
 
 ## Erreur connue
 
+### Erreur 500
+
 Si la requête HTTP/SOAP/XML est malformée ou si tous les attributs d'une balise ne sont pas sur la même ligne, le serveur renvoie l'erreur 500 enigmatique suivante :
 
     HTTP Status 500 - type Status report
@@ -98,3 +100,6 @@ Si la requête HTTP/SOAP/XML est malformée ou si tous les attributs d'une balis
 
     description: The server encountered an internal error () that prevented it from fulfilling this request.
 
+### WSDL en HTTPS
+
+Contrairement à ce qu'indique le WSDL, l'accès à ce webservice se réalise en HTTPS. Certaines librairies se fiant aux informations publiées par le WSDL échoueront dans l'envoi de leurs requêtes. Il faut donc réécrire l'url contenu dans la description du service de http:// en https://
