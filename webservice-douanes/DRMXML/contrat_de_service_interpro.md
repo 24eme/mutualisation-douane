@@ -1,7 +1,7 @@
 #Projet CIEL Contrat de service avec les interprofessions vitivinicoles
 
-Version 2.3 du 25/07/2016
-[Valable pour la version 1.8 du schéma XSD]
+Version 2.4 du 27/09/2016
+[Valable pour la version 1.9 du schéma XSD]
 
 État : Validé
 
@@ -134,7 +134,7 @@ IIP1, les données mesurant le temps (iat, timestamp, …) sont au format milli-
 |:-----|:-----------------------------|
 | Objectif | Ce service permet aux SI des interprofessions vitivinicoles de fournir aux téléservices clients les données économiques disponibles et nécessaires à la constitution d’une DRM, pour un agrément, un mois et une année donnés (ou pour un agrément et une année donnés dans le cas de la DRA). |
 | Acteur | CIEL (serveur) - SI de l’interprofession vitivinicole (client) |
-| Fréquence | Disponibilité permanente| 
+| Fréquence | Disponibilité permanente|
 | Temps de réponse maximal | 2 secondes au 90e centile (Sur 100 appels au service web, au moins 90 ont un temps de réponse inférieur ou égal à 2 secondes.) |
 
 ###FONCTIONNEMENT GÉNÉRAL
@@ -187,10 +187,10 @@ IIP-1-­E­2.3  | periode | periode | 1 | Mois et année de la déclaration dont
 IIP-1-­E­2.4  | declaration-neant | boolean | ­1 | Déclaration néant : oui / non | O  | IIP1­-RG11 |
 IIP-1-­E­2.5  | droits­-suspendus | droits­-suspendus  | 0..1 | Balance des stocks en droits suspendus de la DRM | F | IIP1­-RG11 IIP1­-RG13 |
 IIP-1­-E­2.6  | droits­-acquittes | droits­-acquittes | 0..1 | Balance des stocks en droits acquittés de la DRM | F | IIP1­-RG11 IIP1­-RG12 |
-IIP-1­-E­2.7  | compte­-crd | compte­-crd | 0..10 | Compte des capsules représentatives de droits de la DRM | F | | 
+IIP-1­-E­2.7  | compte­-crd | compte­-crd | 0..10 | Compte des capsules représentatives de droits de la DRM | F | |
 IIP-1­-E­2.8  | document­-accompagnement | document­-accompagnement | 0..3 | Références des documents d’accompagnement émis durant le mois précédent | F | |
 IIP-1­-E­2.9  | releve­-­non­-apurement | releve­-­non­-apurement | 0..1 | Relevé de non apurement | F | IIP1-­RG12 |
-IIP-1­-E­2.10 | statistiques | statistiques | 0..1 | Statistiques communautaires | F | | 
+IIP-1­-E­2.10 | statistiques | statistiques | 0..1 | Statistiques communautaires | F | |
 
 #####Élément identification­-declarant
 
@@ -241,7 +241,7 @@ Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Fac
 :------------|:--------|:----:|:------------|:------------|:----------------------:|:---------|
 IIP1-E2.4.1.7.1 | stock-debut-periode | volumeStock | 1 | Stock de début de période (en hL), systématiquement repris du stock théorique total de fin de la période de la DRM ou DRA précédente. Si 1ère DRM de la campagne vitivinicole, doit être indiqué le stock réel (physique) tel qu'il résulte de l'inventaire des stocks. | O | IIP1RG14 Si saisi, alors >=0
 IIP1-E2.4.1.7.2 | entrees-periode | entrees-periode |  0..1 | Entrées sur la période en droits suspendus, pour le produit concerné | F | IIP1RG14 Si saisi, alors >= 0
-IIP1-E2.4.1.7.3 | sorties­-periode | sorties­-periode | 0..1 | Sorties sur la période en droits suspendus, pour le produit concerné | F | 
+IIP1-E2.4.1.7.3 | sorties­-periode | sorties­-periode | 0..1 | Sorties sur la période en droits suspendus, pour le produit concerné | F |
 IIP1-E2.4.1.7.4 | stock­-fin­-periode | stock­-fin­-periode | 1 | Stock de fin de période (en hL), correspondant à la différence entre les entrées et les sorties de période. | O | IIP1RG17 IIP1RG18
 
 #####Élément entrees-periode
@@ -253,7 +253,7 @@ Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Fac
 IIP1-E2.4.1.7.2.1  | volume-produit | volumeType | 0..1 | Produits issus des vendanges (récoltants) ou de la déclaration SV12 (négociants vinificateurs), ou produits par assemblage de deux produits ou plus (ratafia, cartagène, floc de Gascogne, pineau des Charentes, etc.), ou ayant fait l'objet d'une déclaration de revendication, ou issus des différentes manipulations possibles sur les vins (soutirages, désalcoolisation...) pour ce qui concerne les lies ou alcools, ou issus d'une activité accessoire (distillation de fruits) (en hL). | F | Si saisi, alors >=0 |
 IIP1-E2.4.1.7.2.2 | achats-reintegrations | volumeType | 0..1 | Achat de produits en vrac, ou en bouteilles nues sur pile, réintégrations de produits sortis en suspension de droits (en hL) | F | Si saisi, alors >=0
 IIP1-E2.4.1.7.2.3  | mouvements-temporaires | mouvements-temporaires | 0..1 | Prestations de service, relogement, ou pour élaboration à façon de vins mousseux, ou pour distillation de cognac, par exemple. Retour obligatoire à la propriété (en hL) | F |
-IIP1-E2.4.1.7.2.4 | ouvements-internes | mouvements-internes | 0..1 | Mouvements internes du produit (en hL) | F | 
+IIP1-E2.4.1.7.2.4 | ouvements-internes | mouvements-internes | 0..1 | Mouvements internes du produit (en hL) | F |
 IIP1-E-2.4.1.7.2.6 | replacement | complexe | 0..1 | Exemple : retour de marchandises, transfert de comptabilité matières. Toute saisie dans cette ligne requiert un commentaire obligatoire dans la rubrique « Observations » (en hL) | F | IIP1RG38
 IIP1-E2.4.1.7.2.5 | autres-entrees | volumeType | 0..1 | Excédent suite à inventaire ou contrôle du service des douanes. Toute saisie requiert un commentaire obligatoire dans la rubrique « Observations » (en hL) | F | IIP1RG25 Si saisi, alors >=0
 
@@ -286,7 +286,7 @@ Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Fac
 :------------|:--------|:----:|:------------|:------------|:----------------------:|:---------|
 IIP1-E2.4.1.7.2.6.1 | mois | int | 1 | Mois de la sortie taxable ou de la réception en droits acquittés de ce produit. Entre 1 et 12. | O | IIP1RG40 |
 IIP1-E2.4.1.7.2.6.2 | annee | int | 1 | Année de la sortie taxable ou de la réception en droits acquittés de ce produit.  Sur 4 positions. | O | IIP1RG40 |
-IIP1-E2.4.1.7.2.6.3 | volume | volumeType | 1 | Volume du produit replacé en suspension | O | >=0 | 
+IIP1-E2.4.1.7.2.6.3 | volume | volumeType | 1 | Volume du produit replacé en suspension | O | >=0 |
 
 #####Élément sorties-periode
 
@@ -315,8 +315,8 @@ Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Fac
 :------------|:--------|:----:|:------------|:------------|:----------------------:|:---------|
 IIP1-E2.4.1.7.3.3.1 | sorties-definitives | volumeType | 0..1 | Sorties définitives du produit en droits suspendus : ventes vrac au négoce, en intracommunautaire, à l'export, sous DAE, DAA et DCA ainsi que sorties de lies et DRA (en hL) | F | Si saisi, alors > 0 | IIP1RG26 Si saisi, alors >0
 IIP1-E2.4.1.7.3.3.2 | consommation-familiale-degustation | volumeType | 0..1 | Consommation familiale du produit et / ou dégustation à l'exploitation (en hL) | F | Si saisi, alors >0
-IIP1-E2.4.1.7.3.3.3 | mouvements-temporaires | mouvements-temporaires | 0..1 | Mouvements temporaires du produit (en hL) Prestations de service, relogement, ou pour élaboration à façon de vins mousseux, ou pour distillation de cognac, par exemple. Retour obligatoire à la propriété | F | 
-IIP1-E2.4.1.7.3.3.4 | mouvements-internes | mouvements-internes | 0..1 | Mouvements internes du produit (en hL) | F | 
+IIP1-E2.4.1.7.3.3.3 | mouvements-temporaires | mouvements-temporaires | 0..1 | Mouvements temporaires du produit (en hL) Prestations de service, relogement, ou pour élaboration à façon de vins mousseux, ou pour distillation de cognac, par exemple. Retour obligatoire à la propriété | F |
+IIP1-E2.4.1.7.3.3.4 | mouvements-internes | mouvements-internes | 0..1 | Mouvements internes du produit (en hL) | F |
 IIP1-E2.4.1.7.3.3.5 | autres-sorties | volumeType | 0..1 | Destruction par exemple (en hL) Toute saisie dans cette ligne requiert un commentaire obligatoire dans la rubrique « Observations » | F | IIP1RG26 Si saisi, alors >0
 
 #####Élément mouvements-temporaires
@@ -339,7 +339,7 @@ Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Fac
 IIP1-E2.4.1.7.3.3.4.1 | replis-declassement-transfert-changement-appellation | volumeType | 0..1 | repli, déclassement, transfert, changement d'appellation (en hL) Toute sortie dans cette rubrique pour une colonne doit trouver son équivalent en entrée dans une autre. | F | Si saisi, alors >=0
 IIP1-E2.4.1.7.3.3.4.2 | fabrication-autre-produit | volumeType | 0..1 | En cas de mutage de vin par adjonction d'alcool, inscrire ici le volume de vin concerné ainsi que le volume d'alcool ayant permis l'opération, et porter les quantités de vins mutés en entrée (en hL) | F | Si saisi, alors >=0
 IIP1-E2.4.1.7.3.3.4.3 | revendication-vci | volumeType | 0..1 | Volume de VCI de l'année N-1 du produit ayant reçu l'agrément à la récolter de l'année N (en hL) | F | Si saisi, alors >=0
-IIP1-E2.4.1.7.3.3.4.4 | autres-mouvements-internes | volumeType | 0..1 | Manipulations, soutirages. Réductions de volume constatées suite à soutirages de lies ou manipulations diverses, notamment les méthodes soustractives d'enrichissement ou la désalcoolisation. | F | Si saisi, alors >=0 | 
+IIP1-E2.4.1.7.3.3.4.4 | autres-mouvements-internes | volumeType | 0..1 | Manipulations, soutirages. Réductions de volume constatées suite à soutirages de lies ou manipulations diverses, notamment les méthodes soustractives d'enrichissement ou la désalcoolisation. | F | Si saisi, alors >=0 |
 
 #####Élément droits-acquittes
 
@@ -361,7 +361,7 @@ IIP1-E2.5.1.2 | libelle-fiscal | LibelleFiscalType | 0..1 | Libellé fiscal du p
 IIP1-E2.5.1.3 | libelle-personnalise | string | 1 | Libellé personnalisé du produit | O | IIP1RG37 |
 IIP1-E2.5.1.4 | tav | tavType | 0..1 | TAV du produit | F | IIP1RG21 IIP1RG22
 IIP1-E2.5.1.3 | premix | boolean | 0..1 | Indique si le produit considéré est un premix ou pas | F | IIP1RG21 IIP1RG22
-IIP1-E2.5.1.4 | balance-stocks | balance-stocks | 1 | Balance des stocks en droits acquittés | O | 
+IIP1-E2.5.1.4 | balance-stocks | balance-stocks | 1 | Balance des stocks en droits acquittés | O |
 IIP1-E2.5.1.5 | observations | string | 0..1 | Observations apportées par le déclarant concernant la balance des stocks en droits acquittés | F | IIP1RG25 IIP1RG26 IIP1RG38
 
 #####Élément balance-stocks (Droits acquittés)
@@ -371,8 +371,8 @@ Type : Complexe ordonné
 Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Facultatif |  Règles  |
 :------------|:--------|:----:|:------------|:------------|:----------------------:|:---------|
 IIP1-E2.6.1.2.1 | stock-debut-periode | volumeStockType | 1 | Stock de début de période (en hL), systématiquement repris du stock théorique total de fin de la période de la DRM ou DRA précédente. Si 1ère DRM de la campagne vitivinicole, doit être indiqué le stock réel (physique) tel qu'il résulte de l'inventaire des stocks. | O | IIP1RG17 IIP1RG18
-IIP1-E2.6.1.2.2 | entrees-periode | entrees-periode | 0..1 | Entrées sur la période en droits acquittés, pour le produit concerné | F | 
-IIP1-E2.6.1.2.3 | sorties-periode | sorties-periode | 0..1 | Sorties sur la période en droits acquittés, pour le produit concerné | F | 
+IIP1-E2.6.1.2.2 | entrees-periode | entrees-periode | 0..1 | Entrées sur la période en droits acquittés, pour le produit concerné | F |
+IIP1-E2.6.1.2.3 | sorties-periode | sorties-periode | 0..1 | Sorties sur la période en droits acquittés, pour le produit concerné | F |
 IIP1-E2.6.1.2.4 | stock-fin-periode | volumeStockType | 1 | Stock de fin de période (en hL), correspondant à la différence entre les entrées et les sorties de période. | O | IIP1RG14 Si saisi, alors >=0
 
 #####Élément entrees-periode
@@ -390,7 +390,7 @@ Type : Complexe ordonné
 
 Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Facultatif |  Règles  |
 :------------|:--------|:----:|:------------|:------------|:----------------------:|:---------|
-IIP1-E2.6.1.2.3.1  | ventes | volumeType | 0..1 | Ventes de produit (en hL) | F | Si saisi, alors >=0 
+IIP1-E2.6.1.2.3.1  | ventes | volumeType | 0..1 | Ventes de produit (en hL) | F | Si saisi, alors >=0
 IIP1-E2.6.1.2.3.2 | replacement-suspension | volumeType | 0..1 | Replacement en suspension du produit (en hL) | F | Si saisi, alors >=0
 IIP1-E2.6.1.2.3.3 | autres-sorties | volumeType | 0..1 | Autres sorties du produits (en hL) | F | IIP1RG26 Si saisi, alors >=0 |
 
@@ -402,7 +402,7 @@ Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Fac
 :------------|:--------|:----:|:------------|:------------|:----------------------:|:---------|
 IIP1-E2.7.1 | categorie-fiscale-capsules | categorieFiscaleCapsuleType | 1 | Catégorie fiscale de capsules représentatives de droits | O | IIP1RG27
 IIP1-E2.7.2 | type-capsule | typeCapsulesType | 1 | Type de capsules représentatives de droits | O | IIP1RG28
-IIP1-E2.7.3 | centilisation | centilisation | 1..21 | Centilisation des capsules déclarées | O | IIP1RG29 IIP1RG31 | 
+IIP1-E2.7.3 | centilisation | centilisation | 1..* | Centilisation des capsules déclarées | O | IIP1RG29 IIP1RG31 |
 
 #####Élément centilisation
 
@@ -411,8 +411,8 @@ Type : Complexe ordonné
 Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Facultatif |  Règles  |
 :------------|:--------|:----:|:------------|:------------|:----------------------:|:---------|
 IIP1-E2.7.3.1 | stock-debut-periode | nonNegativeInteger | 0..1 | Stock de capsules du début de la période | O | IIP1RG31 IIP1RG39 |
-IIP1-E2.7.3.2 | entrees-capsules | entrees-capsules | 0..1 | Entrées de capsules | F | 
-IIP1-E2.7.3.3 | sorties-capsules | sorties-capsules | 0..1 | Sorties de capsules | F | 
+IIP1-E2.7.3.2 | entrees-capsules | entrees-capsules | 0..1 | Entrées de capsules | F |
+IIP1-E2.7.3.3 | sorties-capsules | sorties-capsules | 0..1 | Sorties de capsules | F |
 IIP1-E2.7.3.4 | stock-fin-periode | nonNegativeInteger | 1 | Stock de capsules de la fin de la période | O | IIP1RG30 IIP1RG39 |
 
 #####Élément entrees-capsules
@@ -421,8 +421,8 @@ Type : Complexe ordonné
 
 Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Facultatif |  Règles  |
 :------------|:--------|:----:|:------------|:------------|:----------------------:|:---------|
-IIP1-E2.7.3.2.1 | achats | nonNegativeInteger | 0..1 | Nombre de capsules achetées | F | 
-IIP1-E2.7.3.2.2 | retours | nonNegativeInteger | 0..1 | Nombre de capsules retournées | F | 
+IIP1-E2.7.3.2.1 | achats | nonNegativeInteger | 0..1 | Nombre de capsules achetées | F |
+IIP1-E2.7.3.2.2 | retours | nonNegativeInteger | 0..1 | Nombre de capsules retournées | F |
 IIP1-E2.7.3.2.3 | excedents | nonNegativeInteger | 0..1 | Nombre de capsules excédentaires | F |
 
 #####Élément sorties-capsules
@@ -431,8 +431,8 @@ Type : Complexe ordonné
 
 Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Facultatif |  Règles  |
 :------------|:--------|:----:|:------------|:------------|:----------------------:|:---------|
-IIP1-E2.7.3.3.1 | utilisations | nonNegativeInteger | 0..1 | Nombre de capsules utilisées | F | 
-IIP1-E2.7.3.3.2 | destructions | nonNegativeInteger | 0..1 | Nombre de capsules détruites | F | 
+IIP1-E2.7.3.3.1 | utilisations | nonNegativeInteger | 0..1 | Nombre de capsules utilisées | F |
+IIP1-E2.7.3.3.2 | destructions | nonNegativeInteger | 0..1 | Nombre de capsules détruites | F |
 IIP1-E2.7.3.3.3 | manquants | nonNegativeInteger | 0..1 | Nombre de capsules manquantes | F |
 
 #####Élément document-accompagnement
@@ -451,8 +451,8 @@ Type : Complexe non ordonné
 
 Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Facultatif |  Règles  |
 :------------|:--------|:----:|:------------|:------------|:----------------------:|:---------|
-IIP1-E2.8.1.1 | debut-periode | numeroDocumentType | 1 | Référence du premier document de la période | O | 
-IIP1-E2.8.1.2 | fin-periode  | numeroDocumentType | 1 | Référence du dernier document de la période | O | 
+IIP1-E2.8.1.1 | debut-periode | numeroDocumentType | 1 | Référence du premier document de la période | O |
+IIP1-E2.8.1.2 | fin-periode  | numeroDocumentType | 1 | Référence du dernier document de la période | O |
 IIP1-E2.8.1.2 | nombre-document-empreinte | int | 1 | Nombre de références sur la période | O | >0 |
 
 
@@ -474,7 +474,7 @@ Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Fac
 :------------|:--------|:----:|:------------|:------------|:----------------------:|:---------|
 IIP1-E2.10.1 | quantite-mouts-jus | volumeType | 0..1 | Quantité de moûts de raisin transformés en jus de raisin | F | Si saisi, alors >=0
 IIP1-E2.10.2 | quantite-mouts-mcr | volumeType | 0..1 | Quantité de moûts de raisin transformés en MCR (moûts concentrés rectifiés) | F | Si saisi, alors >=0
-IIP1-E2.10.3 | quantite-vins-vinaigre | volumeType | 0..1 | Quantité de vins utilisés pour la fabrication de vinaigre | F | Si saisi, alors >=0 | 
+IIP1-E2.10.3 | quantite-vins-vinaigre | volumeType | 0..1 | Quantité de vins utilisés pour la fabrication de vinaigre | F | Si saisi, alors >=0 |
 
 ####TYPES SIMPLES
 
@@ -500,7 +500,9 @@ typeCapsulesType | |    |  PERSONNALISEES COLLECTIVES_DROITS_SUSPENDUS COLLECTIV
 categorieFiscaleCapsuleType | | | « M » (vin mousseux) « T » (vin tranquille) « PI » (produit intermédiaire) COGNACARMAGNAC ALCOOLS | | Représente une catégorie fiscale de capsule représentative de droits
 numeroDocumentType | 1 | 9 | | Nombre entier positif | Numéro de référence de document d'accompagnement d'une DRM. En cas de valeur numérique indiquée, seul les entiers positifs sont autorisés.
 numeroRnaType | 1 | 21 | | Chaîne caractères | Numéro de référence du daa­ de dac­dae
-Attribut « volume de l’élément » centilisation | | | CL_10 CL_12_5 CL_18_7 CL_20 CL_25 CL_35 CL_37_5 CL_50 CL_62 CL_70 CL_75 CL_100 CL_150 CL_175 CL_200 BIB_225 BIB_300 BIB_400 BIB_500 BIB_800 BIB_1000 | |Représente la centilisation de capsules représentatives de droits. Valeur obligatoire.
+Attribut « volume » de l’élément centilisation | | | CL_10 CL_12_5 CL_18_7 CL_20 CL_25 CL_35 CL_37_5 CL_50 CL_62 CL_70 CL_75 CL_100 CL_150 CL_175 CL_200 BIB_225 BIB_300 BIB_400 BIB_500 BIB_800 BIB_1000 AUTRE| |Représente la centilisation de capsules représentatives de droits. Valeur obligatoire.
+volumePersonnalise |  |  |  | Nombre décimal (1 chiffre après la virgule) | Volume indiqué pour une centilisation AUTRE
+bib |  |  | Vrai / Faux | Booléen | Indique si la centilisation AUTRE est de type Bag-in-box
 
 ####RÈGLES DE GESTION
 
@@ -550,7 +552,7 @@ Code RG | Test et condition(s) | Code erreur | Message si erreur |
 IIP1RG1 | Le flux transmis doit respecter le schéma XSD prévu. NB : si cette condition n’est pas vérifiée, les contrôles suivants ne seront pas exécutés. | 001 | Le flux ne répond pas au schéma de transmission défini. Message technique &lt;message erreur xsd>. |
 IIP1RG2 | Le flux transmis par l'interprofession doit contenir un seul fichier par déclaration. NB : si cette condition n’est pas vérifiée, les contrôles suivants ne seront pas exécutés.
 IIP1RG3 | Le numéro d’agrément d'entrepositaire agréé fourni par le SI de l’interprofession vitivinicole doit exister et être actif dans ROSA. NB : si cette condition n’est pas vérifiée, les contrôles suivants ne seront pas exécutés. | 002 | Le numéro d’agrément d'entrepositaire agréé n’existe pas ou n’est pas actif.
-IIP1RG4 | L’agrément considéré, récupéré dans ROSA, doit reprendre une activité « EA viti » (les données transmises reprennent uniquement ce format). | 003 | Le numéro d’agrément d'entrepositaire agréé ne correspond à une activité vitivinicole. NB : si cette condition n’est pas vérifiée, les contrôles suivants ne seront pas exécutés. NB : si cette condition n’est pas vérifiée, les contrôles suivants ne seront pas exécutés. 
+IIP1RG4 | L’agrément considéré, récupéré dans ROSA, doit reprendre une activité « EA viti » (les données transmises reprennent uniquement ce format). | 003 | Le numéro d’agrément d'entrepositaire agréé ne correspond à une activité vitivinicole. NB : si cette condition n’est pas vérifiée, les contrôles suivants ne seront pas exécutés. NB : si cette condition n’est pas vérifiée, les contrôles suivants ne seront pas exécutés.
 IIP1RG5 | L'ensemble des informations nécessaires au fonctionnement de CIEL doivent être disponibles et cohérentes dans le référentiel des opérateurs de la DGDDI (ROSA) pour le numéro d'agrément concerné.
 IIP1RG6 | Le portail interprofessionnel indiqué pour l’envoi des données économiques (IIP1) doit correspondre au portail de référence de l'interprofession principale de Le flux ne répond pas au schéma de transmission défini. Message technique <message erreur xsd>. | 004 | Le portail interprofessionnel émetteur ne correspond pas au portail de référence de rattachement du numéro d'agrément pour lequel il envoie les données économiques à CIEL. NB : même erreur si aucune relation OVNI associée. l'interprofession d'appartenance pour ce numéro d'agrément. NB : si cette condition n’est pas vérifiée, les contrôles suivants ne seront pas exécutés. |
 IIP1RG7 | La période de taxation doit être obligatoirement antérieure ou égale au mois courant. | 005 | La déclaration ne peut pas être déposée pour la période indiquée.
@@ -595,9 +597,12 @@ Code RG | Test et condition(s) | Code erreur | Message si erreur |
 :-------|:---------------------|:------------|:------------------|
 IIP1RG27 | Une même catégorie fiscale de capsules ne peut apparaître que deux fois maximum dans un même compte CRD. Pour les EA en acquittés (l'agrément contient la lettre "A"), il ne doit pas y avoir de compte CRD. | 019 | La catégorie de capsule <catégorie> ne devrait être présente que 2 fois maximum dans le compte CRD, ou un compte CRD a été saisi alors que l’agrément ne l’autorise pas. |
 IIP1RG28 | Pour chaque catégorie de produits, il n'est possible d'avoir dans les comptes CRD que les types de capsules suivants : capsules personnalisées en DS ; capsules collectives en DS ; capsules personnalisées + collectives en DS (2 comptes distincts) ; capsules collectives en DA ; capsules collectives en DA + collectives en DS (2 comptes distincts) | 020 | Erreur sur le type de capsules déclarées. |
-IIP1RG29 | Dans un même compte CRD, une centilisation ne peut apparaître qu’une seule fois (unicité de l’attribut « volume » de la centilisation pour une catégorie fiscale donnée et un type de capsules donné)  | 021  | La centilisation <volume> pour la catégorie <catégorie> (<type de capsule>) devrait être unique dans un même compte CRD. |
+IIP1RG29 | Dans un même compte CRD, une centilisation définie ne peut apparaître qu’une seule fois (unicité de l’attribut « volume »  de la centilisation pour une catégorie fiscale donnée et un type de capsules donné). Cette règle exclut la centilisation « AUTRE ».  | 021  | La centilisation <volume> pour la catégorie <catégorie> (<type de capsule>) devrait être unique dans un même compte CRD. |
 IIP1RG30 | Pour une centilisation donnée, le stock de fin de période doit être égal « stock-debut-période » + « entrées- | 022 | Le stock de fin de période de la centilisation <volume> pour la capsules » - « sorties-capsules ». catégorie <catégorie> (<type de capsule>) ne correspond pas aux entrées et sorties. |
 IIP1RG31 | Si une centilisation d’un compte existe dans la déclaration précédente et n’a pas été repris dans la déclaration transmise, alors le stock de fin de période de cette centilisation pour la déclaration précédente doit être de 0. | 023 | La centilisation <volume> pour la catégorie <catégorie> (<type de capsule>) n’est pas reprise dans la déclaration alors que son stock théorique de fin de période précédente n’est pas nul. |
+IIP1RG32 | Pour une centilisation AUTRE, le volume personnalisé et l’indicateur de ‘bag-in-box’ sont  obligatoires. | 024 | Une centilisation pour la catégorie <catégorie> (<type de capsule>) n’est pas correctement renseignée. |
+IIP1RG32 | Pour une centilisation AUTRE, le couple « volume personnalisé + indicateur ‘bag-in-box » doit être unique dans un même compte CRD. | 025 | La centilisation personnalisée <volume> pour la catégorie <catégorie> (<type de capsule>) est reprise deux fois avec le même indicateur bag-in-box. |
+IIP1RG32 | Pour une centilisation AUTRE, le volume personnalisé et l’indicateur bag-in-box ne doivent pas être déjà prévus dans la liste définie des centilisations. | 033 | La centilisation personnalisée <volume> pour la catégorie <catégorie> (<type de capsule>) existe déjà dans la liste de définition prévue. |
 IIP1RG39 | Avec la déclaration précédente, CIEL effectue un contrôle de correspondance des comptes CRD. Pour chaque centilisation de CRD retrouvée, la valeur de « stock-début-période » doit être égale au stock de fin de période de la déclaration précédente. Si le mois de taxation de la déclaration est août (début de la campagne viti-vinicole), cette règle ne doit pas être appliquée. | 035 | La centilisation <volume> pour la catégorie <catégorie> (<type de capsule>) doit avoir un stock de début de période égal au stock de fin de période de la déclaration précédente.  |
 IIP1RG33 | Pour les documents d’accompagnement, chaque numéro de fin de période doit être strictement supérieur au numéro de début de période. | 025 | Erreur sur les numéros de période des documents d'accompagnement. |
 IIP1RG34 | Si le numéro d’agrément contient la lettre « A », alors le type de document ne peut être que « DSA/DSAC ». Dans le cas contraire, il ne peut s’agir que du type de document « DAA/DAC » ou « DSA/DSAC ». | 026 | L'agrément n'autorise pas les types de documents d'accompagnement saisis. |
@@ -637,7 +642,7 @@ prise en compte des données.
 
 ###Élément reponse-ciel
 
-Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Facultatif 
+Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Facultatif
 :------------|:--------|:----:|:------------|:------------|:----------------------:
 IIP1-S-1 | identification-declaration | int | 0..1 | Identifiant de la déclaration dans CIEL | F
 IIP1-S-2 | horodatage-depot | dateTime | 0..1 | Date et heure de l’enregistrement du flux transmis | F
@@ -767,7 +772,7 @@ declarations_vitivinicoles_interprofession_SIREN_AAAAMMJJ.xml, où :
  - SIREN est remplacé par le numéro SIREN de l’interprofession destinataire du fichier ;
 iddeclaration est l’identifiant technique de la déclaration dans CIEL (entier de
 longueur maximale 7) ;
- - numaccise est le numéro d’accise du déclarant.leperiodetaxation est la période de taxation relative à la délcaration 
+ - numaccise est le numéro d’accise du déclarant.leperiodetaxation est la période de taxation relative à la délcaration
  - AAAAMMJJ est remplacé par la date de l’export, au format AAAAMMJJ.
 
 Cet export doit être exécuté en début de journée, idéalement à minuit, pour exporter les
@@ -898,4 +903,3 @@ string | Chaîne de caractères | Ceci est un exemple.
  - AUTRES_ALCOOLS_INF_18_PREMIX
  - MATIERES_PREMIERES_SPIRITUEUX
  - MATIERES_PREMIERES_ALCOOLS
-
