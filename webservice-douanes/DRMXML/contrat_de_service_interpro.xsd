@@ -188,7 +188,7 @@
 									<xsd:sequence>
 										<xsd:element name="categorie-fiscale-capsules" type="categorieFiscaleCapsuleType"/>
 										<xsd:element name="type-capsule" type="typeCapsuleType"/>
-										<xsd:element name="centilisation" maxOccurs="unbounded">
+										<xsd:element name="centilisation" maxOccurs="21">
 											<xsd:complexType>
 												<xsd:sequence>
 													<xsd:element name="stock-debut-periode" type="xsd:nonNegativeInteger"/>
@@ -213,22 +213,6 @@
 													<xsd:element name="stock-fin-periode" type="xsd:nonNegativeInteger"/>
 												</xsd:sequence>
 												<xsd:attribute name="volume" type="centilisationType" use="required"/>
-												<xsd:attribute name="volumePersonnalise">
-													<xsd:annotation>
-														<xsd:documentation>Volume indiqué pour une centilisation AUTRE</xsd:documentation>
-													</xsd:annotation>
-													<xsd:simpleType>
-														<xsd:restriction base="xsd:decimal">
-															<xsd:minExclusive value="0"/>
-															<xsd:fractionDigits value="1"/>
-														</xsd:restriction>
-													</xsd:simpleType>
-												</xsd:attribute>
-												<xsd:attribute name="bib" type="xsd:boolean">
-													<xsd:annotation>
-														<xsd:documentation>Indique si la centilisation AUTRE est de type Bag-in-box</xsd:documentation>
-													</xsd:annotation>
-												</xsd:attribute>
 											</xsd:complexType>
 										</xsd:element>
 									</xsd:sequence>
@@ -539,7 +523,6 @@
 			<xsd:enumeration value="BIB_500"/>
 			<xsd:enumeration value="BIB_800"/>
 			<xsd:enumeration value="BIB_1000"/>
-			<xsd:enumeration value="AUTRE"/>
 		</xsd:restriction>
 	</xsd:simpleType>
 	<xsd:simpleType name="volumeType">

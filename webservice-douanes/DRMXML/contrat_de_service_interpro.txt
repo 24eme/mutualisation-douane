@@ -35,8 +35,8 @@ Contrat de service avec les interprofessions vitivinicoles
 
 
 
-Version 2.4 du 27/09/2016
-[Valable pour la version 1.9 du schéma XSD]
+Version 2.3 du 25/07/2016
+[Valable pour la version 1.8 du schéma XSD]
 
 État : En cours de validation
 
@@ -190,16 +190,6 @@ DNSCE
 Mise à jour avec le schéma 1.8
 
 30/06/16
-V 2.3
-F3
-Mise à jour des RG IIP1-RG23  et IIP1-RG42 
-
-25/07/206
-V 2.4
-DNSCE
-Gestion de centilisation personnalisée
-
-27/09/2016
 
 LISTE DE DIFFUSION
 
@@ -1339,7 +1329,7 @@ IIP1-
 IIP1-E-2.7.3
 centilisation
 centilisation
-1..*
+1..21
 Centilisation des capsules déclarées
 O
 IIP1-RG29
@@ -1690,21 +1680,8 @@ BIB_400
 BIB_500 
 BIB_800 
 BIB_1000 
-AUTRE
 
 Représente la centilisation de capsules représentatives de droits. Valeur obligatoire.
-volumePersonnalise
-
-
-
-Nombre décimal (1 chiffre après la virgule)
-Volume indiqué pour une centilisation AUTRE
-bib
-
-
-Vrai / Faux
-Booléen
-Indique si la centilisation AUTRE est de type Bag-in-box
 3.3.4 Règles de gestion
 
 Dès réception d’un flux, CIEL met en place une série de contrôles pour vérifier la validité et la cohérence des données contenues. Chaque élément ci-dessous reprend la teneur de la vérification ainsi que le message d’erreur associé.
@@ -1947,8 +1924,7 @@ capsules collectives en DA + collectives en DS (2 comptes distincts)
 020
 Erreur sur le type de capsules déclarées.
 IIP1-RG29
-Dans un même compte CRD, une centilisation définie ne peut apparaître qu’une seule fois (unicité de l’attribut « volume »  de la centilisation pour une catégorie fiscale donnée et un type de capsules donné).
-Cette règle exclut la centilisation « AUTRE ».
+Dans un même compte CRD, une centilisation ne peut apparaître qu’une seule fois (unicité de l’attribut « volume »  de la centilisation pour une catégorie fiscale donnée et un type de capsules donné).
 021
 La centilisation <volume> pour la catégorie <catégorie> (<type de capsule>) devrait être unique dans un même compte CRD.
 IIP1-RG30
@@ -1959,18 +1935,6 @@ IIP1-RG31
 Si une centilisation d’un compte existe dans la déclaration précédente et n’a pas été repris dans la déclaration transmise, alors le stock de fin de période de cette centilisation pour la déclaration précédente doit être de 0.
 023
 La centilisation <volume> pour la catégorie <catégorie> (<type de capsule>) n’est pas reprise dans la déclaration alors que son stock théorique de fin de période précédente n’est pas nul.
-IIP1-RG32
-Pour une centilisation ‘AUTRE’, le volume personnalisé et l’indicateur de ‘bag-in-box’ sont  obligatoires.
-024
-Une centilisation pour la catégorie <catégorie> (<type de capsule>) n’est pas correctement renseignée.
-IIP1-RG32
-Pour une centilisation ‘AUTRE’, le couple « volume personnalisé + indicateur ‘bag-in-box » doit être unique dans un même compte CRD.
-025
-La centilisation personnalisée <volume> pour la catégorie <catégorie> (<type de capsule>) est reprise deux fois avec le même indicateur bag-in-box.
-IIP1-RG32
-Pour une centilisation ‘AUTRE’, le volume personnalisé et l’indicateur bag-in-box ne doivent pas être déjà prévus dans la liste définie des centilisations.
-033
-La centilisation personnalisée <volume> pour la catégorie <catégorie> (<type de capsule>) existe déjà dans la liste de définition prévue.
 IIP1-RG39
 Avec la déclaration précédente, CIEL effectue un contrôle de correspondance des comptes CRD.
 Pour chaque centilisation de CRD retrouvée, la valeur de « stock-début-période » doit être égale au stock de fin de période de la déclaration précédente.
