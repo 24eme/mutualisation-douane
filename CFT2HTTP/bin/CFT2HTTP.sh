@@ -4,7 +4,7 @@
 
 for dir in $CFTDIRS ; do
     subrep=$(basename $dir)
-	updatefile="/data/www/sites/cniv/"$subrep"/.update"
+	updatefile=$PUBLISHDIR"/"$subrep"/.update"
     publishdir=$(dirname $updatefile)
     if ! test -e $updatefile ; then
 		mkdir -p $publishdir
