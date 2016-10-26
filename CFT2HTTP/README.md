@@ -71,7 +71,7 @@ Ou plus simplement la liste des DMR reçues depuis le 1er octobre 2016 :
     http://10.222.223.1/reception_douanes/123456789/2016/09/FR123456E1234_1234567_20160914.xml
     http://10.222.223.1/reception_douanes/123456789/2016/09/FR123456E1234_1234567_20160914.xml
 
-## Questions frequement posées
+## Questions frequemment posées
 
 ### Comment savoir quand a été reçue une DRM ?
 
