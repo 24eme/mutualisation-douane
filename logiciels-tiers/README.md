@@ -75,7 +75,7 @@ Le fichier CSV permet de déclarer les différentes informations liées à la DR
 Les premiers champ de chaque ligne sont des champs communs pour tout le fichier, ils décrivent :
  - le type de ligne concernée (CAVE, CRD, ANNEXE, comme décrit plus bas)
  - la période de la DRM courante (format AAAAMM)
- - l'identifiant interpro du chai
+ - l'identifiant interpro de l'établissement (pouvant contenir le numéro SIRET ou CVI entre parenthèses)
  - le numéro d'accise du ressortisant
 
 Le fichier CSV est constitué de trois types de lignes :
@@ -102,20 +102,24 @@ Les lignes de CAVE se constituent des champs suivants :
  
  1. CAVE (champ obligatoire à valeur fixe) 
  2. La période de la DRM (champ obligatoire au format AAAAMM)  
- 3. L'identification de l'établissement (champ alpha-numérique obligatoire)
- 4. Le numéro d'accise (champ alpha-numérique de 13 caractères obligatoire)
+ 3. L'identifiant interpro de l'établissement (champ alpha-numérique) pouvant contenir entre parenthèses le numéro SIRET (14 chiffres) ou CVI (10 chiffres) de l'établissement
+ 4. Le numéro d'accise (champ alpha-numérique de 13 caractères au format FR0xxxxxxxxxx)
+ 
+Pour identifier un établissement, il est obligatoire de renseigner au moins une valeur entre l'identifiant interpro, le siret, le cvi et le numéro d'accise.
 
  **Pour l'identification du vin :**
 
- 5. Le code certification du vin (champ obligatoire)  
- 6. Le code genre du vin (champ obligatoire)  
+ 5. Le code certification du vin (champ obligatoire si la colonne 13 n'est pas renseigné)  
+ 6. Le code genre du vin (champ obligatoire si la colonne 13 n'est pas renseigné)  
  7. Le code appellation du vin (champ facultatif)
  8. Le code mention du vin (champ facultatif)  
  9. Le code lieu du vin (champ facultatif)
- 10. Le code couleur du vin (champ obligatoire)
+ 10. Le code couleur du vin (champ obligatoire si la colonne 13 n'est pas renseigné)
  11. Le code cépage du vin (champ facultatif)
- 12. Le libellé personnalisé du vin (champ facultatif)
- 13. Le complément du vin (champ facultatif)
+ 12. Le complément du vin (champ facultatif)
+ 13. Le libellé personnalisé du vin (champ facultatif sauf si les colonnes 5 à 12 ne sont pas renseignées) pouvant contenir entre parenthèses le code INAO ou le libellé fiscal du produit
+ 
+Pour identifier un produit, il est obligatoire de renseigner les codes du produit de manière éclatée (colonnes 5 à 12) et/ou le libellé du produit (libellé et/ou entre parenthèses le code INAO / le libellé fiscal).
 
  **Pour le type de mouvement :**
  
@@ -144,10 +148,12 @@ La douane demande parfois des informations complémentaires pour un produit afin
 
  **Pour la section commune :**
  
- 1. CRD (champ obligatoire à valeur fixe)  
- 2. La période de la DRM (champ obligatoire au format AAAAMM)
- 3. L'identification de l'établissement (champ alpha-numérique obligatoire)
- 4. Le numéro d'accise (champ alpha-numérique de 13 caractères obligatoire)
+ 1. CAVE (champ obligatoire à valeur fixe) 
+ 2. La période de la DRM (champ obligatoire au format AAAAMM)  
+ 3. L'identifiant interpro de l'établissement (champ alpha-numérique) pouvant contenir entre parenthèses le numéro SIRET (14 chiffres) ou CVI (10 chiffres) de l'établissement
+ 4. Le numéro d'accise (champ alpha-numérique de 13 caractères au format FR0xxxxxxxxxx)
+ 
+Pour identifier un établissement, il est obligatoire de renseigner au moins une valeur entre l'identifiant interpro, le siret, le cvi et le numéro d'accise.
  
  **Pour l'identification de la CRD :**
  
@@ -183,10 +189,12 @@ La douane demande parfois des informations complémentaires pour un produit afin
 
  **Pour la section commune :**
  
- 1. ANNEXE (champ obligatoire à valeur fixe)  
- 2. La Période de la DRM (champ obligatoire au format AAAAMM)
- 3. L'identification de l'établissement (champ alpha-numérique obligatoire)
- 4. Le numéro d'accise (champ alpha-numérique de 13 caractères obligatoire)
+ 1. CAVE (champ obligatoire à valeur fixe) 
+ 2. La période de la DRM (champ obligatoire au format AAAAMM)  
+ 3. L'identifiant interpro de l'établissement (champ alpha-numérique) pouvant contenir entre parenthèses le numéro SIRET (14 chiffres) ou CVI (10 chiffres) de l'établissement
+ 4. Le numéro d'accise (champ alpha-numérique de 13 caractères au format FR0xxxxxxxxxx)
+ 
+Pour identifier un établissement, il est obligatoire de renseigner au moins une valeur entre l'identifiant interpro, le siret, le cvi et le numéro d'accise.
  
  **Pour la description du produit :**
  
