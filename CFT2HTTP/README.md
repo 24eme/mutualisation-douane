@@ -52,16 +52,16 @@ Il est possible de passer deux parametres GET à ces requêtes :
  - ``from`` indique à partir de quelle date on souhaite récupérer la liste des fichiers. La date doit être indiquée au format ISO-8601 (AAAA-MM-JJ)
  - ``format`` permet de demander une sortie dans un format XML
 
- Il est donc possible d'obtenir en XML la liste des DRM reçues depuis le 1er janvier 2016 :
+Il est donc possible d'obtenir en XML la liste des DRM reçues depuis le 1er janvier 2016 :
 
-     $curl http://10.222.223.1/reception_douanes/123456789/?from=2016-01-01&format=xml
-     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-     <list>
+    $ curl http://10.222.223.1/reception_douanes/123456789/?from=2016-01-01&format=xml
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <list>
      <url>http://10.222.223.1/reception_douanes/123456789/2016/08/FR123456E1234_1234567_20160914.xml</url>
      <url>http://10.222.223.1/reception_douanes/123456789/2016/08/FR123456E1234_1234567_20160906.xml</url>
      <url>http://10.222.223.1/reception_douanes/123456789/2016/09/FR123456E1234_1234567_20160914.xml</url>
      <url>http://10.222.223.1/reception_douanes/123456789/2016/09/FR123456E1234_1234567_20160914.xml</url>
-     </list>
+    </list>
 
 Ou plus simplement la liste des DMR reçues depuis le 1er octobre 2016 :
 
