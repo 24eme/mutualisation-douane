@@ -5,6 +5,14 @@ Version 2.4 du 27/09/2016
 
 État : Validé
 
+A propos du calendrier de mise en place de cette version 1.9 :
+
+    La mise en recette est prévue mi-novembre, pour une mise en production début janvier. 
+    C'est à cette seule date que cette évolution précise sur les centilisations sera 
+    disponible en production.
+    
+    (email du 26 octobre)
+
 ##INTRODUCTION
 ###OBJET DU DOCUMENT
 
