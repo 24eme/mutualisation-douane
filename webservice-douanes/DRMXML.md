@@ -10,7 +10,7 @@ Afin d'identifier l'interpro réalisant le transfert, une entête d'authentifica
 
 Url de qualif : http://10.253.161.5/cielqualifinterpro/ws/1.0/declarations
 
-Url de prod : http://10.253.161.5/authtoken/oauth2/v1/token
+Url de prod : http://10.253.161.5/cielqualifinterpro/ws/1.0/declarations
 
 Voici un exemple de requête HTTP réalisant ce transfert (ici sur l'instance de qualification de la douane) :
 
