@@ -100,8 +100,14 @@
       		<categorie-fiscale-capsules>T</categorie-fiscale-capsules>
       		<type-capsule>PERSONNALISEES</type-capsule>
       		<centilisation volume="CL_75">
-        		<stock-debut-periode>140</stock-debut-periode>
-        		<stock-fin-periode>140</stock-fin-periode>
+        		<stock-debut-periode>14000</stock-debut-periode>
+			<entrees-capsules>
+				<achats>1000</achats>
+			</entrees-capsules>
+			<sorties-capsules>
+				<utilisations>3000</utilisations>
+			</sorties-capsules>
+        		<stock-fin-periode>12000</stock-fin-periode>
       		</centilisation>
     	</compte-crd>
     	<document-accompagnement>
