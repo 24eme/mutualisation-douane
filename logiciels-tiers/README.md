@@ -140,7 +140,7 @@ Pour identifier un produit, il est obligatoire de renseigner les codes du produi
 
 **Cas des informations complémentaires**
 
-La douane demande parfois des informations complémentaires pour un produit afin de déclarer son **taux d'alcool volume (TAV)**, le **premix** ou des **observations**. Dans ce cas ces informations sont transmises via un mouvement "complement". Le champ 17 indiquera la valeur pour ces informations (flottant pour TAV, boolean pour premix et chaine de caractère pour observation)
+La douane demande parfois des informations complémentaires pour un produit afin de déclarer son **taux d'alcool volume (TAV)**, le **premix** ou des **observations**. Dans ce cas ces informations sont transmises via une catégorie de mouvement "complement" (champ 15) et où le champ "type de mouvement" (n°16) prend l'une des valeurs suivantes : TAV, premix ou observations. Le champ 17 indiquera alors la valeur pour ces informations (flottant pour TAV, boolean pour premix et chaine de caractère pour observation)
 
 [Voici un exemple ne contenant que quelques lignes de type CAVE](exemple_cave.csv "csv_de_type_cave")
 
