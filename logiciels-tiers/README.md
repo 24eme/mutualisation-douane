@@ -100,43 +100,42 @@ Les lignes de CAVE se constituent des champs suivants :
 
  **Pour la section commune :**
  
- 1. CAVE (champ obligatoire à valeur fixe) 
- 2. La période de la DRM (champ obligatoire au format AAAAMM)  
- 3. L'identifiant interpro de l'établissement (champ alpha-numérique) pouvant contenir entre parenthèses le numéro SIRET (14 chiffres) ou CVI (10 chiffres) de l'établissement
- 4. Le numéro d'accise (champ alpha-numérique de 13 caractères au format FR0xxxxxxxxxx)
+ - 1 : CAVE (champ obligatoire à valeur fixe) 
+ - 2 : La période de la DRM (champ obligatoire au format AAAAMM)  
+ - 3 : L'identifiant interpro de l'établissement (champ alpha-numérique) pouvant contenir entre parenthèses le numéro SIRET (14 chiffres) ou CVI (10 chiffres) de l'établissement
+ - 4 : Le numéro d'accise (champ alpha-numérique de 13 caractères au format FR0xxxxxxxxxx)
  
 Pour identifier un établissement, il est obligatoire de renseigner au moins une valeur entre l'identifiant interpro, le siret, le cvi et le numéro d'accise.
 
  **Pour l'identification du vin :**
 
- 5. Le code certification du vin (champ obligatoire si la colonne 13 n'est pas renseigné)  
- 6. Le code genre du vin (champ obligatoire si la colonne 13 n'est pas renseigné)  
- 7. Le code appellation du vin (champ facultatif)
- 8. Le code mention du vin (champ facultatif)  
- 9. Le code lieu du vin (champ facultatif)
- 10. Le code couleur du vin (champ obligatoire si la colonne 13 n'est pas renseigné)
- 11. Le code cépage du vin (champ facultatif)
- 12. Le complément du vin (champ facultatif)
- 13. Le libellé personnalisé du vin (champ facultatif sauf si les colonnes 5 à 12 ne sont pas renseignées) pouvant contenir entre parenthèses le code INAO ou le libellé fiscal du produit
+ - 5 : Le code certification du vin (champ obligatoire si la colonne 13 n'est pas renseigné)  
+ - 6 : Le code genre du vin (champ obligatoire si la colonne 13 n'est pas renseigné)  
+ - 7 : Le code appellation du vin (champ facultatif)
+ - 8 : Le code mention du vin (champ facultatif)  
+ - 9 : Le code lieu du vin (champ facultatif)
+ - 10 : Le code couleur du vin (champ obligatoire si la colonne 13 n'est pas renseigné)
+ - 11 : Le code cépage du vin (champ facultatif)
+ - 12 : Le complément du vin (champ facultatif)
+ - 13 : Le libellé personnalisé du vin (champ facultatif sauf si les colonnes 5 à 12 ne sont pas renseignées) pouvant contenir entre parenthèses le code INAO ou le libellé fiscal du produit
  
 Pour identifier un produit, il est obligatoire de renseigner les codes du produit de manière éclatée (colonnes 5 à 12) et/ou le libellé du produit (libellé et/ou entre parenthèses le code INAO / le libellé fiscal).
 
  **Pour le type de mouvement :**
- 
- 14. Le type de la DRM : (champ obligatoire, ex: suspendu, acquitte)
- 15. La catégorie de mouvement : (champ obligatoire, ex: stocks, stock_debut, entrée, sortie, stock _fin ...)
- 16. Le type de mouvement (champ obligatoire, ex: renvendiqué, achat, ...)
+
+ - 14 : Le type de la DRM : (champ obligatoire, ex: suspendu, acquitte)
+ - 15 : La catégorie de mouvement : (champ obligatoire, ex: stocks, stock_debut, entrée, sortie, stock_fin, ...)
+ - 16 : Le type de mouvement (champ obligatoire, ex: renvendiqué, achat, ...)
 
  **Pour la quantité :**
- 
- 17. Le volume en hl (ou valeur information complémentaire)
- 
- **Pour les détails :**
- 
- 18. Le pays d'export (nom du pays ou [Code ISO 3166](https://fr.wikipedia.org/wiki/ISO_3166)) si le mouvement est un export / la période au format AAAAMM si le mouvement est une entrée replacement en suspension CRD / sinon vide
- 19. Le numéro du contrat (si le mouvement est une sortie vrac sous contrat, sinon vide)
- 20. Le numéro de document d'accompagnement (si le mouvement fait l'objet d'un document d'accompagnement douanier, sinon vide)
 
+ - 17 : Le volume en hl (ou valeur information complémentaire)
+
+ **Pour les détails :**
+
+ - 18 : Le pays d'export (nom du pays ou [Code ISO 3166](https://fr.wikipedia.org/wiki/ISO_3166)) si le mouvement est un export / la période au format AAAAMM si le mouvement est une entrée replacement en suspension CRD / sinon vide
+ - 19 : Le numéro du contrat (si le mouvement est une sortie vrac sous contrat, sinon vide)
+ - 20 : Le numéro de document d'accompagnement (si le mouvement fait l'objet d'un document d'accompagnement douanier, sinon vide)
 
 **Cas des informations complémentaires**
 
@@ -148,40 +147,40 @@ La douane demande parfois des informations complémentaires pour un produit afin
 
  **Pour la section commune :**
  
- 1. CAVE (champ obligatoire à valeur fixe) 
- 2. La période de la DRM (champ obligatoire au format AAAAMM)  
- 3. L'identifiant interpro de l'établissement (champ alpha-numérique) pouvant contenir entre parenthèses le numéro SIRET (14 chiffres) ou CVI (10 chiffres) de l'établissement
- 4. Le numéro d'accise (champ alpha-numérique de 13 caractères au format FR0xxxxxxxxxx)
+ - 1 : CAVE (champ obligatoire à valeur fixe) 
+ - 2 : La période de la DRM (champ obligatoire au format AAAAMM)  
+ - 3 : L'identifiant interpro de l'établissement (champ alpha-numérique) pouvant contenir entre parenthèses le numéro SIRET (14 chiffres) ou CVI (10 chiffres) de l'établissement
+ - 4 : Le numéro d'accise (champ alpha-numérique de 13 caractères au format FR0xxxxxxxxxx)
  
 Pour identifier un établissement, il est obligatoire de renseigner au moins une valeur entre l'identifiant interpro, le siret, le cvi et le numéro d'accise.
  
  **Pour l'identification de la CRD :**
  
- 5. La couleur de la CRD (champ facultatif)
- 6. La catégorie fiscale de la CRD (champ obligatoire)
- 7. Le centilitrage de la CRD (champ obligatoire)
- 8. vide
- 9. vide
- 10. vide
- 11. vide
- 12. vide
- 13. vide
+ - 5 : La couleur de la CRD (champ facultatif)
+ - 6 : La catégorie fiscale de la CRD (champ obligatoire)
+ - 7 : Le centilitrage de la CRD (champ obligatoire)
+ - 8 : vide
+ - 9 : vide
+ - 10 : vide
+ - 11 : vide
+ - 12 : vide
+ - 13 : vide
  
  **Pour le type de mouvement :**
  
- 14. Type de la CRD (champ obligatoire)
- 15. La catégorie de mouvement : (champ obligatoire, ex: stock_debut, entrée, sortie, stock _fin)
- 16. Le type de mouvement (champ obligatoire, ex: perte, achat, utilisations, ...)
+ - 14 : Type de la CRD (champ obligatoire)
+ - 15 : La catégorie de mouvement : (champ obligatoire, ex: stock_debut, entrée, sortie, stock_fin)
+ - 16 : Le type de mouvement (champ obligatoire, ex: perte, achat, utilisations, ...)
  
  **Pour la quantité :**
  
- 17. La quantité de CRD (champ obligatoire au format nombre entier)
+ - 17 : La quantité de CRD (champ obligatoire au format nombre entier)
 
  **Pour les détails :**
  
- 18. vide
- 19. vide
- 20. vide
+ - 18 : vide
+ - 19 : vide
+ - 20 : vide
 
 [Voici un exemple ne contenant que quelques lignes de type CRD](exemple_crd.csv "csv_de_type_crd")
 
@@ -189,40 +188,40 @@ Pour identifier un établissement, il est obligatoire de renseigner au moins une
 
  **Pour la section commune :**
  
- 1. CAVE (champ obligatoire à valeur fixe) 
- 2. La période de la DRM (champ obligatoire au format AAAAMM)  
- 3. L'identifiant interpro de l'établissement (champ alpha-numérique) pouvant contenir entre parenthèses le numéro SIRET (14 chiffres) ou CVI (10 chiffres) de l'établissement
- 4. Le numéro d'accise (champ alpha-numérique de 13 caractères au format FR0xxxxxxxxxx)
+ - 1 : CAVE (champ obligatoire à valeur fixe) 
+ - 2 : La période de la DRM (champ obligatoire au format AAAAMM)  
+ - 3 : L'identifiant interpro de l'établissement (champ alpha-numérique) pouvant contenir entre parenthèses le numéro SIRET (14 chiffres) ou CVI (10 chiffres) de l'établissement
+ - 4 : Le numéro d'accise (champ alpha-numérique de 13 caractères au format FR0xxxxxxxxxx)
  
 Pour identifier un établissement, il est obligatoire de renseigner au moins une valeur entre l'identifiant interpro, le siret, le cvi et le numéro d'accise.
  
  **Pour la description du produit :**
  
- 5. vide
- 6. vide
- 7. vide
- 8. vide
- 9. vide
- 10. vide
- 11. vide
- 12. vide
- 13. vide
+ - 5 : vide
+ - 6 : vide
+ - 7 : vide
+ - 8 : vide
+ - 9 : vide
+ - 10 : vide
+ - 11 : vide
+ - 12 : vide
+ - 13 : vide
  
  **Pour le type de mouvement :**
  
- 14. vide
- 15. La catégorie d'annexe (champ obligatoire, ex: empreinte, daa, dsa, rna, statistiques, ...)
- 16. Le type lié à la catégorie d'annexe (champ facultatif, ex: debut, fin, jus, mcr, vinaigre ...)
+ - 14 : vide
+ - 15 : La catégorie d'annexe (champ obligatoire, ex: empreinte, daa, dsa, rna, statistiques, ...)
+ - 16 : Le type lié à la catégorie d'annexe (champ facultatif, ex: debut, fin, jus, mcr, vinaigre ...)
  
  **Pour la quantité :**
  
- 17. La Valeur d'annexe (champ facultatif)
+ - 17 : La Valeur d'annexe (champ facultatif)
  
  **Pour les compléments :**
  
- 18. La date d'expédition (champ obligatoire au format AAAA-MM-DD si l'annexe est un relevé de non apurement, sinon vide)
- 19. Le numéro d'accise du destinataire (champ obligatoire au format alpha-numérique de 13 caractères si l'annexe est un relevé de non apurement, sinon vide)
- 20. Le numéro DAA/DAC/DAE (champ obligatoire au format nombre entier si l'annexe est un relevé de non apurement, sinon vide)
+ - 18 : La date d'expédition (champ obligatoire au format AAAA-MM-DD si l'annexe est un relevé de non apurement, sinon vide)
+ - 19 : Le numéro d'accise du destinataire (champ obligatoire au format alpha-numérique de 13 caractères si l'annexe est un relevé de non apurement, sinon vide)
+ - 20 : Le numéro DAA/DAC/DAE (champ obligatoire au format nombre entier si l'annexe est un relevé de non apurement, sinon vide)
 
 [Voici un exemple ne contenant que quelques lignes de type ANNEXE](exemple_annexe.csv "csv_de_type_annexe")
 
