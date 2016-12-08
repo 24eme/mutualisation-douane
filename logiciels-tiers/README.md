@@ -210,7 +210,7 @@ Pour identifier un établissement, il est obligatoire de renseigner au moins une
  **Pour le type de mouvement :**
  
  - 14 : vide
- - 15 : La catégorie d'annexe (champ obligatoire, parmi : empreinte, daadac, dsadsac, dae, rna, stats europeenes )
+ - 15 : La catégorie d'annexe (champ obligatoire, parmi : empreinte, daadac, dsadsac, nonapurement, dae, rna, stats europeenes )
  - 16 : Le type lié à la catégorie d'annexe (champ facultatif, parmi : debut, fin, jus, mcr, vinaigre )
  
  **Pour la quantité :**
