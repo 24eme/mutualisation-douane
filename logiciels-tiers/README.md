@@ -81,7 +81,7 @@ Les premiers champ de chaque ligne sont des champs communs pour tout le fichier,
 Le fichier CSV est constitué de trois types de lignes :
  - CAVE : pour déclarer le stock et les mouvements de cave ;
  - CRD : pour déclarer le stock et les mouvements de CRD ;
- - ANNEXE : pour les informations demandées en annexe par les douanes (documents d'accompagnement, observations, ...)
+ - ANNEXE : pour les informations demandées en annexe par les douanes (documents d'accompagnement, observations et statistiques européennes)
 
 L'idée du fichier CSV est de permettre d'autres exploitations que celles liées à la télédéclaration des DRM. Certaines informations peuvent être éclatées en plusieurs champs afin par exemple de permettre des utilisations statistiques (c'est le cas notamment pour la description des produits).
 
@@ -92,7 +92,7 @@ Les trois types de lignes se basent sur une structure commune. Cette structure s
  - la quantité de produit concerné (1 champ) qui permet de connaître le volume ou la quantité associée au mouvement
  - la partie détail (3 champs) qui permet d'indiquer les détails nécessaires à la déclaration du mouvement (pays d'export, n° de contrat concerné, ...)
 
-La partie identification du produit peut être utilisé soit de manière éclaté (qui permet de faire des exploitations statistiques sur les appellations, les couleurs, ...), soit de manière agrégé en indiquant le nom complet du produit ou du type de CRD dans le premier champ de cette section.
+La partie identification du produit peut être utilisé soit de manière éclaté (qui permet de faire des exploitations statistiques sur les appellations, les couleurs, date de non appurement, numéro d'accise du destinataire de non appurement,  numéro de document), soit de manière agrégé en indiquant le nom complet du produit ou du type de CRD dans le premier champ de cette section.
 
 ###Description des lignes CAVE
 
@@ -170,7 +170,7 @@ Pour identifier un établissement, il est obligatoire de renseigner au moins une
  
  - 14 : Type de la CRD (champ obligatoire)
  - 15 : La catégorie de mouvement : (champ obligatoire, ex: stock_debut, entrée, sortie, stock_fin)
- - 16 : Le type de mouvement (champ obligatoire, ex: perte, achat, utilisations, ...)
+ - 16 : Le type de mouvement (champ obligatoire parmi : achat, excedents, retours, destructions, utilisations, manquants )
  
  **Pour la quantité :**
  
@@ -210,8 +210,8 @@ Pour identifier un établissement, il est obligatoire de renseigner au moins une
  **Pour le type de mouvement :**
  
  - 14 : vide
- - 15 : La catégorie d'annexe (champ obligatoire, ex: empreinte, daa, dsa, rna, statistiques, ...)
- - 16 : Le type lié à la catégorie d'annexe (champ facultatif, ex: debut, fin, jus, mcr, vinaigre ...)
+ - 15 : La catégorie d'annexe (champ obligatoire, parmi : empreinte, daadac, dsadsac, dae, rna, stats europeenes )
+ - 16 : Le type lié à la catégorie d'annexe (champ facultatif, parmi : debut, fin, jus, mcr, vinaigre )
  
  **Pour la quantité :**
  
