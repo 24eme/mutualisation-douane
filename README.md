@@ -17,5 +17,5 @@ Voici les différents éléments contenu dans cet espace documentaire :
 | IVBDpro       | IVBD                   | Actualys | OK   | OK          |                 | OK   |             |             |            | [ivbdpro.fr](http://ivbdpro.fr) |
 | IVSOpro       | IVSO + Cahors / Floc / Armangnac| Actualys |OK| OK     |                 | OK   |             |             |            | [ivsopro.com](http://ivsopro.com) |
 | Registre de cave Extranet de Beaujolais | Inter Beaujolais | RMSI| OK |OK|Acces fonctionnel| OK |             |             |            | [ivsopro.com](http://ivsopro.com)  |
-| DeclaViti     | CIVR, Oc, InterSud     | Infodial | OK    |   OK       |       OK       |  OK   |             |             |            | [declaviti.fr](https://declaviti.fr/)|
+| DeclaViti     | CIVR, Oc, InterSud     | Infodial | OK    |   OK       |       OK       |  OK   | OK          | OK          | OK         | [declaviti.fr](https://declaviti.fr/)|
 | DematVin      | BIVB          | Estalis - HelixDev| OK    | OK         |                |       |             |             |             |            |
