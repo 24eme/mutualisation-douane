@@ -303,7 +303,7 @@ Type : Complexe ordonné
 Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Facultatif |  Règles  |
 :------------|:--------|:----:|:------------|:------------|:----------------------:|:---------|
 IIP1-E2.4.1.7.3.1  | ventes-france-crd-suspendus | ventes-france-crd-suspendus  | 0..1 | Ventes France sous CRD personnalisées ou collectives achetées en droits suspendus, sous DSA ou sous facture (en hL) | F | IIP1RG35 IIP1RG20 Si saisi, alors >=0
-IIP1-E2.4.1.7.3.2 | france-crd-acquittes | ventesvolumeType | 0..1 | Ventes France sous CRD collectives achetées en droits acquittés Les droits ont été acquittés auprès du répartiteur de capsules au moment de l'achat des CRD Dans CIEL, cette donnée n'alimente pas la liquidation de la déclaration mais a une vocation seulement statistique | F | IIP1RG20 Si saisi, alors >=0
+IIP1-E2.4.1.7.3.2 | ventes-france-crd-acquittes | volumeType | 0..1 | Ventes France sous CRD collectives achetées en droits acquittés Les droits ont été acquittés auprès du répartiteur de capsules au moment de l'achat des CRD Dans CIEL, cette donnée n'alimente pas la liquidation de la déclaration mais a une vocation seulement statistique | F | IIP1RG20 Si saisi, alors >=0
 IIP1-E2.4.1.7.3.3 | sorties-sans-paiement-droits | sorties-sans-paiement-droits | 0..1 | Sorties du produit sans paiement des droits (en hL) | F |
 
 #####Élément ventes-france-crd-suspendus
