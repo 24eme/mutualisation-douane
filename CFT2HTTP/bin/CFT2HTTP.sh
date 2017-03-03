@@ -1,5 +1,7 @@
 #!/bin/bash
 
+. $(dirname $0)/CFT2HTTP.config
+
 for dir in /data/axway/reception_douanes* ; do
     subrep=$(basename $dir)
     updatefile=$PUBLISHDIR"/"$subrep"/.update"
