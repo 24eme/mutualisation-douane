@@ -1,4 +1,4 @@
-#Webservice d'authentification JWT
+# Webservice d'authentification JWT
 
 Pour permettre aux interprofessions de pouvoir envoyer des DRM pour le compte de leurs ressortissant, les dounes ont mis en place un service d'authentification basé sur le protocol JWT.
 
@@ -6,7 +6,7 @@ De nombreuses implémentations sont disponibles pour ce protocole. Elles sont r�
 
 Ce protocole est basé sur l'exploitation de messages signés via un mecanisme de clés privée/publique souvent réunies en certificat. Pour l'implémentation douanière, un certificat PKI X509 RGS une étoile est nécessaire.
 
-## Acquisition d'un certificat RGS une étoile
+##  Acquisition d'un certificat RGS une étoile
 
 Pour acquérir un certificat RGS une étoile, il faut s'adresser à l'une des autorités de certification reconnue. Voici les listes des entreprises fournissant des certificats avec ce niveau de sécurité :
  - [ChamberSign](http://www.chambersign.fr/certificat-rgs-initio/) : entreprise associée aux CCI, les documents sont donc déposables dans la CCI de sa région ;
@@ -19,13 +19,13 @@ La livraison de ce certificat se fait généralement par mail en 48h. Il se mat�
 
 Comme la clée privée est une information confidentielle qui ne doit pas être partagée le fichier ``pkcs12`` est normalement protégé par un mot de passe qui vous est fourni par votre organisme de certification.
 
-## Extraire le certificat p12 de votre navigateur
+##  Extraire le certificat p12 de votre navigateur
 
 Certaines autorité de certification installe directement les certificats dans le navigateur au lieu de fournir un fichier p12 par email.
 
 Dans ce cas, allez dans les préférences de votre navigateur pour « Sauvegarder » le fichier (sous firefox, « Préférence » puis « Avancé » puis « Certificats » puis « Voir les certificats », dans l'onglet « Vos certificats », cliquez sur le certificat puis sur le bouton « Sauvegarder »). Le navigateur vous demande alors un mot de passe pour protéger la clé privée qui sera incluse dans le fichier.
 
-## Extraire les certificats du fichier p12
+##  Extraire les certificats du fichier p12
 
 La suite [OpenSLL](https://www.openssl.org/) permet assez facilement d'exploiter les fichiers ``p12`` et notamment d'en extraire les deux certificats ainsi que la clée privée. Un installeur pour windows est disponible sur le site [slproweb.com](http://slproweb.com/products/Win32OpenSSL.html).
 
@@ -114,7 +114,7 @@ Si vous avez besoin de convertir le certificat au format der, voici la commande 
 
     $ openssl x509 -outform der -in certificat-client.crt -out certificat-client.der
 
-## Envoi de certificat et du crl aux dounaes
+##  Envoi de certificat et du crl aux dounaes
 
 Pour avoir accès au webservice d'authentification JWT, il faut envoyer deux fichiers aux douanes :
  - le certificat X509 RGS* (*certificat-client.crt*) dans notre exemple ;
@@ -134,7 +134,7 @@ Sa localiation est en générale indiquée dans le certificat. Pour le lire :
 
 Une fois que ces deux fichiers installés, les douanes fournirront un identifiant ``ISS`` qui permettra d'associer la requête d'authentification à votre interprofession.
 
-## Tester la bonne configuration du service JWT
+##  Tester la bonne configuration du service JWT
 
 Une fois le numéro ISS installé et à condition qu'un accès [PASTER](PASTER.md) soit opérationel, il est possible d'obtenir un token JWT afin de pouvoir s'authentifier auprès du webservice.
 

@@ -1,20 +1,20 @@
-#Projet CIEL Contrat de service avec les interprofessions vitivinicoles
+# Projet CIEL Contrat de service avec les interprofessions vitivinicoles
 
 Version 2.4 du 27/09/2016
 [Valable pour la version 1.9 du schéma XSD]
 
 État : Validé
 
-##INTRODUCTION
-###OBJET DU DOCUMENT
+## INTRODUCTION
+### OBJET DU DOCUMENT
 
 Ce document décrit les interfaces entre le système CIEL et les systèmes d'information (SI) des interprofessions vitivinicoles.
 
-###DOCUMENTS APPLICABLES ET DOCUMENTS DE SECOURS
+### DOCUMENTS APPLICABLES ET DOCUMENTS DE SECOURS
 
 *supprimé*
 
-###GLOSSAIRE
+### GLOSSAIRE
 
 Terme | Définition |
 :-----|:-----------|
@@ -42,7 +42,7 @@ XML   | Extensible markup language |
 XSD   | XML schema definition |
 WSDL  | Web services description language |
 
-###DÉFINITION
+### DÉFINITION
 
 « Numéro d'agrément » : dans le présent document, on entend par « numéro
 d'agrément » le « numéro d'agrément d'entrepositaire agréé » ou « numéro
@@ -57,7 +57,7 @@ générique de « déclaration récapitulative » est utilisé, il fait référe
 déclarations récapitulatives mensuelles (DRM) et aux déclarations récapitulatives
 annuelles (DRA).
 
-##CIEL ET LES INTERPROFESSIONS VITIVINICOLES
+## CIEL ET LES INTERPROFESSIONS VITIVINICOLES
 
 Les opérateurs vitivinicoles saisissent des informations économiques relatives à leur
 comptabilité matières sur les portails des interprofessions desquelles ils sont adhérents.
@@ -124,9 +124,9 @@ Concernant le jeton d’authentification et le jeton d’accès lors des échang
 
 IIP1, les données mesurant le temps (iat, timestamp, …) sont au format milli-secondes.
 
-##INTERFACE IIP1 : ENVOI DES DONNÉES ECONOMIQUES POUR PRÉ­REMPLISSAGE DE LA DÉCLARATION DU PORTAIL DE L'INTERPROFESSION VERS CIEL
+## INTERFACE IIP1 : ENVOI DES DONNÉES ECONOMIQUES POUR PRÉ­REMPLISSAGE DE LA DÉCLARATION DU PORTAIL DE L'INTERPROFESSION VERS CIEL
 
-###DESCRIPTION GÉNÉRALE
+### DESCRIPTION GÉNÉRALE
 
 **IIP1. Envoi des données économiques pour pré-remplissage de la déclaration du portail de l'interprofession vers CIEL**
 
@@ -137,7 +137,7 @@ IIP1, les données mesurant le temps (iat, timestamp, …) sont au format milli-
 | Fréquence | Disponibilité permanente|
 | Temps de réponse maximal | 2 secondes au 90e centile (Sur 100 appels au service web, au moins 90 ont un temps de réponse inférieur ou égal à 2 secondes.) |
 
-###FONCTIONNEMENT GÉNÉRAL
+### FONCTIONNEMENT GÉNÉRAL
 
 L'interprofession envoie les données économiques validées par le ressortissant sur son portail à CIEL (IIP1). Ce flux est unitaire : il ne concerne qu’une déclaration par période de taxation et par déclarant. A réception du flux, CIEL enregistre une déclaration en mode brouillon à partir des données transférées.
 
@@ -157,17 +157,17 @@ CIEL ne saura pas gérer les cas où un opérateur est ressortissant de plusieur
 
 Enfin, lorsque le ressortissant valide les données économiques saisies sur le portail de son interprofession, elles ne sont plus modifiables sur le portail de l'interprofession. CIEL ne peut recevoir qu'une seule fois les données économiques de la part d'une interprofession pour un numéro d'agrément et un mois donnés (ou pour un numéro d'agrément et une année donnés dans le cas de la DRA).
 
-###PARAMÈTRES D'ENTRÉE
+### PARAMÈTRES D'ENTRÉE
 
-####DESCRIPTION
+#### DESCRIPTION
 
 Le SI de l’interprofession vitivinicole envoie toutes les informations économiques dont ildispose et étant utiles à l’élaboration d’une déclaration récapitulative pour un numéro d’agrément d'entrepositaire agréé, un mois et une année (ou pour un numéro d'agrément et une année dans le cas de la DRA) donnés. Le SI de l'interprofession pouvant disposer de toutes les données économiques nécessaires à la DRM, la structure des données envoyées par le service, constituant l'entrée de l'IIP1, reprend la structure des données économiques de la DRM.
 
 La télé-déclaration, étant la photographie de la comptabilité matières pour une période donnée, doivent y figurer tous les produits en stocks (en droits suspendus et/ou en droits acquittés) que ces produits aient fait l’objet d’un mouvement (entrées ou sorties) ou pas depuis la période précédente.
 
-####ÉLÉMENTS
+#### ÉLÉMENTS
 
-#####Élément message­-interprofession
+##### Élément message­-interprofession
 
 Type : Complexe ordonné
 
@@ -176,7 +176,7 @@ Référence | Élément | Type | Cardinalité | Description | Obligatoire/Facult
 IIP-1-­E­1    | siren­-interprofession | sirenType | 1 | Identification de l'interprofession d’appartenance de l’opérateur | O | IIP1­-RG6 |
 IIP-1-­E­2    | declaration­-recapitulative | declaration­-recapitulative  | 1 | Déclaration récapitulative | O | IIP1­-RG2 |
 
-#####Élément declaration­-recapitulative
+##### Élément declaration­-recapitulative
 
 Type : Complexe ordonné
 
@@ -192,7 +192,7 @@ IIP-1­-E­2.8  | document­-accompagnement | document­-accompagnement | 0..3 |
 IIP-1­-E­2.9  | releve­-­non­-apurement | releve­-­non­-apurement | 0..1 | Relevé de non apurement | F | IIP1-­RG12 |
 IIP-1­-E­2.10 | statistiques | statistiques | 0..1 | Statistiques communautaires | F | |
 
-#####Élément identification­-declarant
+##### Élément identification­-declarant
 
 Type : Complexe ordonné
 
@@ -201,7 +201,7 @@ Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Fac
 IIP-1-­E­-2.1.1|numero­-agrement | numeroAcciseType|1|Numéro d’agrément d'entrepositaire agréé concerné par la DRM dont les données sont demandées | O | IIP1­RG3 IIP1­RG4 IIP1­RG5 |
 IIP-1­-E­-2.1.2|numero­-cvi      | numeroCviType | 0..1 | Numéro CVI de l'opérateur | F | |
 
-#####Élément periode
+##### Élément periode
 
 Type : Complexe ordonné
 
@@ -210,7 +210,7 @@ Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Fac
 IIP-1­-E­-2.3.1| mois | int | 1 | Mois de la déclaration dont les données sont envoyées (pour les DRA, il s'agit du mois et de l'année de la fin de la période) | O | IIP1­RG7 IIP1­RG8 IIP1­RG9 |
 IIP-1-­E-­2.3.2| annee |int | 1 | Année de la déclaration dont les données sont envoyées (pour les DRA, il s'agit du mois et de l'année de la fin de la période) | O | IIP1­RG7 IIP1­RG8 IIP1­RG9 |
 
-#####Élément droits-suspendus
+##### Élément droits-suspendus
 
 Type : Complexe ordonné
 
@@ -219,7 +219,7 @@ Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Fac
 IIP-1­-E-­2.4.1| produit | produit | 0..* | Produit concerné par la déclaration en droits suspendus | F | IIP1­RG10 |
 IIP-1­-E-­2.4.2| stockEpuise | boolean | 1 | Booléen indiquant si le stock en droits suspendus est épuisé | O | IIP1­RG13 |
 
-#####Élément produit
+##### Élément produit
 
 Type : Complexe ordonné
 
@@ -233,7 +233,7 @@ IIP1-E2.4.1.4 | tav | tavType | 0..1 | TAV du produit | F |  IIP1RG21 IIP1RG22
 IIP1-E2.4.1.5 | premix | boolean | 0..1 | Indique si le produit considéré est un premix ou pas | F |  IIP1RG21 IIP1RG22
 IIP1-E2.4.1.6 | observations | string | 0..1 | Observations apportées par le déclarant concernant la balance des stocks en droits suspendus | F |  IIP1RG25 IIP1RG26
 
-#####Élément balance-stocks (Droits suspendus)
+##### Élément balance-stocks (Droits suspendus)
 
 Type : Complexe ordonné
 
@@ -244,7 +244,7 @@ IIP1-E2.4.1.7.2 | entrees-periode | entrees-periode |  0..1 | Entrées sur la p�
 IIP1-E2.4.1.7.3 | sorties­-periode | sorties­-periode | 0..1 | Sorties sur la période en droits suspendus, pour le produit concerné | F |
 IIP1-E2.4.1.7.4 | stock­-fin­-periode | stock­-fin­-periode | 1 | Stock de fin de période (en hL), correspondant à la différence entre les entrées et les sorties de période. | O | IIP1RG17 IIP1RG18
 
-#####Élément entrees-periode
+##### Élément entrees-periode
 
 Type : Complexe ordonné
 
@@ -257,7 +257,7 @@ IIP1-E2.4.1.7.2.4 | ouvements-internes | mouvements-internes | 0..1 | Mouvements
 IIP1-E-2.4.1.7.2.6 | replacement | complexe | 0..1 | Exemple : retour de marchandises, transfert de comptabilité matières. Toute saisie dans cette ligne requiert un commentaire obligatoire dans la rubrique « Observations » (en hL) | F | IIP1RG38
 IIP1-E2.4.1.7.2.5 | autres-entrees | volumeType | 0..1 | Excédent suite à inventaire ou contrôle du service des douanes. Toute saisie requiert un commentaire obligatoire dans la rubrique « Observations » (en hL) | F | IIP1RG25 Si saisi, alors >=0
 
-#####Élément mouvements-temporaires
+##### Élément mouvements-temporaires
 
 Type : Complexe ordonné
 
@@ -268,7 +268,7 @@ IIP1-E2.4.1.7.2.3.2 | relogement | volumeType | 0..1 | Retour de relogement (en 
 IIP1-E2.4.1.7.2.3.3 | travail-a-facon | volumeType | 0..1 | Retour de travail à façon (en hL) | F | Si saisi, alors >=0
 IIP1-E2.4.1.7.2.3.4 | distillation-a-faconEntrees | volumeType | 0..1 | Retour de distillation à façon (en hL) | F |  Si saisi, alors >=0
 
-#####Élément mouvements-internes
+##### Élément mouvements-internes
 
 Type : Complexe ordonné
 
@@ -278,7 +278,7 @@ IIP1-E2.4.1.7.2.4.1 | replis­-declassement­-transfert­-changement­-appellati
 IIP1-E2.4.1.7.2.4.2 | manipulations | volumeType | 0..1 | Augmentation de volume constatée suite à une manipulation oenologique autorisée (ex. édulcoration) | F | Si saisi, alors >=0
 IIP1-E2.4.1.7.2.4.3 | integration-vci-agree | volumeType | 0..1 | Intégration de VCI agréé (en hL) Le cumul des agréments de VCI pour les appellations en bénéficiant doit trouver son équivalent en sortie de la colonne produit VCI. | F | Si saisi, alors >=0
 
-#####Élément replacement-suspension
+##### Élément replacement-suspension
 
 Type : Complexe ordonné
 
@@ -288,7 +288,7 @@ IIP1-E2.4.1.7.2.6.1 | mois | int | 1 | Mois de la sortie taxable ou de la récep
 IIP1-E2.4.1.7.2.6.2 | annee | int | 1 | Année de la sortie taxable ou de la réception en droits acquittés de ce produit.  Sur 4 positions. | O | IIP1RG40 |
 IIP1-E2.4.1.7.2.6.3 | volume | volumeType | 1 | Volume du produit replacé en suspension | O | >=0 |
 
-#####Élément sorties-periode
+##### Élément sorties-periode
 
 Type : Complexe ordonné
 
@@ -298,7 +298,7 @@ IIP1-E2.4.1.7.3.1  | ventes-france-crd-suspendus | ventes-france-crd-suspendus  
 IIP1-E2.4.1.7.3.2 | france-crdacquittes | ventesvolumeType | 0..1 | Ventes France sous CRD collectives achetées en droits acquittés Les droits ont été acquittés auprès du répartiteur de capsules au moment de l'achat des CRD Dans CIEL, cette donnée n'alimente pas la liquidation de la déclaration mais a une vocation seulement statistique | F | IIP1RG20 Si saisi, alors >=0
 IIP1-E2.4.1.7.3.3 | sorties-sans-paiement-droits | sorties-sans-paiement-droits | 0..1 | Sorties du produit sans paiement des droits (en hL) | F |
 
-#####Élément ventes-france-crd-suspendus
+##### Élément ventes-france-crd-suspendus
 
 Type : Complexe ordonné
 
@@ -307,7 +307,7 @@ Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Fac
 IIP1-E2.4.1.7.3.1.1 | annee-precedente | volumeType | 0..2 | Volume pour l’année précédente (cas unique des DRA) | F | IIP1RG35 Si saisi, alors >=0
 IIP1-E2.4.1.7.3.1.2 | annee-courante | volumeType | 0..1 | Volume pour l’année courante (cas des DRA) ou volume à déclarer pour la péruide de taxation | O | IIP1RG35 Si saisi, alors >=0
 
-#####Élément sorties-sans-paiement-droits
+##### Élément sorties-sans-paiement-droits
 
 Type : Complexe ordonné
 
@@ -319,7 +319,7 @@ IIP1-E2.4.1.7.3.3.3 | mouvements-temporaires | mouvements-temporaires | 0..1 | M
 IIP1-E2.4.1.7.3.3.4 | mouvements-internes | mouvements-internes | 0..1 | Mouvements internes du produit (en hL) | F |
 IIP1-E2.4.1.7.3.3.5 | autres-sorties | volumeType | 0..1 | Destruction par exemple (en hL) Toute saisie dans cette ligne requiert un commentaire obligatoire dans la rubrique « Observations » | F | IIP1RG26 Si saisi, alors >0
 
-#####Élément mouvements-temporaires
+##### Élément mouvements-temporaires
 
 Type : Complexe ordonné
 
@@ -330,7 +330,7 @@ IIP1-E2.4.1.7.3.3.3.2 | relogement | volumeType | 0..1 | Sortie pour relogement 
 IIP1-E2.4.1.7.3.3.3.3 | travail-a-facon | volumeType | 0..1 | Sortie pour travail à façon (en hL) | F |  Si saisi, alors >=0
 IIP1-E2.4.1.7.3.3.3.4 | distillation-a-facon | volumeType | 0..1 | Sortie pour distillation à façon (en hL) | F | Si saisi, alors >=0
 
-#####Élément mouvements-internes
+##### Élément mouvements-internes
 
 Type : Complexe ordonné
 
@@ -341,7 +341,7 @@ IIP1-E2.4.1.7.3.3.4.2 | fabrication-autre-produit | volumeType | 0..1 | En cas d
 IIP1-E2.4.1.7.3.3.4.3 | revendication-vci | volumeType | 0..1 | Volume de VCI de l'année N-1 du produit ayant reçu l'agrément à la récolter de l'année N (en hL) | F | Si saisi, alors >=0
 IIP1-E2.4.1.7.3.3.4.4 | autres-mouvements-internes | volumeType | 0..1 | Manipulations, soutirages. Réductions de volume constatées suite à soutirages de lies ou manipulations diverses, notamment les méthodes soustractives d'enrichissement ou la désalcoolisation. | F | Si saisi, alors >=0 |
 
-#####Élément droits-acquittes
+##### Élément droits-acquittes
 
 Type : Complexe ordonné
 
@@ -350,7 +350,7 @@ Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Fac
 IIP1-E2.5.1 | produit | produit | 0..* | Produit concerné par la déclaration en droits acquittés | F | IIP1RG10
 IIP1-E2.5.3 | stockEpuise | boolean | 1 | Booléen indiquant si le stock en droits suspendus est épuisé | O | IIP1RG13
 
-#####Élément produit
+##### Élément produit
 
 Type : Complexe ordonné
 
@@ -364,7 +364,7 @@ IIP1-E2.5.1.3 | premix | boolean | 0..1 | Indique si le produit considéré est 
 IIP1-E2.5.1.4 | balance-stocks | balance-stocks | 1 | Balance des stocks en droits acquittés | O |
 IIP1-E2.5.1.5 | observations | string | 0..1 | Observations apportées par le déclarant concernant la balance des stocks en droits acquittés | F | IIP1RG25 IIP1RG26 IIP1RG38
 
-#####Élément balance-stocks (Droits acquittés)
+##### Élément balance-stocks (Droits acquittés)
 
 Type : Complexe ordonné
 
@@ -375,7 +375,7 @@ IIP1-E2.6.1.2.2 | entrees-periode | entrees-periode | 0..1 | Entrées sur la pé
 IIP1-E2.6.1.2.3 | sorties-periode | sorties-periode | 0..1 | Sorties sur la période en droits acquittés, pour le produit concerné | F |
 IIP1-E2.6.1.2.4 | stock-fin-periode | volumeStockType | 1 | Stock de fin de période (en hL), correspondant à la différence entre les entrées et les sorties de période. | O | IIP1RG14 Si saisi, alors >=0
 
-#####Élément entrees-periode
+##### Élément entrees-periode
 
 Type : Complexe ordonné
 
@@ -384,7 +384,7 @@ Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Fac
 IIP1-E2.6.1.2.2.1 | achats | volumeType | 0..1 | Achats du produit (en hL) | F | Si saisi, alors >=0
 IIP1-E2.6.1.2.2.2 | autres-entrees | volumeType | 0..1 | Autres entrées du produit (en hL) | F | IIP1RG25 Si saisi, alors >=0
 
-#####Élément sorties-periode
+##### Élément sorties-periode
 
 Type : Complexe ordonné
 
@@ -394,7 +394,7 @@ IIP1-E2.6.1.2.3.1  | ventes | volumeType | 0..1 | Ventes de produit (en hL) | F 
 IIP1-E2.6.1.2.3.2 | replacement-suspension | volumeType | 0..1 | Replacement en suspension du produit (en hL) | F | Si saisi, alors >=0
 IIP1-E2.6.1.2.3.3 | autres-sorties | volumeType | 0..1 | Autres sorties du produits (en hL) | F | IIP1RG26 Si saisi, alors >=0 |
 
-#####Élément compte-crd
+##### Élément compte-crd
 
 Type : Complexe ordonné
 
@@ -404,7 +404,7 @@ IIP1-E2.7.1 | categorie-fiscale-capsules | categorieFiscaleCapsuleType | 1 | Cat
 IIP1-E2.7.2 | type-capsule | typeCapsulesType | 1 | Type de capsules représentatives de droits | O | IIP1RG28
 IIP1-E2.7.3 | centilisation | centilisation | 1..* | Centilisation des capsules déclarées | O | IIP1RG29 IIP1RG31 |
 
-#####Élément centilisation
+##### Élément centilisation
 
 Type : Complexe ordonné
 
@@ -415,7 +415,7 @@ IIP1-E2.7.3.2 | entrees-capsules | entrees-capsules | 0..1 | Entrées de capsule
 IIP1-E2.7.3.3 | sorties-capsules | sorties-capsules | 0..1 | Sorties de capsules | F |
 IIP1-E2.7.3.4 | stock-fin-periode | nonNegativeInteger | 1 | Stock de capsules de la fin de la période | O | IIP1RG30 IIP1RG39 |
 
-#####Élément entrees-capsules
+##### Élément entrees-capsules
 
 Type : Complexe ordonné
 
@@ -425,7 +425,7 @@ IIP1-E2.7.3.2.1 | achats | nonNegativeInteger | 0..1 | Nombre de capsules achet�
 IIP1-E2.7.3.2.2 | retours | nonNegativeInteger | 0..1 | Nombre de capsules retournées | F |
 IIP1-E2.7.3.2.3 | excedents | nonNegativeInteger | 0..1 | Nombre de capsules excédentaires | F |
 
-#####Élément sorties-capsules
+##### Élément sorties-capsules
 
 Type : Complexe ordonné
 
@@ -435,7 +435,7 @@ IIP1-E2.7.3.3.1 | utilisations | nonNegativeInteger | 0..1 | Nombre de capsules 
 IIP1-E2.7.3.3.2 | destructions | nonNegativeInteger | 0..1 | Nombre de capsules détruites | F |
 IIP1-E2.7.3.3.3 | manquants | nonNegativeInteger | 0..1 | Nombre de capsules manquantes | F |
 
-#####Élément document-accompagnement
+##### Élément document-accompagnement
 
 Type : Complexe ordonné
 
@@ -445,7 +445,7 @@ IIP1-E2.8.1 | numero-empreintes | DebutFinDocumentType | 0..1 | Type de référe
 IIP1-E2.8.2 | daa-dca | DebutFinDocumentType | 0..1 | Type de document pré-validé | F | IIP1RG34
 IIP1-E2.8.3 | dsa-dsac | DebutFinDocumentType | 0..1 | Type de document pré-validé | F | IIP1RG34
 
-#####Type DebutFinDocumentType
+##### Type DebutFinDocumentType
 
 Type : Complexe non ordonné
 
@@ -456,7 +456,7 @@ IIP1-E2.8.1.2 | fin-periode  | numeroDocumentType | 1 | Référence du dernier d
 IIP1-E2.8.1.2 | nombre-document-empreinte | int | 1 | Nombre de références sur la période | O | >0 |
 
 
-#####Élément releve-non-apurement
+##### Élément releve-non-apurement
 
 Type : Complexe ordonné
 
@@ -466,7 +466,7 @@ IIP1-E2.9.1 | numero-daa-dac-dae | numeroRnaType | 0..1 | Numéro de DAA/DAC/DAE
 IIP1-E2.9.2 | date-expedition | date | 0..1 | Date d’expédition (doit être de la forme AAAA-MM-JJ) | O
 IIP1-E2.9.3 | numero-accise-destinataire | String (13 caractères destinataire maximum) | 0..1 | Numéro d’accise du destinataire  ou référence du bureau d’export | F | IIP1RG42
 
-#####Élément statistiques
+##### Élément statistiques
 
 Type : Complexe ordonné
 
@@ -476,9 +476,9 @@ IIP1-E2.10.1 | quantite-mouts-jus | volumeType | 0..1 | Quantité de moûts de r
 IIP1-E2.10.2 | quantite-mouts-mcr | volumeType | 0..1 | Quantité de moûts de raisin transformés en MCR (moûts concentrés rectifiés) | F | Si saisi, alors >=0
 IIP1-E2.10.3 | quantite-vins-vinaigre | volumeType | 0..1 | Quantité de vins utilisés pour la fabrication de vinaigre | F | Si saisi, alors >=0 |
 
-####TYPES SIMPLES
+#### TYPES SIMPLES
 
-#####TYPES SIMPLES BASÉS SUR LE TYPE PRIMITIF DECIMAL
+##### TYPES SIMPLES BASÉS SUR LE TYPE PRIMITIF DECIMAL
 
 Type    | Nombre de décimales | Minimum | Description |
 :-------|:-------------------:|:-------:|:------------|
@@ -487,7 +487,7 @@ volumeStockType | 4 |                   | Représente un volume positif, négati
 tavType | 2 | 0                         | Représente le TAV d’un produit. Un tav ne peut être <=0.5 ou ≥ 100.
 
 
-#####TYPES SIMPLES BASÉS SUR LE TYPE PRIMITIF STRING
+##### TYPES SIMPLES BASÉS SUR LE TYPE PRIMITIF STRING
 
 Type    | Longueur minimale | Longueur maximale | valeurs possibles | format | Description |
 :-------|:-----------------:|:-----------------:|:------------------|:-------|:------------|
@@ -504,7 +504,7 @@ Attribut « volume » de l’élément centilisation | | | CL_10 CL_12_5 CL_18_7
 volumePersonnalise |  |  |  | Nombre décimal (1 chiffre après la virgule) | Volume indiqué pour une centilisation AUTRE
 bib |  |  | Vrai / Faux | Booléen | Indique si la centilisation AUTRE est de type Bag-in-box
 
-####RÈGLES DE GESTION
+#### RÈGLES DE GESTION
 
 Dès réception d’un flux, CIEL met en place une série de contrôles pour vérifier la validité et la cohérence des données contenues. Chaque élément ci-dessous reprend la teneur de la vérification ainsi que le message d’erreur associé.
 
@@ -545,7 +545,7 @@ Enfin, un code ‘999’ est prévu pour toutes les erreurs techniques. Le libel
 contient dans ce cas un identifiant unique (UUID) servant de support dans le
 dépannage du problème.
 
-####Cohérence des méta-données
+#### Cohérence des méta-données
 
 Code RG | Test et condition(s) | Code erreur | Message si erreur |
 :-------|:---------------------|:------------|:------------------|
@@ -561,7 +561,7 @@ IIP1RG9 | Un opérateur déclarant mensuellement ou annuellement ne peut saisir 
 IIP1RG37 | Un nouveau produit dans une déclaration doit être identifié soit pas son code INAO s’il s’agit d’un vin mousseux ou d’un vin tranquille, soit par son libellé fiscal. Pour chaque nouveau produit déclaré, un libellé personnalisé doit être défini par l’opérateur. Le libellé personnalisé servira d’unique identifiant produit pour les déclarations futures, et n’est par conséquent plus modifiable une fois définie. Le code INAO ou le libellé fiscal, ainsi que le libellé personnalisé devront être transmis dans tous les cas, CIEL vérifiera que le produit (retrouvé par son libellé personnalisé) a bien les mêmes caractéristiques. | 030 | Le produit <libellé personnalisé> transmis ne correspond pas au produit indiqué dans la précédente déclaration. |
 
 
-#### Balance des stocks
+####  Balance des stocks
 
 Code RG | Test et condition(s) | Code erreur | Message si erreur |
 :-------|:---------------------|:------------|:------------------|
@@ -590,7 +590,7 @@ IIP1RG41 | Pour les libellés fiscaux  « MATIERES_PREMIERES_SPIRITUEUX » et «
 IIP1RG42 | Pour les libellés fiscaux « MATIERES_PREMIERES_SPIRITUEUX » et « MATIERES_PREMIERES_ALCOOLS », il faut avoir une des activités suivantes précisées dans le référentiel des opérateurs « distillateurs/producteurs d’alcools », « régénérateurs », « dénaturateurs d’alcools », « utilisateurs d’alcools en exonération », « fournisseurs à UT », « récoltants vinificateurs », « négociants vinificateurs », « caves coopératives » | 039 | L’activité de l’agrément douanier n’autorise pas l’utilisation des libellés fiscaux de matières premières.
 IIP1RG43 | Les libellés fiscaux « MATIERES_PREMIERES_SPIRITUEUX » et « MATIERES_PREMIERES_ALCOOLS » ne sont pas autorisés dans les balances de stocks en droits acquittés. | 040 | Les matières premières ne sont pas autorisées dans la balance des stocks en droits acquittés.
 
-##### Compte CRD
+#####  Compte CRD
 
 
 Code RG | Test et condition(s) | Code erreur | Message si erreur |
@@ -611,17 +611,17 @@ IIP1RG43 | Pour les documents d’accompagnement, les champs « Première réfé
 pas être des nombres négatifs, nuls ou décimaux. |
 IIP1RG44 | Pour les documents d’accompagnement, le champ «Nombre de référence(s) dans la période » accepte uniquement un entier strictement positif. | 037 | Le nombre de référence dans la période doit être un entier strictement positif.
 
-####FICHIER XSD
+#### FICHIER XSD
 
 Le fichier XSD d’IIP1-entrée est présenté dans un fichier joint à ce contrat de service.
 
-####EXEMPLE DE PARAMÈTRES D'ENTRÉE
+#### EXEMPLE DE PARAMÈTRES D'ENTRÉE
 
 Un exemple de fichier XML en entrée d’IIP1 est présenté dans un fichier joint à ce contrat de service.
 
-###PARAMÈTRES DE SORTIE
+### PARAMÈTRES DE SORTIE
 
-##DESCRIPTION
+## DESCRIPTION
 
 Les paramètres de sortie de ce service sont décrits dans un document XSD encodé en UTF-8.
 
@@ -640,7 +640,7 @@ Si les données économiques envoyées par l'interprofession respectent l'ensemb
 règles de gestion définies dans le flux d'entrée de l'IIP1, alors CIEL confirme la bonne
 prise en compte des données.
 
-###Élément reponse-ciel
+### Élément reponse-ciel
 
 Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Facultatif
 :------------|:--------|:----:|:------------|:------------|:----------------------:
@@ -654,15 +654,15 @@ le flux est considéré comme accepté et les deux premiers éléments sont valo
 cas contraire, l’identifiant de la déclaration dans CIEL de même que l’horodatage de dépôt
 sont laissés vide et la liste des erreurs contient au moins un élément (raisons du rejet).
 
-####RÈGLES DE GESTION
+#### RÈGLES DE GESTION
 
 cf. Règles de gestion des paramètres d'entrée de l'IIP1 : Règles de gestion.
 
-####FICHIER XSD
+#### FICHIER XSD
 
 Le fichier XSD d’IIP1-sortie est présenté dans un fichier joint à ce contrat de service.
 
-####EXEMPLE DE FICHIER ÉCHANGÉ
+#### EXEMPLE DE FICHIER ÉCHANGÉ
 
 Exemples de flux XML de réponse :
 
@@ -706,13 +706,13 @@ Erreur technique :
     <message-erreur>>Le flux ne répond pas au schéma de transmission
     défini. Message technique: cvc-pattern-valid : La valeur
     '0000000000' n'est pas un facet valide par rapport au modèle '[0-9]
-    {9}' pour le type '#AnonType_siren-interprofessionmessageinterprofession'..</message-erreur>
+    {9}' pour le type '# AnonType_siren-interprofessionmessageinterprofession'..</message-erreur>
     </erreur-technique>
     </reponse-ciel>
 
-##INTERFACE IIP2 : ENVOI PAR CIEL DES DONNÉES ÉCONOMIQUES DE LA DÉCLARATION RÉCAPITULATIVE VALIDÉE À L'INTERPROFESSION
+## INTERFACE IIP2 : ENVOI PAR CIEL DES DONNÉES ÉCONOMIQUES DE LA DÉCLARATION RÉCAPITULATIVE VALIDÉE À L'INTERPROFESSION
 
-###DESCRIPTION GÉNÉRALE
+### DESCRIPTION GÉNÉRALE
 
 IIP2. Mise à disposition des données économiques de la déclaration récapitulative validée pour l'interprofession
 
@@ -725,7 +725,7 @@ Acteurs : Serveur CIEL pour l'envoie ; SI des interprofessions vitivinicoles pou
 
 Fréquence : Quotidienne
 
-###FONCTIONNEMENT GÉNÉRAL
+### FONCTIONNEMENT GÉNÉRAL
 
 Tous les soirs, l'application CIEL constituera par interprofession, par période et par
 déclarant, un fichier (archive zip) qui contiendra un lot de déclarations.
@@ -749,7 +749,7 @@ les données versées sur cassettes).
 Le schéma suivant représente cet échange :
 
 
-###EXPORT IIP2-E
+### EXPORT IIP2-E
 
 Tous les soirs, l'application CIEL constitue autant de fichiers que de déclarations. CIEL
 sélectionne regroupe les données des déclarations récapitulatives par interprofession,
@@ -778,7 +778,7 @@ longueur maximale 7) ;
 Cet export doit être exécuté en début de journée, idéalement à minuit, pour exporter les
 données de la veille dès que la nouvelle journée commence.
 
-###IMPORT IIP2-I
+### IMPORT IIP2-I
 
 Chaque SI d’interprofession vitivinicole récupère le fichier qui lui est destiné et qui a été
 envoyé par CIEL afin d’intégrer les données des déclarations récapitulatives qui s’y
@@ -786,38 +786,38 @@ trouvent.
 
 NB : Les fichiers sont supprimés au bout de 14 mois.
 
-###FICHIER ÉCHANGÉ IIP2-FI
+### FICHIER ÉCHANGÉ IIP2-FI
 
 Les fichiers échangés via cette interface sont des documents XML encodés en UTF-8.
 
-####ÉLÉMENTS
+#### ÉLÉMENTS
 
 Le formalisme (schéma XSD) est exactement le même que celui utilisé en entrée, dans le
 service IIP1.
 
-## INTERFACE IIP3 : TRANSMISSION DES DONNÉES LIÉES À UN NUMÉRO D'AGRÉMENT
+##  INTERFACE IIP3 : TRANSMISSION DES DONNÉES LIÉES À UN NUMÉRO D'AGRÉMENT
 
 L'interface IIP3 utilisera le service SEED. La description de ce flux se trouve dans la
 documentation relative au service SEED. Procédure de secours en cas d’indidisponiblité des services
 
 
-##PROCÉDURE DE SECOURS EN CAS D’INDIDISPONIBLITÉ DES SERVICES
+## PROCÉDURE DE SECOURS EN CAS D’INDIDISPONIBLITÉ DES SERVICES
 
-###INDISPONIBILITÉ DU PORTAIL INTERPROFESSIONNEL
+### INDISPONIBILITÉ DU PORTAIL INTERPROFESSIONNEL
 
 Il n'y aura pas, dans ce cas, de délai supplémentaire accordé aux redevables. Lorsque un
 portail interprofessionnel est indisponible, l'interprofession devra orienter ses opérateurs
 vers CIEL afin d'y saisir directement leurs déclarations en passant par Prodouane. Les
 déclarations validées dans CIEL seront mises à disposition des inter-professions.
 
-###INDISPONIBILITÉ DE L'APPLICATION CIEL
+### INDISPONIBILITÉ DE L'APPLICATION CIEL
 
 N jours de délai de déclaration seront donnés aux redevables sur l’ensemble des portails
 interprofessionnels si CIEL est indisponible.
 
-##ANNEXES
+## ANNEXES
 
-###CARDINALITÉS D’ÉLÉMENT XML
+### CARDINALITÉS D’ÉLÉMENT XML
 
 Ce document utilise des cardinalités pour les éléments XML. Il s’agit du nombre
 d’occurrences d’un élémet pouvant apparaître dans son élément parent. Ces cardinalités
@@ -829,7 +829,7 @@ Cardinalité | Description
  1          | L’élément doit apparaître une fois, et une fois seulement.
  0..*       | L’élément peut ne pas apparaître, apparaître une fois ou apparaître plusieurs fois.
 
-###TYPES PRIMITIFS DE XSD
+### TYPES PRIMITIFS DE XSD
 
 Ce document utilise plusieurs types primitifs fournis par XSD. Ces types sont définis dans
 le tableau suivant :
@@ -847,7 +847,7 @@ int | Nombre entier | 12
 nonNegativeInteger | Nombre entier positif ou nul | 4
 string | Chaîne de caractères | Ceci est un exemple.
 
-###LISTE DES LIBELLÉS FISCAUX
+### LISTE DES LIBELLÉS FISCAUX
 
  - BOISSONS_FERMENTEES_AUTRES
  - BOISSONS_FERMENTEES_AUTRES_PREMIX

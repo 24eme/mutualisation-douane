@@ -1,8 +1,8 @@
-#Spécifications techniques du format « webservice DRM » des portails Déclarvins (InterRhone, CIVP, IVSE), CIVA, InterLoire, IVBD et IVSO.
+# Spécifications techniques du format « webservice DRM » des portails Déclarvins (InterRhone, CIVP, IVSE), CIVA, InterLoire, IVBD et IVSO.
 
-##Architecture technique de sécurité
+## Architecture technique de sécurité
 
-###Authentification des utilisateurs
+### Authentification des utilisateurs
 
 Tous les utilisateurs déclarant ayant accès à la plateforme devront être authentifiés. Avant de pouvoir consulter n'importe quelle page, les utilisateurs doivent donc s'identifier sur le service d’authentification unique et centralisée CAS [1].
 
@@ -12,47 +12,47 @@ Sur l'application, les utilisateurs seront reconnus via un cookie de session fou
 
 Les informations relatives aux identifiants/mots de passe, aux cookies ou aux authentifications HTTP seront transférées en HTTPS [3] comme tout le reste des informations.
 
-###Authentification - DTI
+### Authentification - DTI
 
 Les fichiers CSV provenant des logiciels de gestion cave pourront être « uploadé » sur l'espace DRM du ressortissant. Dans ce cas, l'utilisateur s'authentifiera de manière classique au portail de son interpro.
 
-###Authentification - EDI
+### Authentification - EDI
 
 L'interface EDI n'est accessible qu'après authentification. L'authentification nécessite que l'utilisateur possède un compte sur la plateforme de télédéclaration des interpros. Une fois ce compte créé, l'utilisateur pourra s'identifier sur la plateforme EDI en fournissant son login et mot de passe via le protocole d'authentification HTTP (HTTP Authentication Basic [2]).
 
-###Protocole technique utilisé
+### Protocole technique utilisé
 
 L'EDI mis à disposition des vignerons est accessible à travers le protocole HTTPS. Pour l'envoi d'information, la méthode POST x-www-form-urlencoded [4] doit être implémentée.
 
-###Échange de données
+### Échange de données
 
 Les données échangées en mode lecture ou écriture se font sous le format CSV [5]. La plateforme supporte indifféremment les séparateurs virgules (« , ») ou point-virgules (« ; »). En revanche, il est nécessaire qu'un seul type de séparateur soit utilisé  au sein d'un même document.
 
 La plateforme de télédéclération est insensible à la casse et aux caractères accentués. Les chaines de caractères « Côte » ou « cote » seront donc traitées de manière identique.
 Il faut noter toute fois, qu'en cas d'utilisation de caractères accentués, ces caractères devront être encodés en UTF-8 [6]. 
 
-Débuter une ligne par le caractère « # » permet de définir des commentaires. Elles ne sont donc pas prises en compte par la plateforme.
+Débuter une ligne par le caractère « #  » permet de définir des commentaires. Elles ne sont donc pas prises en compte par la plateforme.
 
 Les nombres décimaux peuvent avoir pour séparateur décimal une virgule « , » ou un point « . ». Dans le cas ou la virgule « , » est choisi, bien faire attention qu'il n'y ait pas de confusion avec le séparateur du CSV.
 
-###Sécurité des transferts
+### Sécurité des transferts
 
 Toutes les connexions réalisées sur l'interface de saisie des DRM se feront via le protocole HTTPS [3].
 
-##Description de l'interface DRM
+## Description de l'interface DRM
 
 La création d'une DRM préremplie sur la plateforme de télédéclaration des interpros peut se faire de deux manières :
 
  - par envoi automatique depuis un logiciel tiers : c'est l'interface EDI
  - par dépot manuel par les utilisateurs de la plateforme via un formulaire HTML d'*upload* : c'est l'interface DTI+
 
-###Domaine dédié à l'EDI
+### Domaine dédié à l'EDI
 
 Un nom de domaine est dédié aux tests et un autre à la production, les URL fournies dans ce document font abstraction du nom de domaine à utiliser.
 
 Un nom de domaine de pré-production et un de production sont mis à disposition sur le portail des interpros.
 
-###Envoi des informations par EDI
+### Envoi des informations par EDI
 
 Voici les détails téchnique pour accéder au webservice d'envoi EDI d'une DRM :
 
@@ -64,11 +64,11 @@ Voici les détails téchnique pour accéder au webservice d'envoi EDI d'une DRM 
  - Type de requete : POST x-www-form-urlencoded
  - URL : *mis à disposition sur le portail des interpros*
 
-##Fichier attendu par les interfaces DTI+ et EDI
+## Fichier attendu par les interfaces DTI+ et EDI
 
 Le fichier décrivant les éléments constitutifs de la DRM qui devra être fourni par les logiciels de gestion de cave est un fichier CSV.
 
-###Organisation générale 
+### Organisation générale 
 
 Le fichier CSV permet de déclarer les différentes informations liées à la DRM.
 
@@ -94,7 +94,7 @@ Les trois types de lignes se basent sur une structure commune. Cette structure s
 
 La partie identification du produit peut être utilisé soit de manière éclaté (qui permet de faire des exploitations statistiques sur les appellations, les couleurs, ...), soit de manière agrégé en indiquant le nom complet du produit ou du type de CRD dans le premier champ de cette section.
 
-###Description des lignes CAVE
+### Description des lignes CAVE
 
 Les lignes de CAVE se constituent des champs suivants :
 
@@ -144,7 +144,7 @@ La douane demande parfois des informations complémentaires pour un produit afin
 
 [Voici un exemple ne contenant que quelques lignes de type CAVE](exemple_cave.csv "csv_de_type_cave")
 
-###Description des lignes CRD
+### Description des lignes CRD
 
  **Pour la section commune :**
  
@@ -185,7 +185,7 @@ Pour identifier un établissement, il est obligatoire de renseigner au moins une
 
 [Voici un exemple ne contenant que quelques lignes de type CRD](exemple_crd.csv "csv_de_type_crd")
 
-###Description des lignes ANNEXE
+### Description des lignes ANNEXE
 
  **Pour la section commune :**
  
@@ -226,13 +226,13 @@ Pour identifier un établissement, il est obligatoire de renseigner au moins une
 
 [Voici un exemple ne contenant que quelques lignes de type ANNEXE](exemple_annexe.csv "csv_de_type_annexe")
 
-###Exemple de CSV complet
+### Exemple de CSV complet
 
 [Vous trouverez ici un exemple complet possèdant plusieurs produits, crds et annexes différentes](export_edi_complet.csv "csv_complet")
 
    [1]: https://artduweb.com/tutoriels/cas-sso
    [2]: https://fr.wikipedia.org/wiki/Authentification_HTTP
    [3]: https://tools.ietf.org/html/rfc2818
-   [4]: http://www.w3.org/TR/html401/interact/forms.html#h-17.13.4.1
+   [4]: http://www.w3.org/TR/html401/interact/forms.html# h-17.13.4.1
    [5]: https://fr.wikipedia.org/wiki/Comma-separated_values
    [6]: https://fr.wikipedia.org/wiki/UTF-8

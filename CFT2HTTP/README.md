@@ -1,4 +1,4 @@
-#Accès aux fichiers XML DRM via le serveur de mutualisation douane
+# Accès aux fichiers XML DRM via le serveur de mutualisation douane
 
 Les fichiers reçus de la douane sont mis à disposition à travers une arborescence HTTP accessible aux partenaires du projet CNIV mutualisation Douane.
 
@@ -6,7 +6,7 @@ Pour y avoir accès, il faut un accès OpenVPN.
 
 L'accès OpenVPN va permettre à chaque interpro d'être identifiée via une adresse IP.
 
-## Découverte de son adresse IP sur le VPN
+##  Découverte de son adresse IP sur le VPN
 
 Pour connaitre l'adresse IP qui vous est attribuée, une url est mise à votre disposition : http://10.222.223.1/myip.php
 
@@ -15,7 +15,7 @@ Pour connaitre l'adresse IP qui vous est attribuée, une url est mise à votre d
 
 Pour avoir accès aux XML reçus de la douane, il faut réaliser une demande auprès de l'équipe vins d'Actualys en leur fournissant cette adresse ip.
 
-## Accès aux fichiers XML
+##  Accès aux fichiers XML
 
 L'accès aux fichiers XML reçus de la plateforme ProDou@ne doit se faire via une arborescence qui répond au schéma suivant :
 
@@ -29,7 +29,7 @@ Pour accéder aux XML transmis en préproduction, l'url change légèrement. ``r
 
     http://10.222.223.1/reception_douanes_PP/123456789/2016/08/FR123456E1234_1234567_20160901.xml
 
-## Listing des DRM reçues
+##  Listing des DRM reçues
 
 En interrogeant les répertoires de l'arborescence, il est possible d'avoir un listing des XML qui s'y trouvent :
 
@@ -71,9 +71,9 @@ Ou plus simplement la liste des DMR reçues depuis le 1er octobre 2016 :
     http://10.222.223.1/reception_douanes/123456789/2016/09/FR123456E1234_1234567_20160914.xml
     http://10.222.223.1/reception_douanes/123456789/2016/09/FR123456E1234_1234567_20160914.xml
 
-## Questions frequemment posées
+##  Questions frequemment posées
 
-### Comment savoir quand a été reçue une DRM ?
+###  Comment savoir quand a été reçue une DRM ?
 
 Chaque fichier XML est daté sur le serveur à la date de sa reception. En interrogeant l'entête HTTP ``Last-Modified``, il est donc possible d'obtenir cette information :
 
