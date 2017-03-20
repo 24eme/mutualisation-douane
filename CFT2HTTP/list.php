@@ -23,9 +23,9 @@ if (isset($_GET['from']) && preg_match('/^[0-9][0-9][0-9][0-9]\-[0-9][0-9]\-[0-9
     exec("touch --date=2016-01-01 $file");
 }
 if (isset($_GET['accise']) && preg_match('/^[A-Z0-9]*$/i',$_GET['accise'])) {
-  exec("find $dir -cnewer $file -type f -name '".$_GET['accise']."*xml'", $output);
+  exec("find $dir -newer $file -type f -name '".$_GET['accise']."*xml'", $output);
 }else{
-  exec("find $dir -cnewer $file -type f -name '*xml'", $output);
+  exec("find $dir -newer $file -type f -name '*xml'", $output);
 }
 unlink ($file);
 if ($isxml) {
