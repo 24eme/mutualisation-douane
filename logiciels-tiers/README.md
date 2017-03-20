@@ -1,5 +1,14 @@
 # Spécifications techniques du format « webservice DRM » des portails Déclarvins (InterRhone, CIVP, IVSE), CIVA, InterLoire, IVBD et IVSO.
 
+## Avant propos
+
+Ce document présente les éléments générique du format webservice DRM mis en place pour 8 interpros. Une annexe pour chacune de ces interpros est mise à disposition des prestataires afin de décrire les spécificités (catalogue produit, mouvements, ...).
+
+Voici les éléments spécifiques définis pour : 
+
+ - [Interloire](https://github.com/24eme/vinsdeloire/tree/prod/doc/logiciels_tiers)
+ - [DéclarVins](https://github.com/24eme/declarvins/tree/prod/doc/logiciels-tiers)
+
 ## Architecture technique de sécurité
 
 ### Authentification des utilisateurs
@@ -232,6 +241,6 @@ Pour identifier un établissement, il est obligatoire de renseigner au moins une
    [1]: https://artduweb.com/tutoriels/cas-sso
    [2]: https://fr.wikipedia.org/wiki/Authentification_HTTP
    [3]: https://tools.ietf.org/html/rfc2818
-   [4]: http://www.w3.org/TR/html401/interact/forms.html# h-17.13.4.1
+   [4]: http://www.w3.org/TR/html401/interact/forms.html#h-17.13.4.1
    [5]: https://fr.wikipedia.org/wiki/Comma-separated_values
    [6]: https://fr.wikipedia.org/wiki/UTF-8
