@@ -9,13 +9,13 @@ Voici les différents éléments contenu dans cet espace documentaire :
 
 ##  Avancement des différentes interpros
 
-| Nom du projet | Interpros       | Prestataire |  PASTEUR | Tocken JWT  | XML DRM recetté | SEED | Recette VDI | XML en Prod | Retour XML | URL du projet |
+| Nom du projet | Interpros (SIREN)      | Prestataire |  PASTEUR | Tocken JWT  | XML DRM recetté | SEED | Recette VDI | XML en Prod | Retour XML | URL du projet |
 |---------------|-----------------|-------------|----------|-------------|-----------------|------|-------------|-------------|------------|---------------|
-| Declarvins    | InterRhone, CIVP, IVSE | Actualys | OK   | OK          | OK              | OK   | OK          | OK          | OK          | [declarvins.net](http://declarvins.net/) |
-| VinsValDeLoire.pro | InterLoire         | Actualys | OK  | OK          | OK              | OK   | OK          |             |            | [vinsvaldeloire.pro](http://vinsvaldeloire.pro) |
-| VinsAlsace.pro| CIVA                   | Actualys | OK   | OK          | OK              | OK   |             |             |            | [vinsalsace.pro](http://vinsalsace.pro)  |
-| IVBDpro       | IVBD                   | Actualys | OK   | OK          |                 | OK   |             |             |            | [ivbdpro.fr](http://ivbdpro.fr) |
-| IVSOpro       | IVSO + Cahors / Floc / Armangnac| Actualys |OK| OK     |                 | OK   |             |             |            | [ivsopro.com](http://ivsopro.com) |
+| Declarvins    | InterRhone (783204001), CIVP (451070197), IVSE (513558494) | Actualys | OK   | OK          | OK              | OK   | OK          | OK          | OK          | [declarvins.net](http://declarvins.net/) |
+| VinsValDeLoire.pro | InterLoire (429164072)        | Actualys | OK  | OK          | OK              | OK   | OK          | OK          | OK           | [vinsvaldeloire.pro](http://vinsvaldeloire.pro) |
+| VinsAlsace.pro| CIVA (778904706)                  | Actualys | OK   | OK          | OK              | OK   |             |             |            | [vinsalsace.pro](http://vinsalsace.pro)  |
+| IVBDpro       | IVBD (781641329)       | Actualys | OK   | OK          | OK              | OK   |  OK         | OK            | OK           | [ivbdpro.fr](http://ivbdpro.fr) |
+| IVSOpro       | IVSO (387577851) + Cahors / Floc / Armangnac| Actualys |OK| OK     | OK              | OK   |  OK         | OK             | OK           | [ivsopro.com](http://ivsopro.com) |
 | Registre de cave Extranet de Beaujolais | Inter Beaujolais | RMSI| OK |OK|Acces fonctionnel| OK |             |             |            | [ivsopro.com](http://ivsopro.com)  |
-| DeclaViti     | CIVR, Oc, InterSud     | Infodial | OK    |   OK       |       OK       |  OK   |             |             |            | [declaviti.fr](https://declaviti.fr/)|
-| DematVin      | BIVB          | Estalis - HelixDev| OK    | OK         |                |       |             |             |             |            |
+| DeclaViti     | CIVR (434341103), Oc (489331314), InterSud (493069546)     | Infodial | OK    |   OK       |       OK       |  OK   | OK          | OK          | OK         | [declaviti.fr](https://declaviti.fr/)|
+| DematVin      | BIVB  (378184758)        | Estalis - HelixDev| OK    | OK         |                |       |             |             |             |            |

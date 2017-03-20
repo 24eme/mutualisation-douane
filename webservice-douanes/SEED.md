@@ -12,10 +12,10 @@ SOAP impose que le nom de la méthode soit fourni dans l'entête de la requête 
 
 Voici un exemple d'implémentation avec la commande unix ``curl`` :
 
-    $ curl --header "Content-Type: text/xml;charset=UTF-8"
-           --header "SOAPAction: getInformation"
-           --data @getInformation.xml
-           https://pro.douane.gouv.fr/seedWS/SeedWS
+    $ curl --header "Content-Type: text/xml;charset=UTF-8" \
+           --header "SOAPAction: getInformation" \
+           --data @getInformation.xml \
+           https://pro.douane.gouv.fr/seedWS/SeedWS 
 
 où le fichier ``getInformation.xml`` contient :
 
