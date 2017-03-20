@@ -38,7 +38,7 @@ $options = array(
     )
 );
 
-$result = httpQuerry('http://10.253.161.5/authtokenqualif/oauth2/v1/token', $options);
+$result = httpQuerry('http://10.253.161.5/authtoken/oauth2/v1/token', $options);
 
 echo "JWT answer: \n".$result ."\n\n";
 
@@ -60,7 +60,7 @@ $options = array(
         'ignore_errors' => true,
     )
 );
-$result = httpQuerry('http://10.253.161.5/cielqualifinterpro/ws/1.0/declarations', $options);
+$result = httpQuerry('http://10.253.161.5/cielinterpro/ws/1.0/declarations', $options);
 
 echo "Application server answer: \n".$result."\n";
 
