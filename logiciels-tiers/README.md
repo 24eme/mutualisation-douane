@@ -9,7 +9,7 @@ Voici les éléments spécifiques définis pour :
  - [Interloire](https://github.com/24eme/vinsdeloire/tree/prod/doc/logiciels_tiers)
  - [DéclarVins](https://github.com/24eme/declarvins/tree/prod/doc/logiciels-tiers)
  - [IVSO](https://github.com/24eme/giilda/tree/master/doc/logiciels_tiers/ivso)
- - [CIVA](https://github.com/24eme/giilda/tree/master/docs/logiciels_tiers)
+ - [CIVA](https://github.com/24eme/giilda/tree/master/doc/logiciels_tiers/civa)
 
 ## Architecture technique de sécurité
 
