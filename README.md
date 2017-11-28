@@ -19,3 +19,9 @@ Voici les différents éléments contenu dans cet espace documentaire :
 | Registre de cave Extranet de Beaujolais | Inter Beaujolais | RMSI| OK |OK|Acces fonctionnel| OK |             |             |            | [ivsopro.com](http://ivsopro.com)  |
 | DeclaViti     | CIVR (434341103), Oc (489331314), InterSud (493069546)     | Infodial | OK    |   OK       |       OK       |  OK   | OK          | OK          | OK         | [declaviti.fr](https://declaviti.fr/)|
 | DematVin      | BIVB  (378184758)        | Estalis - HelixDev| OK    | OK         |                |       |             |             |             |            |
+
+## Statistiques d'usage
+
+Deux fichiers sont mis à disposition aux interprofessions partenaires (via le VPN) :
+ - Nombre de XML reçues par interpros : (http://10.222.223.1/stats/DRMInterpro.csv)[http://10.222.223.1/stats/DRMInterpro.csv]
+ - Nombre de XML générés et les archives transmises par la douane par jour : (http://10.222.223.1/stats/DRMjour.csv)[http://10.222.223.1/stats/DRMjour.csv]
