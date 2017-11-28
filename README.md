@@ -16,7 +16,7 @@ Voici les différents éléments contenu dans cet espace documentaire :
 | VinsAlsace.pro| CIVA (778904706)                  | Actualys | OK   | OK          | OK              | OK   | OK            |             |            | [vinsalsace.pro](http://vinsalsace.pro)  |
 | IVBDpro       | IVBD (781641329)       | Actualys | OK   | OK          | OK              | OK   |  OK         | OK            | OK           | [ivbdpro.fr](http://ivbdpro.fr) |
 | IVSOpro       | IVSO (387577851) + Cahors / Floc / Armangnac| Actualys |OK| OK     | OK              | OK   |  OK         | OK             | OK           | [ivsopro.com](http://ivsopro.com) |
-| Registre de cave Extranet de Beaujolais | Inter Beaujolais (779759935) |  RMSI| OK |OK| OK | OK | OK   | OK    |      | [ivsopro.com](http://ivsopro.com)  |
+| Registre de cave Extranet de Beaujolais | Inter Beaujolais (779759935) |  RMSI| OK |OK| OK | OK | OK   | OK    | OK     | [extranet.beaujolais.com](http://extranet.beaujolais.com/)  |
 | DeclaViti     | CIVR (434341103), Oc (489331314), InterSud (493069546), CIVL (399153386)     | Infodial | OK    |   OK       |       OK       |  OK   | OK          | OK          | OK         | [declaviti.fr](https://declaviti.fr/)|
-| DematVin      | BIVB  (378184758)        | Estalis - HelixDev| OK    | OK         | OK  | OK  | OK   | OK  | OK  |    |
+| DematVin      | BIVB  (378184758)        | Estalis - HelixDev| OK    | OK         | OK  | OK  | OK   | OK  | OK  | [extranet.bivb.com](https://extranet.bivb.com/)   |
 | Vins Centre Loire      | BIVC  (402946016)        |  Actualys | OK    | OK         | OK  | OK  | OK   |   |   | [declaration.vins-centre-loire.com](https://declaration.vins-centre-loire.com/)   |
