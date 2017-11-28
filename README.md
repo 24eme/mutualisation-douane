@@ -13,9 +13,10 @@ Voici les différents éléments contenu dans cet espace documentaire :
 |---------------|-----------------|-------------|----------|-------------|-----------------|------|-------------|-------------|------------|---------------|
 | Declarvins    | InterRhone (783204001), CIVP (451070197), IVSE (513558494) | Actualys | OK   | OK          | OK              | OK   | OK          | OK          | OK          | [declarvins.net](http://declarvins.net/) |
 | VinsValDeLoire.pro | InterLoire (429164072)        | Actualys | OK  | OK          | OK              | OK   | OK          | OK          | OK           | [vinsvaldeloire.pro](http://vinsvaldeloire.pro) |
-| VinsAlsace.pro| CIVA (778904706)                  | Actualys | OK   | OK          | OK              | OK   |             |             |            | [vinsalsace.pro](http://vinsalsace.pro)  |
+| VinsAlsace.pro| CIVA (778904706)                  | Actualys | OK   | OK          | OK              | OK   | OK            |             |            | [vinsalsace.pro](http://vinsalsace.pro)  |
 | IVBDpro       | IVBD (781641329)       | Actualys | OK   | OK          | OK              | OK   |  OK         | OK            | OK           | [ivbdpro.fr](http://ivbdpro.fr) |
 | IVSOpro       | IVSO (387577851) + Cahors / Floc / Armangnac| Actualys |OK| OK     | OK              | OK   |  OK         | OK             | OK           | [ivsopro.com](http://ivsopro.com) |
-| Registre de cave Extranet de Beaujolais | Inter Beaujolais | RMSI| OK |OK|Acces fonctionnel| OK |             |             |            | [ivsopro.com](http://ivsopro.com)  |
-| DeclaViti     | CIVR (434341103), Oc (489331314), InterSud (493069546)     | Infodial | OK    |   OK       |       OK       |  OK   | OK          | OK          | OK         | [declaviti.fr](https://declaviti.fr/)|
-| DematVin      | BIVB  (378184758)        | Estalis - HelixDev| OK    | OK         |                |       |             |             |             |            |
+| Registre de cave Extranet de Beaujolais | Inter Beaujolais (779759935) |  RMSI| OK |OK| OK | OK | OK   | OK    |      | [ivsopro.com](http://ivsopro.com)  |
+| DeclaViti     | CIVR (434341103), Oc (489331314), InterSud (493069546), CIVL (399153386)     | Infodial | OK    |   OK       |       OK       |  OK   | OK          | OK          | OK         | [declaviti.fr](https://declaviti.fr/)|
+| DematVin      | BIVB  (378184758)        | Estalis - HelixDev| OK    | OK         | OK  | OK  | OK   | OK  | OK  |    |
+| Vins Centre Loire      | BIVC  (402946016)        |  Actualys | OK    | OK         | OK  | OK  | OK   |   |   | [declaration.vins-centre-loire.com](https://declaration.vins-centre-loire.com/)   |
