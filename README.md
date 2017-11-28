@@ -27,3 +27,4 @@ Deux fichiers sont mis à disposition aux interprofessions partenaires (via le V
  - Nombre de XML reçues par interpros : [http://10.222.223.1/stats/DRMInterpro.csv](http://10.222.223.1/stats/DRMInterpro.csv)
  - Nombre de XML générés et les archives transmises par la douane par jour : [http://10.222.223.1/stats/DRMjour.csv](http://10.222.223.1/stats/DRMjour.csv)
 
+Ils sont mis à jour quotidiennement (à 8h30)
