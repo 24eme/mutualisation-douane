@@ -7,7 +7,7 @@ mv -f publication_web/stats/DRMInterpro.csv.tmp publication_web/stats/DRMInterpr
 
 find publication_web/reception_douanes/ -type d -exec ls -l --full-time '{}/' ';'  | grep xml   | awk '{print $6}' | sort |  uniq -c | awk '{print $2";XML créés;"$1}' > /tmp/xmlcrees.csv
 ls -l --full-time donnees_cft/reception_douanes/  |  awk '{print $6}' | sort |  uniq -c | awk '{print $2";archives reçues;"$1}' > /tmp/archivesrecues.csv
-cat /tmp/xmlcrees.csv /tmp/archivesrecues.csv | sort > publication_web/stats/DRMjour.csv.tmp
+cat /tmp/xmlcrees.csv /tmp/archivesrecues.csv | grep '^20' | sort > publication_web/stats/DRMjour.csv.tmp
 mv -f publication_web/stats/DRMjour.csv.tmp publication_web/stats/DRMjour.csv
 
 rm /tmp/siren2interpro.csv /tmp/sirenmois.csv /tmp/xmlcrees.csv /tmp/archivesrecues.csv
