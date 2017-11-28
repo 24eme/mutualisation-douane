@@ -8,6 +8,8 @@ Voici les éléments spécifiques définis pour :
 
  - [Interloire](https://github.com/24eme/vinsdeloire/tree/prod/doc/logiciels_tiers)
  - [DéclarVins](https://github.com/24eme/declarvins/tree/prod/doc/logiciels-tiers)
+ - [IVSO](https://github.com/24eme/giilda/tree/master/doc/logiciels_tiers/ivso)
+ - [CIVA](https://github.com/24eme/giilda/tree/master/doc/logiciels_tiers/civa)
 
 ## Architecture technique de sécurité
 
@@ -219,7 +221,7 @@ Pour identifier un établissement, il est obligatoire de renseigner au moins une
  **Pour le type de mouvement :**
  
  - 14 : vide
- - 15 : La catégorie d'annexe (champ obligatoire, parmi : empreinte, daadac, dsadsac, nonapurement, dae, rna, stats europeenes )
+ - 15 : La catégorie d'annexe (champ obligatoire, parmi : empreinte, daadac, dsadsac, nonapurement, stats europeenes )
  - 16 : Le type lié à la catégorie d'annexe (champ facultatif, parmi : debut, fin, jus, mcr, vinaigre )
  
  **Pour la quantité :**
@@ -230,7 +232,7 @@ Pour identifier un établissement, il est obligatoire de renseigner au moins une
  
  - 18 : La date d'expédition (champ obligatoire au format AAAA-MM-DD si l'annexe est un relevé de non apurement, sinon vide)
  - 19 : Le numéro d'accise du destinataire (champ obligatoire au format alpha-numérique de 13 caractères si l'annexe est un relevé de non apurement, sinon vide)
- - 20 : Le numéro DAA/DAC/DAE (champ obligatoire au format nombre entier si l'annexe est un relevé de non apurement, sinon vide)
+ - 20 : Le numéro DAADAC/DSADSAC/EMPREINTE/NONAPUREMENT (champ obligatoire au format nombre entier si l'annexe est un relevé de non apurement, sinon vide)
 
 [Voici un exemple ne contenant que quelques lignes de type ANNEXE](exemple_annexe.csv "csv_de_type_annexe")
 
