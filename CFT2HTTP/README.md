@@ -66,10 +66,16 @@ Il est donc possible d'obtenir en XML la liste des DRM reçues depuis le 1er jan
 Ou plus simplement la liste des DMR reçues depuis le 1er octobre 2016 :
 
     $ curl http://10.222.223.1/reception_douanes/123456789/?from=2016-10-01
-    http://10.222.223.1/reception_douanes/123456789/2016/08/FR123456E1234_1234567_20160914.xml
-    http://10.222.223.1/reception_douanes/123456789/2016/08/FR123456E1234_1234567_20160906.xml
-    http://10.222.223.1/reception_douanes/123456789/2016/09/FR123456E1234_1234567_20160914.xml
-    http://10.222.223.1/reception_douanes/123456789/2016/09/FR123456E1234_1234567_20160914.xml
+    http://10.222.223.1/reception_douanes/123456789/2016/08/FR123000E1234_1234567_20160914.xml
+    http://10.222.223.1/reception_douanes/123456789/2016/08/FR123400E1234_1234567_20160906.xml
+    http://10.222.223.1/reception_douanes/123456789/2016/09/FR123450E1234_1234567_20160914.xml
+    http://10.222.223.1/reception_douanes/123456789/2016/09/FR123450E1234_1234567_20160914.xml
+
+Un paramètre ``accise`` permet de filtrer la liste des DRM reçues sur les seules DRM d'un numéro d'accise :
+
+    $ curl http://10.222.223.1/reception_douanes/123456789/?from=2016-10-01&accise=FR123450E1234
+    http://10.222.223.1/reception_douanes/123456789/2016/09/FR123450E1234_1234567_20160914.xml
+    http://10.222.223.1/reception_douanes/123456789/2016/09/FR123450E1234_1234567_20160914.xml
 
 ##  Questions frequemment posées
 
