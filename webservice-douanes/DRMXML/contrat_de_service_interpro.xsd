@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- edited with XMLSpy v2015 rel. 4 sp1 (http://www.altova.com) by DNSCE (DIR. NAT. DES STATISTIQUES) -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://douane.finances.gouv.fr/app/ciel/interprofession/echanges/1.0" targetNamespace="http://douane.finances.gouv.fr/app/ciel/interprofession/echanges/1.0" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.8">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://douane.finances.gouv.fr/app/ciel/interprofession/echanges/1.0" targetNamespace="http://douane.finances.gouv.fr/app/ciel/interprofession/echanges/1.0" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.11">
 	<xsd:element name="message-interprofession">
 		<xsd:annotation>
 			<xsd:documentation>Message en entrée envoyé par une interprofession et contenant la déclaration d'un opérateur pour une période donnée.</xsd:documentation>
@@ -188,7 +188,7 @@
 									<xsd:sequence>
 										<xsd:element name="categorie-fiscale-capsules" type="categorieFiscaleCapsuleType"/>
 										<xsd:element name="type-capsule" type="typeCapsuleType"/>
-										<xsd:element name="centilisation" maxOccurs="unbounded">
+										<xsd:element name="centilisation" minOccurs="1" maxOccurs="unbounded">
 											<xsd:complexType>
 												<xsd:sequence>
 													<xsd:element name="stock-debut-periode" type="xsd:nonNegativeInteger"/>
@@ -463,10 +463,7 @@
 		<xsd:annotation>
 			<xsd:documentation>Numéro identifiant CVI</xsd:documentation>
 		</xsd:annotation>
-		<xsd:restriction base="xsd:string">
-			<xsd:length value="10"/>
-			<xsd:pattern value="[0-9]{10}"/>
-		</xsd:restriction>
+		<xsd:restriction base="xsd:string"/>
 	</xsd:simpleType>
 	<xsd:simpleType name="numeroDocumentType">
 		<xsd:annotation>
@@ -544,10 +541,10 @@
 	</xsd:simpleType>
 	<xsd:simpleType name="volumeType">
 		<xsd:annotation>
-			<xsd:documentation>Nombre décimal positif ou égal à zéro à 4 chiffres après la virgule</xsd:documentation>
+			<xsd:documentation>Nombre décimal positif ou égal à zéro à 5 chiffres après la virgule</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="xsd:decimal">
-			<xsd:fractionDigits value="4"/>
+			<xsd:fractionDigits value="5"/>
 			<xsd:minInclusive value="0"/>
 		</xsd:restriction>
 	</xsd:simpleType>
@@ -563,10 +560,10 @@
 	</xsd:simpleType>
 	<xsd:simpleType name="volumeStockType">
 		<xsd:annotation>
-			<xsd:documentation>Nombre décimal à 4 chiffres après la virgule</xsd:documentation>
+			<xsd:documentation>Nombre décimal à 5 chiffres après la virgule</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="xsd:decimal">
-			<xsd:fractionDigits value="4"/>
+			<xsd:fractionDigits value="5"/>
 		</xsd:restriction>
 	</xsd:simpleType>
 	<xsd:complexType name="ReplacementType" abstract="false">
@@ -871,6 +868,16 @@
 			<xsd:enumeration value="MATIERES_PREMIERES_ALCOOLS">
 				<xsd:annotation>
 					<xsd:documentation>Matières premières utilisées pour les boissons alcooliques</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="VT_ETRANGERS">
+				<xsd:annotation>
+					<xsd:documentation>Vins tranquilles étrangers</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="VM_ETRANGERS">
+				<xsd:annotation>
+					<xsd:documentation>Vins mousseux étrangers</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 		</xsd:restriction>
