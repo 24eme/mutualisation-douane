@@ -145,8 +145,11 @@ Pour identifier un produit, il est obligatoire de renseigner les codes du produi
  **Pour les détails :**
 
  - 18 : Le pays d'export (nom du pays ou [Code ISO 3166](https://fr.wikipedia.org/wiki/ISO_3166)) si le mouvement est un export / la période au format AAAAMM si le mouvement est une entrée replacement en suspension CRD / sinon vide
- - 19 : Le numéro du contrat (si le mouvement est une sortie vrac sous contrat, sinon vide)
+ - 19 : Le numéro du contrat (si le mouvement est une sortie vrac sous contrat visé par l'interpro, sinon vide)
  - 20 : Le numéro de document d'accompagnement (si le mouvement fait l'objet d'un document d'accompagnement douanier, sinon vide)
+ - 21 : le prix de la transaction (pour les mouvement de contrats non visés par l'Interpro, sinon vide)
+ - 22 : le numéro d'accises de l'acheteur (pour les mouvement de contrats non visés par l'Interpro, sinon vide)
+ - 23 : le nom de l'acheteur (pour les mouvement de contrats non visés par l'Interpro, sinon vide)
 
 **Cas des informations complémentaires**
 
