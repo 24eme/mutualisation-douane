@@ -1,0 +1,25 @@
+Type de la CRD,Catégorie du mouvement,Type du mouvement
+collective suspendue,stock_debut,debut
+collective suspendue,entrees,achats
+collective suspendue,entrees,excedents
+collective suspendue,entrees,retours
+collective suspendue,sorties,utilisations
+collective suspendue,sorties,destructions
+collective suspendue,sorties,manquants
+collective suspendue,stock_fin,fin
+collectif acquitte,stock_debut,debut
+collectif acquitte,entrees,achats
+collectif acquitte,entrees,excedents
+collectif acquitte,entrees,retours
+collectif acquitte,sorties,utilisations
+collectif acquitte,sorties,destructions
+collectif acquitte,sorties,manquants
+collectif acquitte,stock_fin,fin
+personnalise,stock_debut,debut
+personnalise,entrees,achats
+personnalise,entrees,excedents
+personnalise,entrees,retours
+personnalise,sorties,utilisations
+personnalise,sorties,destructions
+personnalise,sorties,manquants
+personnalise,stock_fin,fin
