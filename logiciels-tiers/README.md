@@ -4,7 +4,7 @@
 
 Ce document présente les éléments générique du format webservice DRM mis en place pour 8 interpros. Une annexe pour chacune de ces interpros est mise à disposition des prestataires afin de décrire les spécificités (catalogue produit, mouvements, ...).
 
-Voici les éléments spécifiques définis pour : 
+Voici les éléments spécifiques définis pour :
 
  - [BIVC](https://github.com/24eme/giilda/tree/master/doc/logiciels_tiers/bivc)
  - [CIVA](https://github.com/24eme/giilda/tree/master/doc/logiciels_tiers/civa)
@@ -43,7 +43,7 @@ L'EDI mis à disposition des vignerons est accessible à travers le protocole HT
 Les données échangées en mode lecture ou écriture se font sous le format CSV [5]. La plateforme supporte indifféremment les séparateurs virgules (« , ») ou point-virgules (« ; »). En revanche, il est nécessaire qu'un seul type de séparateur soit utilisé  au sein d'un même document.
 
 La plateforme de télédéclération est insensible à la casse et aux caractères accentués. Les chaines de caractères « Côte » ou « cote » seront donc traitées de manière identique.
-Il faut noter toute fois, qu'en cas d'utilisation de caractères accentués, ces caractères devront être encodés en UTF-8 [6]. 
+Il faut noter toute fois, qu'en cas d'utilisation de caractères accentués, ces caractères devront être encodés en UTF-8 [6].
 
 Débuter une ligne par le caractère « #  » permet de définir des commentaires. Elles ne sont donc pas prises en compte par la plateforme.
 
@@ -82,7 +82,7 @@ Voici les détails téchnique pour accéder au webservice d'envoi EDI d'une DRM 
 
 Le fichier décrivant les éléments constitutifs de la DRM qui devra être fourni par les logiciels de gestion de cave est un fichier CSV.
 
-### Organisation générale 
+### Organisation générale
 
 Le fichier CSV permet de déclarer les différentes informations liées à la DRM.
 
@@ -113,12 +113,12 @@ La partie identification du produit peut être utilisé soit de manière éclat�
 Les lignes de CAVE se constituent des champs suivants :
 
  **Pour la section commune :**
- 
- - 1 : CAVE (champ obligatoire à valeur fixe) 
+
+ - 1 : CAVE (champ obligatoire à valeur fixe)
  - 2 : La période de la DRM (champ obligatoire au format AAAAMM)  
  - 3 : L'identifiant interpro de l'établissement (champ alpha-numérique) pouvant contenir entre parenthèses le numéro SIRET (14 chiffres) ou CVI (10 chiffres) de l'établissement
  - 4 : Le numéro d'accise (champ alpha-numérique de 13 caractères au format FR0xxxxxxxxxx)
- 
+
 Pour identifier un établissement, il est obligatoire de renseigner au moins une valeur entre l'identifiant interpro, le siret, le cvi et le numéro d'accise.
 
  **Pour l'identification du vin :**
@@ -132,7 +132,7 @@ Pour identifier un établissement, il est obligatoire de renseigner au moins une
  - 11 : Le code cépage du vin (champ facultatif)
  - 12 : Le complément du vin (champ facultatif)
  - 13 : Le libellé personnalisé du vin (champ facultatif sauf si les colonnes 5 à 12 ne sont pas renseignées) pouvant contenir entre parenthèses le code INAO ou le libellé fiscal du produit
- 
+
 Pour identifier un produit, il est obligatoire de renseigner les codes du produit de manière éclatée (colonnes 5 à 12) et/ou le libellé du produit (libellé et/ou entre parenthèses le code INAO / le libellé fiscal).
 
  **Pour le type de mouvement :**
@@ -163,40 +163,39 @@ La douane demande parfois des informations complémentaires pour un produit afin
 ### Description des lignes CRD
 
  **Pour la section commune :**
- 
- - 1 : CRD (champ obligatoire à valeur fixe) 
+
+ - 1 : CRD (champ obligatoire à valeur fixe)
  - 2 : La période de la DRM (champ obligatoire au format AAAAMM)  
  - 3 : L'identifiant interpro de l'établissement (champ alpha-numérique) pouvant contenir entre parenthèses le numéro SIRET (14 chiffres) ou CVI (10 chiffres) de l'établissement
  - 4 : Le numéro d'accise (champ alpha-numérique de 13 caractères au format FR0xxxxxxxxxx)
- 
+
 Pour identifier un établissement, il est obligatoire de renseigner au moins une valeur entre l'identifiant interpro, le siret, le cvi et le numéro d'accise.
- 
+
  **Pour l'identification de la CRD :**
- 
- - 5 : La couleur de la CRD (champ facultatif)
- - 6 : La catégorie fiscale de la CRD (champ obligatoire)
- - 7 : Le centilitrage de la CRD (champ obligatoire)
- - 8 : vide
+
+ - 5 : La couleur de la CRD (champ facultatif parmi lies de vin, vert, bleu)
+ - 6 : La catégorie fiscale de la CRD (champ obligatoire parmi tranquille, mousseux)
+ - 7 : Le centilisation de la CRD (champ obligatoire parmi Bouteille 37cl, Bouteille 37,5cl, Bouteille 50cl, Bouteille 75cl, Bouteille 100cl, Bouteille 150cl, Bouteille 300cl, Bouteille 500cl, Bouteille 600cl, BIB 3l, BIB 5l, BIB 6l, BIB 10l, BIB 20l, BIB 30l)
  - 9 : vide
  - 10 : vide
  - 11 : vide
  - 12 : vide
  - 13 : vide
- 
+
  **Pour le type de mouvement :**
- 
+
  - 14 : Type de la CRD (champ obligatoire parmi collectif suspendu, collectif acquitte ou personnalise)
  - 15 : La catégorie de mouvement : (champ obligatoire, ex: stock_debut, entrée, sortie, stock_fin)
  - 16 : Le type de mouvement (champ obligatoire parmi : achat, excedents, retours, destructions, utilisations, manquants )
 
 [Catalogue des différents mouvements de CRD](catalogue_mouvements_crd.csv "catalogue_mouvements_crd")
- 
+
  **Pour la quantité :**
- 
+
  - 17 : La quantité de CRD (champ obligatoire au format nombre entier)
 
  **Pour les détails :**
- 
+
  - 18 : vide
  - 19 : vide
  - 20 : vide
@@ -206,16 +205,16 @@ Pour identifier un établissement, il est obligatoire de renseigner au moins une
 ### Description des lignes ANNEXE
 
  **Pour la section commune :**
- 
- - 1 : ANNEXE (champ obligatoire à valeur fixe) 
+
+ - 1 : ANNEXE (champ obligatoire à valeur fixe)
  - 2 : La période de la DRM (champ obligatoire au format AAAAMM)  
  - 3 : L'identifiant interpro de l'établissement (champ alpha-numérique) pouvant contenir entre parenthèses le numéro SIRET (14 chiffres) ou CVI (10 chiffres) de l'établissement
  - 4 : Le numéro d'accise (champ alpha-numérique de 13 caractères au format FR0xxxxxxxxxx)
- 
+
 Pour identifier un établissement, il est obligatoire de renseigner au moins une valeur entre l'identifiant interpro, le siret, le cvi et le numéro d'accise.
- 
+
  **Pour la description du produit :**
- 
+
  - 5 : vide
  - 6 : vide
  - 7 : vide
@@ -225,19 +224,19 @@ Pour identifier un établissement, il est obligatoire de renseigner au moins une
  - 11 : vide
  - 12 : vide
  - 13 : vide
- 
+
  **Pour le type de mouvement :**
- 
+
  - 14 : vide
  - 15 : La catégorie d'annexe (champ obligatoire, parmi : empreinte, daadac, dsadsac, nonapurement, stats europeenes )
  - 16 : Le type lié à la catégorie d'annexe (champ facultatif, parmi : debut, fin, jus, mcr, vinaigre )
- 
+
  **Pour la quantité :**
- 
+
  - 17 : La Valeur d'annexe (champ facultatif)
- 
+
  **Pour les compléments :**
- 
+
  - 18 : La date d'expédition (champ obligatoire au format AAAA-MM-DD si l'annexe est un relevé de non apurement, sinon vide)
  - 19 : Le numéro d'accise du destinataire (champ obligatoire au format alpha-numérique de 13 caractères si l'annexe est un relevé de non apurement, sinon vide)
  - 20 : Le numéro DAADAC/DSADSAC/EMPREINTE/NONAPUREMENT (champ obligatoire au format nombre entier si l'annexe est un relevé de non apurement, sinon vide)
