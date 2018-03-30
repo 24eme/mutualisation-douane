@@ -133,7 +133,7 @@ Pour identifier un établissement, il est obligatoire de renseigner au moins une
  - 12 : Le complément du vin (champ facultatif)
  - 13 : Le libellé personnalisé du vin (champ facultatif sauf si les colonnes 5 à 12 ne sont pas renseignées) pouvant contenir entre parenthèses le code INAO ou le libellé fiscal du produit
 
-Pour identifier un produit, il est obligatoire de renseigner les codes du produit de manière éclatée (colonnes 5 à 12) et/ou le libellé du produit (libellé et/ou entre parenthèses le code INAO / le libellé fiscal).
+Pour identifier un produit, il est obligatoire de renseigner les codes du produit de manière éclatée (colonnes 5 à 12) et/ou le libellé du produit (libellé et/ou entre parenthèses le code INAO / le libellé fiscal). Lorsqu'aucune des colonnes de 5 à 12 ne sont pas remplies, il est obligatoire de fournir un libellé (un code INAO pouvant correspondre à plusieurs produits, ce libellé est utilisé pour retrouver le bon produit).
 
  **Pour le type de mouvement :**
 
