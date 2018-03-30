@@ -8,7 +8,7 @@ Voici les éléments spécifiques définis pour :
 
  - [BIVC](https://github.com/24eme/giilda/tree/master/doc/logiciels_tiers/bivc)
  - [CIVA](https://github.com/24eme/giilda/tree/master/doc/logiciels_tiers/civa)
- - [DéclarVins](https://github.com/24eme/declarvins/tree/prod/doc/logiciels-tiers)
+ - [DéclarVins](https://github.com/24eme/declarvins/tree/master/doc/logiciels-tiers)
  - [Interloire](https://github.com/24eme/vinsdeloire/tree/prod/doc/logiciels_tiers)
  - [IVBD](https://github.com/24eme/giilda/tree/master/doc/logiciels_tiers/ivbd)
  - [IVSO](https://github.com/24eme/giilda/tree/master/doc/logiciels_tiers/ivso)
