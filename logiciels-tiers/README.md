@@ -2,7 +2,7 @@
 
 ## Avant propos
 
-Ce document présente les éléments générique du format webservice DRM mis en place pour 8 interpros. Une annexe pour chacune de ces interpros est mise à disposition des prestataires afin de décrire les spécificités (catalogue produit, mouvements, ...).
+Ce document présente les éléments générique du format webservice DRM mis en place pour 8 interpros. Une annexe pour chacune de ces interpros est mise à disposition des prestataires afin de décrire les spécificités (catalogue produit, mouvements, ...). Ainsi, les produits et mouvements donnés à titre d'exemple dans la suite de ce document sont fictifs. Pour en connaitre la liste spécifique pour chaque interpro, il faut se référer aux documents listés ci dessous.
 
 Voici les éléments spécifiques définis pour :
 
@@ -158,7 +158,7 @@ Pour identifier un produit, il est obligatoire de renseigner les codes du produi
 
 La douane demande parfois des informations complémentaires pour un produit afin de déclarer son **taux d'alcool volume (TAV)**, le **premix** ou des **observations**. Dans ce cas ces informations sont transmises via une catégorie de mouvement "complement" (champ 15) et où le champ "type de mouvement" (n°16) prend l'une des valeurs suivantes : TAV, premix ou observations. Le champ 17 indiquera alors la valeur pour ces informations (flottant pour TAV, boolean pour premix et chaine de caractère pour observation)
 
-[Voici un exemple ne contenant que quelques lignes de type CAVE](exemple_cave.csv "csv_de_type_cave")
+[Voici un exemple ne contenant que quelques lignes de type CAVE](exemple_cave.csv "csv_de_type_cave") ***Attention, ce fichier est fourni à titre d'exemple, pour en comprendre le format, les produits et les mouvements sont fictifs.*** Il faut se référer à la documentation spécifique à chacune des interpros pour connaitre les produits et mouvements utilisables.
 
 ### Description des lignes CRD
 
@@ -245,7 +245,7 @@ Pour identifier un établissement, il est obligatoire de renseigner au moins une
 
 ### Exemple de CSV complet
 
-[Vous trouverez ici un exemple complet possèdant plusieurs produits, crds et annexes différentes](export_edi_complet.csv "csv_complet")
+[Vous trouverez ici un exemple complet possèdant plusieurs produits, crds et annexes différentes](export_edi_complet.csv "csv_complet") ***Attention, ce fichier est fourni à titre d'exemple, afin de comprendre le format*** Ainsi, les mouvements et produits sont fictifs. Il faut se référer aux documentations "interpro" listées en début de document pour connaitre la liste des produits et mouvements utilisables.
 
    [1]: https://artduweb.com/tutoriels/cas-sso
    [2]: https://fr.wikipedia.org/wiki/Authentification_HTTP
