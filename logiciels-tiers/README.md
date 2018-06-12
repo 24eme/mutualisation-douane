@@ -2,13 +2,13 @@
 
 ## Avant propos
 
-Ce document présente les éléments générique du format webservice DRM mis en place pour 8 interpros. Une annexe pour chacune de ces interpros est mise à disposition des prestataires afin de décrire les spécificités (catalogue produit, mouvements, ...).
+Ce document présente les éléments générique du format webservice DRM mis en place pour 8 interpros. Une annexe pour chacune de ces interpros est mise à disposition des prestataires afin de décrire les spécificités (catalogue produit, mouvements, ...). Ainsi, les produits et mouvements donnés à titre d'exemple dans la suite de ce document sont fictifs. Pour en connaitre la liste spécifique pour chaque interpro, il faut se référer aux documents listés ci dessous.
 
 Voici les éléments spécifiques définis pour :
 
  - [BIVC](https://github.com/24eme/giilda/tree/master/doc/logiciels_tiers/bivc)
  - [CIVA](https://github.com/24eme/giilda/tree/master/doc/logiciels_tiers/civa)
- - [DéclarVins](https://github.com/24eme/declarvins/tree/prod/doc/logiciels-tiers)
+ - [DéclarVins](https://github.com/24eme/declarvins/tree/master/doc/logiciels-tiers)
  - [Interloire](https://github.com/24eme/vinsdeloire/tree/prod/doc/logiciels_tiers)
  - [IVBD](https://github.com/24eme/giilda/tree/master/doc/logiciels_tiers/ivbd)
  - [IVSO](https://github.com/24eme/giilda/tree/master/doc/logiciels_tiers/ivso)
@@ -133,7 +133,7 @@ Pour identifier un établissement, il est obligatoire de renseigner au moins une
  - 12 : Le complément du vin (champ facultatif)
  - 13 : Le libellé personnalisé du vin (champ facultatif sauf si les colonnes 5 à 12 ne sont pas renseignées) pouvant contenir entre parenthèses le code INAO ou le libellé fiscal du produit
 
-Pour identifier un produit, il est obligatoire de renseigner les codes du produit de manière éclatée (colonnes 5 à 12) et/ou le libellé du produit (libellé et/ou entre parenthèses le code INAO / le libellé fiscal).
+Pour identifier un produit, il est obligatoire de renseigner les codes du produit de manière éclatée (colonnes 5 à 12) et/ou le libellé du produit (libellé et/ou entre parenthèses le code INAO / le libellé fiscal). Lorsqu'aucunes des colonnes de 5 à 12 ne sont pas remplies, il est obligatoire de fournir un libellé (un code INAO pouvant correspondre à plusieurs produits, le libellé peut être utilisé pour sélectionner le bon produit).
 
  **Pour le type de mouvement :**
 
@@ -158,7 +158,7 @@ Pour identifier un produit, il est obligatoire de renseigner les codes du produi
 
 La douane demande parfois des informations complémentaires pour un produit afin de déclarer son **taux d'alcool volume (TAV)**, le **premix** ou des **observations**. Dans ce cas ces informations sont transmises via une catégorie de mouvement "complement" (champ 15) et où le champ "type de mouvement" (n°16) prend l'une des valeurs suivantes : TAV, premix ou observations. Le champ 17 indiquera alors la valeur pour ces informations (flottant pour TAV, boolean pour premix et chaine de caractère pour observation)
 
-[Voici un exemple ne contenant que quelques lignes de type CAVE](exemple_cave.csv "csv_de_type_cave")
+[Voici un exemple ne contenant que quelques lignes de type CAVE](exemple_cave.csv "csv_de_type_cave") ***Attention, ce fichier est fourni à titre d'exemple, pour en comprendre le format, les produits et les mouvements sont fictifs.*** Il faut se référer à la documentation spécifique à chacune des interpros pour connaitre les produits et mouvements utilisables.
 
 ### Description des lignes CRD
 
@@ -185,7 +185,7 @@ Pour identifier un établissement, il est obligatoire de renseigner au moins une
  **Pour le type de mouvement :**
 
  - 14 : Type de la CRD (champ obligatoire parmi collectif suspendu, collectif acquitte ou personnalise)
- - 15 : La catégorie de mouvement : (champ obligatoire, ex: stock_debut, entrée, sortie, stock_fin)
+ - 15 : La catégorie de mouvement : (champ obligatoire, ex: stock_debut, entrees, sorties, stock_fin)
  - 16 : Le type de mouvement (champ obligatoire parmi : achat, excedents, retours, destructions, utilisations, manquants )
 
 [Catalogue des différents mouvements de CRD](catalogue_mouvements_crd.csv "catalogue_mouvements_crd")
@@ -245,7 +245,7 @@ Pour identifier un établissement, il est obligatoire de renseigner au moins une
 
 ### Exemple de CSV complet
 
-[Vous trouverez ici un exemple complet possèdant plusieurs produits, crds et annexes différentes](export_edi_complet.csv "csv_complet")
+[Vous trouverez ici un exemple complet possèdant plusieurs produits, crds et annexes différentes](export_edi_complet.csv "csv_complet") ***Attention, ce fichier est fourni à titre d'exemple, afin de comprendre le format*** Ainsi, les mouvements et produits sont fictifs. Il faut se référer aux documentations "interpro" listées en début de document pour connaitre la liste des produits et mouvements utilisables.
 
    [1]: https://artduweb.com/tutoriels/cas-sso
    [2]: https://fr.wikipedia.org/wiki/Authentification_HTTP
