@@ -8,6 +8,10 @@ if test -e "/tmp/CFT2HTTP.lock"; then
 fi
 touch /tmp/CFT2HTTP.lock
 
+if test "$1"; then
+	findlimit=" -name $1"
+fi
+
 for dir in /data/axway/reception_douanes* ; do
     subrep=$(basename $dir)
     updatefile=$PUBLISHDIR"/"$subrep"/.update"
@@ -16,7 +20,7 @@ for dir in /data/axway/reception_douanes* ; do
 		mkdir -p $publishdir
 		touch -d 2016-08-01 $updatefile
 	fi
-	ls -rt $(find $dir -type f -cnewer $updatefile ) | while read zip ; do
+   ls -rt $(find $dir -type f -cnewer $updatefile $findlimit ) | while read zip ; do
         if ! file $zip | grep -i "zip archive" > /tmp/$$.output ; then
 			continue;
 		fi
