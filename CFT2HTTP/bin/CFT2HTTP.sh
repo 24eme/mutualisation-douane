@@ -29,8 +29,8 @@ for dir in /data/axway/reception_douanes* ; do
         mkdir -p /tmp/$$_files/
         unzip -u /tmp/$$.zip -d /tmp/$$_files/ > /dev/null
         find /tmp/$$_files/ -type f | while read xml ; do
-			accise=$(grep agrement $xml | sed 's|</.*||' | sed 's/.*>//')
-			siren=$(grep siren $xml | sed 's|</.*||' | sed 's/.*>//')
+			accise=$(grep '<numero-agrement>' $xml | sed 's|</.*||' | sed 's/.*>//')
+			siren=$(grep '<siren-interprofession>' $xml | sed 's|</.*||' | sed 's/.*>//')
 			mois=$(grep '<mois>' $xml | head -n 1 | sed 's|</.*||' | sed 's/.*>//' | sed 's/[^0-9]//g' | xargs printf '%02d')
 			annee=$(grep '<annee>' $xml | head -n 1 | sed 's|</.*||' | sed 's/.*>//' | sed 's/[^0-9]//g')
 			if ! test $accise || ! test $siren ; then
