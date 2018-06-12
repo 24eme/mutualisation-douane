@@ -2,6 +2,12 @@
 
 . $(dirname $0)/CFT2HTTP.config
 
+if test -e "/tmp/CFT2HTTP.lock"; then
+	echo "Locked";
+	exit 1;
+fi
+touch /tmp/CFT2HTTP.lock
+
 for dir in /data/axway/reception_douanes* ; do
     subrep=$(basename $dir)
     updatefile=$PUBLISHDIR"/"$subrep"/.update"
@@ -40,4 +46,4 @@ for dir in /data/axway/reception_douanes* ; do
 	    rm /tmp/$$.lastzip
 	fi
 done
-rm -f /tmp/$$.output
+rm -f /tmp/$$.output /tmp/CFT2HTTP.lock
