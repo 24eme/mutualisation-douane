@@ -13,7 +13,7 @@ Voici les différents éléments contenu dans cet espace documentaire :
 |---------------|-----------------|-------------|----------|-------------|-----------------|------|-------------|-------------|------------|---------------|
 | Declarvins    | InterRhone (783204001), CIVP (451070197), IVSE (513558494) | 24ème | OK   | OK          | OK              | OK   | OK          | OK          | OK          | [declarvins.net](http://declarvins.net/) |
 | VinsValDeLoire.pro | InterLoire (429164072)        | 24ème | OK  | OK          | OK              | OK   | OK          | OK          | OK           | [vinsvaldeloire.pro](http://vinsvaldeloire.pro) |
-| VinsAlsace.pro| CIVA (778904706)                  | 24ème | OK   | OK          | OK              | OK   | OK            |             |            | [vinsalsace.pro](http://vinsalsace.pro)  |
+| VinsAlsace.pro| CIVA (778904706)                  | 24ème | OK   | OK          | OK              | OK   | OK            | OK             | OK            | [vinsalsace.pro](http://vinsalsace.pro)  |
 | IVBDpro       | IVBD (781641329)       | 24ème | OK   | OK          | OK              | OK   |  OK         | OK            | OK           | [ivbdpro.fr](http://ivbdpro.fr) |
 | IVSOpro       | IVSO (387577851) + Cahors / Floc / Armangnac| 24ème |OK| OK     | OK              | OK   |  OK         | OK             | OK           | [ivsopro.com](http://ivsopro.com) |
 | Registre de cave Extranet de Beaujolais | Inter Beaujolais (779759935) |  RMSI| OK |OK| OK | OK | OK   | OK    | OK     | [extranet.beaujolais.com](http://extranet.beaujolais.com/)  |
