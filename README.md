@@ -26,5 +26,9 @@ Voici les différents éléments contenu dans cet espace documentaire :
 Deux fichiers sont mis à disposition aux interprofessions partenaires (via le VPN) :
  - Nombre de XML reçues par interpros : [http://10.222.223.1/stats/DRMInterpro.csv](http://10.222.223.1/stats/DRMInterpro.csv)
  - Nombre de XML générés et les archives transmises par la douane par jour : [http://10.222.223.1/stats/DRMjour.csv](http://10.222.223.1/stats/DRMjour.csv)
-
+ - XML DRM réémis (modificatrices ou doublons) : [http://10.222.223.1/stats/DRMreemises.csv](http://10.222.223.1/stats/DRMreemises.csv)
+ - date de première réception des DRM : [http://10.222.223.1/stats/DRMpremiererecues.csv](http://10.222.223.1/stats/DRMpremiererecues.csv)
+ - Disponibilité du webservice douanier (via ping http) : [http://10.222.223.1/stats/disponibilite_ping.csv](http://10.222.223.1/stats/disponibilite_ping.csv)
+ 
 Ils sont mis à jour quotidiennement (à 8h30)
+
