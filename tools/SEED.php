@@ -84,6 +84,7 @@ foreach($array as $k => $v) {
 
 }
 ?>
+<p><a href="?" class="btn btn-secondary">Retour</a></p>
 </div></center>
 </div>
 </body>
