@@ -8,6 +8,10 @@ La méthode ``getInformation`` permet de connaitre les produits autorisée pour 
 
 SOAP impose que le nom de la méthode soit fourni dans l'entête de la requête HTTP là où les parametres passent en information POST sous la forme d'un XML.
 
+## Implémentation publique du WebService
+
+[http://cniv.24eme.fr/tools/SEED.php](http://cniv.24eme.fr/tools/SEED.php)
+
 ##  Exemple de requête via curl
 
 Voici un exemple d'implémentation avec la commande unix ``curl`` :
