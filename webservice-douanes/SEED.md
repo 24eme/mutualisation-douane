@@ -10,7 +10,7 @@ SOAP impose que le nom de la méthode soit fourni dans l'entête de la requête 
 
 ## Implémentation publique du WebService
 
-[http://cniv.24eme.fr/tools/SEED.php](http://cniv.24eme.fr/tools/SEED.php)
+[https://cniv.24eme.fr/tools/SEED.php](https://cniv.24eme.fr/tools/SEED.php)
 
 ##  Exemple de requête via curl
 
