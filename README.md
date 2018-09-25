@@ -21,6 +21,10 @@ Voici les différents éléments contenu dans cet espace documentaire :
 | DematVin      | BIVB  (378184758)        | Estalis - HelixDev| OK    | OK         | OK  | OK  | OK   | OK  | OK  | [extranet.bivb.com](https://extranet.bivb.com/)   |
 | Vins Centre Loire      | BIVC  (402946016)        |  24ème | OK    | OK         | OK  | OK  | OK   | OK  | OK  | [declaration.vins-centre-loire.com](https://declaration.vins-centre-loire.com/)   |
 
+## Statuts des services
+
+Une page dédiée au partage des status du webservice CIEL et du retour CFT/DRM XML est disponible depuis l'adresse [https://cniv.24eme.fr/status/](https://cniv.24eme.fr/status/).
+
 ## Statistiques d'usage
 
 Deux fichiers sont mis à disposition aux interprofessions partenaires (via le VPN) :
