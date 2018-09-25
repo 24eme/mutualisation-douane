@@ -12,7 +12,7 @@
       <div class="py-5 text-center">
         <img class="d-block mx-auto mb-4" src="//www.24eme.fr/img/24eme.svg" alt="" width="172" height="172">
 <h1>Mutualisation CNIV CIEL</h1>
-<h2>Statuts des services fournis</h2>
+<h2>Statuts des services</h2>
 </div>
 <center>
       <div style="width: 500px">
