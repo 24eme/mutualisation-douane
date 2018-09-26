@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 $accise = $_GET['accise'];
 ?><!doctype html>
@@ -31,13 +31,16 @@ if (!preg_match('/^FR...........$/', $accise)):
 endif;
 
 
-
-$ch = curl_init();
-curl_setopt($ch, CURLOPT_URL,"https://pro.douane.gouv.fr/seedWS/SeedWS");
-curl_setopt($ch, CURLOPT_POST, 1);
 $data = '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.seed.douane.finances.gouv.fr/"><soapenv:Header/><soapenv:Body><ws:getInformation><numAccises><numAccise>';
 $data .= $accise;
 $data .= '</numAccise></numAccises></ws:getInformation></soapenv:Body></soapenv:Envelope>';
+if (isset($_GET['request']) && $_GET['request']) {
+  echo "<div><pre>".htmlentities($data)."</pre></div>";
+  exit;
+}
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL,"https://pro.douane.gouv.fr/seedWS/SeedWS");
+curl_setopt($ch, CURLOPT_POST, 1);
 //echo $data;exit;
 curl_setopt($ch, CURLOPT_POSTFIELDS, $data);  //Post Fields
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -51,6 +54,12 @@ $headers = [
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
 $server_output = preg_replace('/<\/root>.*/', '</root>', preg_replace('/.*<\/uid>/', '<root>', curl_exec ($ch)));
+
+if (isset($_GET['response']) && $_GET['response']) {
+  echo "<div><pre>".htmlentities($server_output)."</pre></div>";
+  exit;
+}
+
 
 curl_close ($ch);
 
@@ -88,4 +97,3 @@ foreach($array as $k => $v) {
 </div></center>
 </div>
 </body>
-
