@@ -116,7 +116,7 @@ $accise = $_GET['accise'];
         if (is_string($fv)){
           $link = 0;
           if (preg_match('/^[A-Z][A-Z]......$/', $fv)) {
-            echo '<a href="https://www.tarifdouanier.eu/bureaux/'.$fv.'">';
+            echo '<a href="https://pro.douane.gouv.fr/RUSH/fiche_service/default.asp?code='.$fv.'">';
             $link = 1;
           }
           if (($f == 'vatNumber') && preg_match('/([A-Z][A-Z])(.*)/', $fv, $m)) {
