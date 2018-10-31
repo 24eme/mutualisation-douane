@@ -1,3 +1,3 @@
 <?php
 
-header("Location: /status/\n");
+header("Location: https://cniv.24eme.fr/status/\n");
