@@ -88,7 +88,7 @@
                     </table>
                   </div>
                   <div class="row">
-                  <a class="btn btn-secondary btn-block" href="/">Retour</a>
+                  <a class="btn btn-secondary btn-block" href="/tools/edi_drm.php">Retour</a>
                   </div>
                 </div>
             </div>
