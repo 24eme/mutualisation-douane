@@ -1,8 +1,16 @@
 {
-  "userpwd" : "login:pwd",
   "plateformes" : {
-      "plateforme_0" : "url_edi_plateforme_0",
-      "plateforme_1" : "url_edi_plateforme_1",
-      "plateforme_2" : "url_edi_plateforme_2"
+      "plateforme_0" : {
+        "url" : "url_edi_plateforme_0",
+        "userpwd" : "login:pwd"
+      },
+      "plateforme_1" : {
+        "url" : "url_edi_plateforme_1",
+        "userpwd" : "login:pwd"
+      },
+      "plateforme_2 : {
+        "url" : "url_edi_plateforme_2",
+        "userpwd" : "login:pwd"
+      }
     }
 }

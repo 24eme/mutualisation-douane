@@ -1,10 +1,14 @@
 <?php
-  if(isset($_FILES['csv']) && isset($_POST['plateforme']) && isset($_POST['userpwd'])):
+  $config = json_decode(file_get_contents('../config/config.json'),true);
+  $plateformes = $config['plateformes'];
+  if(isset($_FILES['csv']) && isset($_POST['appli'])):
+        $url = $plateformes[$_POST['appli']]['url'];
+        $userpwd = $plateformes[$_POST['appli']]['userpwd'];
         $data = file_get_contents($_FILES['csv']['tmp_name']);
         $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL,$_POST['plateforme']);
+        curl_setopt($ch, CURLOPT_URL,$url);
         curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC ) ;
-        curl_setopt($ch, CURLOPT_USERPWD, $_POST['userpwd']);
+        curl_setopt($ch, CURLOPT_USERPWD, $userpwd);
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $data);  //Post Fields
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -98,7 +102,6 @@
 <?php
 exit;
 endif;
-$config = json_decode(file_get_contents('../config/config.json'),true);
 ?>
 <!doctype html>
 <html lang="fr_FR">
@@ -124,9 +127,9 @@ $config = json_decode(file_get_contents('../config/config.json'),true);
                 <div class="form-group row">
                     <label for="domaine" class="col-sm-4 col-form-label">Plateforme</label>
                     <div class="col-sm-8">
-                        <select class="form-control"  name="plateforme">
+                        <select class="form-control"  name="appli">
                           <?php foreach ($config["plateformes"] as $applik => $appliv) : ?>
-                            <option value="<?php echo $appliv; ?>"><?php echo $applik; ?></option>
+                            <option value="<?php echo $applik; ?>"><?php echo $applik; ?></option>
                           <?php endforeach; ?>
                         </select>
                     </div>
@@ -135,8 +138,6 @@ $config = json_decode(file_get_contents('../config/config.json'),true);
                     <label for="csv" class="col-sm-4 col-form-label">Fichier CSV</label>
                     <div class="col-sm-8">
                         <input type="file" name="csv" class="form-control-file" id="csv">
-                        <input type="hidden" name="userpwd" id="userpwd" value="<?php echo $config["userpwd"]; ?>"/>
-                        <input type="hidden" name="save" id="save" value="0"/>
                     </div>
                 </div>
                 <div class="row py-3">
