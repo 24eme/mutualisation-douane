@@ -98,7 +98,7 @@
 <?php
 exit;
 endif;
-$config = json_decode(file_get_contents('config.json'),true);
+$config = json_decode(file_get_contents('../config/config.json'),true);
 ?>
 <!doctype html>
 <html lang="fr_FR">
@@ -136,6 +136,7 @@ $config = json_decode(file_get_contents('config.json'),true);
                     <div class="col-sm-8">
                         <input type="file" name="csv" class="form-control-file" id="csv">
                         <input type="hidden" name="userpwd" id="userpwd" value="<?php echo $config["userpwd"]; ?>"/>
+                        <input type="hidden" name="save" id="save" value="0"/>
                     </div>
                 </div>
                 <div class="row py-3">
