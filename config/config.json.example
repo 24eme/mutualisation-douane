@@ -1,16 +1,20 @@
 {
+  "doc" : "url_doc_générale",
   "plateformes" : {
       "plateforme_0" : {
         "url" : "url_edi_plateforme_0",
-        "userpwd" : "login:pwd"
+        "userpwd" : "login:pwd",
+        "doc" : "url_doc_plateforme_0"
       },
       "plateforme_1" : {
         "url" : "url_edi_plateforme_1",
-        "userpwd" : "login:pwd"
+        "userpwd" : "login:pwd",
+        "doc" : "url_doc_plateforme_1"
       },
       "plateforme_2 : {
         "url" : "url_edi_plateforme_2",
-        "userpwd" : "login:pwd"
+        "userpwd" : "login:pwd",
+        "doc" : "url_doc_plateforme_2"
       }
     }
 }

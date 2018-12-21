@@ -1,9 +1,11 @@
 <?php
   $config = json_decode(file_get_contents('../config/config.json'),true);
   $plateformes = $config['plateformes'];
+  $appli = null;
   if(isset($_FILES['csv']) && isset($_POST['appli'])):
-        $url = $plateformes[$_POST['appli']]['url'];
-        $userpwd = $plateformes[$_POST['appli']]['userpwd'];
+        $appli = $_POST['appli'];
+        $url = $plateformes[$appli]['url'];
+        $userpwd = $plateformes[$appli]['userpwd'];
         $data = file_get_contents($_FILES['csv']['tmp_name']);
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL,$url);
@@ -91,6 +93,13 @@
                       </tbody>
                     </table>
                   </div>
+                  <div class="row">
+                    Lien vers la documentation générale : &nbsp;<a  href="<?php echo $config["doc"]; ?>"><?php echo $config["doc"]; ?></a>
+                  </div>
+                  <div class="row">
+                    Lien vers la documentation spécifique "<?php echo $appli; ?>" : &nbsp;<a  href="<?php echo $plateformes[$appli]['doc']; ?>"><?php echo $plateformes[$appli]['doc']; ?></a>
+                  </div>
+                  <br/>
                   <div class="row">
                   <a class="btn btn-secondary btn-block" href="/tools/edi_drm.php">Retour</a>
                   </div>
