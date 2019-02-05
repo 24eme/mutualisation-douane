@@ -7,10 +7,10 @@ Version 2.4 du 27/09/2016
 
 A propos du calendrier de mise en place de cette version 1.9 :
 
-    La mise en recette est prévue mi-novembre, pour une mise en production début janvier. 
-    C'est à cette seule date que cette évolution précise sur les centilisations sera 
+    La mise en recette est prévue mi-novembre, pour une mise en production début janvier.
+    C'est à cette seule date que cette évolution précise sur les centilisations sera
     disponible en production.
-    
+
     (email du 26 octobre)
 
 ## INTRODUCTION
@@ -208,6 +208,7 @@ Référence    | Élément | Type | Cardinalité | Description | Obligatoire/Fac
 :------------|:--------|:----:|:------------|:------------|:----------------------:|:---------|
 IIP-1-­E­-2.1.1|numero­-agrement | numeroAcciseType|1|Numéro d’agrément d'entrepositaire agréé concerné par la DRM dont les données sont demandées | O | IIP1­RG3 IIP1­RG4 IIP1­RG5 |
 IIP-1­-E­-2.1.2|numero­-cvi      | numeroCviType | 0..1 | Numéro CVI de l'opérateur | F | |
+IIP-1­-E­-2.1.3|raison-sociale   | raisonSocialeType | 0..1 | Raison sociale associée au numéro d'accise | F | 200 car max |
 
 ##### Élément periode
 
@@ -490,8 +491,8 @@ IIP1-E2.10.3 | quantite-vins-vinaigre | volumeType | 0..1 | Quantité de vins ut
 
 Type    | Nombre de décimales | Minimum | Description |
 :-------|:-------------------:|:-------:|:------------|
-volumeType | 4 | 0                      | Représente un volume positif ou nul |
-volumeStockType | 4 |                   | Représente un volume positif, négatif ou nul |
+volumeType | 5 | 0                      | Représente un volume positif ou nul |
+volumeStockType | 5 |                   | Représente un volume positif, négatif ou nul |
 tavType | 2 | 0                         | Représente le TAV d’un produit. Un tav ne peut être <=0.5 ou ≥ 100.
 
 
@@ -501,9 +502,10 @@ Type    | Longueur minimale | Longueur maximale | valeurs possibles | format | D
 :-------|:-----------------:|:-----------------:|:------------------|:-------|:------------|
 sirenType | 9 | 9                               |          | Nombres entiers | Représente le numéro SIREN d'une interprofession strictement positifs
 codeInaoType | 6 | 8                            |          |       | Représente le code INAO d’un produit. Un code INAO doit contenir entre 6 et 8 digits. Si le code est sur 5 digits, l'interprofession émettrice doit ajouter un espace avant envoi à CIEL.
-LibelleFiscalType | |                           |          |       | Représente le libellé fiscal d’un produit
-numeroAcciseType |13 | 13                  |     | [A­Za­z]{2}[0­9A­Za­z]{11} | Représente un numéro d’agrément
-numeroCviType | 10 | 10 | | 10 chiffres | Représente un numéro CVI
+LibelleFiscalType | |                           |                    |       | Représente le libellé fiscal d’un produit
+numeroAcciseType |13        | 13                | | [A­Za­z]{2}[0­9A­Za­z]{11} | Représente un numéro d’agrément
+numeroCviType | 10          | 10                | | 10 chiffres               | Représente un numéro CVI
+raisonSocialeType | 0       | 200               |                   | Chaine | Raison sociale associée au numéro d'accise
 typeCapsulesType | |    |  PERSONNALISEES COLLECTIVES_DROITS_SUSPENDUS COLLECTIVES_DROITS_ACQUITTES | | Représente un type de capsules représentatives de droits
 categorieFiscaleCapsuleType | | | « M » (vin mousseux) « T » (vin tranquille) « PI » (produit intermédiaire) COGNACARMAGNAC ALCOOLS | | Représente une catégorie fiscale de capsule représentative de droits
 numeroDocumentType | 1 | 9 | | Nombre entier positif | Numéro de référence de document d'accompagnement d'une DRM. En cas de valeur numérique indiquée, seul les entiers positifs sont autorisés.
@@ -857,57 +859,59 @@ string | Chaîne de caractères | Ceci est un exemple.
 
 ### LISTE DES LIBELLÉS FISCAUX
 
- - BOISSONS_FERMENTEES_AUTRES
- - BOISSONS_FERMENTEES_AUTRES_PREMIX
- - CIDRES
- - POIRES
- - HYDROMELS
- - HYDROMELS_PREMIX
- - PETILLANTS
- - PETILLANTS_PREMIX
- - VDN_VDL_AOP_SUP_18
- - VDN_VDL_AOP_INF_18
- - AUTRES_PI_SUP_18
- - AUTRES_PI_INF_18
- - AUTRES_PI_INF_18_PREMIX
- - BIERE_INF_2_8
- - BIERE_INF_2_8_PREMIX
- - BIERE_SUP_18_BRASSERIE_TAUX_NORMAL
- - BIERE_SUP_2_8_BRASSERIE_TAUX_NORMAL
- - BIERE_SUP_2_8_BRASSERIE_TAUX_NORMAL_PREMIX
- - BIERE_SUP_18_PETITE_BRASSERIE_10000
- - BIERE_SUP_2_8_PETITE_BRASSERIE_10000
- - BIERE_SUP_2_8_PETITE_BRASSERIE_10000_PREMIX
- - BIERE_SUP_18_PETITE_BRASSERIE_50000
- - BIERE_SUP_2_8_PETITE_BRASSERIE_50000
- - BIERE_SUP_2_8_PETITE_BRASSERIE_50000_PREMIX
- - BIERE_SUP_18_PETITE_BRASSERIE_200000
- - BIERE_SUP_2_8_PETITE_BRASSERIE_200000
- - BIERE_SUP_2_8_PETITE_BRASSERIE_200000_PREMIX
- - RHUM_TRADITIONNEL_DOM_ART_1
- - RHUM_TRADITIONNEL_DOM_ART_2
- - RHUM_TIERS_ET_AUTRES
- - ALCOOL_AUTRE_SUP_18
- - ALCOOL_AUTRE_INF_18
- - ALCOOL_AUTRE_INF_18_PREMIX
- - RHUM_GUADELOUPE
- - RHUM_MARTINIQUE
- - RHUM_GUYANE
- - RHUM_REUNION
- - SPIRITUEUX_GUADELOUPE_SUP_18
- - SPIRITUEUX_GUADELOUPE_INF_18
- - SPIRITUEUX_GUADELOUPE_INF_18_PREMIX
- - SPIRITUEUX_MARTINIQUE_SUP_18
- - SPIRITUEUX_MARTINIQUE_INF_18
- - SPIRITUEUX_MARTINIQUE_INF_18_PREMIX
- - SPIRITUEUX_GUYANE_SUP_18
- - SPIRITUEUX_GUYANE_INF_18
- - SPIRITUEUX_GUYANE_INF_18_PREMIX
- - SPIRITUEUX_REUNION_SUP_18
- - SPIRITUEUX_REUNION_INF_18
- - SPIRITUEUX_REUNION_INF_18_PREMIX
- - AUTRES_ALCOOLS_SUP_18
- - AUTRES_ALCOOLS_INF_18
- - AUTRES_ALCOOLS_INF_18_PREMIX
- - MATIERES_PREMIERES_SPIRITUEUX
- - MATIERES_PREMIERES_ALCOOLS
+ - BOISSONS_FERMENTEES_AUTRES : Boissons fermentées autres que le vin et la bière
+ - BOISSONS_FERMENTEES_AUTRES_PREMIX : Boissons fermentées autres que le vin et la bière - premix
+ - CIDRES : Cidres
+ - POIRES : Poirés
+ - HYDROMELS : Hydromels
+ - HYDROMELS_PREMIX : Hydromels - premix
+ - PETILLANTS : Pétilants
+ - PETILLANTS_PREMIX : Pétilants - premix
+ - VDN_VDL_AOP_SUP_18 : VDN et VDL AOP < 18 % vol.
+ - VDN_VDL_AOP_INF_18 : VDN et VDL AOP <= 18 % vol.
+ - AUTRES_PI_SUP_18 : Autres produits intermédiaires que VDN et VDL AOP > 18 % vol.
+ - AUTRES_PI_INF_18 : Autres produits intermédiaires que VDN et VDL AOP <= 18 % vol.
+ - AUTRES_PI_INF_18_PREMIX : Autres produits intermédiaires que VDN et VDL AOP <= 18 % vol. - premix
+ - BIERE_INF_2_8 : Bières < 2,8 % vol.
+ - BIERE_INF_2_8_PREMIX : Bières < 2,8 % vol. - premix
+ - BIERE_SUP_18_BRASSERIE_TAUX_NORMAL : Bières > 18 % vol. (brasseries taux normal)
+ - BIERE_SUP_2_8_BRASSERIE_TAUX_NORMAL : Bières > 2,8 % vol. (brasseries taux normal)
+ - BIERE_SUP_2_8_BRASSERIE_TAUX_NORMAL_PREMIX : Bières > 2,8 % vol. (brasseries taux normal) - premix
+ - BIERE_SUP_18_PETITE_BRASSERIE_10000 : Bières > 18 % vol. (petite brasserie <= 10000 hl)
+ - BIERE_SUP_2_8_PETITE_BRASSERIE_10000 : Bières > 2,8 % vol. (petite brasserie <= 10000 hl)
+ - BIERE_SUP_2_8_PETITE_BRASSERIE_10000_PREMIX : Bières > 2,8 % vol. (petite brasserie <= 10000 hl) – prémix
+ - BIERE_SUP_18_PETITE_BRASSERIE_50000 : Bières > 18 % vol. (10000 hl < petite brasserie <= 50000 hl)
+ - BIERE_SUP_2_8_PETITE_BRASSERIE_50000 : Bières > 2,8 % vol. (10000 hl < petite brasserie <= 50000 hl)
+ - BIERE_SUP_2_8_PETITE_BRASSERIE_50000_PREMIX : Bières > 2,8 % vol. (10000 hl < petite brasserie <= 50000 hl) - premix
+ - BIERE_SUP_18_PETITE_BRASSERIE_200000 : Bières > 18 % vol. (50000 hl < petite brasserie <= 200000 hl)
+ - BIERE_SUP_2_8_PETITE_BRASSERIE_200000 : Bières > 2,8 % vol. (50000 hl < petite brasserie <= 200000 hl)
+ - BIERE_SUP_2_8_PETITE_BRASSERIE_200000_PREMIX : Bières > 2,8 % vol. (50000 hl < petite brasserie <= 200000 hl) - premix
+ - RHUM_TRADITIONNEL_DOM_ART_1 : Rhums traditionnels des DOM commercialisés en métropole dans le cadre du contingent fiscal prévu à l’article 403-I.1° du CGI
+ - RHUM_TRADITIONNEL_DOM_ART_2 : Rhums traditionnels des DOM commercialisés en métropole dans le cadre des dispositions de l’article 403-I.2° du CGI
+ - RHUM_TIERS_ET_AUTRES : Rhums tiers (hors DOM) et autres rhums
+ - ALCOOL_AUTRE_SUP_18 : Alcools autres que rhums > 18 % vol.
+ - ALCOOL_AUTRE_INF_18 : Alcools autres que rhums <= 18 % vol
+ - ALCOOL_AUTRE_INF_18_PREMIX : Alcools autres que rhums <= 18 % vol - premix
+ - RHUM_GUADELOUPE : Rhums DOM et tafias Guadeloupe
+ - RHUM_MARTINIQUE : Rhums DOM et tafias Martinique
+ - RHUM_GUYANE : Rhums DOM et tafias Guynae
+ - RHUM_REUNION : Rhums DOM et tafias Réunion
+ - SPIRITUEUX_GUADELOUPE_SUP_18 : Spiritueux à base d’alcools de cru Guadeloupe > 18 % vol.
+ - SPIRITUEUX_GUADELOUPE_INF_18 : Spiritueux à base d’alcools de cru Guadeloupe <= 18 % vol.
+ - SPIRITUEUX_GUADELOUPE_INF_18_PREMIX : Spiritueux à base d’alcools de cru Guadeloupe <= 18 % vol. - premix
+ - SPIRITUEUX_MARTINIQUE_SUP_18 : Spiritueux à base d’alcools de cru Martinique > 18 % vol.
+ - SPIRITUEUX_MARTINIQUE_INF_18 : Spiritueux à base d’alcools de cru Martinique <= 18 % vol.
+ - SPIRITUEUX_MARTINIQUE_INF_18_PREMIX : Spiritueux à base d’alcools de cru Martinique <= 18 % vol. - premix
+ - SPIRITUEUX_GUYANE_SUP_18 : Spiritueux à base d’alcools de cru Guyane > 18 % vol.
+ - SPIRITUEUX_GUYANE_INF_18 : Spiritueux à base d’alcools de cru Guyane <= 18 % vol.
+ - SPIRITUEUX_GUYANE_INF_18_PREMIX : Spiritueux à base d’alcools de cru Guyane <= 18 % vol. - premix
+ - SPIRITUEUX_REUNION_SUP_18 : Spiritueux à base d’alcools de cru Réunion >18 % vol.
+ - SPIRITUEUX_REUNION_INF_18 : Spiritueux à base d’alcools de cru Réunion <= 18 % vol.
+ - SPIRITUEUX_REUNION_INF_18_PREMIX : Spiritueux à base d’alcools de cru Réunion <= 18 % vol. - premix
+ - AUTRES_ALCOOLS_SUP_18 : Autres alcools – alcools autres que rhums traditionnels des DOM > 18 % vol. ou spiritueux importés d’un autre DOM
+ - AUTRES_ALCOOLS_INF_18 : Autres alcools – alcools autres que rhums traditionnels des DOM <= 18 % vol. ou spiritueux importés d’un autre DOM
+ - AUTRES_ALCOOLS_INF_18_PREMIX : Autres alcools – alcools autres que rhums traditionnels des DOM <= 18 % vol. ou spiritueux importés d’un autre DOM - premix
+ - MATIERES_PREMIERES_SPIRITUEUX : Matières premières utilisées pour les spiritueux (chapitre 2208 du tarif des douanes)
+ - MATIERES_PREMIERES_ALCOOLS : Matières premières utilisées pour les boissons alcooliques
+ - VT_ETRANGERS : Vins tranquilles étrangers
+ - VM_ETRANGERS : Vins mousseux étrangers
