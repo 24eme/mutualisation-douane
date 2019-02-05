@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- edited with XMLSpy v2015 rel. 4 sp1 (http://www.altova.com) by DNSCE (DIR. NAT. DES STATISTIQUES) -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://douane.finances.gouv.fr/app/ciel/interprofession/echanges/1.0" targetNamespace="http://douane.finances.gouv.fr/app/ciel/interprofession/echanges/1.0" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.11">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://douane.finances.gouv.fr/app/ciel/interprofession/echanges/1.0" targetNamespace="http://douane.finances.gouv.fr/app/ciel/interprofession/echanges/1.0" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.12">
 	<xsd:element name="message-interprofession">
 		<xsd:annotation>
 			<xsd:documentation>Message en entrée envoyé par une interprofession et contenant la déclaration d'un opérateur pour une période donnée.</xsd:documentation>
@@ -188,7 +187,7 @@
 									<xsd:sequence>
 										<xsd:element name="categorie-fiscale-capsules" type="categorieFiscaleCapsuleType"/>
 										<xsd:element name="type-capsule" type="typeCapsuleType"/>
-										<xsd:element name="centilisation" minOccurs="1" maxOccurs="unbounded">
+										<xsd:element name="centilisation" maxOccurs="unbounded">
 											<xsd:complexType>
 												<xsd:sequence>
 													<xsd:element name="stock-debut-periode" type="xsd:nonNegativeInteger"/>
@@ -370,6 +369,7 @@
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="numero-cvi" type="numeroCviType" minOccurs="0"/>
+			<xsd:element name="raison-sociale" type="raisonSocialeType" minOccurs="0"/>
 		</xsd:sequence>
 	</xsd:complexType>
 	<xsd:complexType name="MouvementsTemporairesType">
@@ -464,6 +464,14 @@
 			<xsd:documentation>Numéro identifiant CVI</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="raisonSocialeType">
+		<xsd:annotation>
+			<xsd:documentation>Raison sociale associée au numéro d'accise.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="200"/>
+		</xsd:restriction>
 	</xsd:simpleType>
 	<xsd:simpleType name="numeroDocumentType">
 		<xsd:annotation>
@@ -832,7 +840,7 @@
 			</xsd:enumeration>
 			<xsd:enumeration value="SPIRITUEUX_REUNION_SUP_18">
 				<xsd:annotation>
-					<xsd:documentation>Spiritueux à base d’alcools de cru Réunion >18 % vol.</xsd:documentation>
+					<xsd:documentation>Spiritueux à base d’alcools de cru Réunion &gt; 18 % vol.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="SPIRITUEUX_REUNION_INF_18">
@@ -878,6 +886,46 @@
 			<xsd:enumeration value="VM_ETRANGERS">
 				<xsd:annotation>
 					<xsd:documentation>Vins mousseux étrangers</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="VT_IG_AOP">
+				<xsd:annotation>
+					<xsd:documentation>Vins tranquilles avec IG – AOP</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="VT_IG_IGP">
+				<xsd:annotation>
+					<xsd:documentation>Vins tranquilles avec IG – IGP</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="VT_SANS_IG_CEPAGE">
+				<xsd:annotation>
+					<xsd:documentation>Vins tranquilles sans IG – vins de cépage</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="VT_SANS_IG_AUTRES">
+				<xsd:annotation>
+					<xsd:documentation>Vins tranquilles sans IG – autres</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="VM_IG_AOP">
+				<xsd:annotation>
+					<xsd:documentation>Vins mousseux avec IG – AOP</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="VM_IG_IGP">
+				<xsd:annotation>
+					<xsd:documentation>Vins mousseux avec IG – IGP</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="VM_SANS_IG_CEPAGE">
+				<xsd:annotation>
+					<xsd:documentation>Vins mousseux sans IG – vins de cépage</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="VM_SANS_IG_AUTRES">
+				<xsd:annotation>
+					<xsd:documentation>Vins mousseux sans IG – autres</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 		</xsd:restriction>
