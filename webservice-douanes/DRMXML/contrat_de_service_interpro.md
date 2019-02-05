@@ -859,59 +859,67 @@ string | Chaîne de caractères | Ceci est un exemple.
 
 ### LISTE DES LIBELLÉS FISCAUX
 
- - BOISSONS_FERMENTEES_AUTRES : Boissons fermentées autres que le vin et la bière
- - BOISSONS_FERMENTEES_AUTRES_PREMIX : Boissons fermentées autres que le vin et la bière - premix
- - CIDRES : Cidres
- - POIRES : Poirés
- - HYDROMELS : Hydromels
- - HYDROMELS_PREMIX : Hydromels - premix
- - PETILLANTS : Pétilants
- - PETILLANTS_PREMIX : Pétilants - premix
- - VDN_VDL_AOP_SUP_18 : VDN et VDL AOP < 18 % vol.
- - VDN_VDL_AOP_INF_18 : VDN et VDL AOP <= 18 % vol.
- - AUTRES_PI_SUP_18 : Autres produits intermédiaires que VDN et VDL AOP > 18 % vol.
- - AUTRES_PI_INF_18 : Autres produits intermédiaires que VDN et VDL AOP <= 18 % vol.
- - AUTRES_PI_INF_18_PREMIX : Autres produits intermédiaires que VDN et VDL AOP <= 18 % vol. - premix
- - BIERE_INF_2_8 : Bières < 2,8 % vol.
- - BIERE_INF_2_8_PREMIX : Bières < 2,8 % vol. - premix
- - BIERE_SUP_18_BRASSERIE_TAUX_NORMAL : Bières > 18 % vol. (brasseries taux normal)
- - BIERE_SUP_2_8_BRASSERIE_TAUX_NORMAL : Bières > 2,8 % vol. (brasseries taux normal)
- - BIERE_SUP_2_8_BRASSERIE_TAUX_NORMAL_PREMIX : Bières > 2,8 % vol. (brasseries taux normal) - premix
- - BIERE_SUP_18_PETITE_BRASSERIE_10000 : Bières > 18 % vol. (petite brasserie <= 10000 hl)
- - BIERE_SUP_2_8_PETITE_BRASSERIE_10000 : Bières > 2,8 % vol. (petite brasserie <= 10000 hl)
- - BIERE_SUP_2_8_PETITE_BRASSERIE_10000_PREMIX : Bières > 2,8 % vol. (petite brasserie <= 10000 hl) – prémix
- - BIERE_SUP_18_PETITE_BRASSERIE_50000 : Bières > 18 % vol. (10000 hl < petite brasserie <= 50000 hl)
- - BIERE_SUP_2_8_PETITE_BRASSERIE_50000 : Bières > 2,8 % vol. (10000 hl < petite brasserie <= 50000 hl)
- - BIERE_SUP_2_8_PETITE_BRASSERIE_50000_PREMIX : Bières > 2,8 % vol. (10000 hl < petite brasserie <= 50000 hl) - premix
- - BIERE_SUP_18_PETITE_BRASSERIE_200000 : Bières > 18 % vol. (50000 hl < petite brasserie <= 200000 hl)
- - BIERE_SUP_2_8_PETITE_BRASSERIE_200000 : Bières > 2,8 % vol. (50000 hl < petite brasserie <= 200000 hl)
- - BIERE_SUP_2_8_PETITE_BRASSERIE_200000_PREMIX : Bières > 2,8 % vol. (50000 hl < petite brasserie <= 200000 hl) - premix
- - RHUM_TRADITIONNEL_DOM_ART_1 : Rhums traditionnels des DOM commercialisés en métropole dans le cadre du contingent fiscal prévu à l’article 403-I.1° du CGI
- - RHUM_TRADITIONNEL_DOM_ART_2 : Rhums traditionnels des DOM commercialisés en métropole dans le cadre des dispositions de l’article 403-I.2° du CGI
- - RHUM_TIERS_ET_AUTRES : Rhums tiers (hors DOM) et autres rhums
- - ALCOOL_AUTRE_SUP_18 : Alcools autres que rhums > 18 % vol.
- - ALCOOL_AUTRE_INF_18 : Alcools autres que rhums <= 18 % vol
- - ALCOOL_AUTRE_INF_18_PREMIX : Alcools autres que rhums <= 18 % vol - premix
- - RHUM_GUADELOUPE : Rhums DOM et tafias Guadeloupe
- - RHUM_MARTINIQUE : Rhums DOM et tafias Martinique
- - RHUM_GUYANE : Rhums DOM et tafias Guynae
- - RHUM_REUNION : Rhums DOM et tafias Réunion
- - SPIRITUEUX_GUADELOUPE_SUP_18 : Spiritueux à base d’alcools de cru Guadeloupe > 18 % vol.
- - SPIRITUEUX_GUADELOUPE_INF_18 : Spiritueux à base d’alcools de cru Guadeloupe <= 18 % vol.
- - SPIRITUEUX_GUADELOUPE_INF_18_PREMIX : Spiritueux à base d’alcools de cru Guadeloupe <= 18 % vol. - premix
- - SPIRITUEUX_MARTINIQUE_SUP_18 : Spiritueux à base d’alcools de cru Martinique > 18 % vol.
- - SPIRITUEUX_MARTINIQUE_INF_18 : Spiritueux à base d’alcools de cru Martinique <= 18 % vol.
- - SPIRITUEUX_MARTINIQUE_INF_18_PREMIX : Spiritueux à base d’alcools de cru Martinique <= 18 % vol. - premix
- - SPIRITUEUX_GUYANE_SUP_18 : Spiritueux à base d’alcools de cru Guyane > 18 % vol.
- - SPIRITUEUX_GUYANE_INF_18 : Spiritueux à base d’alcools de cru Guyane <= 18 % vol.
- - SPIRITUEUX_GUYANE_INF_18_PREMIX : Spiritueux à base d’alcools de cru Guyane <= 18 % vol. - premix
- - SPIRITUEUX_REUNION_SUP_18 : Spiritueux à base d’alcools de cru Réunion >18 % vol.
- - SPIRITUEUX_REUNION_INF_18 : Spiritueux à base d’alcools de cru Réunion <= 18 % vol.
- - SPIRITUEUX_REUNION_INF_18_PREMIX : Spiritueux à base d’alcools de cru Réunion <= 18 % vol. - premix
- - AUTRES_ALCOOLS_SUP_18 : Autres alcools – alcools autres que rhums traditionnels des DOM > 18 % vol. ou spiritueux importés d’un autre DOM
- - AUTRES_ALCOOLS_INF_18 : Autres alcools – alcools autres que rhums traditionnels des DOM <= 18 % vol. ou spiritueux importés d’un autre DOM
- - AUTRES_ALCOOLS_INF_18_PREMIX : Autres alcools – alcools autres que rhums traditionnels des DOM <= 18 % vol. ou spiritueux importés d’un autre DOM - premix
- - MATIERES_PREMIERES_SPIRITUEUX : Matières premières utilisées pour les spiritueux (chapitre 2208 du tarif des douanes)
- - MATIERES_PREMIERES_ALCOOLS : Matières premières utilisées pour les boissons alcooliques
- - VT_ETRANGERS : Vins tranquilles étrangers
- - VM_ETRANGERS : Vins mousseux étrangers
+ - **BOISSONS_FERMENTEES_AUTRES** : Boissons fermentées autres que le vin et la bière
+ - **BOISSONS_FERMENTEES_AUTRES_PREMIX** : Boissons fermentées autres que le vin et la bière - premix 
+ - **CIDRES** : Cidres 
+ - **POIRES** : Poirés 
+ - **HYDROMELS** : Hydromels 
+ - **HYDROMELS_PREMIX** : Hydromels - premix 
+ - **PETILLANTS** : Pétilants 
+ - **PETILLANTS_PREMIX** : Pétilants - premix 
+ - **VDN_VDL_AOP_SUP_18** : VDN et VDL AOP < 18 % vol. 
+ - **VDN_VDL_AOP_INF_18** : VDN et VDL AOP <= 18 % vol. 
+ - **AUTRES_PI_SUP_18** : Autres produits intermédiaires que VDN et VDL AOP > 18 % vol. 
+ - **AUTRES_PI_INF_18** : Autres produits intermédiaires que VDN et VDL AOP <= 18 % vol. 
+ - **AUTRES_PI_INF_18_PREMIX** : Autres produits intermédiaires que VDN et VDL AOP <= 18 % vol. - premix 
+ - **BIERE_INF_2_8** : Bières < 2,8 % vol. 
+ - **BIERE_INF_2_8_PREMIX** : Bières < 2,8 % vol. - premix 
+ - **BIERE_SUP_18_BRASSERIE_TAUX_NORMAL** : Bières > 18 % vol. (brasseries taux normal) 
+ - **BIERE_SUP_2_8_BRASSERIE_TAUX_NORMAL** : Bières > 2,8 % vol. (brasseries taux normal) 
+ - **BIERE_SUP_2_8_BRASSERIE_TAUX_NORMAL_PREMIX** : Bières > 2,8 % vol. (brasseries taux normal) - premix 
+ - **BIERE_SUP_18_PETITE_BRASSERIE_10000** : Bières > 18 % vol. (petite brasserie <= 10000 hl) 
+ - **BIERE_SUP_2_8_PETITE_BRASSERIE_10000** : Bières > 2,8 % vol. (petite brasserie <= 10000 hl) 
+ - **BIERE_SUP_2_8_PETITE_BRASSERIE_10000_PREMIX** : Bières > 2,8 % vol. (petite brasserie <= 10000 hl) – prémix 
+ - **BIERE_SUP_18_PETITE_BRASSERIE_50000** : Bières > 18 % vol. (10000 hl < petite brasserie <= 50000 hl) 
+ - **BIERE_SUP_2_8_PETITE_BRASSERIE_50000** : Bières > 2,8 % vol. (10000 hl < petite brasserie <= 50000 hl) 
+ - **BIERE_SUP_2_8_PETITE_BRASSERIE_50000_PREMIX** : Bières > 2,8 % vol. (10000 hl < petite brasserie <= 50000 hl) - premix 
+ - **BIERE_SUP_18_PETITE_BRASSERIE_200000** : Bières > 18 % vol. (50000 hl < petite brasserie <= 200000 hl) 
+ - **BIERE_SUP_2_8_PETITE_BRASSERIE_200000** : Bières > 2,8 % vol. (50000 hl < petite brasserie <= 200000 hl) 
+ - **BIERE_SUP_2_8_PETITE_BRASSERIE_200000_PREMIX** : Bières > 2,8 % vol. (50000 hl < petite brasserie <= 200000 hl) - premix 
+ - **RHUM_TRADITIONNEL_DOM_ART_1** : Rhums traditionnels des DOM commercialisés en métropole dans le cadre du contingent fiscal prévu à l’article 403-I.1° du CGI 
+ - **RHUM_TRADITIONNEL_DOM_ART_2** : Rhums traditionnels des DOM commercialisés en métropole dans le cadre des dispositions de l’article 403-I.2° du CGI 
+ - **RHUM_TIERS_ET_AUTRES** : Rhums tiers (hors DOM) et autres rhums 
+ - **ALCOOL_AUTRE_SUP_18** : Alcools autres que rhums > 18 % vol. 
+ - **ALCOOL_AUTRE_INF_18** : Alcools autres que rhums <= 18 % vol 
+ - **ALCOOL_AUTRE_INF_18_PREMIX** : Alcools autres que rhums <= 18 % vol - premix 
+ - **RHUM_GUADELOUPE** : Rhums DOM et tafias Guadeloupe 
+ - **RHUM_MARTINIQUE** : Rhums DOM et tafias Martinique 
+ - **RHUM_GUYANE** : Rhums DOM et tafias Guynae 
+ - **RHUM_REUNION** : Rhums DOM et tafias Réunion 
+ - **SPIRITUEUX_GUADELOUPE_SUP_18** : Spiritueux à base d’alcools de cru Guadeloupe > 18 % vol. 
+ - **SPIRITUEUX_GUADELOUPE_INF_18** : Spiritueux à base d’alcools de cru Guadeloupe <= 18 % vol. 
+ - **SPIRITUEUX_GUADELOUPE_INF_18_PREMIX** : Spiritueux à base d’alcools de cru Guadeloupe <= 18 % vol. - premix 
+ - **SPIRITUEUX_MARTINIQUE_SUP_18** : Spiritueux à base d’alcools de cru Martinique > 18 % vol. 
+ - **SPIRITUEUX_MARTINIQUE_INF_18** : Spiritueux à base d’alcools de cru Martinique <= 18 % vol. 
+ - **SPIRITUEUX_MARTINIQUE_INF_18_PREMIX** : Spiritueux à base d’alcools de cru Martinique <= 18 % vol. - premix 
+ - **SPIRITUEUX_GUYANE_SUP_18** : Spiritueux à base d’alcools de cru Guyane > 18 % vol. 
+ - **SPIRITUEUX_GUYANE_INF_18** : Spiritueux à base d’alcools de cru Guyane <= 18 % vol. 
+ - **SPIRITUEUX_GUYANE_INF_18_PREMIX** : Spiritueux à base d’alcools de cru Guyane <= 18 % vol. - premix 
+ - **SPIRITUEUX_REUNION_SUP_18** : Spiritueux à base d’alcools de cru Réunion > 18 % vol. 
+ - **SPIRITUEUX_REUNION_INF_18** : Spiritueux à base d’alcools de cru Réunion <= 18 % vol. 
+ - **SPIRITUEUX_REUNION_INF_18_PREMIX** : Spiritueux à base d’alcools de cru Réunion <= 18 % vol. - premix 
+ - **AUTRES_ALCOOLS_SUP_18** : Autres alcools – alcools autres que rhums traditionnels des DOM > 18 % vol. ou spiritueux importés d’un autre DOM 
+ - **AUTRES_ALCOOLS_INF_18** : Autres alcools – alcools autres que rhums traditionnels des DOM <= 18 % vol. ou spiritueux importés d’un autre DOM 
+ - **AUTRES_ALCOOLS_INF_18_PREMIX** : Autres alcools – alcools autres que rhums traditionnels des DOM <= 18 % vol. ou spiritueux importés d’un autre DOM - premix 
+ - **MATIERES_PREMIERES_SPIRITUEUX** : Matières premières utilisées pour les spiritueux (chapitre 2208 du tarif des douanes) 
+ - **MATIERES_PREMIERES_ALCOOLS** : Matières premières utilisées pour les boissons alcooliques 
+ - **VT_ETRANGERS** : Vins tranquilles étrangers 
+ - **VM_ETRANGERS** : Vins mousseux étrangers 
+ - **VT_IG_AOP** : Vins tranquilles avec IG – AOP 
+ - **VT_IG_IGP** : Vins tranquilles avec IG – IGP 
+ - **VT_SANS_IG_CEPAGE** : Vins tranquilles sans IG – vins de cépage 
+ - **VT_SANS_IG_AUTRES** : Vins tranquilles sans IG – autres 
+ - **VM_IG_AOP** : Vins mousseux avec IG – AOP 
+ - **VM_IG_IGP** : Vins mousseux avec IG – IGP 
+ - **VM_SANS_IG_CEPAGE** : Vins mousseux sans IG – vins de cépage 
+ - **VM_SANS_IG_AUTRES** : Vins mousseux sans IG – autres 
