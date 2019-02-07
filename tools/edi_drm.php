@@ -60,11 +60,10 @@
             <br/>
             <div class="row justify-content-sm-center">
               <?php if(count($csv_retour) > 2 && $isValid): ?>
-              <div class="col-md-12">
-                <div class="row">
                   <p>Il y a cependant des points d'attention : </p>
-                </div>
-              </div>
+              <?php endif; ?>
+              <?php if(count($csv_retour) <= 2 && !$isValid): ?>
+                  <p>Erreur interne :-(</p>
               <?php endif; ?>
                 <div class="col-md-12">
                   <div class="row">
