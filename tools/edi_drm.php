@@ -96,9 +96,11 @@
                   <?php endif; ?>
                   </div>
                   <hr/>
-                  <div class="row">
-                    <p><center><a  href="<?php echo $config["doc"]; ?>">Consulter la documentation générale</a></center></p>
-                    <p><center><a  href="<?php echo $plateformes[$appli]['doc']; ?>">la documentation spécifique pour <?php echo $appli; ?></a></center></p>
+                  <div class="text-center">
+                    <a  href="<?php echo $config["doc"]; ?>">Consulter la documentation générale</a>
+                  </div>
+                  <div class="text-center">
+                    <a  href="<?php echo $plateformes[$appli]['doc']; ?>">Consulter la documentation spécifique pour <?php echo $appli; ?></a>
                   </div>
                   <br/>
                   <div class="row">
