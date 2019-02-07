@@ -67,6 +67,7 @@
               <?php endif; ?>
                 <div class="col-md-12">
                   <div class="row">
+                    <?php if(count($csv_retour) > 2): ?>
                     <table class="table table-striped">
                       <?php
                       foreach ($csv_retour as $num_row => $row):
@@ -92,12 +93,12 @@
                      ?>
                       </tbody>
                     </table>
+                  <?php endif; ?>
                   </div>
+                  <hr/>
                   <div class="row">
-                    Lien vers la documentation générale : &nbsp;<a  href="<?php echo $config["doc"]; ?>"><?php echo $config["doc"]; ?></a>
-                  </div>
-                  <div class="row">
-                    Lien vers la documentation spécifique "<?php echo $appli; ?>" : &nbsp;<a  href="<?php echo $plateformes[$appli]['doc']; ?>"><?php echo $plateformes[$appli]['doc']; ?></a>
+                    <p><center><a  href="<?php echo $config["doc"]; ?>">Consulter la documentation générale</a></center></p>
+                    <p><center><a  href="<?php echo $plateformes[$appli]['doc']; ?>">la documentation spécifique pour <?php echo $appli; ?></a></center></p>
                   </div>
                   <br/>
                   <div class="row">
