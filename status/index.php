@@ -23,6 +23,7 @@
 <tr><td>Interface IIP2 CFT sur la journée</td><td class="text-right"><img src="CFT.svg.php"/></td></tr>
 <tr><td>Interface IIP2 XML sur la journée</td><td class="text-right"><img src="XML.svg.php"/></td></tr>
 <tr><td>Interface IIP3 SEED</td><td class="text-right"><img src="SEED.svg.php"/></td></tr>
+<tr><td>Ligne PASTEUR</td><td class="text-right"><img src="PASTEUR.svg.php"/></td></tr>
 </table>
 </div></center>
 </div>
