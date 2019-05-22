@@ -20,6 +20,7 @@ Voici les différents éléments contenu dans cet espace documentaire :
 | DeclaViti     | CIVR (434341103), Oc (489331314), InterSud (493069546), CIVL (399153386)     | Infodial | OK    |   OK       |       OK       |  OK   | OK          | OK          | OK         | [declaviti.fr](https://declaviti.fr/)|
 | DematVin      | BIVB  (378184758)        | Estalis - HelixDev| OK    | OK         | OK  | OK  | OK   | OK  | OK  | [extranet.bivb.com](https://extranet.bivb.com/)   |
 | Vins Centre Loire      | BIVC  (402946016)        |  24ème | OK    | OK         | OK  | OK  | OK   | OK  | OK  | [declaration.vins-centre-loire.com](https://declaration.vins-centre-loire.com/)   |
+| Vins de Corse         | CIVC Corse  (305835845)        |  ITMG Consulting | OK    |          |   |   |    |   |   |   |
 
 ## Statuts des services
 
