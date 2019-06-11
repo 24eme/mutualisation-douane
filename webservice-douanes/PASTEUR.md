@@ -82,3 +82,10 @@ Il faut bien vérifier que le fichier de configuration du client OpenVPN contien
     route 10.253.161.5 255.255.255.255
     route 10.124.0.0 255.255.0.0
  
+ ### Cannont reach 10.XXX.XXX.XXX
+ 
+Votre openvpn n'est pas configurer pour prendre en charge les connexions vers les réseaux douaniers. Il faut donc vérifier que le fichier de configuration est bien prévu pour cette prise en charge. Vous devriez y trouver les deux lignes suivantes :
+
+    route 10.253.161.5 255.255.255.255
+    route 10.124.0.0 255.255.0.0
+
