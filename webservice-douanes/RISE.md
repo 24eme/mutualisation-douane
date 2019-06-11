@@ -29,27 +29,27 @@ Interco réseau PASTEUR :
 
   - ping http sur l'un des webservice de la machine
 
-    curl -m 1 http://10.253.161.5/authtokenqualif/oauth2/v1/ping
+    ``curl -m 1 http://10.253.161.5/authtokenqualif/oauth2/v1/ping``
 
 Webservices réseau RISE :
 
  - préprod jwt :
 
-    curl -m 1 http://10.124.131.1/authtoken/oauth2/v1/ping
+    ``curl -m 1 http://10.124.131.1/authtoken/oauth2/v1/ping``
 
  - préprod ciel :
 
-    curl -m 1 http://10.124.131.3/cielinterpro/ws/1.0/declarations
+    ``curl -m 1 http://10.124.131.3/cielinterpro/ws/1.0/declarations``
 
-(une erreur est retournée par cette url, c'est normal)
+    (une erreur est retournée par cette url, c'est normal)
 
  - prod jwt :
 
-    curl -m 1 http://10.124.111.12/authtoken/oauth2/v1/ping
+    ``curl -m 1 http://10.124.111.12/authtoken/oauth2/v1/ping``
 
  - prod ciel :
 
-    curl -m 1 http://10.124.111.3/cielinterpro/ws/1.0/declarations 
+    ``curl -m 1 http://10.124.111.3/cielinterpro/ws/1.0/declarations``
 
-(une erreur est retournée par cette url, c'est normal)
+    (une erreur est retournée par cette url, c'est normal)
 
