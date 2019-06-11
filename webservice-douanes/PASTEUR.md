@@ -77,6 +77,8 @@ Suite à l'installation d'un client OpenVPN, le serveur du CNIV est accessible, 
 
 *Résolution* : Le problème rencontré est lié à la définition de route. L'instruction du fichier de configuration openvpn qui indique que les requêtes vers 10.253.161.5 doivent passées par la liaison VPN sont ignorées. En effet le client OpenVPN prend la chaine de caractère ``10.253.161.5 255.255.255.255`` comme un nom de domaine et non pour un ip suivi de son masque.
 
-Il faut bien vérifier que le fichier de configuration du client OpenVPN contient une ligne ``route`` où l'ip ``10.253.161.5`` et le masque ``255.255.255.255`` sont renseignés sans guillemets et sans espace inséquable :
+Il faut bien vérifier que le fichier de configuration du client OpenVPN contient une ligne ``route`` où l'ip ``10.253.161.5`` et le masque ``255.255.255.255`` ainsi que le réseau ``10.124.0.0`` et son netmask ``255.255.0.0`` sont bien renseignés sans guillemets et sans espace inséquable :
 
     route 10.253.161.5 255.255.255.255
+    route 10.124.0.0 255.255.0.0
+ 
