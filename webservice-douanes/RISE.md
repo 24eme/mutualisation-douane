@@ -53,3 +53,6 @@ Webservices réseau RISE :
 
     (une erreur est retournée par cette url, c'est normal)
 
+### Accès CFT
+
+Le CFT douanier est hébergé sur 10.121.191.24. Il n'y a pas moyen de vérifier que le service est actif depuis chez nous.
