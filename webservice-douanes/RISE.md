@@ -31,6 +31,8 @@ Interco réseau PASTEUR :
 
     ``curl -m 1 http://10.253.161.5/authtokenqualif/oauth2/v1/ping``
 
+    **Attention cette adressse a vocation à disparaitre**
+
 Webservices réseau RISE :
 
  - préprod jwt :
