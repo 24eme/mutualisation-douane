@@ -53,9 +53,9 @@ Tant que votre client OpenVPN sera opérationnel, vous pourrez interroger le ser
     <html><head>
     [...]
 
-De même si les routes sont bien installées par OpenVPN, vous pourrez avoir accès à la machine des douanes [http://10.253.161.5/](http://10.253.161.5/) qui renvoie sur le portail ProDouane : 
+De même si les routes sont bien installées par OpenVPN, vous pourrez avoir accès à la machine des douanes [http://xxx.xxx.xxx.xxx/](http://xxx.xxx.xxx.xxx/) qui renvoie sur le portail ProDouane : 
 
-    $ curl http://10.253.161.5/
+    $ curl http://xxx.xxx.xxx.xxx/
     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
     <html><head>
     <title>302 Found</title>
@@ -73,19 +73,19 @@ Une fois qualifiée, l'installation peut être facilement installée comme servi
 
 Suite à l'installation d'un client OpenVPN, le serveur du CNIV est accessible, mais adresse des douanes qui tombe en erreur (``ERR_CONNECTION_TIMED_OUT``). Dans les logs produits par le client OpenVPN, on peut voir cette ligne :
 
-    00:00:00 2016 RESOLVE: Cannot resolve host address: 10.253.161.5 255.255.255.255: Hôte inconnu.
+    00:00:00 2016 RESOLVE: Cannot resolve host address: xxx.xxx.xxx.xxx 255.255.255.255: Hôte inconnu.
 
-*Résolution* : Le problème rencontré est lié à la définition de route. L'instruction du fichier de configuration openvpn qui indique que les requêtes vers 10.253.161.5 doivent passées par la liaison VPN sont ignorées. En effet le client OpenVPN prend la chaine de caractère ``10.253.161.5 255.255.255.255`` comme un nom de domaine et non pour un ip suivi de son masque.
+*Résolution* : Le problème rencontré est lié à la définition de route. L'instruction du fichier de configuration openvpn qui indique que les requêtes vers xxx.xxx.xxx.xxx doivent passées par la liaison VPN sont ignorées. En effet le client OpenVPN prend la chaine de caractère ``xxx.xxx.xxx.xxx 255.255.255.255`` comme un nom de domaine et non pour un ip suivi de son masque.
 
-Il faut bien vérifier que le fichier de configuration du client OpenVPN contient une ligne ``route`` où l'ip ``10.253.161.5`` et le masque ``255.255.255.255`` ainsi que le réseau ``10.124.0.0`` et son netmask ``255.255.0.0`` sont bien renseignés sans guillemets et sans espace inséquable :
+Il faut bien vérifier que le fichier de configuration du client OpenVPN contient une ligne ``route`` où l'ip ``xxx.xxx.xxx.xxx`` et le masque ``255.255.255.255`` ainsi que le réseau ``10.124.0.0`` et son netmask ``255.255.0.0`` sont bien renseignés sans guillemets et sans espace inséquable :
 
-    route 10.253.161.5 255.255.255.255
+    route xxx.xxx.xxx.xxx 255.255.255.255
     route 10.124.0.0 255.255.0.0
  
  ### Cannont reach 10.XXX.XXX.XXX
  
 Votre openvpn n'est pas configurer pour prendre en charge les connexions vers les réseaux douaniers. Il faut donc vérifier que le fichier de configuration est bien prévu pour cette prise en charge. Vous devriez y trouver les deux lignes suivantes :
 
-    route 10.253.161.5 255.255.255.255
+    route xxx.xxx.xxx.xxx 255.255.255.255
     route 10.124.0.0 255.255.0.0
 

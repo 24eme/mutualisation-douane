@@ -186,7 +186,7 @@ Pour identifier un établissement, il est obligatoire de renseigner au moins une
 
  **Pour le type de mouvement :**
 
- - 14 : Type de la CRD (champ obligatoire parmi collectif suspendu, collectif acquitte ou personnalise)
+ - 14 : Type de la CRD (champ obligatoire parmi : collectif suspendu, collectif acquitte ou personnalise)
  - 15 : La catégorie de mouvement : (champ obligatoire, ex: stock_debut, entrees, sorties, stock_fin)
  - 16 : Le type de mouvement (champ obligatoire parmi : achat, excedents, retours, destructions, utilisations, manquants )
 

@@ -31,6 +31,8 @@ Interco réseau PASTEUR :
 
     ``curl -m 1 http://10.253.161.5/authtokenqualif/oauth2/v1/ping``
 
+    **Attention cette adressse a vocation à disparaitre**
+
 Webservices réseau RISE :
 
  - préprod jwt :
@@ -53,3 +55,6 @@ Webservices réseau RISE :
 
     (une erreur est retournée par cette url, c'est normal)
 
+### Accès CFT
+
+Le CFT douanier est hébergé sur 10.121.191.24. Il n'y a pas moyen de vérifier que le service est actif depuis chez nous.
