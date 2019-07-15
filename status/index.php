@@ -15,15 +15,16 @@
 <h2>Statuts des services</h2>
 </div>
 <center>
-      <div style="width: 500px">
+      <div style="width: 650px">
 <table class="lead table">
-<tr><td>Interface IIP1 CIEL ping http</td><td class="text-right"><img src="CIEL.svg.php"/></td></tr>
-<tr><td>Interface IIP1 CIEL ping http sur une 1h</td><td class="text-right"><img src="CIEL60min.svg.php"/></td></tr>
-<tr><td>Interface IIP1 CIEL transmission</td><td class="text-right"><img src="CIELTRANSMISSION.svg.php"/></td></tr>
-<tr><td>Interface IIP2 CFT sur la journée</td><td class="text-right"><img src="CFT.svg.php"/></td></tr>
-<tr><td>Interface IIP2 XML sur la journée</td><td class="text-right"><img src="XML.svg.php"/></td></tr>
+<tr><td>Interface IIP1 CIEL ping http <small class="text-muted">(via RISE)</small></td><td class="text-right"><img src="CIEL.svg.php"/></td></tr>
+<tr><td>Interface IIP1 CIEL ping http sur une 1h <small class="text-muted">(via PASTEUR)</small></td><td class="text-right"><img src="CIEL60min.svg.php"/></td></tr>
+<tr><td>Interface IIP1 CIEL transmission <small class="text-muted">(via RISE)</small></td><td class="text-right"><img src="CIELTRANSMISSION.svg.php"/></td></tr>
+<tr><td>Interface IIP2 CFT sur la journée <small class="text-muted">(via PASTEUR)</small></td><td class="text-right"><img src="CFT.svg.php"/></td></tr>
+<tr><td>Interface IIP2 XML sur la journée <small class="text-muted">(via PASTEUR)</small></td><td class="text-right"><img src="XML.svg.php"/></td></tr>
 <tr><td>Interface IIP3 SEED</td><td class="text-right"><img src="SEED.svg.php"/></td></tr>
 <tr><td>Ligne PASTEUR</td><td class="text-right"><img src="PASTEUR.svg.php"/></td></tr>
+<tr><td>Ligne RISE</td><td class="text-right"><img src="RISE.svg.php"/></td></tr>
 </table>
 </div></center>
 </div>
