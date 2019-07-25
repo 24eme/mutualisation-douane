@@ -65,7 +65,7 @@ De même si les routes sont bien installées par OpenVPN, vous pourrez avoir acc
 
 L'outil [OpenVPN GUI](https://community.openvpn.net/openvpn/wiki/OpenVPN-GUI) permet une installation simple d'un client OpenVPN.
 
-Une fois qualifiée, l'installation peut être facilement installée comme service en suivant la documentation suivante : [Running OpenVPN as a Windows Service](https://openvpn.net/index.php/open-source/documentation/install.html?start=1# running_as_windows_service)
+Une fois qualifiée, l'installation peut être facilement installée comme service en suivant la documentation suivante : [Running OpenVPN as a Windows Service](https://openvpn.net/index.php/open-source/documentation/install.html?start=1#running_as_windows_service)
 
 ## Résolutions d'erreur
 
@@ -89,3 +89,9 @@ Votre openvpn n'est pas configurer pour prendre en charge les connexions vers le
     route xxx.xxx.xxx.xxx 255.255.255.255
     route 10.124.0.0 255.255.0.0
 
+### Déconnexion régulière de l'OpenVPN
+
+En général la déconnexion d'un openVPN Client peut avoir deux raisons :
+
+ - les parametres de connexion qui vous ont été attribués sont utilisés par un autre client OpenVPN : si vous avez plusieurs clients openVPN, assurez vous que leurs paramètres (clés et ip) soient uniques et que notamment d'anciennes instances ne soient plus actives
+ - OpenVPN n'est pas activité en mode démon, il se désactive donc à chaque déconnexion de l'utilisateur qui l'héberge. Voici une [documentation pour installer openvpn comme un service windows](https://openvpn.net/community-resources/running-openvpn-as-a-windows-service/)
