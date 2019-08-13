@@ -145,7 +145,7 @@ A la place du "code produit éclaté", il est également possible d'utiliser le 
 
  **Pour la quantité :**
 
- - 17 : Le volume en hl (ou valeur information complémentaire)
+ - 17 : Le volume en hl (champ obligatoire non négatif) ou valeur information complémentaire
 
  **Pour les détails :**
 
