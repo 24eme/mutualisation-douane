@@ -144,6 +144,6 @@ Le site officiel du projet [JWT.io](http://jwt.io) références les implémentat
 
 **Attention** : Les douanes n'autorisent qu'une 50aine de requêtes quotidiennes. Il faut donc prévoir un mécanisme de cache des tickets JWT pour éviter de se faire couper les accès pendant plusieurs heures.
 
-Url de qualification : http://10.253.161.5/authtokenqualif/oauth2/v1/token
+Url de qualification : http://10.124.131.1/authtoken/oauth2/v1/token
 
-Url de production : http://10.253.161.5/authtoken/oauth2/v1/token
+Url de production : http://10.124.111.12/authtoken/oauth2/v1/token

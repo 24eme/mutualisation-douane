@@ -26,3 +26,5 @@ $key = '-----BEGIN RSA PRIVATE KEY-----
 ****************************************************************
 -----END RSA PRIVATE KEY-----';
 $curl_enabled = false;
+$jwt_url = 'http://10.124.131.1/authtoken/oauth2/v1/token';
+$ciel_url = 'http://10.124.131.3/cielinterpro/ws/1.0/declarations';
