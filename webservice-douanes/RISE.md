@@ -11,7 +11,9 @@ Une migration est en cours. Cette page permet de suivre l'état de cette migrati
 | Demande de ligne                   | OK            |
 | Mise en place de la ligne IPSec    | OK            |
 | Recette des webservices CIEL       | OK            |
-| Recette CFT                        | En cours      |
+| Recette CFT                        | OK      |
+
+La migration est terminée
 
 ## Élements de diagnostiques 
 
