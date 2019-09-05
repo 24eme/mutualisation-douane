@@ -94,7 +94,7 @@ Les premiers champ de chaque ligne sont des champs communs pour tout le fichier,
 
 Le fichier CSV est constitué de trois types de lignes :
  - CAVE : pour déclarer le stock et les mouvements de cave ;
- - CRD : pour déclarer le stock et les mouvements de capsule CRD ;
+ - CRD : pour déclarer le stock et les mouvements de capsules CRD ;
  - ANNEXE : pour les informations demandées en annexe par les douanes (documents d'accompagnement, observations et statistiques européennes)
 
 L'idée du fichier CSV est de permettre d'autres exploitations que celles liées à la télédéclaration des DRM. Certaines informations peuvent être éclatées en plusieurs champs afin par exemple de permettre des utilisations statistiques (c'est le cas notamment pour la description des produits).
