@@ -156,7 +156,7 @@ A la place du "code produit éclaté", il est également possible d'utiliser le 
  - 22 : le numéro d'accises de l'acheteur (pour les mouvement de contrats non visés par l'Interpro, sinon vide)
  - 23 : le nom de l'acheteur (pour les mouvement de contrats non visés par l'Interpro, sinon vide)
 
-**Cas des informations complémentaires**
+#### Cas des informations complémentaires
 
 La douane demande parfois des informations complémentaires pour un produit afin de déclarer son **taux d'alcool volume (TAV)**, le **premix** ou des **observations**. Dans ce cas ces informations sont transmises via une catégorie de mouvement "complement" (champ 15) et où le champ "type de mouvement" (n°16) prend l'une des valeurs suivantes : TAV, premix ou observations. Le champ 17 indiquera alors la valeur pour ces informations (flottant pour TAV, boolean pour premix et chaine de caractère pour observation)
 
