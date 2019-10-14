@@ -1,9 +1,9 @@
 #TYPE,PERIODE,IDENTIFIANT,ACCISE,CERTIFICATION, GENRE, APPELLATION,MENTION,LIEU,COULEUR,CEPAGE,COMPLEMENT,LIBELLE,TYPE_DRM,CATEGORIE MOUVEMENT,TYPE MOUVEMENT,VOLUME,PAYS EXPORT,NUMERO CONTRAT,NUMERO DOCUMENT ACCOMPAGNEMENT
-CAVE,201509,11223301,FR01234567890,AOC,Fines bulles,Crémant de Loire,,,Blanc,,,Crément de Loire Blanc,suspendu,stocks_debut,revendique,117,,,
-CAVE,201509,11223301,FR01234567890,AOC,Fines bulles,Crémant de Loire,,,Blanc,,,Crément de Loire Blanc,suspendu,entrees,achatnoncrd,34,,,
-CAVE,201509,11223301,FR01234567890,AOC,Fines bulles,Crémant de Loire,,,Blanc,,,Crément de Loire Blanc,suspendu,sorties,ventefrancebouteillecrd,4,,,
-CAVE,201509,11223301,FR01234567890,AOC,Fines bulles,Crémant de Loire,,,Blanc,,,Crément de Loire Blanc,suspendu,sorties,export,34,Japon,,123457777
-CAVE,201509,11223301,FR01234567890,AOC,Fines bulles,Crémant de Loire,,,Blanc,,,Crément de Loire Blanc,suspendu,stocks_fin,revendique,113,,,
+CAVE,201509,11223301,FR01234567890,AOC,Fines bulles,Crémant de Loire,,,Blanc,,,Crémant de Loire Blanc,suspendu,stocks_debut,revendique,117,,,
+CAVE,201509,11223301,FR01234567890,AOC,Fines bulles,Crémant de Loire,,,Blanc,,,Crémant de Loire Blanc,suspendu,entrees,achatnoncrd,34,,,
+CAVE,201509,11223301,FR01234567890,AOC,Fines bulles,Crémant de Loire,,,Blanc,,,Crémant de Loire Blanc,suspendu,sorties,ventefrancebouteillecrd,4,,,
+CAVE,201509,11223301,FR01234567890,AOC,Fines bulles,Crémant de Loire,,,Blanc,,,Crémant de Loire Blanc,suspendu,sorties,export,34,Japon,,123457777
+CAVE,201509,11223301,FR01234567890,AOC,Fines bulles,Crémant de Loire,,,Blanc,,,Crémant de Loire Blanc,suspendu,stocks_fin,revendique,113,,,
 CAVE,201509,11223301,FR01234567890,AOC,,Muscadet Sèvre et Maine,,Clisson,Blanc,Melon,,Muscadet Sèvre et Maine Clisson Blanc Melon,acquitte,stocks_debut,revendique,195,,,
 CAVE,201509,11223301,FR01234567890,AOC,,Muscadet Sèvre et Maine,,Clisson,Blanc,Melon,,Muscadet Sèvre et Maine Clisson Blanc Melon,acquitte,sorties,consommationfamilialedegustation,10,,,
 CAVE,201509,11223301,FR01234567890,AOC,,Muscadet Sèvre et Maine,,Clisson,Blanc,Melon,,Muscadet Sèvre et Maine Clisson Blanc Melon,acquitte,sorties,export,90,Belgique,,123456793

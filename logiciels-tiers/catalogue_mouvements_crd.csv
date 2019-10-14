@@ -1,12 +1,12 @@
 Type de la CRD,Catégorie du mouvement,Type du mouvement
-collective suspendue,stock_debut,debut
-collective suspendue,entrees,achats
-collective suspendue,entrees,excedents
-collective suspendue,entrees,retours
-collective suspendue,sorties,utilisations
-collective suspendue,sorties,destructions
-collective suspendue,sorties,manquants
-collective suspendue,stock_fin,fin
+collectif suspendue,stock_debut,debut
+collectif suspendue,entrees,achats
+collectif suspendue,entrees,excedents
+collectif suspendue,entrees,retours
+collectif suspendue,sorties,utilisations
+collectif suspendue,sorties,destructions
+collectif suspendue,sorties,manquants
+collectif suspendue,stock_fin,fin
 collectif acquitte,stock_debut,debut
 collectif acquitte,entrees,achats
 collectif acquitte,entrees,excedents

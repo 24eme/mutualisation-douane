@@ -94,7 +94,7 @@ Les premiers champ de chaque ligne sont des champs communs pour tout le fichier,
 
 Le fichier CSV est constitué de trois types de lignes :
  - CAVE : pour déclarer le stock et les mouvements de cave ;
- - CRD : pour déclarer le stock et les mouvements de CRD ;
+ - CRD : pour déclarer le stock et les mouvements de capsules CRD ;
  - ANNEXE : pour les informations demandées en annexe par les douanes (documents d'accompagnement, observations et statistiques européennes)
 
 L'idée du fichier CSV est de permettre d'autres exploitations que celles liées à la télédéclaration des DRM. Certaines informations peuvent être éclatées en plusieurs champs afin par exemple de permettre des utilisations statistiques (c'est le cas notamment pour la description des produits).
@@ -156,13 +156,13 @@ A la place du "code produit éclaté", il est également possible d'utiliser le 
  - 22 : le numéro d'accises de l'acheteur (pour les mouvement de contrats non visés par l'Interpro, sinon vide)
  - 23 : le nom de l'acheteur (pour les mouvement de contrats non visés par l'Interpro, sinon vide)
 
-**Cas des informations complémentaires**
+#### Cas des informations complémentaires
 
 La douane demande parfois des informations complémentaires pour un produit afin de déclarer son **taux d'alcool volume (TAV)**, le **premix** ou des **observations**. Dans ce cas ces informations sont transmises via une catégorie de mouvement "complement" (champ 15) et où le champ "type de mouvement" (n°16) prend l'une des valeurs suivantes : TAV, premix ou observations. Le champ 17 indiquera alors la valeur pour ces informations (flottant pour TAV, boolean pour premix et chaine de caractère pour observation)
 
 [Voici un exemple ne contenant que quelques lignes de type CAVE](exemple_cave.csv "csv_de_type_cave") ***Attention, ce fichier est fourni à titre d'exemple, pour en comprendre le format, les produits et les mouvements sont fictifs.*** Il faut se référer à la documentation spécifique à chacune des interpros pour connaitre les produits et mouvements utilisables.
 
-### Description des lignes CRD
+### Description des lignes de capsules CRD
 
  **Pour la section commune :**
 
