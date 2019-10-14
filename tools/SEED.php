@@ -76,7 +76,7 @@ $accise = $_GET['accise'];
       exit;
     }
     $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL,"https://pro.douane.gouv.fr/seedWS/SeedWS");
+    curl_setopt($ch, CURLOPT_URL,"https://www.douane.gouv.fr/seedWS/SeedWS");
     curl_setopt($ch, CURLOPT_POST, 1);
     //echo $data;exit;
     curl_setopt($ch, CURLOPT_POSTFIELDS, $data);  //Post Fields
