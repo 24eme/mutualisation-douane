@@ -7,7 +7,7 @@ $data = '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelo
 $data .= 'FR093101E0055';
 $data .= '</numAccise></numAccises></ws:getInformation></soapenv:Body></soapenv:Envelope>';
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL,"https://pro.douane.gouv.fr/seedWS/SeedWS");
+curl_setopt($ch, CURLOPT_URL,"https://www.douane.gouv.fr/seedWS/SeedWS");
 curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_POSTFIELDS, $data);  //Post Fields
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
