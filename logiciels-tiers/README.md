@@ -177,7 +177,7 @@ Pour identifier un établissement, il est obligatoire de renseigner au moins une
 
  - 5 : La couleur de la CRD (champ facultatif parmi lies de vin, vert, bleu, ce champs n'est plus obligatoire, pour les autres couleurs le laisser vide)
  - 6 : La catégorie fiscale de la CRD (champ obligatoire parmi tranquille, mousseux, PI, ALCOOLS, COGNAC-ARMAGNAC)
- - 7 : Le centilisation de la CRD (champ obligatoire parmi Bouteille 37cl, Bouteille 37,5cl, Bouteille 50cl, Bouteille 75cl, Bouteille 100cl, Bouteille 150cl, Bouteille 300cl, Bouteille 500cl, Bouteille 600cl, BIB 3l, BIB 5l, BIB 6l, BIB 10l, BIB 20l, BIB 30l)
+ - 7 : Le centilisation de la CRD (champ obligatoire parmi Bouteille 37cl, Bouteille 37,5cl, Bouteille 50cl, Bouteille 75cl, Bouteille 100cl, Bouteille 150cl, Bouteille 300cl, Bouteille 500cl, Bouteille 600cl, BIB 1,5l, BIB 2l, BIB 2,25l, BIB 3l, BIB 5l, BIB 6l, BIB 10l, BIB 15l, BIB 20l, BIB 22l, BIB 30l, BIB 33l)
  - 9 : vide
  - 10 : vide
  - 11 : vide
