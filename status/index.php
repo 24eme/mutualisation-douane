@@ -18,6 +18,7 @@
       <div style="width: 650px">
 <table class="lead table">
 <tr><td>Interface IIP1 CIEL ping http <small class="text-muted">(via RISE)</small></td><td class="text-right"><img src="CIEL.svg.php"/></td></tr>
+<tr><td>Interface IIP1 CIEL ping http <small class="text-muted">(via ClaraNet)</small></td><td class="text-right"><img src="CIELviaClaraNet.svg.php"/></td></tr>
 <tr><td>Interface IIP1 CIEL ping http sur une 1h <small class="text-muted">(via RISE)</small></td><td class="text-right"><img src="CIEL60min.svg.php"/></td></tr>
 <tr><td>Interface IIP1 CIEL transmission <small class="text-muted">(via RISE)</small></td><td class="text-right"><img src="CIELTRANSMISSION.svg.php"/></td></tr>
 <tr><td>Interface IIP2 CFT sur la journée <small class="text-muted"></small></td><td class="text-right"><img src="CFT.svg.php"/></td></tr>
