@@ -2,12 +2,16 @@
 
 header('Content-Type: image/svg+xml');
 
-$ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, "http://10.124.111.3/cielinterpro/ws/1.0/declarations");
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-$response = curl_exec($ch);
-curl_close($ch);
-
+for($i = 0 ; $i < 6 ; $i++) {
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, "http://10.124.111.3/cielinterpro/ws/1.0/declarations");
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    $response = curl_exec($ch);
+    curl_close($ch);
+    if($response[0] != "{") {
+        break;
+    }
+}
 if($response[0] == "{"): ?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="88" height="20"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="88" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path fill="#555" d="M0 0h37v20H0z"/><path fill="#4c1" d="M37 0h51v20H37z"/><path fill="url(#b)" d="M0 0h88v20H0z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="195" y="150" fill="#010101" fill-opacity=".3" transform="scale(.1)" textLength="270">CIEL</text><text x="195" y="140" transform="scale(.1)" textLength="270">CIEL</text><text x="615" y="150" fill="#010101" fill-opacity=".3" transform="scale(.1)" textLength="410">_ OK _</text><text x="615" y="140" transform="scale(.1)" textLength="410">_ OK _</text></g></svg>
 <?php else: ?>
