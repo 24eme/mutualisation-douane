@@ -4,7 +4,7 @@ header('Content-Type: image/svg+xml');
 
 $cft = file("http://10.222.223.1/stats/DRMjour.csv");
 
-$ligne = split(';', $cft[count($cft) - 2]);
+$ligne = explode(';', $cft[count($cft) - 2]);
 
 $cpt = $ligne[2] * 1;
 
