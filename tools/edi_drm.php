@@ -62,12 +62,12 @@
               <?php if(count($csv_retour) > 2 && $isValid): ?>
                   <p>Il y a cependant des points d'attention : </p>
               <?php endif; ?>
-              <?php if(count($csv_retour) <= 2 && !$isValid): ?>
+              <?php if(!count($csv_retour) && !$isValid): ?>
                   <p>Erreur interne :-(</p>
               <?php endif; ?>
                 <div class="col-md-12">
                   <div class="row">
-                    <?php if(count($csv_retour) > 2): ?>
+                    <?php if(count($csv_retour)): ?>
                     <table class="table table-striped">
                       <?php
                       foreach ($csv_retour as $num_row => $row):
