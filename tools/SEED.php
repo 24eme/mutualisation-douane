@@ -53,7 +53,7 @@ $accise = $_GET['accise'];
         <img class="d-block mx-auto mb-4" src="//www.24eme.fr/img/24eme.svg" alt="" width="172" height="172">
         <h1>Enregistrement SEED</h1>
         <?php
-        if (!preg_match('/^FR...........$/', $accise)):
+        if (!preg_match('/^FR...........$/', $accise) && !preg_match('/^FR......$/', $accise)):
           ?>
         </div>
         <center>
