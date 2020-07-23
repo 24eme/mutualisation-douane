@@ -1,15 +1,16 @@
-<?php 
+<?php
 
 header('Content-Type: image/svg+xml');
 
 $cft = file("http://10.222.223.1/stats/DRMjour.csv");
 
-$ligne = explode(';', $cft[count($cft) - 1]);
-
-$cpt = $ligne[2] * 1;
-
-if($ligne[0] != date('Y-m-d')) {
-	$cpt = 0;
+$cpt = 0;
+for($i = count($cft) -1 ; $i > count($cft) - 5 ; $i--) {
+	$ligne = explode(';', $cft[$i]);
+	if( ($ligne[0] == date('Y-m-d')) && ($ligne[1] == 'XML créés') ) {
+		$cpt = $ligne[2] * 1;
+		last;
+	}
 }
 
 if ($cpt || date('H') < 7): ?>
