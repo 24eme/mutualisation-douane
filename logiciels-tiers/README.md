@@ -123,6 +123,8 @@ Pour identifier un établissement, il est obligatoire de renseigner au moins une
 
  **Pour l'identification du vin :**
 
+Les champs 5 à 13 servent d'identifiant du vin : ils doivent être uniques pour chaque "colonne" de la DRM déclarée. Il n'est donc pas possible de déclarer plusieurs stocks ou plusieurs TAV pour un unique identifiant de vin. Au minimum, les libellés permettront de faire la différence entre deux produits similaires.
+
  - 5 : Le code certification du vin (champ obligatoire si la colonne 13 n'est pas renseigné)  
  - 6 : Le code genre du vin (champ obligatoire si la colonne 13 n'est pas renseigné)  
  - 7 : Le code appellation du vin (champ facultatif)
@@ -142,6 +144,8 @@ A la place du "code produit éclaté", il est également possible d'utiliser le 
  - 14 : Le type de la DRM : (champ obligatoire, ex: suspendu, acquitte)
  - 15 : La catégorie de mouvement : (champ obligatoire, ex: stocks, stock_debut, entrée, sortie, stock_fin, ...)
  - 16 : Le type de mouvement (champ obligatoire, ex: renvendiqué, achat, ...)
+
+/!\ Il n'est donc pas possible de déclarer plusieurs stocks ou plusieurs TAV pour un seul identifiant de vin (colonnes 5 à 13).
 
  **Pour la quantité :**
 
