@@ -133,9 +133,9 @@ Les champs 5 à 13 servent d'identifiant du vin : ils doivent être uniques pour
  - 10 : Le code couleur du vin (champ obligatoire si la colonne 13 n'est pas renseigné)
  - 11 : Le code cépage du vin (champ facultatif)
  - 12 : Libellé complémentaire du vin (champ facultatif)
- - 13 : Le libellé complet du vin (champ facultatif sauf si les colonnes 5 à 12 ne sont pas renseignées)
+ - 13 : Le libellé complet du vin (champ facultatif sauf si les colonnes 6 à 12 ne sont pas renseignées)
 
-Pour identifier un produit, il est obligatoire de renseigner les codes du produit de manière éclatée (colonnes 5 à 11) et/ou le libellé du produit (libellé et/ou entre parenthèses le code INAO / le libellé fiscal). Lorsqu'aucunes des colonnes de 5 à 12 ne sont pas remplies, il est obligatoire de fournir un libellé (un code INAO pouvant correspondre à plusieurs produits, le libellé peut être utilisé pour sélectionner le bon produit).
+Pour identifier un produit, il est obligatoire de renseigner les codes du produit de manière éclatée (colonnes 5 à 11) et/ou le libellé du produit (libellé et/ou entre parenthèses le code INAO / le libellé fiscal). Lorsqu'aucunes des colonnes de 6 à 12 ne sont pas remplies, il est obligatoire de fournir un libellé (un code INAO pouvant correspondre à plusieurs produits, le libellé peut être utilisé pour sélectionner le bon produit).
 
 A la place du "code produit éclaté", il est également possible d'utiliser le code INAO qui est dans ce cas indiqué en colonne 5, les colonnes 6 à 11 sont dans ce cas laissées vides. Le libellé complet ne doit alors pas contenir de parenthèses.
 
