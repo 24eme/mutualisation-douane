@@ -1,4 +1,4 @@
-# DRM dounière : Changer le mois de démarrage de l'execice commercial
+# DRM dounière : Changer le mois de démarrage de l'exercice commercial
 
 Pour changer le mois de démarrage de l'exercice commercial, il faut se rendre dans CIEL et cliquer sur Consulter mon profil opérateur :
 
