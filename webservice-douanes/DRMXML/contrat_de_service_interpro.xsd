@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://douane.finances.gouv.fr/app/ciel/interprofession/echanges/1.0" targetNamespace="http://douane.finances.gouv.fr/app/ciel/interprofession/echanges/1.0" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.12">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://douane.finances.gouv.fr/app/ciel/interprofession/echanges/1.0" targetNamespace="http://douane.finances.gouv.fr/app/ciel/interprofession/echanges/1.0" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.15">
 	<xsd:element name="message-interprofession">
 		<xsd:annotation>
 			<xsd:documentation>Message en entrée envoyé par une interprofession et contenant la déclaration d'un opérateur pour une période donnée.</xsd:documentation>
@@ -39,6 +39,7 @@
 													<xsd:element name="libelle-personnalise">
 														<xsd:simpleType>
 															<xsd:restriction base="xsd:string">
+																<xsd:minLength value="1"/>
 																<xsd:maxLength value="100"/>
 															</xsd:restriction>
 														</xsd:simpleType>
@@ -92,6 +93,7 @@
 																					<xsd:sequence>
 																						<xsd:element name="sorties-definitives" type="volumeType" minOccurs="0"/>
 																						<xsd:element name="consommation-familiale-degustation" type="volumeType" minOccurs="0"/>
+																						<xsd:element name="mise-sur-marche-corse" type="volumeType" minOccurs="0"/>
 																						<xsd:element name="mouvements-temporaires" type="MouvementsTemporairesType" minOccurs="0"/>
 																						<xsd:element name="mouvements-internes" minOccurs="0">
 																							<xsd:complexType>
@@ -253,17 +255,7 @@
 											</xsd:simpleType>
 										</xsd:element>
 										<xsd:element name="date-expedition" type="xsd:date"/>
-										<xsd:element name="numero-accise-destinataire" minOccurs="0">
-											<xsd:annotation>
-												<xsd:documentation>N° d'accise destinataire ou bureau de sortie</xsd:documentation>
-											</xsd:annotation>
-											<xsd:simpleType>
-												<xsd:restriction base="xsd:string">
-													<xsd:maxLength value="13"/>
-													<xsd:minLength value="1"/>
-												</xsd:restriction>
-											</xsd:simpleType>
-										</xsd:element>
+										<xsd:element name="numero-accise-destinataire" type="NumAcciseDestType" minOccurs="0"/>
 									</xsd:sequence>
 								</xsd:complexType>
 							</xsd:element>
@@ -342,6 +334,14 @@
 		</xsd:complexType>
 	</xsd:element>
 	<!--*******************************         types simples et complexes réutilisables         ********************************-->
+	<xsd:simpleType name="NumAcciseDestType">
+		<xsd:annotation>
+			<xsd:documentation>N° d'accise destinataire ou bureau de sortie</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="([A-Za-z0-9]{8}|[A-Za-z0-9]{13})"/>
+		</xsd:restriction>
+	</xsd:simpleType>
 	<xsd:complexType name="DebutFinDocumentType">
 		<xsd:annotation>
 			<xsd:documentation>Numéros de document de début et de fin de période.</xsd:documentation>
@@ -773,101 +773,6 @@
 					<xsd:documentation>Alcools autres que rhums &lt;= 18 % vol - premix</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
-			<xsd:enumeration value="RHUM_GUADELOUPE">
-				<xsd:annotation>
-					<xsd:documentation>Rhums DOM et tafias Guadeloupe</xsd:documentation>
-				</xsd:annotation>
-			</xsd:enumeration>
-			<xsd:enumeration value="RHUM_MARTINIQUE">
-				<xsd:annotation>
-					<xsd:documentation>Rhums DOM et tafias Martinique</xsd:documentation>
-				</xsd:annotation>
-			</xsd:enumeration>
-			<xsd:enumeration value="RHUM_GUYANE">
-				<xsd:annotation>
-					<xsd:documentation>Rhums DOM et tafias Guynae</xsd:documentation>
-				</xsd:annotation>
-			</xsd:enumeration>
-			<xsd:enumeration value="RHUM_REUNION">
-				<xsd:annotation>
-					<xsd:documentation>Rhums DOM et tafias Réunion</xsd:documentation>
-				</xsd:annotation>
-			</xsd:enumeration>
-			<xsd:enumeration value="SPIRITUEUX_GUADELOUPE_SUP_18">
-				<xsd:annotation>
-					<xsd:documentation>Spiritueux à base d’alcools de cru Guadeloupe &gt; 18 % vol.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:enumeration>
-			<xsd:enumeration value="SPIRITUEUX_GUADELOUPE_INF_18">
-				<xsd:annotation>
-					<xsd:documentation>Spiritueux à base d’alcools de cru Guadeloupe &lt;= 18 % vol.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:enumeration>
-			<xsd:enumeration value="SPIRITUEUX_GUADELOUPE_INF_18_PREMIX">
-				<xsd:annotation>
-					<xsd:documentation>Spiritueux à base d’alcools de cru Guadeloupe &lt;= 18 % vol. - premix</xsd:documentation>
-				</xsd:annotation>
-			</xsd:enumeration>
-			<xsd:enumeration value="SPIRITUEUX_MARTINIQUE_SUP_18">
-				<xsd:annotation>
-					<xsd:documentation>Spiritueux à base d’alcools de cru Martinique &gt; 18 % vol.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:enumeration>
-			<xsd:enumeration value="SPIRITUEUX_MARTINIQUE_INF_18">
-				<xsd:annotation>
-					<xsd:documentation>Spiritueux à base d’alcools de cru Martinique &lt;= 18 % vol.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:enumeration>
-			<xsd:enumeration value="SPIRITUEUX_MARTINIQUE_INF_18_PREMIX">
-				<xsd:annotation>
-					<xsd:documentation>Spiritueux à base d’alcools de cru Martinique &lt;= 18 % vol. - premix</xsd:documentation>
-				</xsd:annotation>
-			</xsd:enumeration>
-			<xsd:enumeration value="SPIRITUEUX_GUYANE_SUP_18">
-				<xsd:annotation>
-					<xsd:documentation>Spiritueux à base d’alcools de cru Guyane &gt; 18 % vol.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:enumeration>
-			<xsd:enumeration value="SPIRITUEUX_GUYANE_INF_18">
-				<xsd:annotation>
-					<xsd:documentation>Spiritueux à base d’alcools de cru Guyane &lt;= 18 % vol.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:enumeration>
-			<xsd:enumeration value="SPIRITUEUX_GUYANE_INF_18_PREMIX">
-				<xsd:annotation>
-					<xsd:documentation>Spiritueux à base d’alcools de cru Guyane &lt;= 18 % vol. - premix</xsd:documentation>
-				</xsd:annotation>
-			</xsd:enumeration>
-			<xsd:enumeration value="SPIRITUEUX_REUNION_SUP_18">
-				<xsd:annotation>
-					<xsd:documentation>Spiritueux à base d’alcools de cru Réunion &gt; 18 % vol.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:enumeration>
-			<xsd:enumeration value="SPIRITUEUX_REUNION_INF_18">
-				<xsd:annotation>
-					<xsd:documentation>Spiritueux à base d’alcools de cru Réunion &lt;= 18 % vol.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:enumeration>
-			<xsd:enumeration value="SPIRITUEUX_REUNION_INF_18_PREMIX">
-				<xsd:annotation>
-					<xsd:documentation>Spiritueux à base d’alcools de cru Réunion &lt;= 18 % vol. - premix</xsd:documentation>
-				</xsd:annotation>
-			</xsd:enumeration>
-			<xsd:enumeration value="AUTRES_ALCOOLS_SUP_18">
-				<xsd:annotation>
-					<xsd:documentation>Autres alcools – alcools autres que rhums traditionnels des DOM &gt; 18 % vol. ou spiritueux importés d’un autre DOM</xsd:documentation>
-				</xsd:annotation>
-			</xsd:enumeration>
-			<xsd:enumeration value="AUTRES_ALCOOLS_INF_18">
-				<xsd:annotation>
-					<xsd:documentation>Autres alcools – alcools autres que rhums traditionnels des DOM &lt;= 18 % vol. ou spiritueux importés d’un autre DOM</xsd:documentation>
-				</xsd:annotation>
-			</xsd:enumeration>
-			<xsd:enumeration value="AUTRES_ALCOOLS_INF_18_PREMIX">
-				<xsd:annotation>
-					<xsd:documentation>Autres alcools – alcools autres que rhums traditionnels des DOM &lt;= 18 % vol. ou spiritueux importés d’un autre DOM - premix</xsd:documentation>
-				</xsd:annotation>
-			</xsd:enumeration>
 			<xsd:enumeration value="MATIERES_PREMIERES_SPIRITUEUX">
 				<xsd:annotation>
 					<xsd:documentation>Matières premières utilisées pour les spiritueux (chapitre 2208 du tarif des douanes)</xsd:documentation>
@@ -883,9 +788,19 @@
 					<xsd:documentation>Vins tranquilles étrangers</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
+			<xsd:enumeration value="VT_ETRANGERS_PREMIX">
+				<xsd:annotation>
+					<xsd:documentation>Vins tranquilles étrangers - prémix</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
 			<xsd:enumeration value="VM_ETRANGERS">
 				<xsd:annotation>
 					<xsd:documentation>Vins mousseux étrangers</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="VM_ETRANGERS_PREMIX">
+				<xsd:annotation>
+					<xsd:documentation>Vins mousseux étrangers - prémix</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="VT_IG_AOP">
@@ -903,9 +818,19 @@
 					<xsd:documentation>Vins tranquilles sans IG – vins de cépage</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
+			<xsd:enumeration value="VT_SANS_IG_CEPAGE_PREMIX">
+				<xsd:annotation>
+					<xsd:documentation>Vins tranquilles sans IG vin de cépage - prémix</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
 			<xsd:enumeration value="VT_SANS_IG_AUTRES">
 				<xsd:annotation>
 					<xsd:documentation>Vins tranquilles sans IG – autres</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="VT_SANS_IG_AUTRES_PREMIX">
+				<xsd:annotation>
+					<xsd:documentation>Vins tranquilles sans IG autres - prémix</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="VM_IG_AOP">
@@ -923,9 +848,19 @@
 					<xsd:documentation>Vins mousseux sans IG – vins de cépage</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
+			<xsd:enumeration value="VM_SANS_IG_CEPAGE_PREMIX">
+				<xsd:annotation>
+					<xsd:documentation>Vins mousseux sans IG vin de cépage - prémix</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
 			<xsd:enumeration value="VM_SANS_IG_AUTRES">
 				<xsd:annotation>
 					<xsd:documentation>Vins mousseux sans IG – autres</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="VM_SANS_IG_AUTRES_PREMIX">
+				<xsd:annotation>
+					<xsd:documentation>Vins mousseux sans IG autres - prémix</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 		</xsd:restriction>
