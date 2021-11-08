@@ -112,7 +112,7 @@ La partie identification du produit peut être utilisé soit de manière éclat�
 
 Les lignes de CAVE se constituent des champs suivants :
 
- **Pour la section commune :**
+#### Pour la section commune :
 
  - 1 : CAVE (champ obligatoire à valeur fixe)
  - 2 : La période de la DRM (champ obligatoire au format AAAAMM)  
@@ -121,7 +121,7 @@ Les lignes de CAVE se constituent des champs suivants :
 
 Pour identifier un établissement, il est obligatoire de renseigner au moins une valeur entre l'identifiant interpro, le siret, le cvi et le numéro d'accise.
 
- **Pour l'identification du vin :**
+#### Pour l'identification du vin :
 
 Les champs 5 à 13 servent d'identifiant du vin : ils doivent être uniques pour chaque "colonne" de la DRM déclarée. Il n'est donc pas possible de déclarer plusieurs stocks ou plusieurs TAV pour un unique identifiant de vin. Au minimum, les libellés permettront de faire la différence entre deux produits similaires.
 
@@ -139,7 +139,7 @@ Pour identifier un produit, il est obligatoire de renseigner les codes du produi
 
 A la place du "code produit éclaté", il est également possible d'utiliser le code INAO qui est dans ce cas indiqué en colonne 5, les colonnes 6 à 11 sont dans ce cas laissées vides. Le libellé complet ne doit alors pas contenir de parenthèses.
 
- **Pour le type de mouvement :**
+#### Pour le type de mouvement :
 
  - 14 : Le type de la DRM : (champ obligatoire, ex: suspendu, acquitte)
  - 15 : La catégorie de mouvement : (champ obligatoire, ex: stocks, stock_debut, entrée, sortie, stock_fin, ...)
@@ -147,11 +147,11 @@ A la place du "code produit éclaté", il est également possible d'utiliser le 
 
 /!\ Il n'est donc pas possible de déclarer plusieurs stocks ou plusieurs TAV pour un seul identifiant de vin (colonnes 5 à 13).
 
- **Pour la quantité :**
+#### Pour la quantité :
 
  - 17 : Le volume en hl (champ obligatoire non négatif) ou valeur information complémentaire
 
- **Pour les détails :**
+#### Pour les détails :
 
  - 18 : Le pays d'export (nom du pays ou [Code ISO 3166](https://fr.wikipedia.org/wiki/ISO_3166)) si le mouvement est un export / la période au format AAAAMM si le mouvement est une entrée replacement en suspension CRD / sinon vide
  - 19 : Le numéro du contrat (si le mouvement est une sortie vrac sous contrat visé par l'interpro, sinon vide)
