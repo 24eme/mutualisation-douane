@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://douane.finances.gouv.fr/app/ciel/dtiplus/v1" targetNamespace="http://douane.finances.gouv.fr/app/ciel/dtiplus/v1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0.5">
+	<xs:element name="declaration">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="identification-redevable" type="numeroAgrementType"/>
+				<xs:element name="periode-taxation" type="periodeTaxationType"/>
+				<xs:element name="societes-representees" type="societesRepresenteesType"/>
+				<xs:element name="observations" type="observationsType" minOccurs="0"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="numeroAgrementType">
+		<xs:annotation>
+			<xs:documentation>Numéro d'agrément de la relation EAOE.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[A-Za-z]{2}[0-9]{6}[A-Za-z][0-9]{4}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="periodeTaxationType">
+		<xs:annotation>
+			<xs:documentation>Période de taxation de la déclaration.</xs:documentation>
+		</xs:annotation>
+		<xs:all>
+			<xs:element name="annee" type="anneeType"/>
+			<xs:element name="mois" type="moisType"/>
+		</xs:all>
+	</xs:complexType>
+	<xs:simpleType name="anneeType">
+		<xs:restriction base="xs:int">
+			<xs:minInclusive value="2021"/>
+			<xs:maxInclusive value="2100"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="moisType">
+		<xs:restriction base="xs:int">
+			<xs:minInclusive value="1"/>
+			<xs:maxInclusive value="12"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="societesRepresenteesType">
+		<xs:sequence>
+			<xs:element name="societe-representee" type="societeRepresenteeType" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="societeRepresenteeType">
+		<xs:sequence>
+			<xs:element name="produit" type="produitType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="vendeurRepresente" type="vendeurRepresenteType" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="produitType">
+		<xs:all>
+			<xs:element name="libelle-fiscal" type="libelleFiscalType"/>
+			<xs:element name="libelle-personnalise" type="libellePersonnaliseType"/>
+			<xs:element name="tav" type="tavType" minOccurs="0"/>
+			<xs:element name="volume" type="volumeType"/>
+		</xs:all>
+	</xs:complexType>
+	<xs:simpleType name="libelleFiscalType">
+		<xs:annotation>
+			<xs:documentation>Enumération des différents libellés fiscaux acceptables.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="RHUM_TRADITIONNEL_DOM_ART_2">
+				<xs:annotation>
+					<xs:documentation>Rhums traditionnels des DOM commercialisés en métropole dans le cadre des dispositions de l’article 403-I.2° du CGI</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="RHUM_TRADITIONNEL_DOM_HORS_CONTINGENT_FISCAL">
+				<xs:annotation>
+					<xs:documentation>Rhums traditionnels DOM définis à l'article L.313-24 du CIBS, commercialisés en métropole hors du contingent fiscal</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="RHUM_TIERS_ET_AUTRES">
+				<xs:annotation>
+					<xs:documentation>Rhums tiers (hors DOM) et autres rhums</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ALCOOL_AUTRE_INF_18">
+				<xs:annotation>
+					<xs:documentation>Alcools autres que rhums &lt;= 18 % vol</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ALCOOL_AUTRE_INF_18_PREMIX">
+				<xs:annotation>
+					<xs:documentation>Alcools autres que rhums &lt;= 18 % vol - premix</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ALCOOL_AUTRE_SUP_18">
+				<xs:annotation>
+					<xs:documentation>Alcools autres que rhums &gt; 18 % vol.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BIERE_INF_2_8">
+				<xs:annotation>
+					<xs:documentation>Bières &lt; 2,8 % vol.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BIERE_INF_2_8_PREMIX">
+				<xs:annotation>
+					<xs:documentation>Bières &lt; 2,8 % vol. - premix</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BIERE_SUP_18_BRASSERIE_TAUX_NORMAL">
+				<xs:annotation>
+					<xs:documentation>Bières &gt; 18 % vol. (brasseries taux normal)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BIERE_SUP_2_8_BRASSERIE_TAUX_NORMAL">
+				<xs:annotation>
+					<xs:documentation>Bières &gt; 2,8 % vol. (brasseries taux normal)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BIERE_SUP_2_8_BRASSERIE_TAUX_NORMAL_PREMIX">
+				<xs:annotation>
+					<xs:documentation>Bières &gt; 2,8 % vol. (brasseries taux normal) - premix</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BIERE_PETITE_BRASSERIE_SUP_18">
+				<xs:annotation>
+					<xs:documentation>Bières &gt; 18 % vol. (petite brasserie)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BIERE_PETITE_BRASSERIE_SUP_2_8">
+				<xs:annotation>
+					<xs:documentation>ières &gt; 2.8 % vol. (petite brasserie)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BIERE_PETITE_BRASSERIE_SUP_2_8_PREMIX">
+				<xs:annotation>
+					<xs:documentation>Bières &gt; 2,8 % vol. (petite brasserie) - prémix</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BIERE_SUP_18_PETITE_BRASSERIE_10000">
+				<xs:annotation>
+					<xs:documentation>Bières &gt; 18 % vol. (petite brasserie &lt;= 10000 hl)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BIERE_SUP_2_8_PETITE_BRASSERIE_10000">
+				<xs:annotation>
+					<xs:documentation>Bières &gt; 2,8 % vol. (petite brasserie &lt;= 10000 hl)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BIERE_SUP_2_8_PETITE_BRASSERIE_10000_PREMIX">
+				<xs:annotation>
+					<xs:documentation>Bières &gt; 2,8 % vol. (petite brasserie &lt;= 10000 hl) – prémix</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BIERE_SUP_18_PETITE_BRASSERIE_50000">
+				<xs:annotation>
+					<xs:documentation>Bières &gt; 18 % vol. (10000 hl &lt; petite brasserie &lt;= 50000 hl)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BIERE_SUP_2_8_PETITE_BRASSERIE_50000">
+				<xs:annotation>
+					<xs:documentation>Bières &gt; 2,8 % vol. (10000 hl &lt; petite brasserie &lt;= 50000 hl)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BIERE_SUP_2_8_PETITE_BRASSERIE_50000_PREMIX">
+				<xs:annotation>
+					<xs:documentation>Bières &gt; 2,8 % vol. (10000 hl &lt; petite brasserie &lt;= 50000 hl) - premix</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BIERE_SUP_18_PETITE_BRASSERIE_200000">
+				<xs:annotation>
+					<xs:documentation>Bières &gt; 18 % vol. (50000 hl &lt; petite brasserie &lt;= 200000 hl)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BIERE_SUP_2_8_PETITE_BRASSERIE_200000">
+				<xs:annotation>
+					<xs:documentation>Bières &gt; 2,8 % vol. (50000 hl &lt; petite brasserie &lt;= 200000 hl)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BIERE_SUP_2_8_PETITE_BRASSERIE_200000_PREMIX">
+				<xs:annotation>
+					<xs:documentation>Bières &gt; 2,8 % vol. (50000 hl &lt; petite brasserie &lt;= 200000 hl) - premix</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="VDN_VDL_AOP_INF_18">
+				<xs:annotation>
+					<xs:documentation>VDN et VDL AOP &lt;= 18 % vol.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="VDN_VDL_AOP_SUP_18">
+				<xs:annotation>
+					<xs:documentation>VDN et VDL AOP &lt; 18 % vol.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="AUTRES_PI_INF_18">
+				<xs:annotation>
+					<xs:documentation>Autres produits intermédiaires que VDN et VDL AOP &lt;= 18 % vol.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="AUTRES_PI_INF_18_PREMIX">
+				<xs:annotation>
+					<xs:documentation>Autres produits intermédiaires que VDN et VDL AOP &lt;= 18 % vol. - premix</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="AUTRES_PI_SUP_18">
+				<xs:annotation>
+					<xs:documentation>Autres produits intermédiaires que VDN et VDL AOP &gt; 18 % vol.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="VINS_TRANQUILLES">
+				<xs:annotation>
+					<xs:documentation>Vins tranquilles</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="VT_ETRANGERS_PREMIX">
+				<xs:annotation>
+					<xs:documentation>Vins tranquilles étrangers - prémix</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="VINS_MOUSSEUX">
+				<xs:annotation>
+					<xs:documentation>Vins mousseux</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="VM_ETRANGERS_PREMIX">
+				<xs:annotation>
+					<xs:documentation>Vins mousseux étrangers - prémix</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="CIDRES">
+				<xs:annotation>
+					<xs:documentation>Cidres</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="CIDRES_INF_8_5">
+				<xs:annotation>
+					<xs:documentation>Cidres &lt;= 8,5% vol.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="POIRES">
+				<xs:annotation>
+					<xs:documentation>Poirés</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="POIRES_INF_8_5">
+				<xs:annotation>
+					<xs:documentation>Poirés &lt;= 8,5% vol.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BOISSONS_FERMENTEES_AUTRES">
+				<xs:annotation>
+					<xs:documentation>Boissons fermentées autres que le vin et la bière</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BOISSONS_FERMENTEES_AUTRES_PREMIX">
+				<xs:annotation>
+					<xs:documentation>Boissons fermentées autres que le vin et la bière - premix</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="HYDROMELS">
+				<xs:annotation>
+					<xs:documentation>Hydromels</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="HYDROMELS_INF_8_5">
+				<xs:annotation>
+					<xs:documentation>Hydromels &lt;= 8,5% vol.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="HYDROMELS_PREMIX">
+				<xs:annotation>
+					<xs:documentation>Hydromels - premix</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="HYDROMELS_INF_8_5_PREMIX">
+				<xs:annotation>
+					<xs:documentation>Hydromels &lt;= 8,5% vol. - premix</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="PETILLANTS">
+				<xs:annotation>
+					<xs:documentation>Pétillants</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="PETILLANTS_INF_8_5">
+				<xs:annotation>
+					<xs:documentation>Pétillants &lt;= 8,5% vol.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="PETILLANTS_PREMIX">
+				<xs:annotation>
+					<xs:documentation>Pétillants - premix</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="PETILLANTS_INF_8_5_PREMIX">
+				<xs:annotation>
+					<xs:documentation>Pétillants &lt;= 8,5% vol. - premix</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="libellePersonnaliseType">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="100"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tavType">
+		<xs:annotation>
+			<xs:documentation>Nombre décimal positif ou égal à zéro à 2 chiffres après la virgule</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:decimal">
+			<xs:fractionDigits value="2"/>
+			<xs:minExclusive value="0.5"/>
+			<xs:maxExclusive value="100"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="volumeType">
+		<xs:annotation>
+			<xs:documentation>Nombre décimal à 5 chiffres après la virgule</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:decimal">
+			<xs:fractionDigits value="5"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="vendeurRepresenteType">
+		<xs:annotation>
+			<xs:documentation>Identifiant du vendeur représenté sur 9 caractères numériques.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="20"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="observationsType">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="1000"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
