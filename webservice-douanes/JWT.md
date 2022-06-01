@@ -114,11 +114,15 @@ Si vous avez besoin de convertir le certificat au format der, voici la commande 
 
     $ openssl x509 -outform der -in certificat-client.crt -out certificat-client.der
 
-##  Envoi de certificat et du crl aux dounaes
+##  Envoi de certificat et du crl aux douanes
 
 Pour avoir accès au webservice d'authentification JWT, il faut envoyer deux fichiers aux douanes :
- - le certificat X509 RGS* (*certificat-client.crt*) dans notre exemple ;
+ - le certificat X509 RGS* (au format .pem : *certificat-client.pem*) dans notre exemple ;
  - le fichier de révocation émis par l'autorité de certification.
+
+Le certificat au format .pem peut être généré avec la commande suivante :
+
+   $ openssl x509 -in certificat-client.crt  > certificat-client.pem
 
 Le point de contact du bureau F3 en charge de cette reception est  ciel-f3(a)douane .finances .gouv .fr
 
