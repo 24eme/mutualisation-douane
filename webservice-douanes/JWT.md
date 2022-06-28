@@ -117,7 +117,7 @@ Si vous avez besoin de convertir le certificat au format der, voici la commande 
 ##  Envoi de certificat et du crl aux douanes
 
 Pour avoir accès au webservice d'authentification JWT, il faut envoyer deux fichiers aux douanes :
- - le certificat X509 RGS* (au format .pem : *certificat-client.pem*) dans notre exemple ;
+ - le certificat X509 RGS* (au format .pem sans les information Bag Attributes/LDAP : *certificat-client.pem*) dans notre exemple ;
  - le fichier de révocation émis par l'autorité de certification.
 
 Le certificat au format .pem peut être généré avec la commande suivante :
