@@ -13,7 +13,7 @@ Pour connaitre l'adresse IP qui vous est attribuée, une url est mise à votre d
      $ curl http://10.222.223.1/myip.php
      10.222.223.XXX
 
-Pour avoir accès aux XML reçus de la douane, il faut réaliser une demande auprès de l'équipe vins d'Actualys en leur fournissant cette adresse ip.
+Pour avoir accès aux XML reçus de la douane, il faut réaliser une demande auprès de l'équipe vins du 24eme en leur fournissant cette adresse ip.
 
 ##  Accès aux fichiers XML
 
