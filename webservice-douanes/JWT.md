@@ -122,7 +122,7 @@ Pour avoir accès au webservice d'authentification JWT, il faut envoyer deux fic
 
 Le certificat au format .pem peut être généré avec la commande suivante :
 
-   $ openssl x509 -in certificat-client.crt  > certificat-client.pem
+    $ openssl x509 -in certificat-client.crt  > certificat-client.pem
 
 Le point de contact du bureau F3 en charge de cette reception est  ciel-f3(a)douane .finances .gouv .fr
 
