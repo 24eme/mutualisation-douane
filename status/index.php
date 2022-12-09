@@ -17,6 +17,7 @@
 <center>
       <div style="width: 650px">
 <table class="lead table">
+<tr><td>Site Web de la douane <small class="text-muted">(douane.gouv.fr)</small></td><td class="text-right"><img src="WEB.svg.php"/></td></tr>
 <tr><td>Interface IIP1 CIEL ping http <small class="text-muted">(via ClaraNet/RISE)</small></td><td class="text-right"><img src="CIEL.svg.php"/></td></tr>
 <tr><td>Interface IIP1 CIEL ping http sur une 1h <small class="text-muted">(via RISE)</small></td><td class="text-right"><img src="CIEL60min.svg.php"/></td></tr>
 <tr><td>Interface IIP1 CIEL transmission <small class="text-muted">(via RISE)</small></td><td class="text-right"><img src="CIELTRANSMISSION.svg.php"/></td></tr>
