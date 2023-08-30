@@ -23,3 +23,19 @@ La commande ``cftutil cftext`` permet de générer un fichier permettant de modi
 Cette commande permet l'export. Puis on crée, fichier ``/tmp/partneaire_duplique.txt`` en copiant et adaptant au moins l'identifiant et les NSPART/NRPART. Puis, on charge le nouveau partenaire avec la commande :
 
     cftutil @/tmp/partneaire_duplique.txt
+
+## Vérification du fonctionnement
+
+Le service écoute sur le port **1762**.
+
+Lorsqu'il fonctionne correctement, les processus suivants sont lancés :
+ - CFTTSSL
+ - CFTMAIN
+ - CFTLOG
+ - CFTTFIL
+ - CFTTFIL
+ - CFTTCOM
+ - CFTPRX
+ - CFTTPRO
+ - CFTTFIL
+ - CFTTCPS
