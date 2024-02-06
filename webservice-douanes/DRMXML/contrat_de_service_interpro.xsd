@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://douane.finances.gouv.fr/app/ciel/interprofession/echanges/1.0" targetNamespace="http://douane.finances.gouv.fr/app/ciel/interprofession/echanges/1.0" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.15">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://douane.finances.gouv.fr/app/ciel/interprofession/echanges/1.0" targetNamespace="http://douane.finances.gouv.fr/app/ciel/interprofession/echanges/1.0" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.21">
 	<xsd:element name="message-interprofession">
 		<xsd:annotation>
 			<xsd:documentation>Message en entrée envoyé par une interprofession et contenant la déclaration d'un opérateur pour une période donnée.</xsd:documentation>
@@ -199,6 +199,7 @@
 																<xsd:element name="achats" type="xsd:nonNegativeInteger" minOccurs="0"/>
 																<xsd:element name="retours" type="xsd:nonNegativeInteger" minOccurs="0"/>
 																<xsd:element name="excedents" type="xsd:nonNegativeInteger" minOccurs="0"/>
+																<xsd:element name="autres-entrees" type="xsd:nonNegativeInteger" minOccurs="0"/>
 															</xsd:sequence>
 														</xsd:complexType>
 													</xsd:element>
@@ -208,10 +209,12 @@
 																<xsd:element name="utilisations" type="xsd:nonNegativeInteger" minOccurs="0"/>
 																<xsd:element name="destructions" type="xsd:nonNegativeInteger" minOccurs="0"/>
 																<xsd:element name="manquants" type="xsd:nonNegativeInteger" minOccurs="0"/>
+																<xsd:element name="autres-sorties" type="xsd:nonNegativeInteger" minOccurs="0"/>
 															</xsd:sequence>
 														</xsd:complexType>
 													</xsd:element>
 													<xsd:element name="stock-fin-periode" type="xsd:nonNegativeInteger"/>
+													<xsd:element name="observations" type="observationType" minOccurs="0"/>
 												</xsd:sequence>
 												<xsd:attribute name="volume" type="centilisationType" use="required"/>
 												<xsd:attribute name="volumePersonnalise">
@@ -623,9 +626,19 @@
 					<xsd:documentation>Cidres</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
+			<xsd:enumeration value="CIDRES_INF_8_5">
+				<xsd:annotation>
+					<xsd:documentation>Cidres &lt;= 8,5% vol.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
 			<xsd:enumeration value="POIRES">
 				<xsd:annotation>
 					<xsd:documentation>Poirés</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="POIRES_INF_8_5">
+				<xsd:annotation>
+					<xsd:documentation>Poirés &lt;= 8,5% vol.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="HYDROMELS">
@@ -633,24 +646,44 @@
 					<xsd:documentation>Hydromels</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
+			<xsd:enumeration value="HYDROMELS_INF_8_5">
+				<xsd:annotation>
+					<xsd:documentation>Hydromels &lt;= 8,5% vol.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
 			<xsd:enumeration value="HYDROMELS_PREMIX">
 				<xsd:annotation>
 					<xsd:documentation>Hydromels - premix</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
+			<xsd:enumeration value="HYDROMELS_INF_8_5_PREMIX">
+				<xsd:annotation>
+					<xsd:documentation>Hydromels &lt;= 8,5% vol. - premix</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
 			<xsd:enumeration value="PETILLANTS">
 				<xsd:annotation>
-					<xsd:documentation>Pétilants</xsd:documentation>
+					<xsd:documentation>Pétillants</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="PETILLANTS_INF_8_5">
+				<xsd:annotation>
+					<xsd:documentation>Pétillants &lt;= 8,5% vol.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="PETILLANTS_PREMIX">
 				<xsd:annotation>
-					<xsd:documentation>Pétilants - premix</xsd:documentation>
+					<xsd:documentation>Pétillants - premix</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="PETILLANTS_INF_8_5_PREMIX">
+				<xsd:annotation>
+					<xsd:documentation>Pétillants &lt;= 8,5% vol. - premix</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="VDN_VDL_AOP_SUP_18">
 				<xsd:annotation>
-					<xsd:documentation>VDN et VDL AOP &lt; 18 % vol.</xsd:documentation>
+					<xsd:documentation>VDN et VDL AOP &gt; 18 % vol.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="VDN_VDL_AOP_INF_18">
@@ -661,6 +694,11 @@
 			<xsd:enumeration value="AUTRES_PI_SUP_18">
 				<xsd:annotation>
 					<xsd:documentation>Autres produits intermédiaires que VDN et VDL AOP &gt; 18 % vol.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="AUTRES_PI_SUP_18_HORS_CSS">
+				<xsd:annotation>
+					<xsd:documentation>Autres produits intermédiaires que VDN et VDL AOP &gt; 18 % vol. hors CSS</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="AUTRES_PI_INF_18">
@@ -696,6 +734,21 @@
 			<xsd:enumeration value="BIERE_SUP_2_8_BRASSERIE_TAUX_NORMAL_PREMIX">
 				<xsd:annotation>
 					<xsd:documentation>Bières &gt; 2,8 % vol. (brasseries taux normal) - premix</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="BIERE_PETITE_BRASSERIE_SUP_18">
+				<xsd:annotation>
+					<xsd:documentation>Bières &gt; 18 % vol. (petite brasserie)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="BIERE_PETITE_BRASSERIE_SUP_2_8">
+				<xsd:annotation>
+					<xsd:documentation>ières &gt; 2.8 % vol. (petite brasserie)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="BIERE_PETITE_BRASSERIE_SUP_2_8_PREMIX">
+				<xsd:annotation>
+					<xsd:documentation>Bières &gt; 2,8 % vol. (petite brasserie) - prémix</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="BIERE_SUP_18_PETITE_BRASSERIE_10000">
@@ -753,6 +806,16 @@
 					<xsd:documentation>Rhums traditionnels des DOM commercialisés en métropole dans le cadre des dispositions de l’article 403-I.2° du CGI</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
+			<xsd:enumeration value="RHUM_TRADITIONNEL_DOM_CONTINGENT_FISCAL">
+				<xsd:annotation>
+					<xsd:documentation>Rhums traditionnels DOM définis à l'article L.313-24 du CIBS, commercialisés en métropole dans la limite du contingent fiscal prévu à l'article L.313-26 du CIBS</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="RHUM_TRADITIONNEL_DOM_HORS_CONTINGENT_FISCAL">
+				<xsd:annotation>
+					<xsd:documentation>Rhums traditionnels DOM définis à l'article L.313-24 du CIBS, commercialisés en métropole hors du contingent fiscal</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
 			<xsd:enumeration value="RHUM_TIERS_ET_AUTRES">
 				<xsd:annotation>
 					<xsd:documentation>Rhums tiers (hors DOM) et autres rhums</xsd:documentation>
@@ -763,6 +826,11 @@
 					<xsd:documentation>Alcools autres que rhums &gt; 18 % vol.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
+			<xsd:enumeration value="ALCOOL_AUTRE_SUP_18_HORS_CSS">
+				<xsd:annotation>
+					<xsd:documentation>Alcools autres que rhums &gt; 18 % vol. hors CSS</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
 			<xsd:enumeration value="ALCOOL_AUTRE_INF_18">
 				<xsd:annotation>
 					<xsd:documentation>Alcools autres que rhums &lt;= 18 % vol</xsd:documentation>
@@ -771,6 +839,21 @@
 			<xsd:enumeration value="ALCOOL_AUTRE_INF_18_PREMIX">
 				<xsd:annotation>
 					<xsd:documentation>Alcools autres que rhums &lt;= 18 % vol - premix</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="COMPLEMENTS_ALIMENTAIRES">
+				<xsd:annotation>
+					<xsd:documentation>Compléments alimentaires</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="COMPLEMENTS_ALIMENTAIRES_PREMIX">
+				<xsd:annotation>
+					<xsd:documentation>Compléments alimentaires - prémix</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="COMPLEMENTS_ALIMENTAIRES_CSS">
+				<xsd:annotation>
+					<xsd:documentation>Compléments alimentaires - CSS</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="MATIERES_PREMIERES_SPIRITUEUX">

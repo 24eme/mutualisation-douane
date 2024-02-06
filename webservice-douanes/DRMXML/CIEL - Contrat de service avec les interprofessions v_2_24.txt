@@ -1,0 +1,5733 @@
+Projet CIEL
+
+Contrat de service avec les interprofessions
+vitivinicoles
+
+Version 2.23 du 27/10/2022
+[Valable pour la version 1.21 du schéma XSD]
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Page 1/52
+
+SUIVI DES MODIFICATIONS
+Version
+Rédaction
+Description
+V0.1
+Sopra
+Création du document
+
+Vérification
+
+Date
+15/10/14
+
+V0.2
+
+Sopra
+
+Mise à jour du document suite à la réunion avec les
+interprofessions du 15/10/2014 et la fourniture des
+modèles de DRM par le bureau F3 le 13/11/2014
+
+21/11/14
+
+V0.3
+
+Sopra
+
+Modifications suite à la réception du document des
+Inter-professions « 2014-11-19 NOTE IP DEMAT
+DRM PROJET CIEL 2 ».
+
+15/12/14
+
+V0.4
+
+Sopra
+
+Intégration des remarques de C1 sur la V0.3 et à la
+réception de la note de la DNSCE
+
+03/02/15
+
+V0.5
+
+Sopra
+
+Modifications suite à la réunion avec la DNSCE du
+04/02/2015
+
+10/02/15
+
+V0.6
+
+Sopra
+
+Prise en compte des remarques de F3 relatives à la
+description des éléments en entrée de l'IIP1
+
+13/02/15
+
+V0.7
+
+Sopra
+
+- Mise à jour suite aux retours de la DNSCE sur les
+aspects techniques
+- Prise en compte des remarques de F3 suite à la
+réunion du 13/02/2015
+
+18/02/15
+
+V0.8
+
+Sopra
+
+Intégration des modifications suite aux réunions
+avec les interprofessions du 20/02/2015 et du
+19/03/2015
+
+07/04/15
+
+V0.9
+
+Sopra
+
+Mise à jour suite à la relecture du document par le
+bureau C1
+
+15/04/15
+
+V 1.0.0
+
+DNSCE
+
+Revue technique et fonctionnelle
+
+22/04/15
+
+V 1.0.1
+
+DNSCE
+
+Mise à jour de la réponse et précision sur le flux
+IIP1
+
+11/08/15
+
+V 1.0.2
+
+DNSCE
+
+Ajout du TAV et de l’indicateur premix pour les
+produits
+
+02/09/15
+
+V1.0.3
+
+C1
+
+Précisions sur le processus de gestion des
+indisponibilités
+
+02/09/15
+
+V1.0.4
+
+C1
+
+Précisions sur le processus de gestion des
+indisponibilités
+
+29/09/15
+
+V1.1
+
+C1
+
+Ajout de précisions sur des RG CIEL et corrections
+
+08/10/15
+
+V1.2
+
+DNSCE
+
+Mise à jour du XSD pour les sorties en
+droits suspendus
+Mise à jour du nombre de comptes CRD
+ajout de centilisation pour les « bag in box »
+note sur l’obligation de saisie des TAV et du
+prémix
+
+10/11/15
+
+§3.3.3 : Mise à jour des centilisations.
+Mise à jour de la RG IIP1-RG4 pour les
+combinaisons possibles du compte CRD.
+Mise à jour de la RG IIP1-RG CIEL1 pour la
+cohérence entre le code INAO et la saisie
+du prémix et du TAV.
+
+12/11/15
+
+•
+•
+•
+•
+
+V1.3
+
+F3
+
+•
+•
+•
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Page 2/52
+
+Version
+Rédaction
+Description
+V 1.4
+DNSCE
+Déplacement de la balise « observations » dans les
+produits plutôt que dans les balances des stocks.
+V 1.5
+DNSCE
+Changement de cardinalité des types de capsules
+dans un compte CRD
+V1.6
+C1/F3
+Mise à jour de la RG IIP1-E-2.5.1.2.3.2.5 : Les
+manquants ne seront plus repris dans les autres
+sorties possibles
+V.1.7
+Sopra Steria - Mise à jour des paramètres d’entrées et de sorties
+- Mise à jour et renumérotation des règles de
+gestion IIP1
+- Mise à jour des annexes
+V.1.8
+Sopra Steria - Mise à jour des paramètres d’entrées et de sorties
+- Mise à jour et ajout de nouvelles RG
+- Mise à jour des annexes
+V.1.9
+Sopra Steria - Mise à jour des paramètres d’entrées et de sorties
+- Ajout des règles de gestion IIP1-RG40 et IIP1RG41
+- Mise à jour des annexes
+V2.0
+Sopra Steria - Mise à jour des RG
+V2.1
+
+Vérification
+
+Date
+17/11/15
+
+24/11/15
+
+07/01/16
+
+01/02/16
+
+09/02/16
+
+10/03/16
+13/04/16
+
+V 2.2
+
+Sopra Steria - Suppression des champs compensations et stocks
+warrantés
+- Mise à jour des RG, des paramètres d’entrées et
+sorties, des annexes
+DNSCE
+Mise à jour avec le schéma 1.8
+
+30/06/16
+
+V 2.3
+
+F3
+
+25/07/206
+
+V 2.4
+
+DNSCE
+
+•
+•
+
+V 2.5
+
+DNSCE
+
+•
+
+V 2.6
+
+DNSCE
+
+V 2.7
+
+Mise à jour des RG IIP1-RG23 et IIP1-RG42
+Gestion de centilisation personnalisée
+Ajout du code 5X999V aux produits non
+fiscalisés (4R988Y, 4B988Y et 4X999V )
+Précision sur la notion de stock épuisé et la
+DRM néant
+
+19/12/2016
+
+•
+
+RG IIP1-RG42 ; le format de la référence à
+saisir est élargi
+
+24/05/17
+
+F3
+
+•
+
+07/11/17
+
+V2.8
+
+F3
+
+•
+•
+•
+
+V2.9
+
+DNSCE/F3
+
+•
+
+Saisie des volumes jusqu’à 5 décimales
+(3.3.3)
+Nouveaux libellés fiscaux pour les vins
+Mise à jour du XSD de référence
+Précision du nombre de caractère
+maximum pour le champ « observations »
+Ajout d’une règle de gestion (IIP1-RG45)
+pour interdire les sorties avec paiements
+sur les produits non fiscalisés
+MaJ RG IIP1-RG21, IIP1-RG36 : TAV
+désormais facultatif pour les produits
+intermédiaires
+Mise à jour des RG IIP1-RG23 et IIP1RG41
+
+•
+•
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+31/01/2017
+
+23/11/17
+
+24/08/18
+
+Page 3/52
+
+Version
+Rédaction
+V2.10
+DNSCE
+
+•
+•
+•
+
+V2.11
+
+DNSCE
+
+•
+•
+•
+
+V2.12
+
+DNSCE/Fid3
+
+•
+
+•
+•
+•
+•
+•
+•
+V2.13
+
+DNSCE/Fid3
+
+•
+•
+
+V2.14
+
+DNSCE
+
+•
+
+Description
+L’indicateur de stock épuisé sur la DRM
+précédente n’interdit plus le dépôt des DRM
+suivantes
+Mise à jour de la RG-24 sur le contrôle de
+présence des produits
+Ajout de la raison sociale au schéma des
+flux
+Le mois de début de campagne n’est plus
+forcément août (négociants vinificateurs) :
+impacts RG14, RG15, RG39
+Modifications de certaines règles de gestion
+(numero-accise-destinataire notamment)
+Suppression des libellés fiscaux réservés
+aux DOM, et utilisables que par les
+déclarants CIEL situés en outre-mer
+Modification des règles de gestion
+concernant les contrôles des périodes de
+dépôt : suppression IIP1-RG8, code erreur
+006, RG_DecPrécédente1, impact libellé
+code erreur 016
+Ajout de la règle de gestion IIP1-RG46
+(code erreur 042)
+Ajout de la règle de gestion IIP1-RG48
+(code erreur 044) : mise sur le marché en
+Corse
+Ajout des règles de gestion IIP1-RG49
+(code erreur 045) et IIP1-RG50 (code
+erreur 046) : gestion des stocks épuisés
+Suppression des règles de gestion IIP1RG10, IIP1-RG20, IIP1-RG42 (balance des
+stocks)
+Modification de la règle de gestion IIP1RG19
+Modification des règles de gestion IIP1RG21, IIP1-RG36
+Ajout de la règle de gestion IIP1-RG51
+(code erreur 047)
+Ajouts de six nouveaux libellés fiscaux liés
+aux vins prémix.
+
+Modification de la RG18 (les stocks de fin
+de période ne peuvent plus être négatifs).
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Vérification
+
+Date
+16/10/18
+
+27/11/18
+
+11/04/19
+
+17/12/19
+
+27/08/21
+
+Page 4/52
+
+Version
+Rédaction
+V2.15
+DNSCE
+
+•
+
+Description
+Ajout de la règle de gestion IIP1-RG52
+(code erreur 049)
+
+V2.16
+
+DNSCE
+
+•
+
+Ajout des libellés fiscaux pour les alcools
+sans CSS
+
+08/11/21
+
+V2.17
+
+DNSCE
+
+•
+
+Ajout des règles de gestion concernant les
+Stocks Dormants
+
+19/11/21
+
+V2.18
+
+DNSCE
+
+•
+
+Ajout des nouveaux libellés fiscaux valables
+à partir de 2022
+
+15/12/21
+
+V2.19
+
+DNSCE
+
+•
+
+Ajout de nouveaux libellés fiscaux pour les
+rhums à partir de 2022
+Ajout de nouveaux libellés fiscaux pour les
+bières à partir de 2022
+
+26/01/22
+
+Les produits avec un libellé contenant
+« INF_8_5 » doivent avoir un TAV inférieur
+ou égal à 8,5
+
+03/03/22
+
+•
+
+V2.20
+
+DNSCE
+
+•
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Vérification
+
+Date
+15/10/21
+
+Page 5/52
+
+Version
+Rédaction
+V2.21
+DNSCE
+
+•
+
+V2.22
+
+DNSCE
+
+•
+
+Ajout du produit fiscal : Compléments
+alimentaires
+
+01/06/22
+
+V2.23
+
+DNSCE
+
+•
+
+Ajout d’une règle de gestion concernant la
+valeur minimum acceptée du TAV pour les
+produits de la catégorie alcools (1,2 % vol.)
+Ajout des champs « Autres entrées » et
+« Autres sorties » pour les CRD
+
+27/10/22
+
+Ajoutchamp CRD : observations
+Ajout des règles IIP1-RG66 et IIP1-RG67
+
+05/02/24
+
+•
+
+V2.24
+
+DNSCE
+
+•
+
+Description
+Suppression des règles IIP1-RG63 et IIP1RG64 concernant l’interdiction d’ajouter un
+compte CRD ou des entrées CRD pour les
+opérateurs Stocks Dormants
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Vérification
+
+Date
+10/05/22
+
+Page 6/52
+
+SOMMAIRE
+1 . INTRODUCTION.............................................................................................................8
+1.1 . OBJET DU DOCUMENT......................................................................................................8
+1.2 . DOCUMENTS APPLICABLES ET DOCUMENTS DE SECOURS.......................................8
+1.3 . GLOSSAIRE........................................................................................................................8
+1.4 . DÉFINITION........................................................................................................................9
+
+2 . CIEL ET LES INTERPROFESSIONS VITIVINICOLES.................................................10
+3 . INTERFACE IIP1 : ENVOI DES DONNÉES ECONOMIQUES POUR PRÉREMPLISSAGE DE LA DÉCLARATION DU PORTAIL DE L'INTERPROFESSION VERS
+CIEL...................................................................................................................................14
+3.1 . DESCRIPTION GÉNÉRALE..............................................................................................14
+3.2 . FONCTIONNEMENT GÉNÉRAL.......................................................................................14
+3.3 . PARAMÈTRES D'ENTRÉE................................................................................................15
+3.3.1 . Description...................................................................................................................................15
+3.3.2 . Éléments......................................................................................................................................16
+3.3.3 . Types simples..............................................................................................................................31
+3.3.4 . Règles de gestion........................................................................................................................33
+3.3.5 . Fichier XSD..................................................................................................................................42
+3.3.6 . Exemple de paramètres d'entrée.................................................................................................42
+
+3.4 . PARAMÈTRES DE SORTIE..............................................................................................43
+3.4.1 . Description...................................................................................................................................43
+3.4.2 . Elément reponse-ciel...................................................................................................................43
+3.4.3 . Règles de gestion........................................................................................................................44
+3.4.4 . Fichier XSD..................................................................................................................................44
+3.4.5 . Exemple de fichier échangé........................................................................................................44
+
+4 . INTERFACE IIP2 : ENVOI PAR CIEL DES DONNÉES ÉCONOMIQUES DE LA
+DÉCLARATION RÉCAPITULATIVE VALIDÉE À L'INTERPROFESSION..........................45
+4.1 . DESCRIPTION GÉNÉRALE..............................................................................................45
+4.2 . FONCTIONNEMENT GÉNÉRAL.......................................................................................45
+4.3 . EXPORT IIP2-E.................................................................................................................46
+4.4 . IMPORT IIP2-I...................................................................................................................47
+4.5 . FICHIER ÉCHANGÉ IIP2-FI..............................................................................................47
+4.5.1 . Éléments......................................................................................................................................47
+
+5 . INTERFACE IIP3 : TRANSMISSION DES DONNÉES LIÉES À UN NUMÉRO
+D'AGRÉMENT....................................................................................................................48
+6 . PROCÉDURE DE SECOURS EN CAS D’INDIDISPONIBLITÉ DES SERVICES.........49
+6.1 . INDISPONIBILITÉ DU PORTAIL INTERPROFESSIONNEL..............................................49
+6.2 . INDISPONIBILITÉ DE L'APPLICATION CIEL....................................................................49
+
+7 . ANNEXES.....................................................................................................................50
+7.1 . CARDINALITÉS D’ÉLÉMENT XML...................................................................................50
+7.2 . TYPES PRIMITIFS DE XSD..............................................................................................50
+7.3 . LISTE DES LIBELLÉS FISCAUX.......................................................................................50
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Page 7/52
+
+Contrat de service
+CIEL- Contrat de service avec les interprofessions v_2_24(1).odt
+
+1
+
+INTRODUCTION
+1.1
+
+OBJET DU DOCUMENT
+
+Ce document décrit les interfaces entre le système CIEL et les systèmes d'information (SI)
+des interprofessions vitivinicoles.
+1.2
+
+DOCUMENTS APPLICABLES ET DOCUMENTS DE SECOURS
+
+Réf.
+
+Nom
+
+Objet
+
+CIEL_Dossier de
+cadrage_V5.0.odt
+
+R1
+
+Dossier de cadrage
+
+R2
+
+Dossier de cadrage de
+Dossier de cadrage –
+l’interfaçage entre CIEL et les
+Interfaçage Interprofessions
+interprofessions vitivinicoles
+
+R3
+
+CIEL – Réunion de travail
+avec le CNIV – 16/05/2014
+
+Support de l’atelier de travail avec CIEL_Support réunion CNIV
+le CNIV du vendredi 16/05/2014
+20140516 v0.2 – annoté.pptx
+
+R4
+
+Réunion de travail avec le
+CNIV du 16/05/2014
+
+Compte rendu de l’atelier de
+travail avec le CNIV du vendredi
+16/05/2014
+
+CIEL_INTERPRO_CR_20140516_
+v1 0.odt
+
+R5
+
+Réunion de travail avec le
+CNIV du 18/06/2014
+
+Compte rendu de l’atelier de
+travail avec le CNIV du mercredi
+18/06/2014
+
+CIEL_INTERPRO_CR_20140618_
+v0.1.odt
+
+Modèles des DRM viti en droits
+suspendus et en droits acquittés
+fournis par le bureau F3 le
+13/11/2014
+
+CIEL_SFG_lot
+1_V1.3_ANNEXE_10_DRM
+vitivinicole en suspension.ods
+CIEL_SFG_lot
+1_V1.3_ANNEXE_12_DRM de
+produits détenus en droits
+acquittés.ods
+
+R6
+
+1.3
+
+Annexes des SFG CIEL lot
+1 – Modèles de DRM
+
+Dossier de cadrage de CIEL
+
+Fichier
+
+CIEL_Dossier de
+cadrage_Interfaçage
+Interpros_V1.0.odt
+
+GLOSSAIRE
+
+Terme
+
+Définition
+
+CIEL
+
+Contributions indirectes en ligne
+
+CRD
+
+Capsule représentative de droits
+
+DAA
+
+Document d’accompagnement administratif
+
+DAC
+
+Document d’accompagnement commercial
+
+DAE
+
+Document administratif électronique
+
+DCA
+
+Document commercial d’accompagnement
+
+DRA
+
+Déclaration récapitulative annuelle
+
+DRM
+
+Déclaration récapitulative mensuelle
+
+DSA
+
+Document simplifié d’accompagnement
+
+DSAC
+
+Document simplifié d’accompagnement commercial
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Page 8/52
+
+Contrat de service
+CIEL- Contrat de service avec les interprofessions v_2_24(1).odt
+
+Terme
+
+Définition
+
+hL
+
+Hectolitre
+
+IIP
+
+Interface avec les interprofessions vitivinicoles
+
+INAO
+
+Institut national de l’origine et de la qualité (anciennement Institut national des appellations
+d’origine)
+
+MCR
+
+Moût concentré rectifié
+
+ROSA
+
+Référentiel des opérateurs et de suivi des agréments
+
+SAX
+
+Simple API for XML
+
+SEED
+
+System of exchange of excise data
+
+SI
+
+Système d’information
+
+SOAP
+
+Simple object access protocol
+
+TAV
+
+Titre alcoométrique volumique
+
+XML
+
+Extensible markup language
+
+XSD
+
+XML schema definition
+
+WSDL
+
+Web services description language
+
+1.4
+
+DÉFINITION
+
+•
+
+« Numéro d'agrément » : dans le présent document, on entend par « numéro
+d'agrément » le « numéro d'agrément d'entrepositaire agréé » ou « numéro
+d'accises ». Dans le référentiel ROSA (référentiel des opérateurs et de suivi des
+agréments) de la DGDDI, chaque entrepositaire agréé est identifié par un « numéro
+d'agrément d'entrepositaire agréé ». Ce numéro correspond au « numéro
+d'accises » et constitue l'identifiant commun de l'opérateur entre la DGDDI et les
+interprofessions.
+« Déclaration récapitulative » : dans le présent document, lorsque le terme
+générique de « déclaration récapitulative » est utilisé, il fait référence aux
+déclarations récapitulatives mensuelles (DRM) et aux déclarations récapitulatives
+annuelles (DRA).
+
+•
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Page 9/52
+
+Contrat de service
+CIEL- Contrat de service avec les interprofessions v_2_24(1).odt
+
+2
+
+CIEL ET LES INTERPROFESSIONS VITIVINICOLES
+
+Les opérateurs vitivinicoles saisissent des informations économiques relatives à leur
+comptabilité matières sur les portails des interprofessions desquelles ils sont adhérents.
+Suite à la validation des données économiques sur le portail de l'interprofession, les
+données sont envoyées à CIEL. Tous les mois, les opérateurs se connectent à CIEL pour
+y saisir leur déclaration récapitulative mensuelle (tous les ans pour les opérateurs
+déposant des déclarations récapitulatives annuelles). CIEL pré-remplit alors la déclaration
+récapitulative de l'opérateur à partir des données économiques précédemment reçues de
+l'interprofession.
+La complétude des informations fournies par les interprofessions vitivinicoles dépend du
+portail et de la saisie des opérateurs. La saisie des déclarations récapitulatives dans CIEL
+par les opérateurs pouvant se faire à tout moment, l’interprofession doit envoyer les
+données économiques à CIEL immédiatement après la validation de la saisie sur le portail
+de l'interprofession.
+Une fois que les opérateurs ont saisi leur déclaration récapitulative, ils la valident dans
+CIEL. Les données économiques des déclarations récapitulatives validées sont ensuite
+envoyées aux interprofessions vitivinicoles.
+Les opérateurs pouvant modifier leurs déclarations récapitulatives dans CIEL, CIEL envoie
+à nouveau aux interprofessions les déclarations modifiées et validées.
+NB : La DRM concernant le mois N peut être saisie et validée par l’opérateur jusqu’au 10
+du mois N+1 (ex : la DRM de janvier 2016 peut être saisie sur CIEL jusqu’au 10 février
+2016). Une fois ce délai dépassé, la déclaration ne peut plus être modifiée par le déclarant
+au travers du site web. Toute modification ultérieure entre dans le cadre d’un processus
+exceptionnel et non automatisé, qui requiert la validation du chef de service des douanes
+locales. Une DRM reste modifiable par le service des douanes :
+- tant que le paiement de la somme à recouvrer n’est pas réalisé ;
+- tant que la déclaration du mois suivant n’a pas été saisie et validée par l’opérateur, et au
+plus tard dans un délai de deux mois.
+Une DRM validée sur CIEL est transmise en retour à l’interprofession de rattachement.
+Les éventuelles modifications ultérieures, sur CIEL ou dans le cadre de la procédure
+exceptionnelle, feront l’objet de nouveaux flux de retour vers l’interprofession concernée.
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Page 10/52
+
+Contrat de service
+CIEL- Contrat de service avec les interprofessions v_2_24(1).odt
+
+Le schéma suivant présente ce processus :
+
+Lorsqu’un opérateur vitivinicole saisit les informations sur sa comptabilité matières dans le
+portail de son interprofession, le SI de l’interprofession doit vérifier l’existence du numéro
+d’agrément d'entrepositaire agréé (ou numéro d'accises) indiqué par l’opérateur. Pour ce
+faire, le SI de l’interprofession interroge le SI de la douane, qui lui indique en retour si le
+numéro d’agrément existe.
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Page 11/52
+
+Contrat de service
+CIEL- Contrat de service avec les interprofessions v_2_24(1).odt
+
+Les échanges entre le SI des douanes et les SI des interprofessions vitivinicoles sont
+répartis sur les trois interfaces IIP1, IIP2 et IIP3 représentées dans le schéma ci-dessous :
+
+Ces trois interfaces sont détaillées dans les chapitres suivants :
+•
+•
+•
+
+3. Interface IIP1 : Envoi des données economiques pour pré-remplissage de la
+déclaration du portail de l'interprofession vers CIEL
+4. Interface IIP2 : Envoi par CIEL des données économiques de la déclaration
+récapitulative validée à l'interprofession
+5.Interface IIP3 : Transmission des données liées à un numéro d'agrément
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Page 12/52
+
+Contrat de service
+CIEL- Contrat de service avec les interprofessions v_2_24(1).odt
+
+L’interprofession garantit la sécurité de son accès vis à vis d’éventuelles intrusions
+extérieures sur le SI de la Douane.
+L’interprofession est responsable de la connexion jusqu’au point de raccordement
+(Routeur de l’opérateur de télécommunication pour Pasteur Garanti, ou terminaison du
+tunnel VPN pour Pasteur Léger).
+Concernant le jeton d’authentification et le jeton d’accès lors des échanges sur l’interface
+IIP1, les données mesurant le temps (iat, timestamp, …) sont au format milli-secondes.
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Page 13/52
+
+Contrat de service
+CIEL- Contrat de service avec les interprofessions v_2_24(1).odt
+
+3
+
+INTERFACE IIP1 : ENVOI DES DONNÉES ECONOMIQUES POUR PRÉ-REMPLISSAGE DE LA DÉCLARATION DU
+PORTAIL DE L'INTERPROFESSION VERS CIEL
+3.1
+
+DESCRIPTION GÉNÉRALE
+
+IIP1. Envoi des données économiques pour pré-remplissage de la déclaration du
+portail de l'interprofession vers CIEL
+Type
+
+Service web synchrone (REST)
+
+Objectif
+
+Ce service permet aux SI des interprofessions vitivinicoles de fournir aux
+téléservices clients les données économiques disponibles et nécessaires à
+la constitution d’une DRM, pour un agrément, un mois et une année
+donnés (ou pour un agrément et une année donnés dans le cas de la
+DRA).
+
+Acteur
+
+CIEL (serveur)
+SI de l’interprofession vitivinicole (client)
+
+Fréquence
+
+Disponibilité permanente
+
+Temps de réponse maximal
+
+2 secondes au 90e centile1
+
+3.2
+
+FONCTIONNEMENT GÉNÉRAL
+
+L'interprofession envoie les données économiques validées par le ressortissant sur son
+portail à CIEL (IIP1). Ce flux est unitaire : il ne concerne qu’une déclaration par période de
+taxation et par déclarant. A réception du flux, CIEL enregistre une déclaration en mode
+brouillon à partir des données transférées.
+Le ressortissant est redirigé depuis le portail de son interprofession vers CIEL afin de
+saisir sa déclaration récapitulative (après authentification sur Prodouane). Une fois qu’il a
+choisi un numéro d’agrément et une période de déclaration, CIEL affiche le formulaire de
+la déclaration pré-rempli à partir des données économiques envoyées par
+l'interprofession.
+Le schéma suivant représente l'envoi des données économiques par l'interprofession :
+
+L'opérateur effectue une seule convention d'adhésion à CIEL par compte Prodouane. Pour
+1
+
+Sur 100 appels au service web, au moins 90 ont un temps de réponse inférieur ou égal à 2 secondes.
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Page 14/52
+
+Contrat de service
+CIEL- Contrat de service avec les interprofessions v_2_24(1).odt
+
+chaque numéro d'agrément, l'opérateur renseigne son interprofession de rattachement.
+Dans la mesure où un compte Prodouane peut être habilité à déclarer pour plusieurs
+numéros d'agrément, plusieurs interprofessions peuvent être rattachées à un compte
+Prodouane (une interprofession par numéro d'agrément).
+Lorsque l'interprofession envoie des données économiques pour un numéro d'agrément et
+un mois donnés, CIEL doit être capable de déterminer si le portail émetteur correspond au
+portail de référence de l'interprofession d'appartenance pour ce numéro d'agrément. Dans
+le cas où CIEL reçoit des données économiques pour un numéro d'agrément d'un portail
+qui n'est pas le portail de référence, CIEL n'accepte pas les données et renvoie un
+message d'erreur.
+CIEL ne saura pas gérer les cas où un opérateur est ressortissant de plusieurs
+interprofessions vitivinicoles pour un même numéro d'agrément. Pour ces cas, l'opérateur
+devra choisir son interprofession « principale » lors de son habilitation à la télé-procédure;
+CIEL ne connaîtra que l’adhésion de cet opérateur à cette interprofession pour le numéro
+d'agrément concerné. Ainsi, l’interface IIP1 n’aura lieu qu’entre CIEL et le portail de
+référence de cette interprofession.
+Enfin, lorsque le ressortissant valide les données économiques saisies sur le portail de
+son interprofession, elles ne sont plus modifiables sur le portail de l'interprofession. CIEL
+ne peut recevoir qu'une seule fois les données économiques de la part d'une
+interprofession pour un numéro d'agrément et un mois donnés (ou pour un numéro
+d'agrément et une année donnés dans le cas de la DRA).
+3.3
+
+PARAMÈTRES D'ENTRÉE
+
+3.3.1
+
+DESCRIPTION
+
+Le SI de l’interprofession vitivinicole envoie toutes les informations économiques dont il
+dispose et étant utiles à l’élaboration d’une déclaration récapitulative pour un numéro
+d’agrément d'entrepositaire agréé, un mois et une année (ou pour un numéro d'agrément
+et une année dans le cas de la DRA) donnés. Le SI de l'interprofession pouvant disposer
+de toutes les données économiques nécessaires à la DRM, la structure des données
+envoyées par le service, constituant l'entrée de l'IIP1, reprend la structure des données
+économiques de la DRM.
+La télé-déclaration, étant la photographie de la comptabilité matières pour une période
+donnée, doivent y figurer tous les produits en stocks (en droits suspendus et/ou en droits
+acquittés) que ces produits aient fait l’objet d’un mouvement (entrées ou sorties) ou pas
+depuis la période précédente.
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Page 15/52
+
+Contrat de service
+CIEL- Contrat de service avec les interprofessions v_2_24(1).odt
+
+3.3.2
+
+ÉLÉMENTS
+
+ÉLÉMENT MESSAGE-INTERPROFESSION
+
+Élément message-interprofession
+Type
+Référence
+
+Complexe ordonné
+Élément
+
+Type
+
+Cardinalit
+é
+
+Description
+
+Obligatoi Règle
+re /
+s
+Facultatif
+
+IIP1-E-1
+
+sirensirenTyp
+interprofession e
+
+1
+
+Identification de l'interprofession
+d’appartenance de l’opérateur
+
+O
+
+IIP1RG6
+
+IIP1-E-2
+
+declarationrecapitulative
+
+1
+
+Déclaration récapitulative
+
+O
+
+IIP1RG2
+
+declarati
+onrecapitul
+ative
+
+ÉLÉMENT DECLARATION-RECAPITULATIVE
+
+Élément declaration-recapitulative
+Type
+Référence
+
+Complexe ordonné
+Élément
+
+Type
+
+Cardinalit
+é
+
+Description
+
+IIP1-E-2.1 identificati
+ondeclarant
+
+identificationdeclarant
+
+1
+
+Numéro d'agrément, numéro CVI et
+raison sociale de l'opérateur
+
+O
+
+IIP1-E-2.2 periode
+
+periode
+
+1
+
+Mois et année de la déclaration
+dont les données sont envoyées
+(pour les DRA, il s'agit du mois et
+de l'année de la fin de la période)
+
+O
+
+IIP1-E-2.3 declaration boolean
+-neant
+
+1
+
+Déclaration néant : oui / non
+
+O
+
+IIP1RG11
+
+IIP1-E-2.4 droitsdroitssuspendus suspendus
+
+0..1
+
+Balance des stocks en droits
+suspendus de la DRM
+
+F
+
+IIP1RG11
+IIP1RG13
+
+IIP1-E-2.5 droitsacquittes
+
+droitsacquittes
+
+0..1
+
+Balance des stocks en droits
+acquittés de la DRM
+
+F
+
+IIP1RG11
+IIP1RG12
+
+IIP1-E-2.6 comptecrd
+
+compte-crd
+
+0..10
+
+Compte des capsules
+représentatives de droits de la DRM
+
+F
+
+IIP1-E-2.7 document- documentaccompag accompagne
+nement
+ment
+
+0..3
+
+Références des documents
+d’accompagnement émis durant le
+mois précédent
+
+F
+
+IIP1-E-2.8 relevereleve-nonnonapurement
+apurement
+
+0..1
+
+Relevé de non apurement
+
+F
+
+IIP1-E-2.9 statistique statistiques
+s
+
+0..1
+
+Statistiques communautaires
+
+F
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Obligatoi Règle
+re /
+s
+Facultatif
+
+IIP1RG12
+
+Page 16/52
+
+Contrat de service
+CIEL- Contrat de service avec les interprofessions v_2_24(1).odt
+
+Attention : la notion de « déclaration néant » n’a pas la même signification selon le sens du flux.
+• dans le sens Interprofession → CIEL : cela signifie qu'aucun mouvement n'est intervenu sur
+la période. CIEL récupère donc automatiquement les produits de le DRM précédente sans
+que l'interprofession n'ait à les renseigner.
+• dans le sens CIEL → Interprofession : CIEL renvoie toujours tous les produits afin que
+l'interprofession puisse se mettre à jour avec les stocks complets. Même si elle a envoyé
+"néant" en première intention, CIEL répond avec le détail complet pour s'assurer que les
+deux systèmes ont le même niveau d'information sur l'état des produits, et donc se prémunir
+d'éventuelles erreurs sur le mois suivant. Cet indicateur peut donc être ignoré dans le flux
+IIP2
+ÉLÉMENT IDENTIFICATION-DECLARANT
+
+Élément identification-declarant
+Type
+
+Complexe ordonné
+
+Référence
+
+Élément
+
+Type
+
+Cardinalit
+é
+
+Description
+
+Obligatoi Règle
+re /
+s
+Facultatif
+
+IIP1-E2.1.1
+
+numeroagrement
+
+numeroAccis
+eType
+
+1
+
+Numéro d’agrément d'entrepositaire
+agréé concerné par la DRM dont les
+données sont demandées
+
+O
+
+IIP1-E2.1.2
+
+numerocvi
+
+numeroCviTy
+pe
+
+0..1
+
+Numéro CVI de l'opérateur
+
+F
+
+IIP1-E2.1.3
+
+raisonsociale
+
+raisonSociale
+Type
+
+0..1
+
+Raison sociale de l’opérateur
+
+F
+
+IIP1RG3
+IIP1RG4
+IIP1RG5
+
+ÉLÉMENT PERIODE
+
+Élément periode
+Type
+
+Complexe ordonné
+
+Référence
+
+Élément
+
+IIP1-E2.3.1
+
+mois
+
+IIP1-E2.3.2
+
+annee
+
+Type
+
+Cardinalit
+é
+
+Description
+
+1
+
+Mois de la déclaration dont les
+données sont envoyées (pour les
+DRA, il s'agit du mois et de l'année
+de la fin de la période)
+
+O
+
+Année de la déclaration dont les
+données sont envoyées (pour les
+DRA, il s'agit du mois et de l'année
+de la fin de la période)
+
+O
+
+int
+
+int
+
+1
+
+Obligatoi Règle
+re /
+s
+Facultatif
+IIP1RG7
+IIP1RG9
+IIP1RG7
+IIP1RG9
+
+ÉLÉMENT DROITS-SUSPENDUS
+
+Élément droits-suspendus
+Type
+
+Complexe ordonné
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Page 17/52
+
+Contrat de service
+CIEL- Contrat de service avec les interprofessions v_2_24(1).odt
+
+Référence
+
+Élément
+
+IIP1-E2.4.1
+
+produit
+
+IIP1-E2.4.2
+
+Type
+
+Cardinalit
+é
+
+Description
+
+Obligatoi Règle
+re /
+s
+Facultatif
+
+produit
+
+0..*
+
+Produit concerné par la déclaration
+en droits suspendus
+
+F
+
+Erreur
+:
+sourc
+e de
+la
+référe
+nce
+non
+trouvé
+e
+
+stockEpuis boolean
+e
+
+1
+
+Booléen indiquant si le stock en
+droits suspendus est épuisé
+
+O
+
+IIP1RG13
+IIP1RG49
+IIP1RG50
+
+ÉLÉMENT PRODUIT
+
+Élément produit
+Type
+
+Complexe ordonné
+
+Référence
+
+Élément
+
+Type
+
+Cardinalit
+é
+
+Description
+
+IIP1-E2.4.1.2
+
+code-inao
+
+codeInaoTyp
+e
+
+0..1
+
+Code INAO du produit
+
+F
+
+IIP1RG19
+Erreur
+:
+sourc
+e de
+la
+référe
+nce
+non
+trouvé
+e
+IIP1RG23
+
+IIP1-E2.4.1.1
+
+libellefiscal
+
+LibelleFiscalT
+ype
+
+0..1
+
+Libellé fiscal du produit (liste des
+libellés en annexes)
+
+F
+
+IIP1RG36
+IIP1RG41
+
+IIP1-E2.4.1.3
+
+libellestring
+personnali
+se
+
+1
+
+Libellé personnalisé du produit
+
+O
+
+IIP1RG37
+
+IIP1-E2.4.1.7
+
+balancestocks
+
+balancestocks
+
+1
+
+Balance des stocks en droits
+suspendus
+
+O
+
+IIP1-E2.4.1.4
+
+tav
+
+tavType
+
+0..1
+
+TAV du produit
+
+F
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Obligatoi Règle
+re /
+s
+Facultatif
+
+IIP1RG21
+IIP1RG22
+
+Page 18/52
+
+Contrat de service
+CIEL- Contrat de service avec les interprofessions v_2_24(1).odt
+
+Référence
+
+Élément
+
+Type
+
+IIP1-E2.4.1.5
+
+premix
+
+IIP1-E2.4.1.6
+
+observatio string (250
+ns
+caractères
+maximum)
+
+Cardinalit
+é
+
+Description
+
+0..1
+
+Indique si le produit considéré est
+un premix ou pas
+
+F
+
+IIP1RG21
+IIP1RG22
+
+0..1
+
+Observations apportées par le
+déclarant concernant la balance des
+stocks en droits suspendus
+
+F
+
+IIP1RG25
+IIP1RG26
+
+boolean
+
+Obligatoi Règle
+re /
+s
+Facultatif
+
+ÉLÉMENT BALANCE-STOCKS
+
+Élément balance-stocks (Droits suspendus)
+Type
+
+Complexe ordonné
+
+Référence
+
+Élément
+
+Type
+
+Cardinalit
+é
+
+Description
+
+IIP1-E2.4.1.7.1
+
+Obligatoi Règle
+re /
+s
+Facultatif
+
+stockdebutperiode
+
+volumeStock
+Type
+
+1
+
+Stock de début de période (en hL),
+systématiquement repris du stock
+théorique total de fin de la période
+de la DRM ou DRA précédente. Si
+1ère DRM de la campagne
+vitivinicole, doit être indiqué le stock
+réel (physique) tel qu'il résulte de
+l'inventaire des stocks.
+
+O
+
+IIP1-E2.4.1.7.2
+
+entreesperiode
+
+entreesperiode
+
+0..1
+
+Entrées sur la période en droits
+suspendus, pour le produit
+concerné
+
+F
+
+IIP1-E2.4.1.7.3
+
+sortiesperiode
+
+sortiesperiode
+
+0..1
+
+Sorties sur la période en droits
+suspendus, pour le produit
+concerné
+
+F
+
+IIP1-E2.4.1.7.4
+
+stock-finperiode
+
+volumeStock
+Type
+
+1
+
+Stock de fin de période (en hL),
+correspondant à la différence entre
+les entrées et les sorties de période.
+
+O
+
+IIP1RG14
+Si
+saisi,
+alors
+>= 0
+
+IIP1RG17
+IIP1RG18
+
+ÉLÉMENT ENTREES-PERIODE
+
+Élément entrees-periode
+Type
+
+Complexe ordonné
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Page 19/52
+
+Contrat de service
+CIEL- Contrat de service avec les interprofessions v_2_24(1).odt
+
+Référence
+
+Élément
+
+Type
+
+Cardinalit
+é
+
+Description
+
+IIP1-Evolume2.4.1.7.2.1 produit
+
+volumeType
+
+0..1
+
+Produits issus des vendanges
+(récoltants) ou de la déclaration
+SV12 (négociants vinificateurs), ou
+produits par assemblage de deux
+produits ou plus (ratafia, cartagène,
+floc de Gascogne, pineau des
+Charentes, etc.), ou ayant fait l'objet
+d'une déclaration de revendication,
+ou issus des différentes
+manipulations possibles sur les vins
+(soutirages, désalcoolisation...) pour
+ce qui concerne les lies ou alcools,
+ou issus d'une activité accessoire
+(distillation de fruits) (en hL).
+
+F
+
+Si
+saisi,
+alors
+>=0
+
+IIP1-Eachats2.4.1.7.2.2 reintegrati
+ons
+
+volumeType
+
+0..1
+
+Achat de produits en vrac, ou en
+bouteilles nues sur pile,
+réintégrations de produits sortis en
+suspension de droits (en hL)
+
+F
+
+Si
+saisi,
+alors
+>=0
+
+IIP1-Emouveme mouvementstemporaires
+2.4.1.7.2.3 ntstemporaire
+s
+
+0..1
+
+Prestations de service, relogement,
+ou pour élaboration à façon de vins
+mousseux, ou pour distillation de
+cognac, par exemple. Retour
+obligatoire à la propriété (en hL)
+
+F
+
+IIP1-Emouveme
+2.4.1.7.2.4 ntsinternes
+
+0..1
+
+Mouvements internes du produit (en
+hL)
+
+F
+
+IIP1-Ereplaceme complexe
+2.4.1.7.2.6 nts
+
+0..1
+
+Exemple : retour de marchandises,
+transfert de comptabilité matières
+Toute saisie requiert un
+commentaire obligatoire dans la
+rubrique « Observations » (en hL)
+
+F
+
+IIP1RG38
+
+IIP1-Eautres2.4.1.7.2.5 entrees
+
+0..1
+
+Excédent suite à inventaire ou
+contrôle du service des douanes.
+Toute saisie dans cette ligne
+requiert un commentaire obligatoire
+dans la rubrique « Observations »
+(en hL)
+
+F
+
+IIP1RG25
+Si
+saisi,
+alors
+>=0
+
+mouvementsinternes
+
+volumeType
+
+Obligatoi Règle
+re /
+s
+Facultatif
+
+ÉLÉMENT MOUVEMENTS-TEMPORAIRES
+
+Élément mouvements-temporaires
+Type
+Référence
+
+Complexe ordonné
+Élément
+
+Type
+
+IIP1-Eembouteill volumeType
+2.4.1.7.2.3 age
+.1
+
+Cardinalit
+é
+0..1
+
+Description
+
+Retour de prestation
+d'embouteillage (uniquement si
+l'embouteillage n'a pas lieu sur
+place) (en hL)
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Obligatoi Règle
+re /
+s
+Facultatif
+F
+
+Si
+saisi,
+alors
+>=0
+
+Page 20/52
+
+Contrat de service
+CIEL- Contrat de service avec les interprofessions v_2_24(1).odt
+
+Référence
+
+Élément
+
+Type
+
+Cardinalit
+é
+
+Description
+
+Obligatoi Règle
+re /
+s
+Facultatif
+
+IIP1-Erelogemen volumeType
+2.4.1.7.2.3 t
+.2
+
+0..1
+
+Retour de relogement (en hL)
+
+F
+
+Si
+saisi,
+alors
+>=0
+
+IIP1-Etravail-a2.4.1.7.2.3 facon
+.3
+
+volumeType
+
+0..1
+
+Retour de travail à façon (en hL)
+
+F
+
+Si
+saisi,
+alors
+>=0
+
+IIP1-Edistillation- volumeType
+2.4.1.7.2.3 a.4
+faconEntre
+es
+
+0..1
+
+Retour de distillation à façon (en hL)
+
+F
+
+Si
+saisi,
+alors
+>=0
+
+ÉLÉMENT MOUVEMENTS-INTERNES
+
+Élément mouvements-internes
+Type
+Référence
+
+Complexe ordonné
+Élément
+
+Type
+
+Cardinalit
+é
+
+Description
+
+Obligatoi Règle
+re /
+s
+Facultatif
+
+IIP1-EreplisvolumeType
+2.4.1.7.2.4 declassem
+.1
+enttransfertchangeme
+ntappellation
+
+0..1
+
+repli, déclassement, transfert,
+changement d'appellation (en hL)
+Toute entrée dans cette rubrique
+pour une colonne doit trouver son
+équivalent en sortie dans une autre.
+
+F
+
+Si
+saisi,
+alors
+>=0
+
+IIP1-Emanipulati volumeType
+2.4.1.7.2.4 ons
+.2
+
+0..1
+
+Augmentation de volume constatée
+suite à une manipulation
+oenologique autorisée (ex.
+édulcoration)
+
+F
+
+Si
+saisi,
+alors
+>=0
+
+IIP1-Eintegration volumeType
+2.4.1.7.2.4 -vci-agree
+.3
+
+0..1
+
+Intégration de VCI agréé (en hL)
+Le cumul des agréments de VCI
+pour les appellations en bénéficiant
+doit trouver son équivalent en sortie
+de la colonne produit VCI.
+
+F
+
+Si
+saisi,
+alors
+>=0
+
+ÉLÉMENT REPLACEMENT-SUSPENSION
+
+Élément replacement-suspension
+Type
+Référence
+
+Complexe ordonné
+Élément
+
+Type
+
+Cardinalit
+é
+
+Description
+
+Obligatoi Règle
+re /
+s
+Facultatif
+
+IIP1-Emois
+2.4.1.7.2.6
+.1
+
+int
+
+1
+
+Mois de la sortie taxable ou de la
+réception en droits acquittés de ce
+produit. Entre 1 et 12.
+
+O
+
+IIP1RG40
+
+IIP1-Eannee
+2.4.1.7.2.6
+.2
+
+int
+
+1
+
+Année de la sortie taxable ou de la
+réception en droits acquittés de ce
+produit. Sur 4 positions.
+
+O
+
+IIP1RG40
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Page 21/52
+
+Contrat de service
+CIEL- Contrat de service avec les interprofessions v_2_24(1).odt
+
+Référence
+
+Élément
+
+IIP1-Evolume
+2.4.1.7.2.6
+.3
+
+Type
+
+Cardinalit
+é
+
+volumeType
+
+1
+
+Description
+
+Volume du produit replacé en
+suspension
+
+Obligatoi Règle
+re /
+s
+Facultatif
+O
+
+>=0
+
+ÉLÉMENT SORTIES-PERIODE
+
+Élément sorties-periode
+Type
+Référence
+
+Complexe ordonné
+Élément
+
+Type
+
+Cardinalit
+é
+
+Description
+
+IIP1-Eventesventes2.4.1.7.3.1 france-crd- france-crdsuspendus suspendus
+
+0..1
+
+Ventes France sous CRD
+personnalisées ou collectives
+achetées en droits suspendus, sous
+DSA ou sous facture (en hL)
+
+F
+
+IIP1RG35
+Erreur
+:
+sourc
+e de
+la
+référe
+nce
+non
+trouvé
+e
+Si
+saisi,
+alors
+>=0
+
+IIP1-EventesvolumeType
+2.4.1.7.3.2 france-crdacquittes
+
+0..1
+
+Ventes France sous CRD
+collectives achetées en droits
+acquittés
+Les droits ont été acquittés auprès
+du répartiteur de capsules au
+moment de l'achat des CRD
+Dans CIEL, cette donnée n'alimente
+pas la liquidation de la déclaration
+mais a une vocation seulement
+statistique
+
+F
+
+Erreur
+:
+sourc
+e de
+la
+référe
+nce
+non
+trouvé
+e
+Si
+saisi,
+alors
+>=0
+
+IIP1-Esorties2.4.1.7.3.3 sanspaiementdroits
+
+0..1
+
+Sorties du produit sans paiement
+des droits (en hL)
+
+F
+
+sorties-sanspaiementdroits
+
+Obligatoi Règle
+re /
+s
+Facultatif
+
+ELÉMENT VENTES-FRANCE-CRD-SUSPENDUS
+
+Élément ventes-france-crd-suspendus
+Type
+
+Complexe ordonné
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Page 22/52
+
+Contrat de service
+CIEL- Contrat de service avec les interprofessions v_2_24(1).odt
+
+Référence
+
+Élément
+
+Type
+
+Cardinalit
+é
+
+Description
+
+Obligatoi Règle
+re /
+s
+Facultatif
+
+IIP1-Eannee2.4.1.7.3.1 precedent
+.1
+e
+
+volumeType
+
+0..2
+
+Volume pour l’année précédente
+(cas unique des DRA)
+
+F
+
+IIP1RG35
+Si
+saisi,
+alors
+>=0
+
+IIP1-Eannee2.4.1.7.3.1 courante
+.2
+
+volumeType
+
+0..1
+
+Volume pour l’année courante (cas
+des DRA) ou volume à déclarer
+pour la péruide de taxation
+
+O
+
+IIP1RG35
+Si
+saisi,
+alors
+>=0
+
+ELÉMENT SORTIES-SANS-PAIEMENT-DROITS
+
+Élément sorties-sans-paiement-droits
+Type
+Référence
+
+Complexe ordonné
+Élément
+
+Type
+
+Cardinalit
+é
+
+Description
+
+volumeType
+
+0..1
+
+Sorties définitives du produit en
+droits suspendus : ventes vrac au
+négoce, en intracommunautaire, à
+l'export, sous DAE, DAA et DCA
+ainsi que sorties de lies et DRA (en
+hL)
+
+F
+
+Si
+saisi,
+alors
+>0
+
+IIP1-Econsomma volumeType
+2.4.1.7.3.3 tion.2
+familialedegustatio
+n
+
+0..1
+
+Consommation familiale du produit
+et / ou dégustation à l'exploitation
+(en hL)
+
+F
+
+Si
+saisi,
+alors
+>0
+
+IIP1-Emise-sur2.4.1.7.3.3 marche.3
+corse
+
+volumeType
+
+0..1
+
+Mise sur le marché en Corse :
+concerne les vins produits et
+commercialisés en Corse (en hL)
+
+F
+
+IIP1RG48
+Si
+saisi,
+alors
+>0
+
+IIP1-Emouveme mouvementstemporaires
+2.4.1.7.3.3 nts.4
+temporaire
+s
+
+0..1
+
+Mouvements temporaires du produit
+(en hL)
+Prestations de service, relogement,
+ou pour élaboration à façon de vins
+mousseux, ou pour distillation de
+cognac, par exemple. Retour
+obligatoire à la propriété
+
+F
+
+IIP1-Emouveme
+2.4.1.7.3.3 nts.5
+internes
+
+mouvementsinternes
+
+0..1
+
+Mouvements internes du produit (en
+hL)
+
+F
+
+IIP1-Eautres2.4.1.7.3.3 sorties
+.6
+
+volumeType
+
+0..1
+
+Destruction par exemple (en hL)
+Toute saisie dans cette ligne
+requiert un commentaire obligatoire
+dans la rubrique « Observations »
+
+F
+
+IIP1-Esorties2.4.1.7.3.3 definitives
+.1
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Obligatoi Règle
+re /
+s
+Facultatif
+
+IIP1RG26
+Si
+saisi,
+alors
+>0
+Page 23/52
+
+Contrat de service
+CIEL- Contrat de service avec les interprofessions v_2_24(1).odt
+
+ELÉMENT MOUVEMENTS-TEMPORAIRES
+
+Élément mouvements-temporaires
+Type
+Référence
+
+Complexe ordonné
+Élément
+
+Type
+
+Cardinalit
+é
+
+Description
+
+Obligatoi Règle
+re /
+s
+Facultatif
+
+IIP1-Eembouteill volumeType
+2.4.1.7.3.3 age
+.3.1
+
+0..1
+
+Sortie pour prestation
+d'embouteillage (uniquement si
+l'embouteillage n'a pas lieu sur
+place) (en hL)
+
+F
+
+Si
+saisi,
+alors
+>=0
+
+IIP1-Erelogemen volumeType
+2.4.1.7.3.3 t
+.3.2
+
+0..1
+
+Sortie pour relogement (en hL)
+
+F
+
+Si
+saisi,
+alors
+>=0
+
+IIP1-Etravail-a2.4.1.7.3.3 facon
+.3.3
+
+volumeType
+
+0..1
+
+Sortie pour travail à façon (en hL)
+
+F
+
+Si
+saisi,
+alors
+>=0
+
+IIP1-Edistillation- volumeType
+2.4.1.7.3.3 a-Facon
+.3.4
+
+0..1
+
+Sortie pour distillation à façon (en
+hL)
+
+F
+
+Si
+saisi,
+alors
+>=0
+
+ELÉMENT MOUVEMENTS-INTERNES
+
+Élément mouvements-internes
+Type
+Référence
+
+Complexe ordonné
+Élément
+
+Type
+
+Cardinalit
+é
+
+Description
+
+IIP1-EreplisvolumeType
+2.4.1.7.3.3 declassem
+.4.1
+enttransfertchangeme
+ntappellation
+
+0..1
+
+repli, déclassement, transfert,
+changement d'appellation (en hL)
+Toute sortie dans cette rubrique
+pour une colonne doit trouver son
+équivalent en entrée dans une
+autre.
+
+F
+
+Si
+saisi,
+alors
+>=0
+
+IIP1-Efabrication volumeType
+2.4.1.7.3.3 -autre.4.2
+produit
+
+0..1
+
+En cas de mutage de vin par
+adjonction d'alcool, inscrire ici le
+volume de vin concerné ainsi que le
+volume d'alcool ayant permis
+l'opération, et porter les quantités
+de vins mutés en entrée (en hL)
+
+F
+
+Si
+saisi,
+alors
+>=0
+
+IIP1-Erevendicati volumeType
+2.4.1.7.3.3 on-vci
+.4.3
+
+0..1
+
+Volume de VCI de l'année N-1 du
+produit ayant reçu l'agrément à la
+récolter de l'année N (en hL)
+
+F
+
+Si
+saisi,
+alors
+>=0
+
+IIP1-Eautres2.4.1.7.3.3 mouveme
+.4.4
+ntsinternes
+
+0..1
+
+Manipulations, soutirages.
+Réductions de volume constatées
+suite à soutirages de lies ou
+manipulations diverses, notamment
+les méthodes soustractives
+d'enrichissement ou la
+désalcoolisation.
+
+F
+
+Si
+saisi,
+alors
+>=0
+
+volumeType
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Obligatoi Règle
+re /
+s
+Facultatif
+
+Page 24/52
+
+Contrat de service
+CIEL- Contrat de service avec les interprofessions v_2_24(1).odt
+
+ÉLÉMENT DROITS-ACQUITTES
+
+Élément droits-acquittes
+Type
+
+Complexe non ordonné
+
+Référence
+
+Élément
+
+IIP1-E2.5.1
+
+produit
+
+IIP1-E2.5.3
+
+Type
+
+Cardinalit
+é
+
+Description
+
+Obligatoi Règle
+re /
+s
+Facultatif
+
+produit
+
+0..*
+
+Produit concerné par la déclaration
+en droits acquittés
+
+F
+
+Erreur
+:
+sourc
+e de
+la
+référe
+nce
+non
+trouvé
+e
+
+stockEpuis boolean
+e
+
+1
+
+Booléen indiquant si le stock en
+droits suspendus est épuisé
+
+O
+
+IIP1RG13
+
+ÉLÉMENT PRODUIT
+
+Élément produit
+Type
+
+Complexe non ordonné
+
+Référence
+
+Élément
+
+Type
+
+Cardinalit
+é
+
+IIP1-E2.5.1.1
+
+code-inao
+
+codeInaoTyp
+e
+
+1
+
+Code INAO du produit
+
+O
+
+IIP1RG19
+Erreur
+:
+sourc
+e de
+la
+référe
+nce
+non
+trouvé
+e
+IIP1RG23
+
+IIP1-E2.5.1.2
+
+libellefiscal
+
+LibelleFiscalT
+ype
+
+0..1
+
+Libellé fiscal du produit (liste des
+libellés en annexes)
+
+F
+
+IIP1RG36
+
+IIP1-E2.5.1.3
+
+libellestring
+personnali
+se
+
+1
+
+Libellé personnalisé du produit
+
+O
+
+IIP1RG37
+
+IIP1-E2.5.1.4
+
+tav
+
+0..1
+
+TAV du produit
+
+F
+
+IIP1RG21
+IIP1RG22
+
+tavType
+
+Description
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Obligatoi Règle
+re /
+s
+Facultatif
+
+Page 25/52
+
+Contrat de service
+CIEL- Contrat de service avec les interprofessions v_2_24(1).odt
+
+Référence
+
+Élément
+
+Type
+
+Cardinalit
+é
+
+Description
+
+IIP1-E2.5.1.3
+
+premix
+
+IIP1-E2.5.1.4
+
+balancestocks
+
+IIP1-E2.5.1.5
+
+observatio string (250
+ns
+caractères
+maximum)
+
+Obligatoi Règle
+re /
+s
+Facultatif
+
+boolean
+
+0..1
+
+Indique si le produit considéré est
+un premix ou pas
+
+F
+
+balancestocks
+
+1
+
+Balance des stocks en droits
+acquittés
+
+O
+
+0..1
+
+Observations apportées par le
+déclarant concernant la balance des
+stocks en droits acquittés
+
+F
+
+IIP1RG21
+IIP1RG22
+
+IIP1RG25
+IIP1RG26
+IIP1RG38
+
+ÉLÉMENT BALANCE-STOCKS
+
+Élément balance-stocks (Droits acquittés)
+Type
+
+Complexe ordonné
+
+Référence
+
+Élément
+
+Type
+
+Cardinalit
+é
+
+Description
+
+IIP1-E2.6.1.2.1
+
+Obligatoi Règle
+re /
+s
+Facultatif
+
+stockdebutperiode
+
+volumeStock
+Type
+
+1
+
+Stock de début de période (en hL),
+systématiquement repris du stock
+théorique total de fin de la période
+de la DRM ou DRA précédente. Si
+1ère DRM de la campagne
+vitivinicole, doit être indiqué le stock
+réel (physique) tel qu'il résulte de
+l'inventaire des stocks.
+
+O
+
+IIP1-E2.6.1.2.2
+
+entreesperiode
+
+entreesperiode
+
+0..1
+
+Entrées sur la période en droits
+acquittés, pour le produit concerné
+
+F
+
+IIP1-E2.6.1.2.3
+
+sortiesperiode
+
+sortiesperiode
+
+0..1
+
+Sorties sur la période en droits
+acquittés, pour le produit concerné
+
+F
+
+IIP1-E2.6.1.2.4
+
+stock-finperiode
+
+volumeStock
+Type
+
+1
+
+Stock de fin de période (en hL),
+correspondant à la différence entre
+les entrées et les sorties de période.
+
+O
+
+IIP1RG14
+Si
+saisi,
+alors
+>= 0
+
+IIP1RG17
+IIP1RG18
+
+ÉLÉMENT ENTREES-PERIODE
+
+Élément entrees-periode
+Type
+Référence
+
+Complexe ordonné
+Élément
+
+IIP1-Eachats
+2.6.1.2.2.1
+
+Type
+
+Cardinalit
+é
+
+volumeType
+
+0..1
+
+Description
+
+Achats du produit (en hL)
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Obligatoi Règle
+re /
+s
+Facultatif
+F
+
+Si
+saisi,
+alors
+>=0
+
+Page 26/52
+
+Contrat de service
+CIEL- Contrat de service avec les interprofessions v_2_24(1).odt
+
+Référence
+
+Élément
+
+IIP1-Eautres2.6.1.2.2.2 entrees
+
+Type
+
+Cardinalit
+é
+
+volumeType
+
+0..1
+
+Description
+
+Autres entrées du produit (en hL)
+
+Obligatoi Règle
+re /
+s
+Facultatif
+F
+
+IIP1RG25
+Si
+saisi,
+alors
+>=0
+
+ÉLÉMENT SORTIES-PERIODE
+
+Élément sorties-periode
+Type
+Référence
+
+Complexe ordonné
+Élément
+
+Type
+
+Cardinalit
+é
+
+volumeType
+
+0..1
+
+Ventes de produit (en hL)
+
+F
+
+Si
+saisi,
+alors
+>=0
+
+IIP1-Ereplaceme volumeType
+2.6.1.2.3.2 ntsuspensio
+n
+
+0..1
+
+Replacement en suspension du
+produit (en hL)
+
+F
+
+Si
+saisi,
+alors
+>=0
+
+IIP1-Eautres2.6.1.2.3.3 sorties
+
+0..1
+
+Autres sorties du produits (en hL)
+
+F
+
+IIP1RG26
+Si
+saisi,
+alors
+>=0
+
+IIP1-Eventes
+2.6.1.2.3.1
+
+volumeType
+
+Description
+
+Obligatoi Règle
+re /
+s
+Facultatif
+
+ÉLÉMENT COMPTE-CRD
+
+Élément compte-crd
+Type
+
+Complexe ordonné
+Élément
+
+Type
+
+Cardinalit
+é
+
+Description
+
+IIP1-E2.7.1
+
+categoriefiscalecapsules
+
+categorieFisc
+aleCapsuleTy
+pe
+
+1
+
+Catégorie fiscale de capsules
+représentatives de droits
+
+O
+
+IIP1RG27
+
+IIP1-E2.7.2
+
+typecapsule
+
+typeCapsules
+Type
+
+1
+
+Type de capsules représentatives
+de droits
+
+O
+
+IIP1-
+
+IIP1-E2.7.3
+
+centilisatio centilisation
+n
+
+1..*
+
+Centilisation des capsules
+déclarées
+
+O
+
+IIP1RG29
+IIP1RG31
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Obligatoi Règle
+re /
+s
+Facultatif
+
+Page 27/52
+
+Contrat de service
+CIEL- Contrat de service avec les interprofessions v_2_24(1).odt
+
+ÉLÉMENT CENTILISATION
+
+Élément centilisation
+Type
+
+Complexe ordonné
+
+Référence
+
+Élément
+
+Type
+
+Cardinalit
+é
+
+Description
+
+IIP1-E2.7.3.1
+
+Obligatoi Règle
+re /
+s
+Facultatif
+
+stockdebutperiode
+
+nonNegativeI
+nteger
+
+1
+
+Stock de capsules du début de la
+période
+
+O
+
+IIP1-E2.7.3.2
+
+entreescapsules
+
+entreescapsules
+
+0..1
+
+Entrées de capsules
+
+F
+
+IIP1-E2.7.3.3
+
+sortiescapsules
+
+sortiescapsules
+
+0..1
+
+Sorties de capsules
+
+F
+
+IIP1-E2.7.3.4
+
+stockFinP
+eriode
+
+nonNegativeI
+nteger
+
+1
+
+Stock de capsules de la fin de la
+période
+
+O
+
+IIP1RG31
+IIP1RG39
+
+IIP1RG30
+IIP1RG39
+
+ÉLÉMENT ENTREES-CAPSULES
+
+Élément entrees-capsules
+Type
+
+Complexe non ordonné
+
+Référence
+
+Élément
+
+Type
+
+Cardinalit
+é
+
+IIP1-E2.7.3.2.1
+
+achats
+
+nonNegativeI
+nteger
+
+0..1
+
+Nombre de capsules achetées
+
+F
+
+IIP1-E2.7.3.2.2
+
+retours
+
+nonNegativeI
+nteger
+
+0..1
+
+Nombre de capsules retournées
+
+F
+
+IIP1-E2.7.3.2.3
+
+excedents nonNegativeI
+nteger
+
+0..1
+
+Nombre de capsules excédentaires
+
+F
+
+IIP1-E2.7.3.2.4
+
+autresentrees
+
+0..1
+
+Nombre de capsules entrées pour
+d’autres raisons
+
+F
+
+nonNegativeI
+nteger
+
+Description
+
+Obligatoi Règle
+re /
+s
+Facultatif
+
+ÉLÉMENT SORTIES-CAPSULES
+
+Élément sorties-capsules
+Type
+
+Complexe non ordonné
+
+Référence
+
+Élément
+
+Type
+
+IIP1-E2.7.3.3.1
+
+utilisations nonNegativeI
+nteger
+
+0..1
+
+Nombre de capsules utilisées
+
+F
+
+IIP1-E2.7.3.3.2
+
+destruction nonNegativeI
+s
+nteger
+
+0..1
+
+Nombre de capsules détruites
+
+F
+
+IIP1-E2.7.3.3.3
+
+manquant
+s
+
+0..1
+
+Nombre de capsules manquantes
+
+F
+
+nonNegativeI
+nteger
+
+Cardinalit
+é
+
+Description
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Obligatoi Règle
+re /
+s
+Facultatif
+
+Page 28/52
+
+Contrat de service
+CIEL- Contrat de service avec les interprofessions v_2_24(1).odt
+
+Référence
+
+Élément
+
+IIP1-E2.7.3.3.4
+
+autressorties
+
+Type
+
+Cardinalit
+é
+
+nonNegativeI
+nteger
+
+0..1
+
+Description
+
+Nombre de capsules sorties pour
+d’autres raisons
+
+Obligatoi Règle
+re /
+s
+Facultatif
+F
+
+ÉLÉMENT DOCUMENT-ACCOMPAGNEMENT
+
+Élément document-accompagnement
+Type
+
+Complexe ordonné
+
+Référence
+
+Élément
+
+Type
+
+Cardinalit
+é
+
+Description
+
+Obligatoi Règle
+re /
+s
+Facultatif
+
+IIP1-E2.8.1
+
+numerompreintes
+
+DebutFinDoc
+umentType
+
+0..1
+
+Type de référence du document
+d'accompagnement
+
+F
+
+IIP1RG34
+
+IIP1-E2.8.2
+
+daa-dca
+
+DebutFinDoc
+umentType
+
+0..1
+
+Type de document pré-validé
+
+F
+
+IIP1RG34
+
+IIP1-E2.8.3
+
+dsa-dsac
+
+DebutFinDoc
+umentType
+
+0..1
+
+Type de document pré-validé
+
+F
+
+IIP1RG34
+
+TYPE DEBUTFINDOCUMENTTYPE
+
+Type DebutFinDocumentType
+Type
+
+Complexe non ordonné
+
+Référence
+
+Élément
+
+Type
+
+Cardinalit
+é
+
+Description
+
+IIP1-E2.8.1.1
+
+debutperiode
+
+Obligatoi Règle
+re /
+s
+Facultatif
+
+numeroDocu
+mentType
+
+1
+
+Référence du premier document de
+la période
+
+O
+
+IIP1-E2.8.1.2
+
+fin-periode numeroDocu
+mentType
+
+1
+
+Référence du dernier document de
+la période
+
+O
+
+IIP1-E2.8.1.2
+
+nombreint
+documentempreinte
+
+1
+
+Nombre de références sur la
+période
+
+O
+
+>0
+
+ÉLÉMENT RELEVE-NON-APUREMENT
+
+Élément releve-non-apurement
+Type
+
+Complexe non ordonné
+
+Référence
+
+Élément
+
+Type
+
+Cardinalit
+é
+
+Description
+
+IIP1-E2.9.1
+
+numerodaa-dacdae
+
+numeroRnaT
+ype
+
+0..1
+
+Numéro de DAA/DAC/DAE
+
+O
+
+IIP1-E2.9.2
+
+datedate
+expedition
+
+0..1
+
+Date d’expédition (doit être de la
+forme AAAA-MM-JJ)
+
+O
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Obligatoi Règle
+re /
+s
+Facultatif
+IIP1RG12
+
+Page 29/52
+
+Contrat de service
+CIEL- Contrat de service avec les interprofessions v_2_24(1).odt
+
+Référence
+
+Élément
+
+Type
+
+Cardinalit
+é
+
+Description
+
+IIP1-E2.9.3
+
+numeroaccisedestinatair
+e
+
+String (8 ou
+13 caractères
+alphanumériq
+ues)
+
+0..1
+
+Numéro d’accise du destinataire ou
+référence du bureau d’export
+
+Obligatoi Règle
+re /
+s
+Facultatif
+F
+
+IIP1RG42
+
+ÉLÉMENT STATISTIQUES
+
+Élément statistiques
+Type
+
+Complexe ordonné
+Élément
+
+Type
+
+Cardinalit
+é
+
+IIP1-E2.10.1
+
+quantitemouts-jus
+
+volumeType
+
+0..1
+
+Quantité de moûts de raisin
+transformés en jus de raisin
+
+F
+
+Si
+saisi,
+alors
+>=0
+
+IIP1-E2.10.2
+
+quantitevolumeType
+mouts-mcr
+
+0..1
+
+Quantité de moûts de raisin
+transformés en MCR (moûts
+concentrés rectifiés)
+
+F
+
+Si
+saisi,
+alors
+>=0
+
+IIP1-E2.10.3
+
+quantitevinsvinaigre
+
+0..1
+
+Quantité de vins utilisés pour la
+fabrication de vinaigre
+
+F
+
+Si
+saisi,
+alors
+>=0
+
+volumeType
+
+Description
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Obligatoi Règle
+re /
+s
+Facultatif
+
+Page 30/52
+
+Contrat de service
+CIEL- Contrat de service avec les interprofessions v_2_24(1).odt
+
+3.3.3
+
+TYPES SIMPLES
+TYPES SIMPLES BASÉS SUR LE TYPE PRIMITIF DECIMAL
+
+Nombre de
+décimales
+
+Minimum
+
+volumeType
+
+5
+
+0
+
+volumeStockType
+
+5
+
+tavType
+
+2
+
+Type
+
+Description
+Représente un volume positif ou nul
+Représente un volume positif, négatif ou nul
+
+0
+
+Représente le TAV d’un produit. Un tav ne peut être <=0.5
+ou ≥ 100.
+
+CIEL accepte des volumes jusqu'à 5 décimales. Le fonctionnement du flux retour est le
+suivant :
+- si le volume du produit contient moins de 5 décimales, CIEL renvoie 4 décimales ;
+- si le volume du produit contient 5 décimales, CIEL renvoie 5 décimales ;
+- si la cinquième décimale est un 0, CIEL renvoie 4 décimales.
+TYPES SIMPLES BASÉS SUR LE TYPE PRIMITIF STRING
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Page 31/52
+
+Contrat de service
+CIEL- Contrat de service avec les interprofessions v_2_24(1).odt
+
+Type
+
+Longueur Longueur
+minimale maximale
+
+sirenType
+
+9
+
+9
+
+codeInaoTy
+pe
+
+6
+
+8
+
+numeroAcci
+seType
+
+13
+
+13
+
+Valeurs possibles
+
+Format
+
+Description
+
+Nombres
+entiers
+strictement
+positifs
+
+Représente le numéro
+SIREN d'une interprofession
+
+Représente le code INAO
+d’un produit.
+Un code INAO doit contenir
+entre 6 et 8 digits. Si le code
+est
+sur
+5
+digits,
+l'interprofession
+émettrice
+doit ajouter un espace avant
+envoi à CIEL.
+
+[A-Za-z]
+Représente un numéro
+{2}[0-9A- d’agrément
+Za-z]{11}
+
+LibelleFiscal
+Type
+numeroCviT
+ype
+
+Représente le libellé fiscal
+d’un produit
+10
+
+raisonSocial
+eType
+
+10
+
+10 chiffres
+
+Représente un numéro CVI
+
+200
+
+Chaîne de
+caractères
+
+Représente le nom ou la
+raison sociale de
+l’opérateur
+
+typeCapsule
+sType
+
+• PERSONNALISEES
+• COLLECTIVES_DR
+OITS_SUSPENDUS
+• COLLECTIVES_DR
+OITS_ACQUITTES
+
+Représente un type de
+capsules représentatives de
+droits
+
+categorieFis
+caleCapsule
+Type
+
+• « M » (vin
+mousseux)
+• « T » (vin tranquille)
+• « PI » (produit
+intermédiaire)
+• COGNACARMAGNAC
+• ALCOOLS
+
+Représente une catégorie
+fiscale de capsule
+représentative de droits
+
+numeroDoc
+umentType
+
+1
+
+30
+
+Référence
+d’un
+document
+
+Numéro de référence de
+document
+d'accompagnement d'une
+DRM. En cas de valeur
+numérique indiquée, seul les
+entiers positifs sont
+autorisés.
+
+numeroRna
+Type
+
+1
+
+21
+
+Chaîne de
+caractères
+
+Numéro de référence du
+daa-dac-dae
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Page 32/52
+
+Contrat de service
+CIEL- Contrat de service avec les interprofessions v_2_24(1).odt
+
+Type
+
+Longueur Longueur
+minimale maximale
+
+Attribut
+« volume
+« de
+l’élément
+centilisation
+
+Valeurs possibles
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+CL_10
+CL_12_5
+CL_18_7
+CL_20
+CL_25
+CL_35
+CL_37_5
+CL_50
+CL_62
+CL_70
+CL_75
+CL_100
+CL_150
+CL_175
+CL_200
+BIB_225
+BIB_300
+BIB_400
+BIB_500
+BIB_800
+BIB_1000
+AUTRE
+
+Description
+Représente la centilisation
+de capsules représentatives
+de droits. Valeur obligatoire.
+
+Nombre
+Volume indiqué pour une
+décimal (1
+centilisation AUTRE
+chiffre après
+la virgule)
+
+volumePer
+sonnalise
+Vrai / Faux
+
+bib
+
+3.3.4
+
+Format
+
+Booléen
+
+Indique si la centilisation
+AUTRE est de type Bag-inbox
+
+RÈGLES DE GESTION
+
+Dès réception d’un flux, CIEL met en place une série de contrôles pour vérifier la validité et
+la cohérence des données contenues. Chaque élément ci-dessous reprend la teneur de la
+vérification ainsi que le message d’erreur associé.
+Chaque erreur est préfixée d’un texte commun indiquant le numéro (code) de l’erreur,
+repris dans les tableaux ci-dessous.
+Exemple : « Erreur 007. Les données économiques ont déjà été reçues pour la période. »
+Certains contrôles nécessitent la récupération de la télé-déclaration précédente.
+Cependant, la présence de la déclaration précédente ne devant pas constituer un frein à
+la transmission des télé-déclarations par les interprofessions, les règles de gestion
+suivantes s’appliquent donc pour la réception des DRM :
+RG_DecPrécédente_2
+
+S’il n’existe aucune DRM pour le numéro d’agrément transmis, les
+contrôles relatifs à la DRM précédente ne sont pas appliqués.
+
+RG_DecPrécédente_3
+
+La recherche de la DRM précédente (cf RG ci-dessus) inclut tous
+les formats (GILDA, CIEL-intranet et CIEL-internet).
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Page 33/52
+
+Contrat de service
+CIEL- Contrat de service avec les interprofessions v_2_24(1).odt
+
+Cependant, les contrôles sur les données (produits, stocks ...) ne
+peuvent s’appliquer que si la DRM précédente est une télédéclaration.
+
+NB : les contrôles pour les opérateurs réalisants des DRA (déclarations récapitulatives
+annuelles) ne peuvent être faits que si une relation COCI active indiquant cet état est liée
+à la relation EACI.
+Important : une seule erreur, quelle qu’elle soit, est suffisante pour justifier le rejet
+global du flux de la déclaration.
+Hors les erreurs de format (non respect du XSD) et les erreurs 001 à 007 qui
+bloquent immédiatement l’exécution des contrôles, l’ensemble des tests doit être
+passé pour effectuer un contrôle complet de la déclaration.
+Enfin, un code ‘999’ est prévu pour toutes les erreurs techniques. Le libellé associé
+contient dans ce cas un identifiant unique (UUID) servant de support dans le
+dépannage du problème.
+Cohérence des méta-données
+Code
+RG
+
+Test et condition(s)
+
+Code
+erreur
+
+Message si erreur
+
+IIP1RG1
+
+Le flux transmis doit respecter le schéma XSD prévu.
+
+001
+
+Le flux ne répond pas au
+schéma de transmission défini.
+Message technique <message
+erreur xsd>.
+
+NB : si cette condition n’est pas vérifiée, les
+contrôles suivants ne seront pas exécutés.
+
+IIP1RG2
+
+Le flux transmis par l'interprofession doit contenir un
+seul fichier par déclaration.
+NB : si cette condition n’est pas vérifiée, les
+contrôles suivants ne seront pas exécutés.
+
+/
+
+/
+
+IIP1RG3
+
+Le numéro d’agrément d'entrepositaire agréé fourni par
+le SI de l’interprofession vitivinicole doit exister et être
+actif dans ROSA.
+NB : si cette condition n’est pas vérifiée, les
+contrôles suivants ne seront pas exécutés.
+
+002
+
+Le numéro d’agrément
+d'entrepositaire agréé n’existe
+pas ou n’est pas actif.
+
+IIP1RG4
+
+L’agrément considéré, récupéré dans ROSA, doit
+reprendre une activité « EA viti » (les données
+transmises reprennent uniquement ce format).
+
+003
+
+Le numéro d’agrément
+d'entrepositaire agréé ne
+correspond à une activité
+vitivinicole.
+
+NB : si cette condition n’est pas vérifiée, les
+contrôles suivants ne seront pas exécutés.
+IIP1RG5
+
+L'ensemble des informations nécessaires au
+fonctionnement de CIEL doivent être disponibles et
+cohérentes dans le référentiel des opérateurs de la
+DGDDI (ROSA) pour le numéro d'agrément concerné.
+
+/
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+/
+
+Page 34/52
+
+Contrat de service
+CIEL- Contrat de service avec les interprofessions v_2_24(1).odt
+
+IIP1RG6
+
+Le portail interprofessionnel indiqué pour l’envoi des
+données économiques (IIP1) doit correspondre au
+portail de référence de l'interprofession principale de
+rattachement du numéro d'agrément pour lequel il
+envoie les données économiques à CIEL.
+NB : même erreur si aucune relation OVNI associée.
+
+004
+
+Le portail interprofessionnel
+émetteur ne correspond pas au
+portail de référence de
+l'interprofession d'appartenance
+pour ce numéro d'agrément.
+
+005
+
+La déclaration ne peut pas être
+déposée pour la période
+indiquée.
+
+007
+
+Les données économiques ont
+déjà été reçues pour la période.
+
+IIP1- Un nouveau produit dans une déclaration doit être
+RG37 identifié soit pas son code INAO s’il s’agit d’un vin
+mousseux ou d’un vin tranquille, soit par son libellé
+fiscal.
+Pour chaque nouveau produit déclaré, un libellé
+personnalisé doit être défini par l’opérateur. Le libellé
+personnalisé servira d’unique identifiant produit pour les
+déclarations futures, et n’est par conséquent plus
+modifiable une fois définie. Le code INAO ou le libellé
+fiscal, ainsi que le libellé personnalisé devront être
+transmis dans tous les cas, CIEL vérifiera que le produit
+(retrouvé par son libellé personnalisé) a bien les
+mêmes caractéristiques.
+
+030
+
+Le produit <libellé personnalisé>
+transmis ne correspond pas au
+produit indiqué dans la
+précédente déclaration.
+
+IIP1- Afin d’assurer la cohérence des stocks entre deux
+RG46 déclarations successives, l’envoi d’une DRM à CIEL
+pour une période antérieure à la période de la dernière
+déclaration validée n’est pas autorisé.
+
+042
+
+Une autre déclaration a déjà été
+déposée pour une période
+postérieure à la période
+indiquée.
+
+Code
+erreur
+
+Message si erreur
+
+008
+
+Des éléments de la balance des
+stocks en droits suspendus
+et/ou acquittés ont été saisis
+alors que l'opérateur a indiqué
+effectuer une déclaration néant.
+
+NB : si cette condition n’est pas vérifiée, les
+contrôles suivants ne seront pas exécutés.
+IIP1RG7
+
+La période de taxation doit être obligatoirement
+antérieure ou égale au mois courant.
+Par exemple, si le flux arrive le 30 mai, la période de
+taxation est au plus tard le mois de mai.
+NB : si cette condition n’est pas vérifiée, les
+contrôles suivants ne seront pas exécutés.
+
+IIP1RG9
+
+Un
+opérateur
+déclarant
+mensuellement
+ou
+annuellement ne peut saisir qu'une DRM/DRA par
+numéro d'agrément et par mois/année de taxation.
+Il ne doit pas y avoir de déclaration validée pour la
+période de taxation transmise (mois et année pour les
+DRM ou année pour les DRA), quelle que soit son
+origine (intranet ou internet).
+NB : si cette condition n’est pas vérifiée, les
+contrôles suivants ne seront pas exécutés.
+
+Balances des stocks
+Code
+RG
+
+Tests et conditions
+
+IIP1- Si l’indicateur « déclaration-néant » est vrai, alors les
+RG11 objets « droits-suspendus » et « droits-acquittes » ne
+peuvent pas contenir de « produit » (liste vide ou nulle).
+‘Neant’ correspond à ‘Pas de mouvement sur le mois
+
+écoulé’. Il n’y a donc pas d’entrées et sor es même il y a
+des stocks pour les produits
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Page 35/52
+
+Contrat de service
+CIEL- Contrat de service avec les interprofessions v_2_24(1).odt
+
+Code
+RG
+
+Tests et conditions
+
+Code
+erreur
+
+Message si erreur
+
+IIP1- Si l’agrément n’autorise pas les mouvements de stock
+RG12 en droits suspendus (agrément de type « Entrepositaire
+national en droits acquittés », contient la lettre « A »),
+alors l’objet « droits-suspendus » ne peut pas contenir
+de « produit » (liste vide ou nulle). De même dans ce
+cas, il ne doit pas y avoir de « relevé-non-apurement ».
+
+009
+
+Des mouvements de stocks en
+droits suspendus ou des relevés
+de non apurement ont été saisis
+alors que l'agrément ne
+l’autorise pas..
+
+IIP1- Si la déclaration précédente indique un stock épuisé
+RG13 pour la balance des stocks en droits suspendus, alors
+l’objet « droits-suspendus » ne peut pas contenir de
+« produit » (liste vide ou nulle).
+Un stock épuisé signifie réglementairement un stock à
+zéro définitivement pour tous les produits. CIEL
+considère que le déclarant ne doit plus faire de DRM
+jusqu'à la prochaine campagne.
+
+010
+
+Des éléments de la balance des
+stocks en droits suspendus ont
+été saisis alors que l'opérateur a
+déclaré que son stock était
+épuisé sur la précédente
+déclaration.
+
+IIP1- Avec la déclaration précédente, CIEL effectue un
+RG14 contrôle de correspondance avec les produits (identifiés
+par leur libellé personnalisé), pour la balance des stocks
+en droits suspendus.
+Pour chaque produit retrouvé, la valeur de « stockdébut-période » doit être égale au stock de fin de
+période de la déclaration précédente.
+Si le mois de taxation de la déclaration est le premier
+mois de l’exercice, cette règle ne doit pas être
+appliquée.
+Le premier de campagne est automatiquement août
+(campagne viti-vicole), si l’entrepositaire n’est pas
+négociant-vinificateur.
+
+011
+
+Le stock de début de période du
+produit <libellé personnalisé> de
+la balance des stocks en droits
+suspendus ne correspond pas
+au stock de fin de période du
+même produit de la déclaration
+précédente.
+
+IIP1- Avec la déclaration précédente, CIEL effectue un
+RG15 contrôle de correspondance avec les produits (identifiés
+par leur libellé personnalisé), pour la balance des stocks
+en droits acquittés.
+Pour chaque produit retrouvé, la valeur de « stockdébut-période » doit être égale au stock de fin de
+période de la déclaration précédente.
+Si le mois de taxation de la déclaration est le premier
+mois de l’exercice, cette règle ne doit pas être
+appliquée.
+Le premier de campagne est automatiquement août
+(campagne viti-vicole), si l’entrepositaire n’est pas
+négociant-vinificateur.
+
+012
+
+Le stock de début de période du
+produit <libellé personnalisé> de
+la balance des stocks en droits
+acquittés ne correspond pas au
+stock de fin de période du
+même produit de la déclaration
+précédente.
+
+IIP1- Pour chaque produit en droits suspendus de la
+RG16 déclaration transmise, la valeur « stock-fin-période »
+doit être égale à : « stock-début-période » + « entréespériode » - « sorties-période ».
+
+013
+
+Le stock de fin de période du
+produit <libellé personnalisé> de
+la balance des stocks en droits
+suspendus ne correspond pas
+aux éléments de la déclaration.
+
+IIP1- Pour chaque produit en droits acquittés de la
+RG17 déclaration transmise, la valeur « stock-fin-période »
+doit être égale à : « stock-début-période » + « entréespériode » - « sorties-période ».
+
+014
+
+Le stock de fin de période du
+produit <libellé personnalisé> de
+la balance des stocks en droits
+acquittés ne correspond pas
+aux éléments de la déclaration.
+
+IIP1- Dans CIEL, il est interdit d’avoir un stock théorique de
+RG18 fin de période négatif.
+
+048
+
+Le stock théorique de fin de
+période pour le produit « <libellé
+personnalisé> » ne peut pas
+être négatif.
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Page 36/52
+
+Contrat de service
+CIEL- Contrat de service avec les interprofessions v_2_24(1).odt
+
+Code
+RG
+
+Tests et conditions
+
+Code
+erreur
+
+Message si erreur
+
+015
+
+Le code INAO <code> n’existe
+pas ou n’est pas valide.
+
+IIP1- Si le produit nécessite la saisie d’un TAV et/ou de
+RG21 l’indicateur de premix, CIEL contrôle que ces données
+sont bien présentes.
+NB :
+• CIEL accepte désormais les fichiers où la valeur
+du TAV n’est pas renseignée pour les produits
+dont
+le
+libellé
+fiscal
+est
+VDN_VDL_AOP_SUP_18
+VDN_VDL_AOP_INF_18
+AUTRES_PI_SUP_18
+AUTRES_PI_SUP_18_HORS_CSS
+AUTRES_PI_INF_18
+• Les produits intermédiaires saisis par code
+INAO de la forme 1___N, 1___Z et/ou
+commence par 1R175, 1S175, 1B175
+demandent la saisie du TAV et de la premix.
+• Pour tous les autres codes INAO, pas de saisie
+de TAV ni de prémix
+
+027
+
+Le
+produit
+<libellé
+personnalisé> doit avoir un TAV
+et/ou indiquer s'il s'agit d'un
+premix ou non.
+
+IIP1- Les règles suivantes s’appliquent aux produits identifiés
+RG36 par un libellé fiscal :
+• La valeur du TAV saisie pour un produit doit
+respecter la tranche du TAV définie dans le
+libellé fiscal (ex : si le libellé fiscal choisi est
+BIERE_INF_2_8, alors le TAV doit être inférieur
+ou égal à 2.8%)
+• Si le produit choisi est un prémix, alors le TAV
+doit être compris entre 1,2 % exclus et 12 %
+exclus
+• Les deux règles ci-dessus doivent s’appliquer
+simultanément (ex : si le libellé fiscal choisi est
+BIERE_INF_2_8_PREMIX, alors le TAV doit
+être compris entre 1,2 % exclus et 2,8% inclus)
+• Toute valorisation du champ prémix ne peut être
+considérée car c’est le libellé fiscal qui porte
+cette information
+• Si le libellé fiscal indique « SUP », cela sousentend strictement supérieur. S’il indique
+« INF », cela sous-entend inférieur ou égal.
+
+029
+
+Le TAV indiqué pour le produit
+<libellé
+personnalisé>
+ne
+correspond pas au libellé fiscal
+choisi.
+
+IIP1- Si le code INAO n’est pas de la forme 1xxxxN ou
+RG22 1xxxxZ ou commence pas par 1B175, 1R175, 1S175,
+alors les champs TAV et prémix ne sont pas exploités
+par CIEL
+
+/
+
+/
+
+IIP1- Les balances des stocks en droits suspendus et en
+RG23 droits acquittés ne peuvent contenir qu’un seul et même
+libellé personnalisé respectivement.
+
+028
+
+Le produit <libellé personnalisé>
+apparaît deux fois dans la
+balance des stocks
+
+IIP1- Les codes INAO doivent contenir entre 6 et 8 digits. Si
+RG19 le code est sur 5 digits, l'interprofession émettrice doit
+ajouter un espace avant envoi à CIEL. CIEL rejettera le
+code INAO « 5 digits + espace », si le code existe déjà
+dans le référentiel sur 6 digits.
+Le code INAO doit exister dans le référentiel.
+
+NB : En revanche, les balances de stocks en droits suspendus
+et en droits acquittés peuvent contenir plusieurs fois le même
+code INAO à condition que les produits soient distingués par
+des libellés personnalisés différents.
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Page 37/52
+
+Contrat de service
+CIEL- Contrat de service avec les interprofessions v_2_24(1).odt
+
+Code
+RG
+
+Tests et conditions
+
+Code
+erreur
+
+Message si erreur
+
+IIP1- Si un produit existe dans la déclaration précédente et
+RG24 n’a pas été repris dans la déclaration transmise, alors le
+stock de fin de période de ce produit pour la déclaration
+précédente doit être de 0.
+
+016
+
+Le produit <libellé personnalisé>
+n’est pas repris dans la
+déclaration alors que son stock
+théorique de fin de période dans
+la déclaration précédente n’est
+pas nul.
+
+IIP1- Si le champ « autres-entrées » contient une valeur
+RG25 positive dans une balance des stocks (droits suspendus
+ou droits acquittés), alors la zone observations de la
+balance des stocks en question ne doit pas être vide.
+
+017
+
+Si d’autres entrées ont été
+indiquées, merci de remplir la
+case ‘observations’.
+
+IIP1- Si le champ « autres-sorties» contient une valeur
+RG26 positive dans une balance des stocks (droits suspendus
+ou droits acquittés), alors la zone observations de la
+balance des stocks en question ne doit pas être vide.
+
+018
+
+Si d’autres sorties ont été
+indiquées, merci de remplir la
+case ‘observations’.
+
+IIP1- Si le champ "replacements" est valorisé, alors la zone
+RG38 observations de la balance des stocks en question ne
+doit pas être vide.
+
+031
+
+Si un replacement en
+suspension a été indiqué, merci
+de remplir la case
+‘observations’.
+
+IIP1- Le mois et l’année du replacement en suspension saisi
+RG40 ne peuvent dater de plus de deux ans à compter du
+mois et de l’année de taxation en cours.
+
+032
+
+Un replacement en suspension
+datant de plus de deux ans n’est
+pas possible.
+
+IIP1- Si l'exercice commercial de l'opérateur ne correspond
+RG35 pas à l'année civile alors l'opérateur bénéficiant de la
+DRA doit saisir en double le champs :
+• Vente en France sous CRD
+
+/
+
+/
+
+IIP1RG41
+
+Pour les libellés fiscaux
+« MATIERES_PREMIERES_SPIRITUEUX » et
+« MATIERES_PREMIERES_ALCOOLS », les balises :
+• replacements
+• ventes-france-crd-suspendus
+• ventes-france-crd-acquittés
+doivent être vides.
+
+038
+
+Les libellés fiscaux de matières
+premières interdisent l’utilisation
+de replacements et les sorties
+avec paiement de droits.
+
+IIP1RG43
+
+Les libellés fiscaux
+
+040
+
+Les matières premières ne sont
+pas autorisées dans la balance
+des stocks en droits acquittés.
+
+« MATIERES_PREMIERES_SPIRITUEUX » et
+« MATIERES_PREMIERES_ALCOOLS » ne sont pas
+autorisés dans les balances de stocks en droits
+acquittés.
+
+IIP1RG45
+
+Les produits non fiscalisés ( 4R988Y, 4B988Y, 4X999V
+et 5X999V) ne peuvent avoir de sorties avec paiement
+ou de replacement en suspension des droits.
+
+041
+
+Le produit <libellé> interdit
+l'utilisation de replacements et
+les sorties avec paiements de
+droits.
+
+IIP1RG48
+
+La mise sur le marché en Corse n’est autorisée que
+pour les vins tranquilles et les vins mousseux et
+uniquement si l’opérateur dépend de l’interprofession
+des vins de Corse.
+
+044
+
+Pour une mise sur le marché en
+Corse, le produit doit être un vin
+tranquille ou un vin mousseux et
+l’opérateur doit dépendre de
+l’interprofession des vins de
+Corse.
+
+IIP1RG49
+
+Des stocks épuisés ne peuvent être déclarés que si
+tous les produits de la balance des stocks en droits
+suspendus ont un stock de fin de période nul.
+
+045
+
+Des stocks épuisés ont été
+déclarés alors que des produits
+de la balance des stocks en
+droits suspendus n’ont pas un
+stock de fin de période nul.
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Page 38/52
+
+Contrat de service
+CIEL- Contrat de service avec les interprofessions v_2_24(1).odt
+
+Code
+RG
+
+Tests et conditions
+
+Code
+erreur
+
+Message si erreur
+
+IIP1RG50
+
+Il est interdit de déclarer des stocks épuisés dans la
+première déclaration de la campagne.
+
+046
+
+Il est interdit de déclarer des
+stocks épuisés dans la première
+déclaration de la campagne.
+
+IIP1RG51
+
+Un produit doit au moins contenir un code INAO ou un
+libellé fiscal pour son identification.
+
+047
+
+Le produit <libellé
+personnalisé> n'a pas de libellé
+de fiscal et de code INAO, il est
+obligatoire de renseigner l'un ou
+l'autre.
+
+IIP1RG52
+
+Il est interdit d'ajouter un nouveau produit Rhums
+traditionnels des DOM commercialisés en métropole
+dans le cadre du contingent fiscal prévu à l’article 403I.1° du CGI ou Rhums traditionnels DOM définis à
+l'article L.313-24 du CIBS, commercialisés en
+métropole dans la limite du contingent fiscal prévu
+à l'article L.313-26 du CIBS
+
+049
+
+La valeur renseignée pour le
+TAV du produit <libellé
+personnalisé> est invalide. En
+application de l'article <article
+de loi>, la valeur du TAV doit
+être un nombre positif supérieur
+ou égal à 39,8 avec au plus
+deux décimales.
+
+IIP1RG63
+
+A partir de 2022, les produits PETILLANTS,
+PETILLANTS_PREMIX, HYDROMELS,
+HYDROMELS_PREMIX, CIDRES, POIRES,
+RHUM_TRADITIONNEL_DOM_ART_1 et
+RHUM_TRADITIONNEL_DOM_ART_2 ne sont plus
+valides et doivent être remplacés respectivement par les
+produits PETILLANTS_INF_8_5,
+PETILLANTS_INF_8_5_PREMIX,
+HYRDOMELS_INF_8_5,
+HYDROMELS_INF_8_5_PREMIX, CIDRES_INF_8_5,
+POIRES_INF_8_5,
+RHUM_TRADITIONNEL_DOM_CONTINGENT_FISCA
+L et
+RHUM_TRADITIONNEL_DOM_HORS_CONTINGENT_
+FISCAL.
+Les produits
+BIERE_SUP_18_PETITE_BRASSERIE_xxx,
+BIERE_SUP_2_8_PETITE_BRASSERIE_xxx et
+BIERE_SUP_2_8_PETITE_BRASSERIE_xxx_PREMIX
+(où xxx correspond à la production maximum de la
+brasserie) doivent être remplacés respectivement par
+les produits BIERE_PETITE_BRASSERIE_SUP_18,
+BIERE_PETITE_BRASSERIE_SUP_2_8 et
+BIERE_PETITE_BRASSERIE_SUP_2_8_PREMIX (la
+production de la brasserie n’est pas précisée).
+Si les anciens produits sont déclarés dans le fichier, ils
+sont automatiquement remplacés par leur nouvelle
+version.
+
+/
+
+/
+
+IIP1RG65
+
+En cas d’ajout d’un nouveau produit de la catégorie
+« Alcools » le TAV doit être strictement supérieur à
+1,2 % vol.
+
+54
+
+La valeur renseignée pour le
+TAV du produit <libellé
+personnalisé> est invalide. En
+application de l'article <article
+de loi>, la valeur du TAV doit
+être un nombre positif
+strictement supérieur à 1,2 avec
+au plus deux décimales.
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Page 39/52
+
+Contrat de service
+CIEL- Contrat de service avec les interprofessions v_2_24(1).odt
+
+Compte CRD
+Code
+RG
+
+Tests et conditions
+
+Code
+erreur
+
+Message si erreur
+
+IIP1- Une même catégorie fiscale de capsules ne peut
+RG27 apparaître que deux fois maximum dans un même
+compte CRD. Pour les EA en acquittés (l'agrément
+contient la lettre "A"), il ne doit pas y avoir de compte
+CRD.
+
+019
+
+La catégorie de capsule
+<catégorie> ne devrait être
+présente que 2 fois maximum
+dans le compte CRD, ou un
+compte CRD a été saisi alors
+que l’agrément ne l’autorise
+pas.
+
+IIP1- Pour chaque catégorie de produits, il n'est possible
+RG28 d'avoir dans les comptes CRD que les types de
+capsules suivants :
+• capsules personnalisées en DS
+• capsules collectives en DS
+• capsules personnalisées + collectives en DS (2
+comptes distincts)
+• capsules collectives en DA
+• capsules collectives en DA + collectives en DS
+(2 comptes distincts)
+
+020
+
+Erreur sur le type de capsules
+déclarées.
+
+IIP1- Dans un même compte CRD, une centilisation définie
+RG29 ne peut apparaître qu’une seule fois (unicité de l’attribut
+« volume » de la centilisation pour une catégorie fiscale
+donnée et un type de capsules donné).
+Cette règle exclut la centilisation « AUTRE ».
+
+021
+
+La centilisation <volume> pour
+la catégorie <catégorie> (<type
+de capsule>) devrait être
+unique dans un même compte
+CRD.
+
+IIP1- Pour une centilisation donnée, le stock de fin de période
+RG30 doit être égal « stock-debut-période » + « entréescapsules » - « sorties-capsules ».
+
+022
+
+Le stock de fin de période de la
+centilisation <volume> pour la
+catégorie <catégorie> (<type de
+capsule>) ne correspond pas
+aux entrées et sorties.
+
+IIP1- Si une centilisation d’un compte existe dans la
+RG31 déclaration précédente et n’a pas été repris dans la
+déclaration transmise, alors le stock de fin de période de
+cette centilisation pour la déclaration précédente doit
+être de 0.
+
+023
+
+La centilisation <volume> pour
+la catégorie <catégorie> (<type
+de capsule>) n’est pas reprise
+dans la déclaration alors que
+son stock théorique de fin de
+période précédente n’est pas
+nul.
+
+IIP1- Pour une centilisation ‘AUTRE’, le volume personnalisé
+RG32 et l’indicateur de ‘bag-in-box’ sont obligatoires.
+
+024
+
+Une centilisation pour la
+catégorie <catégorie> (<type de
+capsule>) n’est pas
+correctement renseignée.
+
+IIP1- Pour une centilisation ‘AUTRE’, le couple « volume
+RG32 personnalisé + indicateur ‘bag-in-box » doit être unique
+dans un même compte CRD.
+
+025
+
+La centilisation personnalisée
+<volume> pour la catégorie
+<catégorie> (<type de
+capsule>) est reprise deux fois
+avec le même indicateur bag-inbox.
+
+IIP1- Pour une centilisation ‘AUTRE’, le volume personnalisé
+RG32 et l’indicateur bag-in-box ne doivent pas être déjà
+prévus dans la liste définie des centilisations.
+
+033
+
+La centilisation personnalisée
+<volume> pour la catégorie
+<catégorie> (<type de
+capsule>) existe déjà dans la
+liste de définition prévue.
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Page 40/52
+
+Contrat de service
+CIEL- Contrat de service avec les interprofessions v_2_24(1).odt
+
+IIP1- Avec la déclaration précédente, CIEL effectue un
+RG39 contrôle de correspondance des comptes CRD.
+Pour chaque centilisation de CRD retrouvée, la valeur
+de « stock-début-période » doit être égale au stock de
+fin de période de la déclaration précédente.
+Si le mois de taxation de la déclaration est le premier
+mois de l’exercice, cette règle ne doit pas être
+appliquée.
+
+035
+
+La centilisation <volume> pour
+la catégorie <catégorie> (<type
+de capsule>) doit avoir un stock
+de début de période égal au
+stock de fin de période de la
+déclaration précédente.
+
+IIP1- Si, pour une centilisation, le champ « autres-entrees »
+RG66 contient une valeur positive dans un mouvement, alors
+la zone observations du mouvement en question ne doit
+pas être vide.
+
+055
+
+La case 'observations' doit être
+renseignée pour la centilisation
+<centilisation> de la catégorie
+<categorie> (<type de
+capsule>) car des autres
+entrées ont été saisies.
+
+IIP1- Si, pour une centilisation, le champ « autres-sorties »
+RG67 contient une valeur positive dans un mouvement, alors
+la zone observations du mouvement en question ne doit
+pas être vide.
+
+056
+
+La case 'observations' doit être
+renseignée pour la centilisation
+<centilisation> de la catégorie
+<categorie> (<type de
+capsule>) car des autres sorties
+ont été saisies.
+
+Autres données de la déclaration
+Code
+RG
+
+Tests et conditions
+
+Code
+erreur
+
+Message si erreur
+
+IIP1RG34
+
+Si le numéro d’agrément contient la lettre « A », alors le
+type de document ne peut être que « DSA/DSAC ».
+Dans le cas contraire, il ne peut s’agir que du type de
+document « DAA/DAC » ou « DSA/DSAC ».
+
+026
+
+L'agrément n'autorise pas les
+types de documents
+d'accompagnement saisis.
+
+IIP1RG42
+
+Le champ « numero-accise-destinataire » accepte :
+• soit un numéro d’accises alphanumérique de 13
+caractères
+• soit un code bureau alphanumérique de 8
+caractères maximum
+Si le numéro d’accise commence par « FR » et contient
+13 caractères, alors une vérification de l’existence de
+l’opérateur destinataire dans ROSA (référentiel edes
+opérateurs) est effectuée.
+
+034
+
+Le numéro d’accise destinataire
+saisi dans le relevé de non
+apurement n’est pas correct ou
+n’existe pas dans le référentiel
+des opérateurs de la DGDDI.
+
+IIP1RG43
+
+Pour les documents d’accompagnement, les champs
+« debut-periode » (Première référence de la période )
+et « fin-periode » (Dernière référence de la période)
+acceptent :
+
+036
+
+Les références des documents
+d'accompagnement ne peuvent
+pas être des nombres négatifs,
+nuls ou décimaux.
+
+037
+
+Le nombre de référence dans la
+période doit être un entier
+strictement positif.
+
+• soit une chaîne de caractères
+• soit un numérique strictement positif
+Dans le cas de la chaîne de caractères, toute valeur est
+acceptée.
+IIP1RG44
+
+Pour les documents d’accompagnement, le champ
+« nombre-document-empreinte » (nombre de
+référence(s) dans la période ) accepte uniquement un
+entier strictement positif.
+
+Stocks dormants
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Page 41/52
+
+Contrat de service
+CIEL- Contrat de service avec les interprofessions v_2_24(1).odt
+
+Code
+RG
+
+Tests et conditions
+
+Code
+erreur
+
+Message si erreur
+
+IIP1RG53
+
+Le dépôt d’une DRM « Stocks Dormants » n’est pas
+obligatoirement mensuel
+
+IIP1RG54
+
+Une DRM "Stocks dormants" ne peut pas être déposée
+pour une période de taxation située dans le futur (Voir
+IIP1-RG7)
+
+005
+
+La déclaration ne peut pas être
+déposée pour la période
+indiquée.
+
+IIP1RG55
+
+Il ne peut pas y avoir deux DRM "Stocks dormants" pour
+une même période de taxation (voir IIP1-RG9)
+
+007
+
+Les données économiques ont
+déjà été reçues pour la période.
+
+IIP1RG56
+
+a) : les produits d'une première DRM "stocks dormants"
+sont repris de la dernière DRM internet « classique »
+validée par l'opérateur (s'il y en a une)
+b) : si l'opérateur dépose une première DRM "stocks
+dormants" et n'a jamais déposé dans CIEL auparavant,
+ou bien si cette DRM succède une DRM Intranet, il peut
+ajouter des nouveaux produits à sa première DRM.
+c) : excepté dans le cas de la b), l’ajout de nouveaux
+produits n’est pas possible dans une DRM « stocks
+dormants », sauf pour les comptes CRD où l’ajout de
+nouveaux comptes reste possible dans tous les cas.
+
+050
+
+L’ajout de nouveaux produits
+n’est pas possible dans une
+DRM de type « Stocks
+Dormants »
+
+IIP1RG57
+
+L’information « stock de début de période » est
+modifiable si :
+1- l’opérateur saisit sa toute première DRM « stocks
+dormants »
+2- lors d’un changement de campagne
+(Voir IIP1-RG14)
+
+011
+
+Le stock de début de période
+du produit <libellé
+personnalisé> de la balance
+des stocks en droits suspendus
+ne correspond pas au stock de
+fin de période du même produit
+de la déclaration précédente.
+
+IIP1RG58
+
+Les stocks doivent être cohérents d’une DRM à l’autre,
+sauf si changement de campagne (Voir IIP1-RG15).
+
+012
+
+Le stock de début de période
+du produit <libellé
+personnalisé> de la balance
+des stocks en droits acquittés
+ne correspond pas au stock de
+fin de période du même produit
+de la déclaration précédente.
+
+IIP1RG59
+
+Les informations non modifiables sont les mêmes que
+celles de la DRM viti classique
+
+IIP1RG60
+
+La saisie d’informations d’entrées produit est interdite
+dans le cadre d’une déclaration de type « Stocks
+Dormants », sauf pour les comptes CRD. Tout fichier
+contenant des informations d’entrées produit dans les
+balances des stocks sera rejeté.
+
+051
+
+La saisie d’informations
+d’entrées dans une déclaration
+de type « Stocks Dormants »
+n’est pas autorisée.
+
+IIP1RG61
+
+Le stock négatif en fin de période n’est pas permis (Voir
+IIP1-RG18).
+
+048
+
+Le stock théorique de fin de
+période pour le produit « <libellé
+personnalisé> » ne peut pas
+être négatif.
+
+IIP1RG62
+
+La période de taxation doit être postérieure à la dernière
+DRM connue de CIEL (Voir IIP1-RG46).
+
+042
+
+Une autre déclaration a déjà été
+déposée pour une période
+postérieure à la période
+indiquée.
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Page 42/52
+
+Contrat de service
+CIEL- Contrat de service avec les interprofessions v_2_24(1).odt
+
+3.3.5
+
+FICHIER XSD
+
+Le fichier XSD d’IIP1-entrée est présenté dans un fichier joint à ce contrat de service.
+3.3.6
+
+EXEMPLE DE PARAMÈTRES D'ENTRÉE
+
+Un exemple de fichier XML en entrée d’IIP1 est présenté dans un fichier joint à ce contrat
+de service.
+
+3.4
+
+PARAMÈTRES DE SORTIE
+
+3.4.1
+
+DESCRIPTION
+
+Les paramètres de sortie de ce service sont décrits dans un document XSD encodé en
+UTF-8.
+Suite à l'envoi des données économiques par l'interprofession, CIEL retourne un flux
+indiquant à l'interprofession la bonne prise en compte des données économiques ou le
+rejet (message d'erreur).
+Si les données économiques envoyées par l'interprofession à CIEL ne respectent pas une
+ou plusieurs des règles de gestion définies dans le flux d'entrée de l'IIP1, alors CIEL
+rejette en totalité le flux. De plus, si pour l'agrément concerné, les informations
+nécessaires ne sont pas trouvées par CIEL dans le référentiel des opérateurs de la
+DGDDI (ROSA), alors CIEL rejette en totalité le flux. CIEL retourne le message d'erreur
+correspondant à la règle de gestion non respectée.
+Si les données économiques envoyées par l'interprofession respectent l'ensemble des
+règles de gestion définies dans le flux d'entrée de l'IIP1, alors CIEL confirme la bonne
+prise en compte des données.
+3.4.2
+
+ELÉMENT REPONSE-CIEL
+
+Élément reponse-ciel
+Type
+
+Complexe non ordonné
+
+Référence
+
+Élément
+
+Type
+
+Cardinalit
+é
+
+Description
+
+IIP1-S-1
+
+identificati int
+ondeclaration
+
+0..1
+
+Identifiant de la déclaration dans
+CIEL
+
+F
+
+IIP1-S-2
+
+horodatag dateTime
+e-depot
+
+0..1
+
+Date et heure de l’enregistrement
+du flux transmis
+
+F
+
+IIP1-S-3
+
+erreurscomplexe
+fonctionnel
+les
+
+0..n
+
+Contient une liste de type « erreurfonctionnelle », chacune contenant
+un code erreur défini et un message
+(max 500 caractères)
+
+F
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Obligatoi Règle
+re /
+s
+Facultatif
+
+Page 43/52
+
+Contrat de service
+CIEL- Contrat de service avec les interprofessions v_2_24(1).odt
+
+Référence
+
+Élément
+
+Type
+
+IIP1-S-4
+
+erreurtechnique
+
+complexe
+
+Cardinalit
+é
+
+Description
+
+0..1
+
+Contient la référence technique de
+l’erreur (UUID) avec le message
+afférent.
+
+Obligatoi Règle
+re /
+s
+Facultatif
+
+Nota : si la liste des erreurs est vide (non valorisée) ou qu’il n’y a pas d’erreurs techniques,
+le flux est considéré comme accepté et les deux premiers éléments sont valorisés. Dans le
+cas contraire, l’identifiant de la déclaration dans CIEL de même que l’horodatage de dépôt
+sont laissés vide et la liste des erreurs contient au moins un élément (raisons du rejet).
+
+3.4.3
+
+RÈGLES DE GESTION
+
+cf. Règles de gestion des paramètres d'entrée de l'IIP1 : Règles de gestion.
+3.4.4
+
+FICHIER XSD
+
+Le fichier XSD d’IIP1-sortie est présenté dans un fichier joint à ce contrat de service.
+3.4.5
+
+EXEMPLE DE FICHIER ÉCHANGÉ
+
+Exemples de flux XML de réponse :
+Sans erreur :
+<reponse-ciel
+xmlns="http://douane.finances.gouv.fr/app/ciel/interprofession/echanges/1.0"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://douane.finances.gouv.fr/app/ciel/interprofession/
+echanges/1.0 echanges-interprofession-1.0.xsd">
+<identifiant-declaration>1</identifiant-declaration>
+<horodatage-depot>2001-12-17T09:30:47Z</horodatage-depot>
+</reponse-ciel>
+
+Erreurs fonctionnelles :
+<reponse-ciel
+xmlns="http://douane.finances.gouv.fr/app/ciel/interprofession/echanges/1.0"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://douane.finances.gouv.fr/app/ciel/interprofession/
+echanges/1.0 echanges-interprofession-1.0.xsd">
+<erreurs-fonctionnelles>
+<erreur-fonctionnelle code-erreur="010">
+<message-erreur>Des éléments de la balance des stocks en
+droits suspendus ont été saisis alors que l'opérateur a
+déclaré que son stock était épuisé sur la précédente
+déclaration.</message-erreur>
+</erreur-fonctionnelle>
+<erreur-fonctionnelle code-erreur="015">
+<message-erreur>Le code INAO "123456" n’existe pas ou n’est
+pas valide.</message-erreur>
+</erreur-fonctionnelle>
+</erreurs-fonctionnelles>
+</reponse-ciel>
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Page 44/52
+
+Contrat de service
+CIEL- Contrat de service avec les interprofessions v_2_24(1).odt
+
+Erreur technique :
+<reponse-ciel
+xmlns="http://douane.finances.gouv.fr/app/ciel/interprofession/echanges/1.0"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://douane.finances.gouv.fr/app/ciel/interprofession/
+echanges/1.0 echanges-interprofession-1.0.xsd">
+<erreur-technique reference-erreur="^000000000-0000-0000-00000000000000000">
+<message-erreur>>Le flux ne répond pas au schéma de transmission
+défini. Message technique: cvc-pattern-valid : La valeur
+'0000000000' n'est pas un facet valide par rapport au modèle '[0-9]
+{9}' pour le type '#AnonType_siren-interprofessionmessageinterprofession'..</message-erreur>
+</erreur-technique>
+</reponse-ciel>
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Page 45/52
+
+Contrat de service
+CIEL- Contrat de service avec les interprofessions v_2_24(1).odt
+
+4
+
+INTERFACE IIP2 : ENVOI PAR CIEL DES DONNÉES ÉCONOMIQUES DE LA DÉCLARATION RÉCAPITULATIVE
+VALIDÉE À L'INTERPROFESSION
+4.1
+
+DESCRIPTION GÉNÉRALE
+
+IIP2. Mise à disposition des données économiques de la déclaration récapitulative
+validée pour l'interprofession
+Type
+
+Traitement asynchrone
+
+Objectif
+
+Cette interface permet aux SI des interprofessions vitivinicoles d’obtenir les
+données des DRM qui ont été créées ou modifiées dans CIEL.
+
+Acteurs
+
+Serveur CIEL pour l'envoie
+SI des interprofessions vitivinicoles pour la récupération des données
+
+Fréquence
+
+4.2
+
+Quotidienne
+
+FONCTIONNEMENT GÉNÉRAL
+
+Tous les soirs, l'application CIEL constituera par interprofession, par période et par
+déclarant, un fichier (archive zip) qui contiendra un lot de déclarations.
+Une fois constitués, les fichiers sont envoyés par l'application CIEL aux interprofessions
+correspondantes.
+CIEL enverra un seul zip contenant toutes les déclarations à destination du portail X
+(même si ce portail est utilisé par les interpros X et Y). La distinction sera possible en se
+basant sur le numéro d'agrément indiqué dans le nom du fichier de déclaration
+Chaque interprofession recevra uniquement les données économiques des DRM validées
+par l'un de ses ressortissants. Dans le cas où le ressortissant utilise le portail d'une
+interprofession B (prêt de portail), CIEL envoie les données économiques suite à la
+validation de la DRM à l'interprofession B uniquement. Charge aux interprofessions de
+définir les modalités de mutualisation des données entre interprofessions.
+Une sauvegarde est effectuée sur serveur chaque jour, puis versée sur des cassettes
+spécifiques à disposition une semaine en cas de besoin de restaurer les données au-delà
+de J+1 (à J+1, on peut utiliser encore la sauvegarde sur serveur qui est effacée une fois
+les données versées sur cassettes).
+Le schéma suivant représente cet échange :
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Page 46/52
+
+Contrat de service
+CIEL- Contrat de service avec les interprofessions v_2_24(1).odt
+
+Attention : CIEL renvoie toujours tous les produits afin que l'interprofession puisse se
+mettre à jour avec les stocks complets. Même si elle a envoyé "déclration-néant" en
+première intention, CIEL répond toujours avec le détail complet des produits pour
+s'assurer que les deux systèmes ont le même niveau d'information sur l'état des produits,
+et donc se prémunir d'éventuelles erreurs sur le mois suivant. Cet indicateur peut donc
+être ignoré dans le flux IIP2.
+4.3
+
+EXPORT IIP2-E
+
+Tous les soirs, l'application CIEL constitue autant de fichiers que de déclarations. CIEL
+sélectionne regroupe les données des déclarations récapitulatives par interprofession,
+période et déclarant sur chaque répertoire. CIEL sélectionne les déclarations
+récapitulatives qui ont été validées (créées ou modifiées) la veille et les regroupe dans un
+dossier spécifique selon les interprofessions auxquelles adhèrent les bénéficiaires de ces
+DRM.
+Une fois constitués, les fichiers sont envoyés par l'application CIEL par protocole SFTP
+vers la plate-forme d'échange de la DNSCE. L'envoi vers les interprofessions se fera par
+protocole CFT.
+Les accusés de réception et mécanismes de reprise sont gérés au niveau de CFT.
+Chaque fichier est nommé de la manière suivante :
+canalCFT_SIREN_iddeclaration_numaccise_periodetaxation_AAAAMMJJ.xml
+declarations_vitivinicoles_interprofession_SIREN_AAAAMMJJ.xml, où :
+• canalCFT est le nom du canal à utiliser pour l’envoi des fichiers
+(auto-aiguillage du destinataire)
+
+•
+•
+•
+•
+
+SIREN est remplacé par le numéro SIREN de l’interprofession destinataire du
+
+fichier ;
+iddeclaration est l’identifiant technique de la déclaration dans CIEL (entier de
+longueur maximale 7) ;
+numaccise est le numéro d’accise du déclarant.periodetaxation est la période
+de taxation relative à la déclaration
+AAAAMMJJ est remplacé par la date de l’export, au format AAAAMMJJ.
+
+Cet export doit être exécuté en début de journée, idéalement à minuit, pour exporter les
+données de la veille dès que la nouvelle journée commence.
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Page 47/52
+
+Contrat de service
+CIEL- Contrat de service avec les interprofessions v_2_24(1).odt
+
+4.4
+
+IMPORT IIP2-I
+
+Chaque SI d’interprofession vitivinicole récupère le fichier qui lui est destiné et qui a été
+envoyé par CIEL afin d’intégrer les données des déclarations récapitulatives qui s’y
+trouvent.
+NB : Les fichiers sont supprimés au bout de 14 mois.
+4.5
+
+FICHIER ÉCHANGÉ IIP2-FI
+
+Les fichiers échangés via cette interface sont des documents XML encodés en UTF-8.
+4.5.1
+
+ÉLÉMENTS
+
+Le formalisme (schéma XSD) est exactement le même que celui utilisé en entrée, dans le
+service IIP1.
+Lors de l’export IIP2-E constitué par CIEL, pour chaque déclaration, l’identification du
+déclarant contient, en plus du numéro d’agrément, la raison sociale du déclarant.
+La mention de la raison sociale n’est pas nécessaire dans le cadre de l’envoi IIP1.
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Page 48/52
+
+Contrat de service
+CIEL- Contrat de service avec les interprofessions v_2_24(1).odt
+
+5 INTERFACE IIP3 : TRANSMISSION DES DONNÉES LIÉES À UN NUMÉRO D'AGRÉMENT
+L'interface IIP3 utilisera le service SEED. La description de ce flux se trouve dans la
+documentation relative au service SEED. Procédure de secours en cas d’indidisponiblité
+des services
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Page 49/52
+
+Contrat de service
+CIEL- Contrat de service avec les interprofessions v_2_24(1).odt
+
+6
+
+PROCÉDURE DE SECOURS EN CAS D’INDIDISPONIBLITÉ DES SERVICES
+6.1
+
+INDISPONIBILITÉ DU PORTAIL INTERPROFESSIONNEL
+
+Il n'y aura pas, dans ce cas, de délai supplémentaire accordé aux redevables. Lorsque un
+portail interprofessionnel est indisponible, l'interprofession devra orienter ses opérateurs
+vers CIEL afin d'y saisir directement leurs déclarations en passant par Prodouane. Les
+déclarations validées dans CIEL seront mises à disposition des inter-professions.
+
+6.2
+
+INDISPONIBILITÉ DE L'APPLICATION CIEL
+
+N jours de délai de déclaration seront donnés aux redevables sur l’ensemble des portails
+interprofessionnels si CIEL est indisponible.
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Page 50/52
+
+Contrat de service
+CIEL- Contrat de service avec les interprofessions v_2_24(1).odt
+
+7
+
+ANNEXES
+7.1
+
+CARDINALITÉS D’ÉLÉMENT XML
+
+Ce document utilise des cardinalités pour les éléments XML. Il s’agit du nombre
+d’occurrences d’un élémet pouvant apparaître dans son élément parent. Ces cardinalités
+sont définies dans le tableau suivant :
+Cardinalité
+
+Description
+
+0..1
+
+L’élément peut ne pas apparaître, ou apparaître une fois seulement.
+
+1
+
+L’élément doit apparaître une fois, et une fois seulement.
+
+0..*
+
+L’élément peut ne pas apparaître, apparaître une fois ou apparaître plusieurs fois.
+
+7.2
+
+TYPES PRIMITIFS DE XSD
+
+Ce document utilise plusieurs types primitifs fournis par XSD. Ces types sont définis dans
+le tableau suivant :
+Type
+
+Description
+
+Exemple
+
+boolean
+
+Booléen
+
+true
+
+date
+
+Date
+
+2014-07-21
+
+dateTime
+
+Date et heure
+
+2014-07-21T14:54:26
+
+decimal
+
+Nombre décimal
+
+1234.56789
+
+gMonth
+
+Mois
+
+--07
+
+gYear
+
+Année
+
+2014
+
+gYearMonth
+
+Mois et année
+
+2014-07
+
+int
+
+Nombre entier
+
+12
+
+nonNegativeInteger
+
+Nombre entier positif ou nul
+
+4
+
+string
+
+Chaîne de caractères
+
+Ceci est un exemple.
+
+7.3
+
+LISTE DES LIBELLÉS FISCAUX
+
+BOISSONS_FERMENTEES_AUTRES
+BOISSONS_FERMENTEES_AUTRES_PREMIX
+CIDRES
+CIDRES_INF_8_5
+POIRES
+POIRES_8_5
+HYDROMELS
+HYDROMELS_INF_8_5
+HYDROMELS_PREMIX
+HYDROMELS_INF_8_5_PREMIX
+PETILLANTS
+PETILLANTS_INF_8_5
+PETILLANTS_PREMIX
+PETILLANTS_INF_8_5_PREMIX
+VDN_VDL_AOP_SUP_18
+VDN_VDL_AOP_INF_18
+AUTRES_PI_SUP_18
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Page 51/52
+
+Contrat de service
+CIEL- Contrat de service avec les interprofessions v_2_24(1).odt
+
+AUTRES_PI_SUP_18_HORS_CSS
+AUTRES_PI_INF_18
+AUTRES_PI_INF_18_PREMIX
+BIERE_INF_2_8
+BIERE_INF_2_8_PREMIX
+BIERE_SUP_18_BRASSERIE_TAUX_NORMAL
+BIERE_SUP_2_8_BRASSERIE_TAUX_NORMAL
+BIERE_SUP_2_8_BRASSERIE_TAUX_NORMAL_PREMIX
+BIERE_PETITE_BRASSERIE_SUP_18
+BIERE_PETITE_BRASSERIE_SUP_2_8
+BIERE_PETITE_BRASSERIE_SUP_2_8_PREMIX
+BIERE_SUP_18_PETITE_BRASSERIE_10000
+BIERE_SUP_2_8_PETITE_BRASSERIE_10000
+BIERE_SUP_2_8_PETITE_BRASSERIE_10000_PREMIX
+BIERE_SUP_18_PETITE_BRASSERIE_50000
+BIERE_SUP_2_8_PETITE_BRASSERIE_50000
+BIERE_SUP_2_8_PETITE_BRASSERIE_50000_PREMIX
+BIERE_SUP_18_PETITE_BRASSERIE_200000
+BIERE_SUP_2_8_PETITE_BRASSERIE_200000
+BIERE_SUP_2_8_PETITE_BRASSERIE_200000_PREMIX
+RHUM_TRADITIONNEL_DOM_ART_1
+RHUM_TRADITIONNEL_DOM_ART_2
+RHUM_TRADITIONNEL_DOM_CONTINGENT_FISCAL
+RHUM_TRADITIONNEL_DOM_HORS_CONTINGENT_FISCAL
+RHUM_TIERS_ET_AUTRES
+ALCOOL_AUTRE_SUP_18
+ALCOOL_AUTRE_SUP_18_HORS_CSS
+ALCOOL_AUTRE_INF_18
+ALCOOL_AUTRE_INF_18_PREMIX
+COMPLEMENTS_ALIMENTAIRES
+COMPLEMENTS_ALIMENTAIRES_PREMIX
+COMPLEMENTS_ALIMENTAIRES_CSS
+MATIERES_PREMIERES_SPIRITUEUX
+MATIERES_PREMIERES_ALCOOLS
+VT_ETRANGERS
+VT_ETRANGERS_PREMIX
+VM_ETRANGERS
+VM_ETRANGERS_PREMIX
+VT_IG_AOP
+VT_IG_IGP
+VT_SANS_IG_CEPAGE
+VT_SANS_IG_CEPAGE_PREMIX
+VT_SANS_IG_AUTRES
+VT_SANS_IG_AUTRES_PREMIX
+VM_IG_AOP
+VM_IG_IGP
+VM_SANS_IG_CEPAGE
+VM_SANS_IG_CEPAGE_PREMIX
+VM_SANS_IG_AUTRES
+VM_SANS_IG_AUTRES_PREMIX
+
+Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
+Page 52/52
+
+
