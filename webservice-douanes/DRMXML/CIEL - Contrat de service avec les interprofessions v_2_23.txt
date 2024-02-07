@@ -3,8 +3,8 @@ Projet CIEL
  avec les interprofessions
 vitivinicoles
 
-Version 2.9 du 24/08/2018
-[Valable pour la version 1.12 du schéma XSD]
+Version 2.23 du 27/10/2022
+[Valable pour la version 1.21 du schéma XSD]
 
 
 
@@ -59,8 +59,7 @@ DNSCE
 Revue technique et fonctionnelle
 V 1.0.1
 DNSCE
-Mise à jour de la réponse et précision sur le flux
-IIP1
+Mise à jour de la réponse et précision sur le flux IIP1
 V 1.0.2
 DNSCE
 Ajout du TAV et de l’indicateur premix pour les
@@ -91,7 +90,7 @@ F3
 combinaisons possibles du compte CRD.
 • Mise à jour de la RG IIP1-RG CIEL1 pour la
 cohérence entre le code INAO et la saisie
-du du prémix et du TAV.
+du prémix et du TAV.
 V 1.4
 DNSCE
 Déplacement de la balise « observations » dans les
@@ -164,6 +163,30 @@ sorties, des annexes
 V 2.2
 DNSCE
 Mise à jour avec le schéma 1.8
+V 2.3
+
+F3
+
+Mise à jour des RG IIP1-RG23 et IIP1-RG42
+
+V 2.4
+
+DNSCE
+
+•
+•
+
+V 2.5
+
+DNSCE
+
+•
+
+V 2.6
+
+DNSCE
+
+V 2.7
 
 Vérification
 
@@ -181,57 +204,28 @@ Date
 13/04/16
 
 30/06/16
+25/07/206
 
-V 2.3
+Gestion de centilisation personnalisée
+Ajout du code 5X999V aux produits non
+fiscalisés (4R988Y, 4B988Y et 4X999V )
+Précision sur la notion de stock épuisé et la
+DRM néant
 
-F3
-
-V 2.4
-
-DNSCE
-
-V 2.5
-
-DNSCE
-
-•
-
-Précision sur la notion de stock épuisé
-et la DRM néant
-
-31/01/2017
-
-V 2.6
-
-DNSCE
+19/12/2016
 
 •
 
 RG IIP1-RG42 ; le format de la référence à
+saisir est élargi
 
 24/05/17
-
-Mise à jour des RG IIP1-RG23
-
-•
-•
-
-et IIP1-RG42
-
-Gestion de centilisation personnalisée
-Ajout du code 5X999V aux produits non
-
-25/07/206
-19/12/2016
-
-fiscalisés (4R988Y, 4B988Y et 4X999V )
-
-saisir est élargi
-V 2.7
 
 F3
 
 •
+
+07/11/17
 
 V2.8
 
@@ -241,12 +235,9 @@ F3
 •
 •
 
-V2,9
+V2.9
 
 DNSCE/F3
-
-•
-•
 
 •
 
@@ -254,8 +245,8 @@ Saisie des volumes jusqu’à 5 décimales
 (3.3.3)
 Nouveaux libellés fiscaux pour les vins
 Mise à jour du XSD de référence
-Précision du nombre de caractère
-maximum pour le champ « observations »
+Précision du nombre de caractère maximum
+pour le champ « observations »
 Ajout d’une règle de gestion (IIP1-RG45)
 pour interdire les sorties avec paiements
 sur les produits non fiscalisés
@@ -264,9 +255,12 @@ désormais facultatif pour les produits
 intermédiaires
 Mise à jour des RG IIP1-RG23 et IIP1RG41
 
+•
+•
 
 
-07/11/17
+
+31/01/2017
 
 23/11/17
 
@@ -274,56 +268,280 @@ Mise à jour des RG IIP1-RG23 et IIP1RG41
 
 
 
-
+Version
+Rédaction
+V2.10
+DNSCE
+
+•
+•
+•
+
+V2.11
+
+DNSCE
+
+•
+•
+•
+
+V2.12
+
+DNSCE/Fid3
+
+•
+
+•
+•
+•
+•
+•
+•
+V2.13
+
+DNSCE/Fid3
+
+•
+•
+
+V2.14
+
+DNSCE
+
+•
+
+Description
+L’indicateur de stock épuisé sur la DRM
+précédente n’interdit plus le dépôt des DRM
+suivantes
+Mise à jour de la RG-24 sur le contrôle de
+présence des produits
+Ajout de la raison sociale au schéma des
+flux
+Le mois de début de campagne n’est plus
+forcément août (négociants vinificateurs) :
+impacts RG14, RG15, RG39
+Modifications de certaines règles de gestion
+(numero-accise-destinataire notamment)
+Suppression des libellés fiscaux réservés
+aux DOM, et utilisables que par les
+déclarants CIEL situés en outre-mer
+Modification des règles de gestion
+concernant les contrôles des périodes de
+dépôt : suppression IIP1-RG8, code erreur
+006, RG_DecPrécédente1, impact libellé
+code erreur 016
+Ajout de la règle de gestion IIP1-RG46
+(code erreur 042)
+Ajout de la règle de gestion IIP1-RG48
+(code erreur 044) : mise sur le marché en
+Corse
+Ajout des règles de gestion IIP1-RG49
+(code erreur 045) et IIP1-RG50 (code erreur
+046) : gestion des stocks épuisés
+Suppression des règles de gestion IIP1RG10, IIP1-RG20, IIP1-RG42 (balance des
+stocks)
+Modification de la règle de gestion IIP1RG19
+Modification des règles de gestion IIP1RG21, IIP1-RG36
+Ajout de la règle de gestion IIP1-RG51
+(code erreur 047)
+Ajouts de six nouveaux libellés fiscaux liés
+aux vins prémix.
+
+Modification de la RG18 (les stocks de fin
+de période ne peuvent plus être négatifs).
+
+
+
+Vérification
+
+Date
+16/10/18
+
+27/11/18
+
+11/04/19
+
+17/12/19
+
+27/08/21
+
+
+
+Version
+Rédaction
+V2.15
+DNSCE
+
+•
+
+V2.16
+
+DNSCE
+
+•
+
+Ajout des libellés fiscaux pour les alcools
+sans CSS
+
+08/11/21
+
+V2.17
+
+DNSCE
+
+•
+
+Ajout des règles de gestion concernant les
+Stocks Dormants
+
+19/11/21
+
+V2.18
+
+DNSCE
+
+•
+
+Ajout des nouveaux libellés fiscaux valables
+à partir de 2022
+
+15/12/21
+
+V2.19
+
+DNSCE
+
+•
+
+Ajout de nouveaux libellés fiscaux pour les
+rhums à partir de 2022
+Ajout de nouveaux libellés fiscaux pour les
+bières à partir de 2022
+
+26/01/22
+
+Les produits avec un libellé contenant
+« INF_8_5 » doivent avoir un TAV inférieur
+ou égal à 8,5
+
+03/03/22
+
+•
+
+V2.20
+
+DNSCE
+
+•
+
+Description
+Ajout de la règle de gestion IIP1-RG52
+(code erreur 049)
+
+
+
+Vérification
+
+Date
+15/10/21
+
+
+
+Version
+Rédaction
+V2.21
+DNSCE
+
+•
+
+V2.22
+
+DNSCE
+
+•
+
+Ajout du produit fiscal : Compléments
+alimentaires
+
+01/06/22
+
+V2.23
+
+DNSCE
+
+•
+
+Ajout d’une règle de gestion concernant la
+valeur minimum acceptée du TAV pour les
+produits de la catégorie alcools (1,2 % vol.)
+Ajout des champs « Autres entrées » et
+« Autres sorties » pour les CRD
+
+27/10/22
+
+•
+
+Description
+Suppression des règles IIP1-RG63 et IIP1RG64 concernant l’interdiction d’ajouter un
+compte CRD ou des entrées CRD pour les
+opérateurs Stocks Dormants
+
+
+
+Vérification
+
+Date
+10/05/22
 
 
 
 SOMMAIRE
-1. INTRODUCTION................................................................................................................7
-1.1. OBJET DU DOCUMENT...................................................................................................... 7
-1.2. DOCUMENTS APPLICABLES ET DOCUMENTS DE SECOURS........................................ 7
-1.3. GLOSSAIRE......................................................................................................................... 7
-1.4. DÉFINITION......................................................................................................................... 8
+1 . INTRODUCTION...............................................................................................................8
+1.1 . OBJET DU DOCUMENT..................................................................................................... 8
+1.2 . DOCUMENTS APPLICABLES ET DOCUMENTS DE SECOURS....................................... 8
+1.3 . GLOSSAIRE........................................................................................................................ 8
+1.4 . DÉFINITION........................................................................................................................ 9
 
-2. CIEL ET LES INTERPROFESSIONS VITIVINICOLES .................................................... 9
-3. INTERFACE IIP1 : ENVOI DES DONNÉES ECONOMIQUES POUR PRÉREMPLISSAGE DE LA DÉCLARATION DU PORTAIL DE L'INTERPROFESSION VERS
-CIEL..................................................................................................................................... 13
-3.1. DESCRIPTION GÉNÉRALE............................................................................................... 13
-3.2. FONCTIONNEMENT GÉNÉRAL........................................................................................ 13
-3.3. PARAMÈTRES D'ENTRÉE................................................................................................. 14
-3.3.1. Description.................................................................................................................................. 14
-3.3.2. Éléments..................................................................................................................................... 15
-3.3.3. Types simples............................................................................................................................. 30
-3.3.4. Règles de gestion....................................................................................................................... 32
-3.3.5. Fichier XSD................................................................................................................................. 38
-3.3.6. Exemple de paramètres d'entrée................................................................................................ 38
+2 . CIEL ET LES INTERPROFESSIONS VITIVINICOLES ................................................. 10
+3 . INTERFACE IIP1 : ENVOI DES DONNÉES ECONOMIQUES POUR PRÉREMPLISSAGE DE LA DÉCLARATION DU PORTAIL DE L'INTERPROFESSION VERS
+CIEL..................................................................................................................................... 14
+3.1 . DESCRIPTION GÉNÉRALE.............................................................................................. 14
+3.2 . FONCTIONNEMENT GÉNÉRAL....................................................................................... 14
+3.3 . PARAMÈTRES D'ENTRÉE................................................................................................ 15
+3.3.1 . Description................................................................................................................................. 15
+3.3.2 . Éléments.................................................................................................................................... 16
+3.3.3 . Types simples............................................................................................................................ 31
+3.3.4 . Règles de gestion...................................................................................................................... 33
+3.3.5 . Fichier XSD................................................................................................................................ 42
+3.3.6 . Exemple de paramètres d'entrée............................................................................................... 42
 
-3.4. PARAMÈTRES DE SORTIE............................................................................................... 39
-3.4.1. Description.................................................................................................................................. 39
-3.4.2. Elément reponse-ciel.................................................................................................................. 39
-3.4.3. Règles de gestion....................................................................................................................... 40
-3.4.4. Fichier XSD................................................................................................................................. 40
-3.4.5. Exemple de fichier échangé........................................................................................................ 40
+3.4 . PARAMÈTRES DE SORTIE.............................................................................................. 43
+3.4.1 . Description................................................................................................................................. 43
+3.4.2 . Elément reponse-ciel................................................................................................................. 43
+3.4.3 . Règles de gestion...................................................................................................................... 44
+3.4.4 . Fichier XSD................................................................................................................................ 44
+3.4.5 . Exemple de fichier échangé....................................................................................................... 44
 
-4. INTERFACE IIP2 : ENVOI PAR CIEL DES DONNÉES ÉCONOMIQUES DE LA
-DÉCLARATION RÉCAPITULATIVE VALIDÉE À L'INTERPROFESSION ..........................41
-4.1. DESCRIPTION GÉNÉRALE............................................................................................... 41
-4.2. FONCTIONNEMENT GÉNÉRAL........................................................................................ 41
-4.3. EXPORT IIP2-E.................................................................................................................. 42
-4.4. IMPORT IIP2-I.................................................................................................................... 42
-4.5. FICHIER ÉCHANGÉ IIP2-FI............................................................................................... 43
-4.5.1. Éléments..................................................................................................................................... 43
+4 . INTERFACE IIP2 : ENVOI PAR CIEL DES DONNÉES ÉCONOMIQUES DE LA
+DÉCLARATION RÉCAPITULATIVE VALIDÉE À L'INTERPROFESSION..........................45
+4.1 . DESCRIPTION GÉNÉRALE.............................................................................................. 45
+4.2 . FONCTIONNEMENT GÉNÉRAL....................................................................................... 45
+4.3 . EXPORT IIP2-E................................................................................................................. 46
+4.4 . IMPORT IIP2-I................................................................................................................... 47
+4.5 . FICHIER ÉCHANGÉ IIP2-FI.............................................................................................. 47
+4.5.1 . Éléments.................................................................................................................................... 47
 
-5. INTERFACE IIP3 : TRANSMISSION DES DONNÉES LIÉES À UN NUMÉRO
-D'AGRÉMENT..................................................................................................................... 44
-6. PROCÉDURE DE SECOURS EN CAS D’INDIDISPONIBLITÉ DES SERVICES ..........45
-6.1. INDISPONIBILITÉ DU PORTAIL INTERPROFESSIONNEL............................................... 45
-6.2. INDISPONIBILITÉ DE L'APPLICATION CIEL..................................................................... 45
+5 . INTERFACE IIP3 : TRANSMISSION DES DONNÉES LIÉES À UN NUMÉRO
+D'AGRÉMENT......................................................................................................................48
+6 . PROCÉDURE DE SECOURS EN CAS D’INDIDISPONIBLITÉ DES SERVICES .........49
+6.1 . INDISPONIBILITÉ DU PORTAIL INTERPROFESSIONNEL.............................................. 49
+6.2 . INDISPONIBILITÉ DE L'APPLICATION CIEL.................................................................... 49
 
-7. ANNEXES........................................................................................................................ 46
-7.1. CARDINALITÉS D’ÉLÉMENT XML.................................................................................... 46
-7.2. TYPES PRIMITIFS DE XSD............................................................................................... 46
-7.3. LISTE DES LIBELLÉS FISCAUX....................................................................................... 46
+7 . ANNEXES....................................................................................................................... 50
+7.1 . CARDINALITÉS D’ÉLÉMENT XML................................................................................... 50
+7.2 . TYPES PRIMITIFS DE XSD.............................................................................................. 50
+7.3 . LISTE DES LIBELLÉS FISCAUX....................................................................................... 50
 
 
 
@@ -540,11 +758,9 @@ Web services description language
 
 1.4
 
-•
-
-•
-
 DÉFINITION
+
+•
 
 « Numéro d'agrément » : dans le présent document, on entend par « numéro
 d'agrément » le « numéro d'agrément d'entrepositaire agréé » ou « numéro
@@ -557,6 +773,8 @@ interprofessions.
 générique de « déclaration récapitulative » est utilisé, il fait référence aux
 déclarations récapitulatives mensuelles (DRM) et aux déclarations récapitulatives
 annuelles (DRA).
+
+•
 
 
 
@@ -651,15 +869,11 @@ IIP2
 IIP3
 
 Ces trois interfaces sont détaillées dans les chapitres suivants :
-•
-•
-•
-
-3. Interface IIP1 : Envoi des données economiques pour pré-remplissage de la
+• 3. Interface IIP1 : Envoi des données economiques pour pré-remplissage de la
 déclaration du portail de l'interprofession vers CIEL
-4. Interface IIP2 : Envoi par CIEL des données économiques de la déclaration
+• 4. Interface IIP2 : Envoi par CIEL des données économiques de la déclaration
 récapitulative validée à l'interprofession
-5.Interface IIP3 : Transmission des données liées à un numéro d'agrément
+• 5.Interface IIP3 : Transmission des données liées à un numéro d'agrément
 
 
 
@@ -836,8 +1050,8 @@ Facultatif
 
 IIP1-E-1
 
-sirensirenType
-interprofession
+sirensirenTyp
+interprofession e
 
 1
 
@@ -887,8 +1101,8 @@ identificationdeclarant
 
 1
 
-Numéro d'agrément et numéro CVI
-de l'opérateur
+Numéro d'agrément, numéro CVI et
+raison sociale de l'opérateur
 
 O
 
@@ -997,7 +1211,7 @@ IIP1RG12
 
 
 
-Attention : la notion de « déclaration néant » n’a pas la même signinfcation sdelon le sens du flux.
+Attention : la notion de « déclaration néant » n’a pas la même signification selon le sens du flux.
 • dans le sens Interprofession → CIEL : cela signifie qu'aucun mouvement n'est intervenu sur
 la période. CIEL récupère donc automatiquement les produits de le DRM précédente sans
 que l'interprofession n'ait à les renseigner.
@@ -1011,9 +1225,11 @@ IIP2
 
 Élément identification-declarant
 Type
-Référence
 
 Complexe ordonné
+
+Référence
+
 Élément
 
 Type
@@ -1023,26 +1239,25 @@ Cardinalit
 
 Description
 
-Numéro d’agrément d'entrepositaire
-agréé concerné par la DRM dont les
-données sont demandées
-
-O
-
-Numéro CVI de l'opérateur
-
-F
+Obligatoi Règle
+re /
+s
+Facultatif
 
 IIP1-E2.1.1
 
 numeroagrement
 
-Erreur :
-source de la
-référence non
-trouvée
+numeroAccis
+eType
 
 1
+
+Numéro d’agrément d'entrepositaire
+agréé concerné par la DRM dont les
+données sont demandées
+
+O
 
 IIP1-E2.1.2
 
@@ -1053,10 +1268,23 @@ pe
 
 0..1
 
-Obligatoi Règle
-re /
-s
-Facultatif
+Numéro CVI de l'opérateur
+
+F
+
+IIP1-E2.1.3
+
+raisonsociale
+
+raisonSociale
+Type
+
+0..1
+
+Raison sociale de l’opérateur
+
+F
+
 IIP1RG3
 IIP1RG4
 IIP1RG5
@@ -1065,10 +1293,20 @@ IIP1RG5
 
 Élément periode
 Type
-Référence
 
 Complexe ordonné
+
+Référence
+
 Élément
+
+IIP1-E2.3.1
+
+mois
+
+IIP1-E2.3.2
+
+annee
 
 Type
 
@@ -1076,17 +1314,6 @@ Cardinalit
 é
 
 Description
-
-Obligatoi Règle
-re /
-s
-Facultatif
-
-IIP1-E2.3.1
-
-mois
-
-int
 
 1
 
@@ -1097,18 +1324,6 @@ de la fin de la période)
 
 O
 
-IIP1RG7
-IIP1RG8
-IIP1RG9
-
-IIP1-E2.3.2
-
-annee
-
-int
-
-1
-
 Année de la déclaration dont les
 données sont envoyées (pour les
 DRA, il s'agit du mois et de l'année
@@ -1116,8 +1331,19 @@ de la fin de la période)
 
 O
 
+int
+
+int
+
+1
+
+Obligatoi Règle
+re /
+s
+Facultatif
 IIP1RG7
-IIP1RG8
+IIP1RG9
+IIP1RG7
 IIP1RG9
 
 ÉLÉMENT DROITS-SUSPENDUS
@@ -1138,24 +1364,16 @@ Référence
 
 Élément
 
-Type
-
 IIP1-E2.4.1
 
 produit
 
 IIP1-E2.4.2
 
-stockEpuis boolean
-e
+Type
 
 Cardinalit
 é
-
-produit
-
-0..*
-1
 
 Description
 
@@ -1164,12 +1382,30 @@ re /
 s
 Facultatif
 
+produit
+
+0..*
+
 Produit concerné par la déclaration
 en droits suspendus
 
 F
 
-IIP1RG10
+Erreur
+:
+sourc
+e de
+la
+référe
+nce
+non
+trouvé
+e
+
+stockEpuis boolean
+e
+
+1
 
 Booléen indiquant si le stock en
 droits suspendus est épuisé
@@ -1177,14 +1413,18 @@ droits suspendus est épuisé
 O
 
 IIP1RG13
+IIP1RG49
+IIP1RG50
 
 ÉLÉMENT PRODUIT
 
 Élément produit
 Type
-Référence
 
 Complexe ordonné
+
+Référence
+
 Élément
 
 Type
@@ -1193,11 +1433,6 @@ Cardinalit
 é
 
 Description
-
-Obligatoi Règle
-re /
-s
-Facultatif
 
 IIP1-E2.4.1.2
 
@@ -1212,7 +1447,16 @@ Code INAO du produit
 F
 
 IIP1RG19
-IIP1RG20
+Erreur
+:
+sourc
+e de
+la
+référe
+nce
+non
+trouvé
+e
 IIP1RG23
 
 IIP1-E2.4.1.1
@@ -1231,7 +1475,6 @@ F
 
 IIP1RG36
 IIP1RG41
-IIP1RG42
 
 IIP1-E2.4.1.3
 
@@ -1264,10 +1507,7 @@ IIP1-E2.4.1.4
 
 tav
 
-Erreur :
-source de la
-référence non
-trouvée
+tavType
 
 0..1
 
@@ -1275,51 +1515,15 @@ TAV du produit
 
 F
 
-IIP1RG21
-IIP1RG22
 
-IIP1-E2.4.1.5
 
-premix
-
-boolean
-
-0..1
-
-Indique si le produit considéré est
-un premix ou pas
-
-F
+Obligatoi Règle
+re /
+s
+Facultatif
 
 IIP1RG21
 IIP1RG22
-
-IIP1-E2.4.1.6
-
-observatio string (250
-ns
-caractères
-maximum)
-
-0..1
-
-Observations apportées par le
-déclarant concernant la balance des
-stocks en droits suspendus
-
-F
-
-IIP1RG25
-IIP1RG26
-
-ÉLÉMENT BALANCE-STOCKS
-
-Élément balance-stocks (Droits suspendus)
-Type
-
-Complexe ordonné
-
-
 
 
 
@@ -1332,15 +1536,79 @@ Référence
 
 Type
 
+IIP1-E2.4.1.5
+
+premix
+
+IIP1-E2.4.1.6
+
+observatio string (250
+ns
+caractères
+maximum)
+
 Cardinalit
 é
 
 Description
 
+0..1
+
+Indique si le produit considéré est
+un premix ou pas
+
+F
+
+IIP1RG21
+IIP1RG22
+
+0..1
+
+Observations apportées par le
+déclarant concernant la balance des
+stocks en droits suspendus
+
+F
+
+IIP1RG25
+IIP1RG26
+
+boolean
+
 Obligatoi Règle
 re /
 s
 Facultatif
+
+ÉLÉMENT BALANCE-STOCKS
+
+Élément balance-stocks (Droits suspendus)
+Type
+
+Complexe ordonné
+
+Référence
+
+Élément
+
+Type
+
+Cardinalit
+é
+
+Description
+
+IIP1-E2.4.1.7.1
+
+Obligatoi Règle
+re /
+s
+Facultatif
+
+stockdebutperiode
+
+volumeStockT
+ype
 
 1
 
@@ -1354,15 +1622,6 @@ réel (physique) tel qu'il résulte de
 l'inventaire des stocks.
 
 O
-
-IIP1-E2.4.1.7.1
-
-stockdebutperiode
-
-Erreur :
-source de la
-référence non
-trouvée
 
 IIP1-E2.4.1.7.2
 
@@ -1396,18 +1655,16 @@ IIP1-E2.4.1.7.4
 
 stock-finperiode
 
-Erreur :
-source de la
-référence non
-trouvée
+volumeStockT
+ype
+
+1
 
 Stock de fin de période (en hL),
 correspondant à la différence entre
 les entrées et les sorties de période.
 
 O
-
-1
 
 IIP1RG14
 Si
@@ -1422,9 +1679,18 @@ IIP1RG18
 
 Élément entrees-periode
 Type
-Référence
 
 Complexe ordonné
+
+
+
+
+
+
+
+
+Référence
+
 Élément
 
 Type
@@ -1436,10 +1702,7 @@ Description
 
 IIP1-Evolume2.4.1.7.2.1 produit
 
-Erreur :
-source de la
-référence non
-trouvée
+volumeType
 
 0..1
 
@@ -1468,10 +1731,7 @@ alors
 IIP1-Eachats2.4.1.7.2.2 reintegrati
 ons
 
-Erreur :
-source de la
-référence non
-trouvée
+volumeType
 
 0..1
 
@@ -1511,36 +1771,6 @@ hL)
 
 F
 
-mouvementsinternes
-
-
-
-Obligatoi Règle
-re /
-s
-Facultatif
-
-
-
-
-
-
-Référence
-
-Élément
-
-Type
-
-Cardinalit
-é
-
-Description
-
-Obligatoi Règle
-re /
-s
-Facultatif
-
 IIP1-Ereplaceme complexe
 2.4.1.7.2.6 nts
 
@@ -1575,10 +1805,14 @@ saisi,
 alors
 >=0
 
-Erreur :
-source de la
-référence non
-trouvée
+mouvementsinternes
+
+volumeType
+
+Obligatoi Règle
+re /
+s
+Facultatif
 
 ÉLÉMENT MOUVEMENTS-TEMPORAIRES
 
@@ -1587,6 +1821,45 @@ Type
 Référence
 
 Complexe ordonné
+Élément
+
+Type
+
+IIP1-Eembouteill volumeType
+2.4.1.7.2.3 age
+.1
+
+Cardinalit
+é
+0..1
+
+Description
+
+Retour de prestation
+d'embouteillage (uniquement si
+l'embouteillage n'a pas lieu sur
+place) (en hL)
+
+
+
+Obligatoi Règle
+re /
+s
+Facultatif
+F
+
+Si
+saisi,
+alors
+>=0
+
+
+
+
+
+
+Référence
+
 Élément
 
 Type
@@ -1601,33 +1874,9 @@ re /
 s
 Facultatif
 
-IIP1-Eembouteill Erreur :
-2.4.1.7.2.3 age
-source de la
-.1
-référence non
-trouvée
-
-0..1
-
-Retour de prestation
-d'embouteillage (uniquement si
-l'embouteillage n'a pas lieu sur
-place) (en hL)
-
-F
-
-Si
-saisi,
-alors
->=0
-
-IIP1-Erelogemen Erreur :
+IIP1-Erelogemen volumeType
 2.4.1.7.2.3 t
-source de la
 .2
-référence non
-trouvée
 
 0..1
 
@@ -1643,10 +1892,7 @@ alors
 IIP1-Etravail-a2.4.1.7.2.3 facon
 .3
 
-Erreur :
-source de la
-référence non
-trouvée
+volumeType
 
 0..1
 
@@ -1659,12 +1905,10 @@ saisi,
 alors
 >=0
 
-IIP1-Edistillation- Erreur :
-2.4.1.7.2.3 asource de la
-.4
-faconEntre référence non
+IIP1-Edistillation- volumeType
+2.4.1.7.2.3 a.4
+faconEntre
 es
-trouvée
 
 0..1
 
@@ -1686,11 +1930,6 @@ Référence
 Complexe ordonné
 Élément
 
-IIP1-Ereplis2.4.1.7.2.4 declassem
-.1
-enttransfertchangeme
-ntappellation
-
 Type
 
 Cardinalit
@@ -1698,10 +1937,16 @@ Cardinalit
 
 Description
 
-Erreur :
-source de la
-référence non
-trouvée
+Obligatoi Règle
+re /
+s
+Facultatif
+
+IIP1-EreplisvolumeType
+2.4.1.7.2.4 declassem
+.1
+enttransfertchangeme
+ntappellation
 
 0..1
 
@@ -1711,12 +1956,6 @@ Toute entrée dans cette rubrique
 pour une colonne doit trouver son
 équivalent en sortie dans une autre.
 
-
-
-Obligatoi Règle
-re /
-s
-Facultatif
 F
 
 Si
@@ -1724,33 +1963,9 @@ saisi,
 alors
 >=0
 
-
-
-
-
-
-Référence
-
-Élément
-
-Type
-
-Cardinalit
-é
-
-Description
-
-Obligatoi Règle
-re /
-s
-Facultatif
-
-IIP1-Emanipulati Erreur :
+IIP1-Emanipulati volumeType
 2.4.1.7.2.4 ons
-source de la
 .2
-référence non
-trouvée
 
 0..1
 
@@ -1766,11 +1981,9 @@ saisi,
 alors
 >=0
 
-IIP1-Eintegration Erreur :
-2.4.1.7.2.4 -vci-agree source de la
+IIP1-Eintegration volumeType
+2.4.1.7.2.4 -vci-agree
 .3
-référence non
-trouvée
 
 0..1
 
@@ -1840,20 +2053,39 @@ O
 
 IIP1RG40
 
+
+
+
+
+
+
+
+Référence
+
+Élément
+
 IIP1-Evolume
 2.4.1.7.2.6
 .3
 
-Erreur :
-source de la
-référence non
-trouvée
+Type
+
+Cardinalit
+é
+
+volumeType
 
 1
+
+Description
 
 Volume du produit replacé en
 suspension
 
+Obligatoi Règle
+re /
+s
+Facultatif
 O
 
 >=0
@@ -1869,12 +2101,12 @@ Complexe ordonné
 
 Type
 
-IIP1-Eventesventes2.4.1.7.3.1 france-crd- france-crdsuspendus suspendus
-
 Cardinalit
 é
 
 Description
+
+IIP1-Eventesventes2.4.1.7.3.1 france-crd- france-crdsuspendus suspendus
 
 0..1
 
@@ -1883,41 +2115,26 @@ personnalisées ou collectives
 achetées en droits suspendus, sous
 DSA ou sous facture (en hL)
 
-
-
-Obligatoi Règle
-re /
-s
-Facultatif
 F
 
 IIP1RG35
-IIP1RG20
+Erreur
+:
+sourc
+e de
+la
+référe
+nce
+non
+trouvé
+e
 Si
 saisi,
 alors
 >=0
 
-
-
-
-
-
-Référence
-
-Élément
-
-Type
-
-Cardinalit
-é
-
-Description
-
-IIP1-EventesErreur :
-2.4.1.7.3.2 france-crd- source de la
-acquittes référence non
-trouvée
+IIP1-EventesvolumeType
+2.4.1.7.3.2 france-crdacquittes
 
 0..1
 
@@ -1934,6 +2151,21 @@ statistique
 
 F
 
+Erreur
+:
+sourc
+e de
+la
+référe
+nce
+non
+trouvé
+e
+Si
+saisi,
+alors
+>=0
+
 IIP1-Esorties2.4.1.7.3.3 sanspaiementdroits
 
 0..1
@@ -1949,19 +2181,23 @@ Obligatoi Règle
 re /
 s
 Facultatif
-IIP1RG20
-Si
-saisi,
-alors
->=0
 
 ELÉMENT VENTES-FRANCE-CRD-SUSPENDUS
 
 Élément ventes-france-crd-suspendus
 Type
-Référence
 
 Complexe ordonné
+
+
+
+
+
+
+
+
+Référence
+
 Élément
 
 Type
@@ -1980,10 +2216,7 @@ IIP1-Eannee2.4.1.7.3.1 precedent
 .1
 e
 
-Erreur :
-source de la
-référence non
-trouvée
+volumeType
 
 0..2
 
@@ -2001,10 +2234,7 @@ alors
 IIP1-Eannee2.4.1.7.3.1 courante
 .2
 
-Erreur :
-source de la
-référence non
-trouvée
+volumeType
 
 0..1
 
@@ -2029,22 +2259,16 @@ Référence
 Complexe ordonné
 Élément
 
-IIP1-Esorties2.4.1.7.3.3 definitives
-.1
-
 Type
 
 Cardinalit
 é
 
-Erreur :
-source de la
-référence non
-trouvée
+Description
+
+volumeType
 
 0..1
-
-Description
 
 Sorties définitives du produit en
 droits suspendus : ventes vrac au
@@ -2053,12 +2277,6 @@ l'export, sous DAE, DAA et DCA
 ainsi que sorties de lies et DRA (en
 hL)
 
-
-
-Obligatoi Règle
-re /
-s
-Facultatif
 F
 
 Si
@@ -2066,24 +2284,10 @@ saisi,
 alors
 >0
 
-
-
-
-
-
-Référence
-
-Élément
-
-Type
-
-Cardinalit
-é
-
-Erreur :
-source de la
-référence non
-trouvée
+IIP1-Econsomma volumeType
+2.4.1.7.3.3 tion.2
+familialedegustatio
+n
 
 0..1
 
@@ -2093,8 +2297,32 @@ et / ou dégustation à l'exploitation
 
 F
 
+Si
+saisi,
+alors
+>0
+
+IIP1-Emise-sur2.4.1.7.3.3 marche.3
+corse
+
+volumeType
+
+0..1
+
+Mise sur le marché en Corse :
+concerne les vins produits et
+commercialisés en Corse (en hL)
+
+F
+
+IIP1RG48
+Si
+saisi,
+alors
+>0
+
 IIP1-Emouveme mouvements2.4.1.7.3.3 ntstemporaires
-.3
+.4
 temporaire
 s
 
@@ -2111,7 +2339,7 @@ obligatoire à la propriété
 F
 
 IIP1-Emouveme
-2.4.1.7.3.3 nts.4
+2.4.1.7.3.3 nts.5
 internes
 
 mouvementsinternes
@@ -2124,12 +2352,9 @@ hL)
 F
 
 IIP1-Eautres2.4.1.7.3.3 sorties
-.5
+.6
 
-Erreur :
-source de la
-référence non
-trouvée
+volumeType
 
 0..1
 
@@ -2140,27 +2365,25 @@ dans la rubrique « Observations »
 
 F
 
-IIP1-Econsomm
-2.4.1.7.3.3 ation.2
-familialedegustatio
-n
+IIP1-Esorties2.4.1.7.3.3 definitives
+.1
 
-Description
+
 
 Obligatoi Règle
 re /
 s
 Facultatif
-Si
-saisi,
-alors
->0
 
 IIP1RG26
 Si
 saisi,
 alors
 >0
+
+
+
+
 
 ELÉMENT MOUVEMENTS-TEMPORAIRES
 
@@ -2183,12 +2406,9 @@ re /
 s
 Facultatif
 
-IIP1-Eembouteill Erreur :
+IIP1-Eembouteill volumeType
 2.4.1.7.3.3 age
-source de la
 .3.1
-référence non
-trouvée
 
 0..1
 
@@ -2204,12 +2424,9 @@ saisi,
 alors
 >=0
 
-IIP1-Erelogemen Erreur :
+IIP1-Erelogemen volumeType
 2.4.1.7.3.3 t
-source de la
 .3.2
-référence non
-trouvée
 
 0..1
 
@@ -2225,10 +2442,7 @@ alors
 IIP1-Etravail-a2.4.1.7.3.3 facon
 .3.3
 
-Erreur :
-source de la
-référence non
-trouvée
+volumeType
 
 0..1
 
@@ -2241,12 +2455,9 @@ saisi,
 alors
 >=0
 
-IIP1-Edistillation- Erreur :
+IIP1-Edistillation- volumeType
 2.4.1.7.3.3 a-Facon
-source de la
 .3.4
-référence non
-trouvée
 
 0..1
 
@@ -2264,18 +2475,9 @@ ELÉMENT MOUVEMENTS-INTERNES
 
 Élément mouvements-internes
 Type
-
-Complexe ordonné
-
-
-
-
-
-
-
-
 Référence
 
+Complexe ordonné
 Élément
 
 Type
@@ -2283,10 +2485,13 @@ Type
 Cardinalit
 é
 
-Erreur :
-source de la
-référence non
-trouvée
+Description
+
+IIP1-EreplisvolumeType
+2.4.1.7.3.3 declassem
+.4.1
+enttransfertchangeme
+ntappellation
 
 0..1
 
@@ -2304,12 +2509,9 @@ saisi,
 alors
 >=0
 
-IIP1-Efabrication Erreur :
-2.4.1.7.3.3 -autresource de la
-.4.2
+IIP1-Efabrication volumeType
+2.4.1.7.3.3 -autre.4.2
 produit
-référence non
-trouvée
 
 0..1
 
@@ -2327,12 +2529,9 @@ saisi,
 alors
 >=0
 
-IIP1-Erevendicati Erreur :
+IIP1-Erevendicati volumeType
 2.4.1.7.3.3 on-vci
-source de la
 .4.3
-référence non
-trouvée
 
 0..1
 
@@ -2368,49 +2567,41 @@ saisi,
 alors
 >=0
 
-IIP1-Ereplis2.4.1.7.3.3 declassem
-.4.1
-enttransfertchangeme
-ntappellation
+volumeType
 
-Erreur :
-source de la
-référence non
-trouvée
 
-Description
 
 Obligatoi Règle
 re /
 s
 Facultatif
+
+
+
+
+
 
 ÉLÉMENT DROITS-ACQUITTES
 
 Élément droits-acquittes
 Type
-Référence
 
 Complexe non ordonné
-Élément
 
-Type
+Référence
+
+Élément
 
 IIP1-E2.5.1
 
 produit
 
-produit
-
 IIP1-E2.5.3
 
-stockEpuis boolean
-e
+Type
 
 Cardinalit
 é
-0..*
-1
 
 Description
 
@@ -2418,13 +2609,31 @@ Obligatoi Règle
 re /
 s
 Facultatif
+
+produit
+
+0..*
 
 Produit concerné par la déclaration
 en droits acquittés
 
 F
 
-IIP1RG10
+Erreur
+:
+sourc
+e de
+la
+référe
+nce
+non
+trouvé
+e
+
+stockEpuis boolean
+e
+
+1
 
 Booléen indiquant si le stock en
 droits suspendus est épuisé
@@ -2437,17 +2646,19 @@ IIP1RG13
 
 Élément produit
 Type
-Référence
-
-IIP1-E2.5.1.1
 
 Complexe non ordonné
+
+Référence
+
 Élément
 
 Type
 
 Cardinalit
 é
+
+IIP1-E2.5.1.1
 
 code-inao
 
@@ -2455,9 +2666,69 @@ codeInaoType
 
 1
 
-Description
-
 Code INAO du produit
+
+O
+
+IIP1RG19
+Erreur
+:
+sourc
+e de
+la
+référe
+nce
+non
+trouvé
+e
+IIP1RG23
+
+IIP1-E2.5.1.2
+
+libellefiscal
+
+LibelleFiscalT
+ype
+
+0..1
+
+Libellé fiscal du produit (liste des
+libellés en annexes)
+
+F
+
+IIP1RG36
+
+IIP1-E2.5.1.3
+
+libellestring
+personnali
+se
+
+1
+
+Libellé personnalisé du produit
+
+O
+
+IIP1RG37
+
+IIP1-E2.5.1.4
+
+tav
+
+0..1
+
+TAV du produit
+
+F
+
+IIP1RG21
+IIP1RG22
+
+tavType
+
+Description
 
 
 
@@ -2465,11 +2736,6 @@ Obligatoi Règle
 re /
 s
 Facultatif
-O
-
-IIP1RG19
-IIP1RG20
-IIP1RG23
 
 
 
@@ -2485,29 +2751,7 @@ Type
 Cardinalit
 é
 
-LibelleFiscalT
-ype
-
-0..1
-
-IIP1-E2.5.1.2
-
-libellefiscal
-
-IIP1-E2.5.1.3
-
-libellestring
-personnali
-se
-
-IIP1-E2.5.1.4
-
-tav
-
-Erreur :
-source de la
-référence non
-trouvée
+Description
 
 IIP1-E2.5.1.3
 
@@ -2524,34 +2768,10 @@ ns
 caractères
 maximum)
 
-Description
-
 Obligatoi Règle
 re /
 s
 Facultatif
-
-Libellé fiscal du produit (liste des
-libellés en annexes)
-
-F
-
-IIP1RG36
-
-Libellé personnalisé du produit
-
-O
-
-IIP1RG37
-
-0..1
-
-TAV du produit
-
-F
-
-IIP1RG21
-IIP1RG22
 
 boolean
 
@@ -2562,9 +2782,6 @@ un premix ou pas
 
 F
 
-IIP1RG21
-IIP1RG22
-
 balancestocks
 
 1
@@ -2574,15 +2791,16 @@ acquittés
 
 O
 
+0..1
+
 Observations apportées par le
 déclarant concernant la balance des
 stocks en droits acquittés
 
 F
 
-1
-
-0..1
+IIP1RG21
+IIP1RG22
 
 IIP1RG25
 IIP1RG26
@@ -2592,9 +2810,11 @@ IIP1RG38
 
 Élément balance-stocks (Droits acquittés)
 Type
-Référence
 
 Complexe ordonné
+
+Référence
+
 Élément
 
 Type
@@ -2604,10 +2824,17 @@ Cardinalit
 
 Description
 
+IIP1-E2.6.1.2.1
+
 Obligatoi Règle
 re /
 s
 Facultatif
+
+stockdebutperiode
+
+volumeStockT
+ype
 
 1
 
@@ -2621,15 +2848,6 @@ réel (physique) tel qu'il résulte de
 l'inventaire des stocks.
 
 O
-
-IIP1-E2.6.1.2.1
-
-stockdebutperiode
-
-Erreur :
-source de la
-référence non
-trouvée
 
 IIP1-E2.6.1.2.2
 
@@ -2661,20 +2879,16 @@ IIP1-E2.6.1.2.4
 
 stock-finperiode
 
-Erreur :
-source de la
-référence non
-trouvée
+volumeStockT
+ype
+
+1
 
 Stock de fin de période (en hL),
 correspondant à la différence entre
 les entrées et les sorties de période.
 
 O
-
-1
-
-
 
 IIP1RG14
 Si
@@ -2685,11 +2899,6 @@ alors
 IIP1RG17
 IIP1RG18
 
-
-
-
-
-
 ÉLÉMENT ENTREES-PERIODE
 
 Élément entrees-periode
@@ -2699,30 +2908,28 @@ Référence
 Complexe ordonné
 Élément
 
+IIP1-Eachats
+2.6.1.2.2.1
+
 Type
 
 Cardinalit
 é
 
+volumeType
+
+0..1
+
 Description
+
+Achats du produit (en hL)
+
+
 
 Obligatoi Règle
 re /
 s
 Facultatif
-
-IIP1-Eachats
-2.6.1.2.2.1
-
-Erreur :
-source de la
-référence non
-trouvée
-
-0..1
-
-Achats du produit (en hL)
-
 F
 
 Si
@@ -2730,17 +2937,34 @@ saisi,
 alors
 >=0
 
+
+
+
+
+
+Référence
+
+Élément
+
 IIP1-Eautres2.6.1.2.2.2 entrees
 
-Erreur :
-source de la
-référence non
-trouvée
+Type
+
+Cardinalit
+é
+
+volumeType
 
 0..1
 
+Description
+
 Autres entrées du produit (en hL)
 
+Obligatoi Règle
+re /
+s
+Facultatif
 F
 
 IIP1RG25
@@ -2763,10 +2987,7 @@ Type
 Cardinalit
 é
 
-Erreur :
-source de la
-référence non
-trouvée
+volumeType
 
 0..1
 
@@ -2779,11 +3000,9 @@ saisi,
 alors
 >=0
 
-IIP1-Ereplaceme Erreur :
-2.6.1.2.3.2 ntsource de la
-suspensio référence non
+IIP1-Ereplaceme volumeType
+2.6.1.2.3.2 ntsuspensio
 n
-trouvée
 
 0..1
 
@@ -2814,10 +3033,7 @@ alors
 IIP1-Eventes
 2.6.1.2.3.1
 
-Erreur :
-source de la
-référence non
-trouvée
+volumeType
 
 Description
 
@@ -2874,67 +3090,69 @@ O
 
 IIP1-
 
-
-
-Obligatoi Règle
-re /
-s
-Facultatif
-
-
-
-
-
-
-Élément
-
 IIP1-E2.7.3
-
-Type
-
-Cardinalit
-é
 
 centilisatio centilisation
 n
 
 1..*
 
-Description
-
 Centilisation des capsules
 déclarées
 
-Obligatoi Règle
-re /
-s
-Facultatif
 O
 
 IIP1RG29
 IIP1RG31
 
+
+
+Obligatoi Règle
+re /
+s
+Facultatif
+
+
+
+
+
+
 ÉLÉMENT CENTILISATION
 
 Élément centilisation
 Type
-Référence
 
 Complexe ordonné
+
+Référence
+
 Élément
 
 Type
 
 Cardinalit
 é
-1
 
 IIP1-E2.7.3.1
+
+Description
+
+Obligatoi Règle
+re /
+s
+Facultatif
 
 stockdebutperiode
 
 nonNegativeI
 nteger
+
+1
+
+Stock de capsules du début de la
+période
+
+O
 
 IIP1-E2.7.3.2
 
@@ -2942,11 +3160,23 @@ entreescapsules
 
 entreescapsules
 
+0..1
+
+Entrées de capsules
+
+F
+
 IIP1-E2.7.3.3
 
 sortiescapsules
 
 sortiescapsules
+
+0..1
+
+Sorties de capsules
+
+F
 
 IIP1-E2.7.3.4
 
@@ -2956,36 +3186,12 @@ eriode
 nonNegativeI
 nteger
 
-Description
-
-Obligatoi Règle
-re /
-s
-Facultatif
-
-Stock de capsules du début de la
-période
-
-O
-
-0..1
-
-Entrées de capsules
-
-F
-
-0..1
-
-Sorties de capsules
-
-F
+1
 
 Stock de capsules de la fin de la
 période
 
 O
-
-1
 
 IIP1RG31
 IIP1RG39
@@ -2997,22 +3203,17 @@ IIP1RG39
 
 Élément entrees-capsules
 Type
-Référence
 
 Complexe non ordonné
+
+Référence
+
 Élément
 
 Type
 
 Cardinalit
 é
-
-Description
-
-Obligatoi Règle
-re /
-s
-Facultatif
 
 IIP1-E2.7.3.2.1
 
@@ -3051,28 +3252,19 @@ Nombre de capsules excédentaires
 
 F
 
-ÉLÉMENT SORTIES-CAPSULES
+IIP1-E2.7.3.2.4
 
-Élément sorties-capsules
-Type
+autresentrees
 
-Complexe non ordonné
+0..1
 
+Nombre de capsules entrées pour
+d’autres raisons
 
+F
 
-
-
-
-
-
-Référence
-
-Élément
-
-Type
-
-Cardinalit
-é
+nonNegativeI
+nteger
 
 Description
 
@@ -3080,6 +3272,19 @@ Obligatoi Règle
 re /
 s
 Facultatif
+
+ÉLÉMENT SORTIES-CAPSULES
+
+Élément sorties-capsules
+Type
+
+Complexe non ordonné
+
+Référence
+
+Élément
+
+Type
 
 IIP1-E2.7.3.3.1
 
@@ -3118,13 +3323,61 @@ F
 nonNegativeI
 nteger
 
+Cardinalit
+é
+
+Description
+
+
+
+Obligatoi Règle
+re /
+s
+Facultatif
+
+
+
+
+
+
+Référence
+
+Élément
+
+IIP1-E2.7.3.3.4
+
+autressorties
+
+Type
+
+Cardinalit
+é
+
+nonNegativeI
+nteger
+
+0..1
+
+Description
+
+Nombre de capsules sorties pour
+d’autres raisons
+
+Obligatoi Règle
+re /
+s
+Facultatif
+F
+
 ÉLÉMENT DOCUMENT-ACCOMPAGNEMENT
 
 Élément document-accompagnement
 Type
-Référence
 
 Complexe ordonné
+
+Référence
+
 Élément
 
 Type
@@ -3189,9 +3442,11 @@ TYPE DEBUTFINDOCUMENTTYPE
 
 Type DebutFinDocumentType
 Type
-Référence
 
 Complexe non ordonné
+
+Référence
+
 Élément
 
 Type
@@ -3201,14 +3456,14 @@ Cardinalit
 
 Description
 
+IIP1-E2.8.1.1
+
+debutperiode
+
 Obligatoi Règle
 re /
 s
 Facultatif
-
-IIP1-E2.8.1.1
-
-debutperiode
 
 numeroDocu
 mentType
@@ -3250,28 +3505,44 @@ O
 
 Élément releve-non-apurement
 Type
-Référence
-
-IIP1-E2.9.1
 
 Complexe non ordonné
-Élément
 
-numerodaa-dacdae
+Référence
+
+Élément
 
 Type
 
 Cardinalit
 é
 
+Description
+
+IIP1-E2.9.1
+
+numerodaa-dacdae
+
 numeroRnaT
 ype
 
 0..1
 
-Description
-
 Numéro de DAA/DAC/DAE
+
+O
+
+IIP1-E2.9.2
+
+datedate
+expedition
+
+0..1
+
+Date d’expédition (doit être de la
+forme AAAA-MM-JJ)
+
+O
 
 
 
@@ -3279,8 +3550,6 @@ Obligatoi Règle
 re /
 s
 Facultatif
-O
-
 IIP1RG12
 
 
@@ -3299,35 +3568,25 @@ Cardinalit
 
 Description
 
-Obligatoi Règle
-re /
-s
-Facultatif
-
-IIP1-E2.9.2
-
-datedate
-expedition
-
-0..1
-
-Date d’expédition (doit être de la
-forme AAAA-MM-JJ)
-
-O
-
 IIP1-E2.9.3
 
-numeroString (13
-accisecaractères
-destinatair maximum)
+numeroaccisedestinatair
 e
+
+String (8 ou
+13 caractères
+alphanumériq
+ues)
 
 0..1
 
 Numéro d’accise du destinataire ou
 référence du bureau d’export
 
+Obligatoi Règle
+re /
+s
+Facultatif
 F
 
 IIP1RG42
@@ -3349,10 +3608,7 @@ IIP1-E2.10.1
 
 quantitemouts-jus
 
-Erreur :
-source de la
-référence non
-trouvée
+volumeType
 
 0..1
 
@@ -3368,10 +3624,8 @@ alors
 
 IIP1-E2.10.2
 
-quantiteErreur :
-mouts-mcr source de la
-référence non
-trouvée
+quantitevolumeType
+mouts-mcr
 
 0..1
 
@@ -3402,10 +3656,7 @@ saisi,
 alors
 >=0
 
-Erreur :
-source de la
-référence non
-trouvée
+volumeType
 
 Description
 
@@ -3488,9 +3739,19 @@ pe
 
 8
 
+numeroAcci
+seType
+
+13
+
+13
+
 Valeurs possibles
 
 Format
+
+Description
+
 Nombres
 entiers
 strictement
@@ -3512,20 +3773,37 @@ l'interprofession
 doit ajouter un espace avant
 envoi à CIEL.
 
+[A-Za-z]
+Représente un numéro
+{2}[0-9A- d’agrément
+Za-z]{11}
+
 LibelleFiscal
 Type
 numeroCviT
 ype
 
-Description
-
 Représente le libellé fiscal
 d’un produit
 10
 
+raisonSocial
+eType
+
 10
 
 10 chiffres
+
+Représente un numéro CVI
+
+200
+
+Chaîne de
+caractères
+
+Représente le nom ou la
+raison sociale de
+l’opérateur
 
 typeCapsule
 sType
@@ -3535,6 +3813,10 @@ sType
 OITS_SUSPENDUS
 • COLLECTIVES_DR
 OITS_ACQUITTES
+
+Représente un type de
+capsules représentatives de
+droits
 
 categorieFis
 caleCapsule
@@ -3548,10 +3830,6 @@ intermédiaire)
 • COGNACARMAGNAC
 • ALCOOLS
 
-Représente un numéro CVI
-Représente un type de
-capsules représentatives de
-droits
 Représente une catégorie
 fiscale de capsule
 représentative de droits
@@ -3599,12 +3877,6 @@ Type
 Longueur Longueur
 minimale maximale
 
-Attribut
-« volume
-« de
-l’élément
-centilisation
-
 Valeurs possibles
 •
 •
@@ -3628,6 +3900,12 @@ Valeurs possibles
 •
 •
 •
+
+Attribut
+« volume
+« de
+l’élément
+centilisation
 
 CL_10
 CL_12_5
@@ -3687,29 +3965,10 @@ de la vérification ainsi que le message d’erreur associé.
 Chaque erreur est préfixée d’un texte commun indiquant le numéro (code) de l’erreur,
 repris dans les tableaux ci-dessous.
 Exemple : « Erreur 007. Les données économiques ont déjà été reçues pour la période. »
-Certains contrôles nécessitent la récupération de la télé-déclaration de la période
-immédiatement précédente. Cependant, la présence de la déclaration précédente ne
-devant pas constituer un frein à la transmission des télé-déclarations par les
-interprofessions, les règles de gestion suivantes s’appliquent donc pour la réception des
-DRM :
-RG_DecPrécédente_1
-
-Si la période de la dernière DRM connue de l’opérateur est après 6
-mois de la période transmise, l’ensemble des contrôles relatifs à la
-DRM précédente ne sont pas appliqués.
-
-
-
-
-
-
-
-
-Exemples :
-• dernière DRM en 03/2015 et envoi de la période 10/2015
-→ les contrôles ne sont pas faits
-• dernière DRM en 03/2015 et envoi de la période 06/2015
-→ CIEL réclame la période 04/2015, l’envoi est rejeté
+Certains contrôles nécessitent la récupération de la télé-déclaration précédente.
+Cependant, la présence de la déclaration précédente ne devant pas constituer un frein à
+la transmission des télé-déclarations par les interprofessions, les règles de gestion
+suivantes s’appliquent donc pour la réception des DRM :
 RG_DecPrécédente_2
 
 S’il n’existe aucune DRM pour le numéro d’agrément transmis, les
@@ -3719,6 +3978,14 @@ RG_DecPrécédente_3
 
 La recherche de la DRM précédente (cf RG ci-dessus) inclut tous
 les formats (GILDA, CIEL-intranet et CIEL-internet).
+
+
+
+
+
+
+
+
 Cependant, les contrôles sur les données (produits, stocks ...) ne
 peuvent s’appliquer que si la DRM précédente est une télédéclaration.
 
@@ -3741,7 +4008,6 @@ Test et condition(s)
 
 Code
 erreur
-001
 
 Message si erreur
 
@@ -3749,12 +4015,23 @@ IIP1RG1
 
 Le flux transmis doit respecter le schéma XSD prévu.
 
+001
+
+Le flux ne répond pas au
+schéma de transmission défini.
+Message technique <message
+erreur xsd>.
+
 IIP1RG2
 
 Le flux transmis par l'interprofession doit contenir un
 seul fichier par déclaration.
 NB : si cette condition n’est pas vérifiée, les
 contrôles suivants ne seront pas exécutés.
+
+/
+
+/
 
 IIP1RG3
 
@@ -3785,36 +4062,26 @@ vitivinicole.
 
 NB : si cette condition n’est pas vérifiée, les
 contrôles suivants ne seront pas exécutés.
-/
 
 NB : si cette condition n’est pas vérifiée, les
 contrôles suivants ne seront pas exécutés.
-IIP1-
+IIP1RG5
 
 L'ensemble des informations nécessaires au
-
-Le flux ne répond pas au
-schéma de transmission défini.
-Message technique <message
-erreur xsd>.
-/
-
-/
-
-
-
-/
-
-
-
-
-
-
-RG5
-
 fonctionnement de CIEL doivent être disponibles et
 cohérentes dans le référentiel des opérateurs de la
 DGDDI (ROSA) pour le numéro d'agrément concerné.
+
+/
+
+
+
+/
+
+
+
+
+
 
 IIP1RG6
 
@@ -3839,70 +4106,10 @@ La déclaration ne peut pas être
 déposée pour la période
 indiquée.
 
-006
-
-Les données économiques n'ont
-pas été reçues pour la période
-précédente.
-
 007
 
 Les données économiques ont
 déjà été reçues pour la période.
-
-030
-
-Le produit <libellé personnalisé>
-transmis ne correspond pas au
-produit indiqué dans la
-précédente déclaration.
-
-Code
-erreur
-
-Message si erreur
-
-/
-
-/
-
-NB : si cette condition n’est pas vérifiée, les
-contrôles suivants ne seront pas exécutés.
-IIP1RG7
-
-La période de taxation doit être obligatoirement
-antérieure ou égale au mois courant.
-Par exemple, si le flux arrive le 30 mai, la période de
-taxation est au plus tard le mois de mai.
-NB : si cette condition n’est pas vérifiée, les
-contrôles suivants ne seront pas exécutés.
-
-IIP1RG8
-
-La période de taxation de la déclaration doit être celle
-suivant la période de la déclaration précédente (mois +
-1 pour les DRM et année + 1 dans le cas des DRA).
-Dans le cas des DRM, ce contrôle ne s’applique que sur
-les 6 derniers mois si une DRM existe pour le numéro
-d’agrément considéré.
-NB : si cette condition n’est pas vérifiée, les
-contrôles suivants ne seront pas exécutés.
-
-IIP1RG9
-
-Un
-opérateur
-déclarant
-mensuellement
-ou
-annuellement ne peut saisir qu'une DRM/DRA par
-numéro d'agrément et par mois/année de taxation.
-Il ne doit pas y avoir de déclaration validée pour la
-période de taxation transmise (mois et année pour les
-DRM ou année pour les DRA), quelle que soit son
-origine (intranet ou internet).
-NB : si cette condition n’est pas vérifiée, les
-contrôles suivants ne seront pas exécutés.
 
 IIP1- Un nouveau produit dans une déclaration doit être
 RG37 identifié soit pas son code INAO s’il s’agit d’un vin
@@ -3918,27 +4125,29 @@ transmis dans tous les cas, CIEL vérifiera que le produit
 (retrouvé par son libellé personnalisé) a bien les mêmes
 caractéristiques.
 
-Balances des stocks
+030
+
+Le produit <libellé personnalisé>
+transmis ne correspond pas au
+produit indiqué dans la
+précédente déclaration.
+
+IIP1- Afin d’assurer la cohérence des stocks entre deux
+RG46 déclarations successives, l’envoi d’une DRM à CIEL
+pour une période antérieure à la période de la dernière
+déclaration validée n’est pas autorisé.
+
+042
+
+Une autre déclaration a déjà été
+déposée pour une période
+postérieure à la période
+indiquée.
+
 Code
-RG
+erreur
 
-Tests et conditions
-
-IIP1- Si la déclaration précédente pour ce numéro d’agrément
-RG10 existe, CIEL pré remplit la déclaration avec les produits
-
-
-
-
-
-
-
-
-renseignés dans la déclaration précédente.
-IIP1- Si l’indicateur « déclaration-néant » est vrai, alors les
-RG11 objets « droits-suspendus » et « droits-acquittes » ne
-peuvent pas contenir de « produit » (liste vide ou nulle).
-‘Neant’ correspond à ‘Pas de mouvement sur le mois
+Message si erreur
 
 008
 
@@ -3947,6 +4156,60 @@ stocks en droits suspendus
 et/ou acquittés ont été saisis
 alors que l'opérateur a indiqué
 effectuer une déclaration néant.
+
+NB : si cette condition n’est pas vérifiée, les
+contrôles suivants ne seront pas exécutés.
+IIP1RG7
+
+La période de taxation doit être obligatoirement
+antérieure ou égale au mois courant.
+Par exemple, si le flux arrive le 30 mai, la période de
+taxation est au plus tard le mois de mai.
+NB : si cette condition n’est pas vérifiée, les
+contrôles suivants ne seront pas exécutés.
+
+IIP1RG9
+
+Un opérateur déclarant mensuellement ou annuellement
+ne peut saisir qu'une DRM/DRA par numéro d'agrément
+et par mois/année de taxation.
+Il ne doit pas y avoir de déclaration validée pour la
+période de taxation transmise (mois et année pour les
+DRM ou année pour les DRA), quelle que soit son
+origine (intranet ou internet).
+NB : si cette condition n’est pas vérifiée, les
+contrôles suivants ne seront pas exécutés.
+
+Balances des stocks
+Code
+RG
+
+Tests et conditions
+
+IIP1- Si l’indicateur « déclaration-néant » est vrai, alors les
+RG11 objets « droits-suspendus » et « droits-acquittes » ne
+peuvent pas contenir de « produit » (liste vide ou nulle).
+‘Neant’ correspond à ‘Pas de mouvement sur le mois
+
+écoulé’. Il n’y a donc pas d’entrées et sorties même il y
+a des stocks pour les produits
+
+
+
+
+
+
+
+
+Code
+RG
+
+Tests et conditions
+
+Code
+erreur
+
+Message si erreur
 
 IIP1- Si l’agrément n’autorise pas les mouvements de stock
 RG12 en droits suspendus (agrément de type « Entrepositaire
@@ -3961,7 +4224,7 @@ Des mouvements de stocks en
 droits suspendus ou des relevés
 de non apurement ont été saisis
 alors que l'agrément ne
-l’autorise pas. .
+l’autorise pas..
 
 IIP1- Si la déclaration précédente indique un stock épuisé
 RG13 pour la balance des stocks en droits suspendus, alors
@@ -3987,9 +4250,12 @@ par leur libellé personnalisé), pour la balance des stocks
 en droits suspendus.
 Pour chaque produit retrouvé, la valeur de « stockdébut-période » doit être égale au stock de fin de
 période de la déclaration précédente.
-Si le mois de taxation de la déclaration est août (début
-de la campagne viti-vinicole), cette règle ne doit pas être
+Si le mois de taxation de la déclaration est le premier
+mois de l’exercice, cette règle ne doit pas être
 appliquée.
+Le premier de campagne est automatiquement août
+(campagne viti-vicole), si l’entrepositaire n’est pas
+négociant-vinificateur.
 
 011
 
@@ -4007,9 +4273,12 @@ par leur libellé personnalisé), pour la balance des stocks
 en droits acquittés.
 Pour chaque produit retrouvé, la valeur de « stockdébut-période » doit être égale au stock de fin de
 période de la déclaration précédente.
-Si le mois de taxation de la déclaration est août (début
-de la campagne viti-vinicole), cette règle ne doit pas être
+Si le mois de taxation de la déclaration est le premier
+mois de l’exercice, cette règle ne doit pas être
 appliquée.
+Le premier de campagne est automatiquement août
+(campagne viti-vicole), si l’entrepositaire n’est pas
+négociant-vinificateur.
 
 012
 
@@ -4022,8 +4291,8 @@ même produit de la déclaration
 précédente.
 
 IIP1- Pour chaque produit en droits suspendus de la
-RG16 déclaration transmise, la valeur « stock-fin-période »
-doit être égale à : « stock-début-période » + « entréespériode » - « sorties-période ».
+RG16 déclaration transmise, la valeur « stock-fin-période » doit
+être égale à : « stock-début-période » + « entréespériode » - « sorties-période ».
 
 013
 
@@ -4045,53 +4314,37 @@ la balance des stocks en droits
 acquittés ne correspond pas
 aux éléments de la déclaration.
 
-IIP1- Dans CIEL, il est possible d’avoir un stock théorique de
+IIP1- Dans CIEL, il est interdit d’avoir un stock théorique de
 RG18 fin de période négatif.
 
-/
+048
 
-/
+Le stock théorique de fin de
+période pour le produit « <libellé
+personnalisé> » ne peut pas
+être négatif.
 
-IIP1- Les codes INAO doivent contenir entre 6 et 8 digits. Si le
-RG19 code est sur 5 digits, l'interprofession émettrice doit
+
+
+
+
+
+
+
+Code
+RG
+
+Tests et conditions
+
+Code
+erreur
+
+Message si erreur
 
 015
 
-écoulé’. Il n’y a donc pas d’entrées et sorties même il y
-a des stocks pour les produits
-
 Le code INAO <code> n’existe
 pas ou n’est pas valide.
-
-
-
-
-
-
-
-
-ajouter un espace avant envoi à CIEL. CIEL rejettera le
-code INAO « 5 digits + espace », si le code existe déjà
-dans le référentiel sur 6 digits.
-Si un code produit transmis n’est pas retrouvé dans la
-déclaration précédente ou que cette dernière n’existe
-pas, alors son code INAO doit exister dans le référentiel
-avec un statut « VALIDE ».
-La seule exception à cette règle est pour les codes
-INAO suivants :
-• 4B988Y
-• 4R988Y
-• 4X999V
-• 5X999V
-IIP1- Si le code INAO est 4B988Y ou 4R988Y ou 4X999V ou
-RG20 5X999V, alors les champs " Ventes France sous CRD
-en droits suspendus" et "Ventes France sous CRD en
-droits acquittés" ne sont pas exploités par CIEL dans la
-partie "Sorties de la période" pour ce produit
-
-/
-
-/
 
 IIP1- Si le produit nécessite la saisie d’un TAV et/ou de
 RG21 l’indicateur de premix, CIEL contrôle que ces données
@@ -4099,9 +4352,20 @@ sont bien présentes.
 NB :
 • CIEL accepte désormais les fichiers où la valeur
 du TAV n’est pas renseignée pour les produits
-dont le code INAO est de la forme 1___N,
-1___Z et/ou commence par 1R175, 1S175,
-1B175.
+dont
+le
+libellé
+fiscal
+est
+VDN_VDL_AOP_SUP_18
+VDN_VDL_AOP_INF_18
+AUTRES_PI_SUP_18
+AUTRES_PI_SUP_18_HORS_CSS
+AUTRES_PI_INF_18
+• Les produits intermédiaires saisis par code
+INAO de la forme 1___N, 1___Z et/ou
+commence par 1R175, 1S175, 1B175
+demandent la saisie du TAV et de la premix.
 • Pour tous les autres codes INAO, pas de saisie
 de TAV ni de prémix
 
@@ -4119,8 +4383,8 @@ RG36 par un libellé fiscal :
 • La valeur du TAV saisie pour un produit doit
 respecter la tranche du TAV définie dans le
 libellé fiscal (ex : si le libellé fiscal choisi est
-BIERE_INF_2_8, alors le TAV doit être
-strictement inférieur à 2.8%)
+BIERE_INF_2_8, alors le TAV doit être inférieur
+ou égal à 2.8%)
 • Si le produit choisi est un prémix, alors le TAV
 doit être compris entre 1,2 % exclus et 12 %
 exclus
@@ -4162,16 +4426,34 @@ Le produit <libellé personnalisé>
 apparaît deux fois dans la
 balance des stocks
 
-
-
-
-
-
+IIP1- Les codes INAO doivent contenir entre 6 et 8 digits. Si le
+RG19 code est sur 5 digits, l'interprofession émettrice doit
+ajouter un espace avant envoi à CIEL. CIEL rejettera le
+code INAO « 5 digits + espace », si le code existe déjà
+dans le référentiel sur 6 digits.
+Le code INAO doit exister dans le référentiel.
 
 NB : En revanche, les balances de stocks en droits
 suspendus et en droits acquittés peuvent contenir plusieurs
 fois le même code INAO à condition que les produits soient
 distingués par des libellés personnalisés différents.
+
+
+
+
+
+
+
+
+Code
+RG
+
+Tests et conditions
+
+Code
+erreur
+
+Message si erreur
 
 IIP1- Si un produit existe dans la déclaration précédente et
 RG24 n’a pas été repris dans la déclaration transmise, alors le
@@ -4183,8 +4465,9 @@ précédente doit être de 0.
 Le produit <libellé personnalisé>
 n’est pas repris dans la
 déclaration alors que son stock
-théorique de fin de période
-précédente n’est pas nul.
+théorique de fin de période dans
+la déclaration précédente n’est
+pas nul.
 
 IIP1- Si le champ « autres-entrées » contient une valeur
 RG25 positive dans une balance des stocks (droits suspendus
@@ -4226,17 +4509,18 @@ mois et de l’année de taxation en cours.
 032
 
 Un replacement en suspension
-datant de plus de deux ans n’est
-pas possible.
-
-/
-
-/
+datant de plus de deux ans
+n’est pas possible.
 
 IIP1- Si l'exercice commercial de l'opérateur ne correspond
 RG35 pas à l'année civile alors l'opérateur bénéficiant de la
 DRA doit saisir en double le champs :
 • Vente en France sous CRD
+
+/
+
+/
+
 IIP1RG41
 
 Pour les libellés fiscaux
@@ -4254,29 +4538,6 @@ premières interdisent l’utilisation
 de replacements et les sorties
 avec paiement de droits.
 
-IIP1RG42
-
-Pour les libellés fiscaux
-« MATIERES_PREMIERES_SPIRITUEUX » et
-« MATIERES_PREMIERES_ALCOOLS », il faut avoir
-une des activités suivantes précisées dans le référentiel
-des opérateurs :
-• distillateurs/producteurs d’alcools
-• régénérateurs
-• dénaturateurs d’alcools
-• utilisateurs d’alcools en exonération
-• fournisseurs à UT
-• récoltants vinificateurs
-• négociants vinificateurs
-• caves coopératives
-
-039
-
-L’activité de l’agrément douanier
-n’autorise pas l’utilisation des
-libellés fiscaux de matières
-premières.
-
 IIP1RG43
 
 Les libellés fiscaux
@@ -4287,10 +4548,166 @@ Les matières premières ne sont
 pas autorisées dans la balance
 des stocks en droits acquittés.
 
+IIP1RG45
+
+Les produits non fiscalisés ( 4R988Y, 4B988Y, 4X999V
+et 5X999V) ne peuvent avoir de sorties avec paiement
+ou de replacement en suspension des droits.
+
+041
+
+Le produit <libellé> interdit
+l'utilisation de replacements et
+les sorties avec paiements de
+droits.
+
+IIP1RG48
+
+La mise sur le marché en Corse n’est autorisée que
+pour les vins tranquilles et les vins mousseux et
+uniquement si l’opérateur dépend de l’interprofession
+des vins de Corse.
+
+044
+
+Pour une mise sur le marché en
+Corse, le produit doit être un vin
+tranquille ou un vin mousseux et
+l’opérateur doit dépendre de
+l’interprofession des vins de
+Corse.
+
+IIP1RG49
+
+Des stocks épuisés ne peuvent être déclarés que si tous
+les produits de la balance des stocks en droits
+suspendus ont un stock de fin de période nul.
+
+045
+
+Des stocks épuisés ont été
+déclarés alors que des produits
+de la balance des stocks en
+droits suspendus n’ont pas un
+stock de fin de période nul.
+
 « MATIERES_PREMIERES_SPIRITUEUX » et
 « MATIERES_PREMIERES_ALCOOLS » ne sont pas
 autorisés dans les balances de stocks en droits
 acquittés.
+
+
+
+
+
+
+
+
+Code
+RG
+
+Tests et conditions
+
+Code
+erreur
+
+Message si erreur
+
+IIP1RG50
+
+Il est interdit de déclarer des stocks épuisés dans la
+première déclaration de la campagne.
+
+046
+
+Il est interdit de déclarer des
+stocks épuisés dans la première
+déclaration de la campagne.
+
+IIP1RG51
+
+Un produit doit au moins contenir un code INAO ou un
+libellé fiscal pour son identification.
+
+047
+
+Le produit <libellé
+personnalisé> n'a pas de libellé
+de fiscal et de code INAO, il est
+obligatoire de renseigner l'un ou
+l'autre.
+
+IIP1RG52
+
+Il est interdit d'ajouter un nouveau produit Rhums
+traditionnels des DOM commercialisés en métropole
+dans le cadre du contingent fiscal prévu à l’article 403I.1° du CGI ou Rhums traditionnels DOM définis à
+l'article L.313-24 du CIBS, commercialisés en
+métropole dans la limite du contingent fiscal prévu à
+l'article L.313-26 du CIBS
+
+049
+
+La valeur renseignée pour le
+TAV du produit <libellé
+personnalisé> est invalide. En
+application de l'article <article
+de loi>, la valeur du TAV doit
+être un nombre positif supérieur
+ou égal à 39,8 avec au plus
+deux décimales.
+
+IIP1RG63
+
+A partir de 2022, les produits PETILLANTS,
+PETILLANTS_PREMIX, HYDROMELS,
+HYDROMELS_PREMIX, CIDRES, POIRES,
+RHUM_TRADITIONNEL_DOM_ART_1 et
+RHUM_TRADITIONNEL_DOM_ART_2 ne sont plus
+valides et doivent être remplacés respectivement par les
+produits PETILLANTS_INF_8_5,
+PETILLANTS_INF_8_5_PREMIX,
+HYRDOMELS_INF_8_5,
+HYDROMELS_INF_8_5_PREMIX, CIDRES_INF_8_5,
+POIRES_INF_8_5,
+RHUM_TRADITIONNEL_DOM_CONTINGENT_FISCAL
+et
+RHUM_TRADITIONNEL_DOM_HORS_CONTINGENT_
+FISCAL.
+Les produits
+BIERE_SUP_18_PETITE_BRASSERIE_xxx,
+BIERE_SUP_2_8_PETITE_BRASSERIE_xxx et
+BIERE_SUP_2_8_PETITE_BRASSERIE_xxx_PREMIX
+(où xxx correspond à la production maximum de la
+brasserie) doivent être remplacés respectivement par
+les produits BIERE_PETITE_BRASSERIE_SUP_18,
+BIERE_PETITE_BRASSERIE_SUP_2_8 et
+BIERE_PETITE_BRASSERIE_SUP_2_8_PREMIX (la
+production de la brasserie n’est pas précisée).
+Si les anciens produits sont déclarés dans le fichier, ils
+sont automatiquement remplacés par leur nouvelle
+version.
+
+/
+
+/
+
+IIP1RG65
+
+En cas d’ajout d’un nouveau produit de la catégorie
+« Alcools » le TAV doit être strictement supérieur à
+1,2 % vol.
+
+54
+
+La valeur renseignée pour le
+TAV du produit <libellé
+personnalisé> est invalide. En
+application de l'article <article
+de loi>, la valeur du TAV doit
+être un nombre positif
+strictement supérieur à 1,2 avec
+au plus deux décimales.
 
 
 
@@ -4342,8 +4759,8 @@ comptes distincts)
 Erreur sur le type de capsules
 déclarées.
 
-IIP1- Dans un même compte CRD, une centilisation définie
-RG29 ne peut apparaître qu’une seule fois (unicité de l’attribut
+IIP1- Dans un même compte CRD, une centilisation définie ne
+RG29 peut apparaître qu’une seule fois (unicité de l’attribut
 « volume » de la centilisation pour une catégorie fiscale
 donnée et un type de capsules donné).
 Cette règle exclut la centilisation « AUTRE ».
@@ -4429,8 +4846,8 @@ RG39 contrôle de correspondance des comptes CRD.
 Pour chaque centilisation de CRD retrouvée, la valeur
 de « stock-début-période » doit être égale au stock de
 fin de période de la déclaration précédente.
-Si le mois de taxation de la déclaration est août (début
-de la campagne viti-vinicole), cette règle ne doit pas être
+Si le mois de taxation de la déclaration est le premier
+mois de l’exercice, cette règle ne doit pas être
 appliquée.
 
 035
@@ -4451,6 +4868,8 @@ Tests et conditions
 Code
 erreur
 
+Message si erreur
+
 IIP1RG34
 
 Si le numéro d’agrément contient la lettre « A », alors le
@@ -4466,11 +4885,11 @@ d'accompagnement saisis.
 
 IIP1RG42
 
-Le champ « Numéro d’accise destinataire » accepte :
+Le champ « numero-accise-destinataire » accepte :
 • soit un numéro d’accises alphanumérique de 13
 caractères
-• soit un alphanumérique de 13 caractères
-maximum
+• soit un code bureau alphanumérique de 8
+caractères maximum
 Si le numéro d’accise commence par « FR » et contient
 13 caractères, alors une vérification de l’existence de
 l’opérateur destinataire dans ROSA (référentiel edes
@@ -4487,8 +4906,9 @@ des opérateurs de la DGDDI.
 IIP1RG43
 
 Pour les documents d’accompagnement, les champs
-« Première référence de la période » et « Dernière
-référence de la période » acceptent :
+« debut-periode » (Première référence de la période )
+et « fin-periode » (Dernière référence de la période)
+acceptent :
 • soit une chaîne de caractères
 • soit un numérique strictement positif
 Dans le cas de la chaîne de caractères, toute valeur est
@@ -4504,8 +4924,9 @@ nuls ou décimaux.
 IIP1RG44
 
 Pour les documents d’accompagnement, le champ
-«Nombre de référence(s) dans la période » accepte
-uniquement un entier strictement positif.
+« nombre-document-empreinte » (nombre de
+référence(s) dans la période ) accepte uniquement un
+entier strictement positif.
 
 037
 
@@ -4513,22 +4934,151 @@ Le nombre de référence dans la
 période doit être un entier
 strictement positif.
 
-Les produits non fiscalisés ( 4R988Y, 4B988Y, 4X999V
-et 5X999V) ne peuvent avoir de sorties avec paiement
-ou de replacement en suspension des droits.
-
-041
-
-Le produit <libellé> interdit
-l'utilisation de replacements et
-les sorties avec paiements de
-droits.
-
-IIP1RG45
-
-3.3.5
+Code
+erreur
 
 Message si erreur
+
+Stocks dormants
+Code
+RG
+
+Tests et conditions
+
+IIP1RG53
+
+Le dépôt d’une DRM « Stocks Dormants » n’est pas
+obligatoirement mensuel
+
+IIP1RG54
+
+Une DRM "Stocks dormants" ne peut pas être déposée
+pour une période de taxation située dans le futur (Voir
+IIP1-RG7)
+
+005
+
+La déclaration ne peut pas être
+déposée pour la période
+indiquée.
+
+IIP1RG55
+
+Il ne peut pas y avoir deux DRM "Stocks dormants" pour
+une même période de taxation (voir IIP1-RG9)
+
+007
+
+Les données économiques ont
+déjà été reçues pour la période.
+
+
+
+
+
+
+
+
+IIP1RG56
+
+a) : les produits d'une première DRM "stocks dormants"
+sont repris de la dernière DRM internet « classique »
+validée par l'opérateur (s'il y en a une)
+b) : si l'opérateur dépose une première DRM "stocks
+dormants" et n'a jamais déposé dans CIEL auparavant,
+ou bien si cette DRM succède une DRM Intranet, il peut
+ajouter des nouveaux produits à sa première DRM.
+c) : excepté dans le cas de la b), l’ajout de nouveaux
+produits n’est pas possible dans une DRM « stocks
+dormants », sauf pour les comptes CRD où l’ajout de
+nouveaux comptes reste possible dans tous les cas.
+
+050
+
+L’ajout de nouveaux produits
+n’est pas possible dans une
+DRM de type « Stocks
+Dormants »
+
+IIP1RG57
+
+L’information « stock de début de période » est
+modifiable si :
+1- l’opérateur saisit sa toute première DRM « stocks
+dormants »
+2- lors d’un changement de campagne
+(Voir IIP1-RG14)
+
+011
+
+Le stock de début de période
+du produit <libellé
+personnalisé> de la balance
+des stocks en droits suspendus
+ne correspond pas au stock de
+fin de période du même produit
+de la déclaration précédente.
+
+IIP1RG58
+
+Les stocks doivent être cohérents d’une DRM à l’autre,
+sauf si changement de campagne (Voir IIP1-RG15).
+
+012
+
+Le stock de début de période
+du produit <libellé
+personnalisé> de la balance
+des stocks en droits acquittés
+ne correspond pas au stock de
+fin de période du même produit
+de la déclaration précédente.
+
+IIP1RG59
+
+Les informations non modifiables sont les mêmes que
+celles de la DRM viti classique
+
+IIP1RG60
+
+La saisie d’informations d’entrées produit est interdite
+dans le cadre d’une déclaration de type « Stocks
+Dormants », sauf pour les comptes CRD. Tout fichier
+contenant des informations d’entrées produit dans les
+balances des stocks sera rejeté.
+
+051
+
+La saisie d’informations
+d’entrées dans une déclaration
+de type « Stocks Dormants »
+n’est pas autorisée.
+
+IIP1RG61
+
+Le stock négatif en fin de période n’est pas permis (Voir
+IIP1-RG18).
+
+048
+
+Le stock théorique de fin de
+période pour le produit
+« <libellé personnalisé> » ne
+peut pas être négatif.
+
+IIP1RG62
+
+La période de taxation doit être postérieure à la dernière
+DRM connue de CIEL (Voir IIP1-RG46).
+
+042
+
+Une autre déclaration a déjà été
+déposée pour une période
+postérieure à la période
+indiquée.
+
+3.3.5
 
 FICHIER XSD
 
@@ -4575,22 +5125,14 @@ ELÉMENT REPONSE-CIEL
 
 Élément reponse-ciel
 Type
-Référence
 
 Complexe non ordonné
+
+Référence
+
 Élément
 
 Type
-
-Cardinalit
-é
-
-Description
-
-Obligatoi Règle
-re /
-s
-Facultatif
 
 IIP1-S-1
 
@@ -4642,6 +5184,16 @@ afférent.
 
 complexe
 
+Cardinalit
+é
+
+Description
+
+Obligatoi Règle
+re /
+s
+Facultatif
+
 Nota : si la liste des erreurs est vide (non valorisée) ou qu’il n’y a pas d’erreurs
 techniques, le flux est considéré comme accepté et les deux premiers éléments sont
 valorisés. Dans le cas contraire, l’identifiant de la déclaration dans CIEL de même que
@@ -4674,8 +5226,8 @@ Sans erreur :
 <reponse-ciel
 xmlns="http://douane.finances.gouv.fr/app/ciel/interprofession/echanges/1.0"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:schemaLocation="http://douane.finances.gouv.fr/app/ciel/interprofession/echa
-nges/1.0 echanges-interprofession-1.0.xsd">
+xsi:schemaLocation="http://douane.finances.gouv.fr/app/ciel/interprofession/
+echanges/1.0 echanges-interprofession-1.0.xsd">
 <identifiant-declaration>1</identifiant-declaration>
 <horodatage-depot>2001-12-17T09:30:47Z</horodatage-depot>
 </reponse-ciel>
@@ -4684,8 +5236,8 @@ Erreurs fonctionnelles :
 <reponse-ciel
 xmlns="http://douane.finances.gouv.fr/app/ciel/interprofession/echanges/1.0"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:schemaLocation="http://douane.finances.gouv.fr/app/ciel/interprofession/echa
-nges/1.0 echanges-interprofession-1.0.xsd">
+xsi:schemaLocation="http://douane.finances.gouv.fr/app/ciel/interprofession/
+echanges/1.0 echanges-interprofession-1.0.xsd">
 <erreurs-fonctionnelles>
 <erreur-fonctionnelle code-erreur="010">
 <message-erreur>Des éléments de la balance des stocks en
@@ -4704,8 +5256,8 @@ Erreur technique :
 <reponse-ciel
 xmlns="http://douane.finances.gouv.fr/app/ciel/interprofession/echanges/1.0"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:schemaLocation="http://douane.finances.gouv.fr/app/ciel/interprofession/echa
-nges/1.0 echanges-interprofession-1.0.xsd">
+xsi:schemaLocation="http://douane.finances.gouv.fr/app/ciel/interprofession/
+echanges/1.0 echanges-interprofession-1.0.xsd">
 <erreur-technique reference-erreur="^000000000-0000-0000-00000000000000000">
 <message-erreur>>Le flux ne répond pas au schéma de transmission
 défini. Message technique: cvc-pattern-valid : La valeur
@@ -4823,14 +5375,14 @@ declarations_vitivinicoles_interprofession_SIREN_AAAAMMJJ.xml, où :
 •
 •
 
-est remplacé par le numéro SIREN de l’interprofession destinataire du
+SIREN est remplacé par le numéro SIREN de l’interprofession destinataire du
+
 fichier ;
 iddeclaration est l’identifiant technique de la déclaration dans CIEL (entier de
 longueur maximale 7) ;
-numaccise est le numéro d’accise du déclarant.leperiodetaxation est la
-période de taxation relative à la délcaration
+numaccise est le numéro d’accise du déclarant.periodetaxation est la période
+de taxation relative à la déclaration
 AAAAMMJJ est remplacé par la date de l’export, au format AAAAMMJJ.
-SIREN
 
 Cet export doit être exécuté en début de journée, idéalement à minuit, pour exporter les
 données de la veille dès que la nouvelle journée commence.
@@ -4860,6 +5412,9 @@ Les fichiers échangés via cette interface sont des documents XML encodés en U
 
 Le formalisme (schéma XSD) est exactement le même que celui utilisé en entrée, dans le
 service IIP1.
+Lors de l’export IIP2-E constitué par CIEL, pour chaque déclaration, l’identification du
+déclarant contient, en plus du numéro d’agrément, la raison sociale du déclarant.
+La mention de la raison sociale n’est pas nécessaire dans le cadre de l’envoi IIP1.
 
 
 
@@ -4917,6 +5472,9 @@ Ce document utilise des cardinalités pour les éléments XML. Il s’agit du no
 d’occurrences d’un élémet pouvant apparaître dans son élément parent. Ces cardinalités
 sont définies dans le tableau suivant :
 Cardinalité
+
+Description
+
 0..1
 
 L’élément peut ne pas apparaître, ou apparaître une fois seulement.
@@ -4927,11 +5485,9 @@ L’élément doit apparaître une fois, et une fois seulement.
 
 0..*
 
-7.2
-
-Description
-
 L’élément peut ne pas apparaître, apparaître une fois ou apparaître plusieurs fois.
+
+7.2
 
 TYPES PRIMITIFS DE XSD
 
@@ -5010,29 +5566,39 @@ LISTE DES LIBELLÉS FISCAUX
 BOISSONS_FERMENTEES_AUTRES
 BOISSONS_FERMENTEES_AUTRES_PREMIX
 CIDRES
+CIDRES_INF_8_5
 POIRES
+POIRES_8_5
 HYDROMELS
+HYDROMELS_INF_8_5
 HYDROMELS_PREMIX
+HYDROMELS_INF_8_5_PREMIX
 PETILLANTS
+PETILLANTS_INF_8_5
 PETILLANTS_PREMIX
+PETILLANTS_INF_8_5_PREMIX
 VDN_VDL_AOP_SUP_18
 VDN_VDL_AOP_INF_18
 AUTRES_PI_SUP_18
+
+
+
+
+
+
+
+
+AUTRES_PI_SUP_18_HORS_CSS
 AUTRES_PI_INF_18
 AUTRES_PI_INF_18_PREMIX
 BIERE_INF_2_8
 BIERE_INF_2_8_PREMIX
 BIERE_SUP_18_BRASSERIE_TAUX_NORMAL
 BIERE_SUP_2_8_BRASSERIE_TAUX_NORMAL
-
-
-
-
-
-
-
-
 BIERE_SUP_2_8_BRASSERIE_TAUX_NORMAL_PREMIX
+BIERE_PETITE_BRASSERIE_SUP_18
+BIERE_PETITE_BRASSERIE_SUP_2_8
+BIERE_PETITE_BRASSERIE_SUP_2_8_PREMIX
 BIERE_SUP_18_PETITE_BRASSERIE_10000
 BIERE_SUP_2_8_PETITE_BRASSERIE_10000
 BIERE_SUP_2_8_PETITE_BRASSERIE_10000_PREMIX
@@ -5044,41 +5610,34 @@ BIERE_SUP_2_8_PETITE_BRASSERIE_200000
 BIERE_SUP_2_8_PETITE_BRASSERIE_200000_PREMIX
 RHUM_TRADITIONNEL_DOM_ART_1
 RHUM_TRADITIONNEL_DOM_ART_2
+RHUM_TRADITIONNEL_DOM_CONTINGENT_FISCAL
+RHUM_TRADITIONNEL_DOM_HORS_CONTINGENT_FISCAL
 RHUM_TIERS_ET_AUTRES
 ALCOOL_AUTRE_SUP_18
+ALCOOL_AUTRE_SUP_18_HORS_CSS
 ALCOOL_AUTRE_INF_18
 ALCOOL_AUTRE_INF_18_PREMIX
-RHUM_GUADELOUPE
-RHUM_MARTINIQUE
-RHUM_GUYANE
-RHUM_REUNION
-SPIRITUEUX_GUADELOUPE_SUP_18
-SPIRITUEUX_GUADELOUPE_INF_18
-SPIRITUEUX_GUADELOUPE_INF_18_PREMIX
-SPIRITUEUX_MARTINIQUE_SUP_18
-SPIRITUEUX_MARTINIQUE_INF_18
-SPIRITUEUX_MARTINIQUE_INF_18_PREMIX
-SPIRITUEUX_GUYANE_SUP_18
-SPIRITUEUX_GUYANE_INF_18
-SPIRITUEUX_GUYANE_INF_18_PREMIX
-SPIRITUEUX_REUNION_SUP_18
-SPIRITUEUX_REUNION_INF_18
-SPIRITUEUX_REUNION_INF_18_PREMIX
-AUTRES_ALCOOLS_SUP_18
-AUTRES_ALCOOLS_INF_18
-AUTRES_ALCOOLS_INF_18_PREMIX
+COMPLEMENTS_ALIMENTAIRES
+COMPLEMENTS_ALIMENTAIRES_PREMIX
+COMPLEMENTS_ALIMENTAIRES_CSS
 MATIERES_PREMIERES_SPIRITUEUX
 MATIERES_PREMIERES_ALCOOLS
 VT_ETRANGERS
+VT_ETRANGERS_PREMIX
 VM_ETRANGERS
+VM_ETRANGERS_PREMIX
 VT_IG_AOP
 VT_IG_IGP
 VT_SANS_IG_CEPAGE
+VT_SANS_IG_CEPAGE_PREMIX
 VT_SANS_IG_AUTRES
+VT_SANS_IG_AUTRES_PREMIX
 VM_IG_AOP
 VM_IG_IGP
 VM_SANS_IG_CEPAGE
+VM_SANS_IG_CEPAGE_PREMIX
 VM_SANS_IG_AUTRES
+VM_SANS_IG_AUTRES_PREMIX
 
 
 

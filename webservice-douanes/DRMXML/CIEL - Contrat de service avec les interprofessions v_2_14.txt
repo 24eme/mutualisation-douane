@@ -1,14 +1,14 @@
 Projet CIEL
 
-Contrat de service avec les interprofessions
+ avec les interprofessions
 vitivinicoles
 
 Version 2.14 du 27/08/2021
 [Valable pour la version 1.15 du schéma XSD]
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
 
-Page 1/49
+
+
 
 SUIVI DES MODIFICATIONS
 Version
@@ -96,7 +96,7 @@ DNSCE
 Déplacement de la balise « observations » dans les
 produits plutôt que dans les balances des stocks.
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
 
 Vérification
 
@@ -126,7 +126,7 @@ Date
 
 17/11/15
 
-Page 2/49
+
 
 Version
 Rédaction
@@ -258,7 +258,7 @@ Mise à jour des RG IIP1-RG23 et IIP1RG41
 •
 •
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
 
 31/01/2017
 
@@ -266,7 +266,7 @@ Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copi
 
 24/08/18
 
-Page 3/49
+
 
 Version
 Rédaction
@@ -351,7 +351,7 @@ aux vins prémix.
 Modification de la RG18 (les stocks de fin
 de période ne peuvent plus être négatifs).
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
 
 Vérification
 
@@ -366,11 +366,11 @@ Date
 
 27/08/21
 
-Page 4/49
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
 
-Page 5/49
+
+
+
 
 SOMMAIRE
 1 . INTRODUCTION...............................................................................................................7
@@ -419,12 +419,12 @@ D'AGRÉMENT.....................................................................
 7.2 . TYPES PRIMITIFS DE XSD.............................................................................................. 48
 7.3 . LISTE DES LIBELLÉS FISCAUX....................................................................................... 48
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
 
-Page 6/49
 
-Contrat de service
-CIEL- Contrat de service avec les interprofessions v_2_14.odt
+
+
+
+
 
 1
 
@@ -572,12 +572,12 @@ hL
 
 Hectolitre
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
 
-Page 7/49
 
-Contrat de service
-CIEL- Contrat de service avec les interprofessions v_2_14.odt
+
+
+
+
 
 Terme
 
@@ -652,12 +652,12 @@ générique de « déclaration récapitulative » est utilisé, il fait référe
 déclarations récapitulatives mensuelles (DRM) et aux déclarations récapitulatives
 annuelles (DRA).
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
 
-Page 8/49
 
-Contrat de service
-CIEL- Contrat de service avec les interprofessions v_2_14.odt
+
+
+
+
 
 2
 
@@ -694,12 +694,12 @@ Une DRM validée sur CIEL est transmise en retour à l’interprofession de ratt
 Les éventuelles modifications ultérieures, sur CIEL ou dans le cadre de la procédure
 exceptionnelle, feront l’objet de nouveaux flux de retour vers l’interprofession concernée.
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
 
-Page 9/49
 
-Contrat de service
-CIEL- Contrat de service avec les interprofessions v_2_14.odt
+
+
+
+
 
 Le schéma suivant présente ce processus :
 
@@ -709,12 +709,12 @@ d’agrément d'entrepositaire agréé (ou numéro d'accises) indiqué par l’o
 faire, le SI de l’interprofession interroge le SI de la douane, qui lui indique en retour si le
 numéro d’agrément existe.
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
 
-Page 10/49
 
-Contrat de service
-CIEL- Contrat de service avec les interprofessions v_2_14.odt
+
+
+
+
 
 Les échanges entre le SI des douanes et les SI des interprofessions vitivinicoles sont
 répartis sur les trois interfaces IIP1, IIP2 et IIP3 représentées dans le schéma ci-dessous :
@@ -751,12 +751,12 @@ déclaration du portail de l'interprofession vers CIEL
 récapitulative validée à l'interprofession
 • 5.Interface IIP3 : Transmission des données liées à un numéro d'agrément
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
 
-Page 11/49
 
-Contrat de service
-CIEL- Contrat de service avec les interprofessions v_2_14.odt
+
+
+
+
 
 L’interprofession garantit la sécurité de son accès vis à vis d’éventuelles intrusions
 extérieures sur le SI de la Douane.
@@ -766,12 +766,12 @@ tunnel VPN pour Pasteur Léger).
 Concernant le jeton d’authentification et le jeton d’accès lors des échanges sur l’interface
 IIP1, les données mesurant le temps (iat, timestamp, …) sont au format milli-secondes.
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
 
-Page 12/49
 
-Contrat de service
-CIEL- Contrat de service avec les interprofessions v_2_14.odt
+
+
+
+
 
 3
 
@@ -845,12 +845,12 @@ Pour chaque numéro d'agrément, l'opérateur renseigne son interprofession de
 
 Sur 100 appels au service web, au moins 90 ont un temps de réponse inférieur ou égal à 2 secondes.
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
 
-Page 13/49
 
-Contrat de service
-CIEL- Contrat de service avec les interprofessions v_2_14.odt
+
+
+
+
 
 rattachement. Dans la mesure où un compte Prodouane peut être habilité à déclarer pour
 plusieurs numéros d'agrément, plusieurs interprofessions peuvent être rattachées à un
@@ -892,12 +892,12 @@ donnée, doivent y figurer tous les produits en stocks (en droits suspendus et/o
 acquittés) que ces produits aient fait l’objet d’un mouvement (entrées ou sorties) ou pas
 depuis la période précédente.
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
 
-Page 14/49
 
-Contrat de service
-CIEL- Contrat de service avec les interprofessions v_2_14.odt
+
+
+
+
 
 3.3.2
 
@@ -1073,7 +1073,7 @@ Statistiques communautaires
 
 F
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
 
 Obligatoi Règle
 re /
@@ -1082,10 +1082,10 @@ Facultatif
 
 IIP1RG12
 
-Page 15/49
 
-Contrat de service
-CIEL- Contrat de service avec les interprofessions v_2_14.odt
+
+
+
 
 Attention : la notion de « déclaration néant » n’a pas la même signification selon le sens du flux.
 • dans le sens Interprofession → CIEL : cela signifie qu'aucun mouvement n'est intervenu sur
@@ -1226,12 +1226,12 @@ Type
 
 Complexe ordonné
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
 
-Page 16/49
 
-Contrat de service
-CIEL- Contrat de service avec les interprofessions v_2_14.odt
+
+
+
+
 
 Référence
 
@@ -1386,7 +1386,7 @@ TAV du produit
 
 F
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
 
 Obligatoi Règle
 re /
@@ -1396,10 +1396,10 @@ Facultatif
 IIP1RG21
 IIP1RG22
 
-Page 17/49
 
-Contrat de service
-CIEL- Contrat de service avec les interprofessions v_2_14.odt
+
+
+
 
 Référence
 
@@ -1551,12 +1551,12 @@ Type
 
 Complexe ordonné
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
 
-Page 18/49
 
-Contrat de service
-CIEL- Contrat de service avec les interprofessions v_2_14.odt
+
+
+
+
 
 Référence
 
@@ -1709,7 +1709,7 @@ d'embouteillage (uniquement si
 l'embouteillage n'a pas lieu sur
 place) (en hL)
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
 
 Obligatoi Règle
 re /
@@ -1722,10 +1722,10 @@ saisi,
 alors
 >=0
 
-Page 19/49
 
-Contrat de service
-CIEL- Contrat de service avec les interprofessions v_2_14.odt
+
+
+
 
 Référence
 
@@ -1922,12 +1922,12 @@ O
 
 IIP1RG40
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
 
-Page 20/49
 
-Contrat de service
-CIEL- Contrat de service avec les interprofessions v_2_14.odt
+
+
+
+
 
 Référence
 
@@ -2058,12 +2058,12 @@ Type
 
 Complexe ordonné
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
 
-Page 21/49
 
-Contrat de service
-CIEL- Contrat de service avec les interprofessions v_2_14.odt
+
+
+
+
 
 Référence
 
@@ -2242,17 +2242,17 @@ F
 
 volumeType
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
 
 IIP1RG26
 Si
 saisi,
 alors
 >0
-Page 22/49
 
-Contrat de service
-CIEL- Contrat de service avec les interprofessions v_2_14.odt
+
+
+
 
 ELÉMENT MOUVEMENTS-TEMPORAIRES
 
@@ -2443,12 +2443,12 @@ alors
 
 volumeType
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
 
-Page 23/49
 
-Contrat de service
-CIEL- Contrat de service avec les interprofessions v_2_14.odt
+
+
+
+
 
 ÉLÉMENT DROITS-ACQUITTES
 
@@ -2599,12 +2599,12 @@ F
 IIP1RG21
 IIP1RG22
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
 
-Page 24/49
 
-Contrat de service
-CIEL- Contrat de service avec les interprofessions v_2_14.odt
+
+
+
+
 
 Référence
 
@@ -2785,7 +2785,7 @@ Description
 
 Achats du produit (en hL)
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
 
 Obligatoi Règle
 re /
@@ -2798,10 +2798,10 @@ saisi,
 alors
 >=0
 
-Page 25/49
 
-Contrat de service
-CIEL- Contrat de service avec les interprofessions v_2_14.odt
+
+
+
 
 Référence
 
@@ -2966,17 +2966,17 @@ IIP1RG31
 
 Description
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
 
 Obligatoi Règle
 re /
 s
 Facultatif
 
-Page 26/49
 
-Contrat de service
-CIEL- Contrat de service avec les interprofessions v_2_14.odt
+
+
+
 
 ÉLÉMENT CENTILISATION
 
@@ -3173,12 +3173,12 @@ F
 nonNegativeI
 nteger
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
 
-Page 27/49
 
-Contrat de service
-CIEL- Contrat de service avec les interprofessions v_2_14.odt
+
+
+
+
 
 ÉLÉMENT DOCUMENT-ACCOMPAGNEMENT
 
@@ -3382,12 +3382,12 @@ Type
 
 Complexe ordonné
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
 
-Page 28/49
 
-Contrat de service
-CIEL- Contrat de service avec les interprofessions v_2_14.odt
+
+
+
+
 
 Élément
 
@@ -3457,12 +3457,12 @@ alors
 
 volumeType
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
 
-Page 29/49
 
-Contrat de service
-CIEL- Contrat de service avec les interprofessions v_2_14.odt
+
+
+
+
 
 3.3.3
 
@@ -3506,12 +3506,12 @@ suivant :
 - si la cinquième décimale est un 0, CIEL renvoie 4 décimales.
 TYPES SIMPLES BASÉS SUR LE TYPE PRIMITIF STRING
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
 
-Page 30/49
 
-Contrat de service
-CIEL- Contrat de service avec les interprofessions v_2_14.odt
+
+
+
+
 
 Type
 
@@ -3655,12 +3655,12 @@ caractères
 
 Numéro de référence du daadac-dae
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
 
-Page 31/49
 
-Contrat de service
-CIEL- Contrat de service avec les interprofessions v_2_14.odt
+
+
+
+
 
 Type
 
@@ -3769,12 +3769,12 @@ RG_DecPrécédente_3
 La recherche de la DRM précédente (cf RG ci-dessus) inclut tous
 les formats (GILDA, CIEL-intranet et CIEL-internet).
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
 
-Page 32/49
 
-Contrat de service
-CIEL- Contrat de service avec les interprofessions v_2_14.odt
+
+
+
+
 
 Cependant, les contrôles sur les données (produits, stocks ...) ne
 peuvent s’appliquer que si la DRM précédente est une télédéclaration.
@@ -3861,14 +3861,14 @@ erreur xsd>.
 
 /
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
+
 
 /
 
-Page 33/49
 
-Contrat de service
-CIEL- Contrat de service avec les interprofessions v_2_14.odt
+
+
+
 
 IIP1RG6
 
@@ -3981,12 +3981,12 @@ peuvent pas contenir de « produit » (liste vide ou nulle).
 écoulé’. Il n’y a donc pas d’entrées et sorties même il y
 a des stocks pour les produits
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
 
-Page 34/49
 
-Contrat de service
-CIEL- Contrat de service avec les interprofessions v_2_14.odt
+
+
+
+
 
 IIP1- Si l’agrément n’autorise pas les mouvements de stock
 RG12 en droits suspendus (agrément de type « Entrepositaire
@@ -4101,12 +4101,12 @@ période pour le produit « <libellé
 personnalisé> » ne peut pas
 être négatif.
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
 
-Page 35/49
 
-Contrat de service
-CIEL- Contrat de service avec les interprofessions v_2_14.odt
+
+
+
+
 
 IIP1- Les codes INAO doivent contenir entre 6 et 8 digits. Si le
 RG19 code est sur 5 digits, l'interprofession émettrice doit
@@ -4205,12 +4205,12 @@ suspendus et en droits acquittés peuvent contenir plusieurs
 fois le même code INAO à condition que les produits soient
 distingués par des libellés personnalisés différents.
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
 
-Page 36/49
 
-Contrat de service
-CIEL- Contrat de service avec les interprofessions v_2_14.odt
+
+
+
+
 
 IIP1- Si un produit existe dans la déclaration précédente et
 RG24 n’a pas été repris dans la déclaration transmise, alors le
@@ -4353,12 +4353,12 @@ stock de fin de période nul.
 autorisés dans les balances de stocks en droits
 acquittés.
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
 
-Page 37/49
 
-Contrat de service
-CIEL- Contrat de service avec les interprofessions v_2_14.odt
+
+
+
+
 
 IIP1RG50
 
@@ -4478,12 +4478,12 @@ catégorie <catégorie> (<type de
 capsule>) n’est pas
 correctement renseignée.
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
 
-Page 38/49
 
-Contrat de service
-CIEL- Contrat de service avec les interprofessions v_2_14.odt
+
+
+
+
 
 IIP1- Pour une centilisation ‘AUTRE’, le couple « volume
 RG32 personnalisé + indicateur ‘bag-in-box » doit être unique
@@ -4602,12 +4602,12 @@ Le nombre de référence dans la
 période doit être un entier
 strictement positif.
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
 
-Page 39/49
 
-Contrat de service
-CIEL- Contrat de service avec les interprofessions v_2_14.odt
+
+
+
+
 
 3.3.5
 
@@ -4690,12 +4690,12 @@ du flux transmis
 
 F
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
 
-Page 40/49
 
-Contrat de service
-CIEL- Contrat de service avec les interprofessions v_2_14.odt
+
+
+
+
 
 Référence
 
@@ -4782,12 +4782,12 @@ droits suspendus ont été saisis alors que l'opérateur a
 déclaré que son stock était épuisé sur la précédente
 déclaration.</message-erreur>
 </erreur-fonctionnelle>
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
 
-Page 41/49
 
-Contrat de service
-CIEL- Contrat de service avec les interprofessions v_2_14.odt
+
+
+
+
 
 <erreur-fonctionnelle code-erreur="015">
 <message-erreur>Le code INAO "123456" n’existe pas ou n’est
@@ -4810,12 +4810,12 @@ défini. Message technique: cvc-pattern-valid : La valeur
 </erreur-technique>
 </reponse-ciel>
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
 
-Page 42/49
 
-Contrat de service
-CIEL- Contrat de service avec les interprofessions v_2_14.odt
+
+
+
+
 
 4
 
@@ -4867,12 +4867,12 @@ de J+1 (à J+1, on peut utiliser encore la sauvegarde sur serveur qui est effac�
 les données versées sur cassettes).
 Le schéma suivant représente cet échange :
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
 
-Page 43/49
 
-Contrat de service
-CIEL- Contrat de service avec les interprofessions v_2_14.odt
+
+
+
+
 
 CIEL
 
@@ -4931,12 +4931,12 @@ SIREN
 
 Cet export doit être exécuté en début de journée, idéalement à minuit, pour exporter les
 données de la veille dès que la nouvelle journée commence.
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
 
-Page 44/49
 
-Contrat de service
-CIEL- Contrat de service avec les interprofessions v_2_14.odt
+
+
+
+
 
 4.4
 
@@ -4961,24 +4961,24 @@ Lors de l’export IIP2-E constitué par CIEL, pour chaque déclaration, l’ide
 déclarant contient, en plus du numéro d’agrément, la raison sociale du déclarant.
 La mention de la raison sociale n’est pas nécessaire dans le cadre de l’envoi IIP1.
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
 
-Page 45/49
 
-Contrat de service
-CIEL- Contrat de service avec les interprofessions v_2_14.odt
+
+
+
+
 
 5 INTERFACE IIP3 : TRANSMISSION DES DONNÉES LIÉES À UN NUMÉRO D'AGRÉMENT
 L'interface IIP3 utilisera le service SEED. La description de ce flux se trouve dans la
 documentation relative au service SEED. Procédure de secours en cas d’indidisponiblité
 des services
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
 
-Page 46/49
 
-Contrat de service
-CIEL- Contrat de service avec les interprofessions v_2_14.odt
+
+
+
+
 
 6
 
@@ -4999,12 +4999,12 @@ INDISPONIBILITÉ DE L'APPLICATION CIEL
 N jours de délai de déclaration seront donnés aux redevables sur l’ensemble des portails
 interprofessionnels si CIEL est indisponible.
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
 
-Page 47/49
 
-Contrat de service
-CIEL- Contrat de service avec les interprofessions v_2_14.odt
+
+
+
+
 
 7
 
@@ -5125,12 +5125,12 @@ BIERE_INF_2_8_PREMIX
 BIERE_SUP_18_BRASSERIE_TAUX_NORMAL
 BIERE_SUP_2_8_BRASSERIE_TAUX_NORMAL
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
 
-Page 48/49
 
-Contrat de service
-CIEL- Contrat de service avec les interprofessions v_2_14.odt
+
+
+
+
 
 BIERE_SUP_2_8_BRASSERIE_TAUX_NORMAL_PREMIX
 BIERE_SUP_18_PETITE_BRASSERIE_10000
@@ -5167,8 +5167,8 @@ VM_SANS_IG_CEPAGE_PREMIX
 VM_SANS_IG_AUTRES
 VM_SANS_IG_AUTRES_PREMIX
 
-Ce document est la propriété de la DGDDI et ne peut être ni divulgué ni copié sans son autorisation. Les citations doivent mentionner la source.
 
-Page 49/49
+
+
 
 
