@@ -19,7 +19,9 @@ personnalise,stock_debut,debut
 personnalise,entrees,achats
 personnalise,entrees,excedents
 personnalise,entrees,retours
+personnalise,entrees,autres
 personnalise,sorties,utilisations
 personnalise,sorties,destructions
 personnalise,sorties,manquants
+personnalise,sorties,autres
 personnalise,stock_fin,fin
