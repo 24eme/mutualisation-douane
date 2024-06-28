@@ -12,7 +12,7 @@ if test "$1"; then
         findlimit=" -name $1"
 fi
 
-    dir=reception_douanes/prod
+    dir=donnees_sftp/reception_douanes
     subrep=reception_douanes
     updatefile=$PUBLISHDIR"/"$subrep"/.update"
     publishdir=$(dirname $updatefile)

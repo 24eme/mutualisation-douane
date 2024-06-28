@@ -7,7 +7,7 @@ $cft = file("http://10.222.223.1/stats/DRMjour.csv");
 $cpt = 0;
 for($i = count($cft) -1 ; $i > count($cft) - 5 ; $i--) {
 	$ligne = explode(';', $cft[$i]);
-	if( ($ligne[0] == date('Y-m-d')) && ($ligne[1] == 'archives reçues') ) {
+	if( ($ligne[0] == date('Y-m-d')) && ($ligne[1] == 'CFT archives reçues') ) {
 		$cpt = $ligne[2] * 1;
 		last;
 	}
