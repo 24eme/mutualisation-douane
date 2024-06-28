@@ -1,4 +1,4 @@
-# Spécifications techniques du format « webservice DRM » des portails Déclarvins (InterRhone, CIVP, IVSE), CIVA, InterLoire, BIVC, IVBD et IVSO.
+# Spécifications techniques du format « webservice DRM » des portails Déclarvins (InterRhone, CIVP, IVSE), CIVA, BIVC, IVBD et IVSO.
 
 ## Avant propos
 
@@ -192,7 +192,7 @@ Pour identifier un établissement, il est obligatoire de renseigner au moins une
 
  - 14 : Type de la CRD (champ obligatoire parmi : collectif suspendu, collectif acquitte ou personnalise)
  - 15 : La catégorie de mouvement : (champ obligatoire, ex: stock_debut, entrees, sorties, stock_fin)
- - 16 : Le type de mouvement (champ obligatoire parmi : achat, excedents, retours, destructions, utilisations, manquants )
+ - 16 : Le type de mouvement (champ obligatoire parmi : achat, excedents, retours, destructions, utilisations, manquants, autres )
 
 [Catalogue des différents mouvements de CRD](catalogue_mouvements_crd.csv "catalogue_mouvements_crd")
 

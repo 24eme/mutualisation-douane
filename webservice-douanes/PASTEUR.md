@@ -16,7 +16,7 @@ En plus de l'archive, deux mots de passe seront donc fournis :
  - celui permettant d'exploiter l'archive zip contenant les quatres fichiers ;
  - celui permettant de protéger la clé privée.
 
-Pour obtenir ces fichiers, il suffit de s'adresser à <vins@actualys.com>. Lors de cette demande, il est préférablei, afin de rendre l'accès directement opérationnel d'**adresser avec la demande l'adresse ip publique** qui sera utilisé par le client pour accéder à ce VPN afin que les flux soient ouverts chez l'hébergeur.
+Pour obtenir ces fichiers, il suffit de s'adresser à <vins@24eme.fr>. Lors de cette demande, il est préférablei, afin de rendre l'accès directement opérationnel d'**adresser avec la demande l'adresse ip publique** qui sera utilisé par le client pour accéder à ce VPN afin que les flux soient ouverts chez l'hébergeur.
 
 ##  Sécurité de la clé privée
 
