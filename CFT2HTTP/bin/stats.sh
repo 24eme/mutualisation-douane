@@ -11,4 +11,4 @@ ls -l --full-time donnees_sftp/reception_douanes/ |  awk '{print $6}' | sort |  
 cat /tmp/xmlcrees.csv /tmp/cftarchivesrecues.csv /tmp/sftparchivesrecues.csv | grep '^20' | sort > publication_web/stats/DRMjour.csv.tmp
 mv -f publication_web/stats/DRMjour.csv.tmp publication_web/stats/DRMjour.csv
 
-rm /tmp/siren2interpro.csv /tmp/sirenmois.csv /tmp/xmlcrees.csv /tmp/archivesrecues.csv /tmp/cftarchivesrecues.csv /tmp/sftparchivesrecues.csv
+rm /tmp/siren2interpro.csv /tmp/sirenmois.csv /tmp/xmlcrees.csv /tmp/cftarchivesrecues.csv /tmp/sftparchivesrecues.csv
