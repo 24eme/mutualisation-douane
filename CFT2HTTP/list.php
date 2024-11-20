@@ -1,7 +1,7 @@
 <?php
 
 $dir = preg_replace('/\?.*/', '', preg_replace('/.list.php.*/', '', preg_replace('/^./', '', $_SERVER['REQUEST_URI'])));
-if (!preg_match('/^reception[a-z0-9\/_]*$/i', $dir)) {
+if (!preg_match('/^reception[a-z0-9_]+\/[0-9\/]+$/i', $dir)) {
     exit;
 }
 $prefix = '';
