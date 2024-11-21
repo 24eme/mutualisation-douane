@@ -3,7 +3,8 @@
 clientname=$1
 
 cd ~/openvpn-easy-rsa
-./easyrsa build-client-full $clientname nopass
+sudo ./easyrsa build-client-full $clientname nopass
+if test -f "pki/issued/"$clientname".crt"; then
 mkdir -p openvpn
 echo "# The name of your server to connect to" > "openvpn/cniv_"$clientname".openvpn"
 echo "remote 10.20.75.250" >> "openvpn/cniv_"$clientname".openvpn"
@@ -19,13 +20,13 @@ echo "# To set a DNS server" >> "openvpn/cniv_"$clientname".openvpn"
 echo "# dhcp-option DNS 192.168.234.1" >> "openvpn/cniv_"$clientname".openvpn"
 echo "" >> "openvpn/cniv_"$clientname".openvpn"
 echo "<key>" >> "openvpn/cniv_"$clientname".openvpn"
-cat "pki/private/"$clientname".key" >> "openvpn/cniv_"$clientname".openvpn"
+sudo cat "pki/private/"$clientname".key" >> "openvpn/cniv_"$clientname".openvpn"
 echo "</key>" >> "openvpn/cniv_"$clientname".openvpn"
 echo "<cert>" >> "openvpn/cniv_"$clientname".openvpn"
-cat "pki/issued/"$clientname".crt" >> "openvpn/cniv_"$clientname".openvpn"
+sudo cat "pki/issued/"$clientname".crt" >> "openvpn/cniv_"$clientname".openvpn"
 echo "</cert>" >> "openvpn/cniv_"$clientname".openvpn"
 echo "<ca>" >> "openvpn/cniv_"$clientname".openvpn"
-cat "pki/ca.crt" >> "openvpn/cniv_"$clientname".openvpn"
+sudo cat "pki/ca.crt" >> "openvpn/cniv_"$clientname".openvpn"
 echo "</ca>" >> "openvpn/cniv_"$clientname".openvpn"
 echo "# This is the fingerprint of the server that we trust. We generated this fingerprint" >> "openvpn/cniv_"$clientname".openvpn"
 echo "# in step 2 of the server setup" >> "openvpn/cniv_"$clientname".openvpn"
@@ -42,3 +43,4 @@ echo "route 10.124.111.12 255.255.255.255" >> "openvpn/cniv_"$clientname".openvp
 echo "route 10.124.111.3 255.255.255.255" >> "openvpn/cniv_"$clientname".openvpn"
 
 echo $(pwd)"/openvpn/cniv_"$clientname".openvpn generated"
+fi
