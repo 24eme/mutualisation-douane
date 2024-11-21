@@ -1,0 +1,6 @@
+certs/
+demoCA/
+index.txt
+openssl.cnf
+private/
+serial
