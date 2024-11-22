@@ -1,13 +1,15 @@
 #!/bin/bash
 
 clientname=$1
+vpnip=$2
 
 cd ~/openvpn-easy-rsa
+. config.inc
 sudo ./easyrsa build-client-full $clientname nopass
 if test -f "pki/issued/"$clientname".crt"; then
 mkdir -p openvpn
 echo "# The name of your server to connect to" > "openvpn/cniv_"$clientname".openvpn"
-echo "remote 10.20.75.250" >> "openvpn/cniv_"$clientname".openvpn"
+echo "remote "$OPENVPN_HOST" " >> "openvpn/cniv_"$clientname".openvpn"
 echo "client" >> "openvpn/cniv_"$clientname".openvpn"
 echo "# use a random source port instead the fixed 1194" >> "openvpn/cniv_"$clientname".openvpn"
 echo "nobind" >> "openvpn/cniv_"$clientname".openvpn"
@@ -43,4 +45,17 @@ echo "route 10.124.111.12 255.255.255.255" >> "openvpn/cniv_"$clientname".openvp
 echo "route 10.124.111.3 255.255.255.255" >> "openvpn/cniv_"$clientname".openvpn"
 
 echo $(pwd)"/openvpn/cniv_"$clientname".openvpn generated"
+
+echo "ifconfig-push "$vpnip" 255.255.254.0" > "openvpn/"$clientname".conf"
+echo "push route 10.124.131.1 255.255.255.255" >> "openvpn/"$clientname".conf"
+echo "push route 10.124.131.3 255.255.255.255" >> "openvpn/"$clientname".conf"
+echo "push route 10.124.111.12 255.255.255.255" >> "openvpn/"$clientname".conf"
+echo "push route 10.124.111.3 255.255.255.255" >> "openvpn/"$clientname".conf"
+
+if sudo cp "openvpn/"$clientname".conf" $OPENVPN_CLIENTS_DIR ; then
+	echo "openvpn client service side configuration copied to "$OPENVPN_CLIENTS_DIR
+else
+	echo "openvpn client service side configuration "$(pwd)"/openvpn/"$clientname".conf generated"
+fi
+
 fi
