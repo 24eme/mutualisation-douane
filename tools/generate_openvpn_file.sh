@@ -9,7 +9,8 @@ sudo ./easyrsa build-client-full $clientname nopass
 if test -f "pki/issued/"$clientname".crt"; then
 mkdir -p openvpn
 echo "# The name of your server to connect to" > "openvpn/cniv_"$clientname".openvpn"
-echo "remote "$OPENVPN_HOST" " >> "openvpn/cniv_"$clientname".openvpn"
+echo "remote "$OPENVPN_HOST >> "openvpn/cniv_"$clientname".openvpn"
+echo "port "$OPENVPN_PORT >> "openvpn/cniv_"$clientname".openvpn"
 echo "client" >> "openvpn/cniv_"$clientname".openvpn"
 echo "# use a random source port instead the fixed 1194" >> "openvpn/cniv_"$clientname".openvpn"
 echo "nobind" >> "openvpn/cniv_"$clientname".openvpn"
