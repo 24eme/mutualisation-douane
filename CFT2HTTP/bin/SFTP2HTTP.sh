@@ -51,9 +51,9 @@ fi
         rm -rf /tmp/$$.zip /tmp/$$_files
         touch $donefile
     done
-	if test -e /tmp/$$.lastzip ; then
-            touch -r $(cat /tmp/$$.lastzip) $updatefile
-            rm /tmp/$$.lastzip
+    if test -e /tmp/$$.lastzip ; then
+        touch -r $(cat /tmp/$$.lastzip) $updatefile
+        rm /tmp/$$.lastzip
     fi
 
-rm -f /tmp/$$.output /tmp/CFT2HTTP.lock
+    rm -f /tmp/$$.output /tmp/CFT2HTTP.lock
