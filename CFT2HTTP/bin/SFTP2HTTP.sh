@@ -24,7 +24,11 @@ fi
    ls -rt $updatefile $(find $dir -type f -cnewer $updatefile $findlimit ) | grep zip | while read zip ; do
         if ! file $zip | grep -i "zip archive" > /tmp/$$.output ; then
                         continue;
-                fi
+        fi
+        donefile=$(echo $zip | sed 's/zip$/done/')
+        if test $donefile -nt $zip; then
+            continue;
+        fi
         cat /tmp/$$.output | sed 's/:.*/:/'
                 cp $zip /tmp/$$.zip
         mkdir -p /tmp/$$_files/
@@ -45,6 +49,7 @@ fi
         done
         echo $zip > /tmp/$$.lastzip
         rm -rf /tmp/$$.zip /tmp/$$_files
+        touch $donefile
     done
 	if test -e /tmp/$$.lastzip ; then
             touch -r $(cat /tmp/$$.lastzip) $updatefile
