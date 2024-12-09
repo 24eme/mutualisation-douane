@@ -53,10 +53,11 @@ echo "push route 10.124.131.3 255.255.255.255" >> "openvpn/"$clientname".conf"
 echo "push route 10.124.111.12 255.255.255.255" >> "openvpn/"$clientname".conf"
 echo "push route 10.124.111.3 255.255.255.255" >> "openvpn/"$clientname".conf"
 
-if sudo cp "openvpn/"$clientname".conf" $OPENVPN_CLIENTS_DIR ; then
-	echo "openvpn client service side configuration copied to "$OPENVPN_CLIENTS_DIR
+if sudo cp "openvpn/"$clientname".conf" $OPENVPN_CLIENTS_DIR"/"$clientname ; then
+	echo "openvpn client service side configuration copied to "$OPENVPN_CLIENTS_DIR"/"$clientname
 else
 	echo "openvpn client service side configuration "$(pwd)"/openvpn/"$clientname".conf generated"
+	echo "Need to be copied in the clients directeory without .conf
 fi
 
 fi
