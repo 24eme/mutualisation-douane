@@ -25,6 +25,8 @@
 <tr><td>Interface IIP2 XML du jour reçu <small class="text-muted"></small></td><td class="text-right"><img src="XML.svg.php"/></td></tr>
 <tr><td>Interface IIP3 SEED</td><td class="text-right"><img src="SEED.svg.php"/></td></tr>
 <tr><td>Ligne RISE</td><td class="text-right"><img src="RISE.svg.php"/></td></tr>
+<tr onclick="document.getElementById('collapseVPN').innerHTML = '<td><ul>Corse<br/>Beaujolais<br/>Bourgogne<br/>DeclaViti<br/>Giilda/Declarvin<br/>Loire<br/></ul></td><td><img src=OpenVPN.svg.php?net=corse /><br/><img src=OpenVPN.svg.php?net=beaujolais /><br/><img src=OpenVPN.svg.php?net=bourgogne /><br/><img src=OpenVPN.svg.php?net=declaviti /><br/><img src=OpenVPN.svg.php?net=24eme /><br/><img src=OpenVPN.svg.php?net=loire /><br/></td>';"><td>OpenVPN Clients (+)</td><td class="text-right"><img src="OpenVPN.svg.php?net=general"/></td></tr>
+<tr id="collapseVPN"></tr>
 </table>
 </div></center>
 </div>
