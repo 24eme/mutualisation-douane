@@ -22,7 +22,7 @@ fi
                 touch -d 2016-08-01 $updatefile
         fi
    ls -rt $updatefile $(find $dir -type f -cnewer $updatefile $findlimit ) | grep zip | while read zip ; do
-        if ! unzip -t "$zip" >/dev/null 2>&1; then
+        if ! unzip -t $zip >/dev/null 2>&1; then
                         continue;
         fi
         donefile=$(echo $zip | sed 's/zip$/done/')
