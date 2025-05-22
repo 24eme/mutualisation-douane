@@ -29,8 +29,8 @@ fi
         if test $donefile -nt $zip; then
             continue;
         fi
-        cat /tmp/$$.output | sed 's/:.*/:/'
-                cp $zip /tmp/$$.zip
+        echo $zip":"
+        cp $zip /tmp/$$.zip
         mkdir -p /tmp/$$_files/
         unzip -u /tmp/$$.zip -d /tmp/$$_files/ > /dev/null
         find /tmp/$$_files/ -type f | while read xml ; do
