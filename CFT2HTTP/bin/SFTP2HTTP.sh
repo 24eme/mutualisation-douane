@@ -22,15 +22,15 @@ fi
                 touch -d 2016-08-01 $updatefile
         fi
    ls -rt $updatefile $(find $dir -type f -cnewer $updatefile $findlimit ) | grep zip | while read zip ; do
-        if ! file $zip | grep -i "zip archive" > /tmp/$$.output ; then
+        if ! unzip -t $zip >/dev/null 2>&1; then
                         continue;
         fi
         donefile=$(echo $zip | sed 's/zip$/done/')
         if test $donefile -nt $zip; then
             continue;
         fi
-        cat /tmp/$$.output | sed 's/:.*/:/'
-                cp $zip /tmp/$$.zip
+        echo $zip":"
+        cp $zip /tmp/$$.zip
         mkdir -p /tmp/$$_files/
         unzip -u /tmp/$$.zip -d /tmp/$$_files/ > /dev/null
         find /tmp/$$_files/ -type f | while read xml ; do
