@@ -4,27 +4,15 @@ Les accès à la ligne spécialisée PASTEUR a été mutualisé grace à l'inter
 
 ##  Fichiers livrés
 
-Lors de livraison de l'accès, une archive contenant quatre fichiers est mise à disposition :
- - ``moninterpro.ovpn`` : le fichier de configuration du client OpenVPN. Ce fichier fait référence aux trois autres fichiers, il convient donc de stocker tous ces fichiers dans le même répertoire ou d'éditer cette configuration pour faire référence au chemin absolu des fichiers ;
- - ``moninterpro.crt`` : le certificat contenant la clé publique permettant à l'OpenVPN de vous identifier ;
- - ``moninterpro.key`` : la clé privée permettant à l'OpenVPN de vous identifier. Cette clé est protégée par un mot de passe ;
- - ``ca.crt`` : le certificat de l'autorité de certification qui a émis votre certificat.
+Lors de livraison de l'accès, une archive ZIP du fichier ``moninterpro.ovpn`` sera fourni. Il s'agit du fichier de configuration du client OpenVPN qui contient les informations nécessaires à la connexion OpenVPN :
+ - le certificat contenant la clé publique permettant à l'OpenVPN de vous identifier ;
+ - la clé privée permettant à l'OpenVPN de vous identifier ;
+ - le certificat de l'autorité de certification qui a émis votre certificat ;
+ - les éléments réseaux nécessaire à la connexion.
 
-Le contenu de ces quatres fichiers sont protégés par un mot de passe. Pour les extraire, il vous sera demandé.
+En plus de l'archive, un mot de passe seront donc fournis qui permettra de l'exploiter.
 
-En plus de l'archive, deux mots de passe seront donc fournis :
- - celui permettant d'exploiter l'archive zip contenant les quatres fichiers ;
- - celui permettant de protéger la clé privée.
-
-Pour obtenir ces fichiers, il suffit de s'adresser à <vins@24eme.fr>. Lors de cette demande, il est préférablei, afin de rendre l'accès directement opérationnel d'**adresser avec la demande l'adresse ip publique** qui sera utilisé par le client pour accéder à ce VPN afin que les flux soient ouverts chez l'hébergeur.
-
-##  Sécurité de la clé privée
-
-Une fois la clé privée installée, si vous ne souhaitez pas saisir son mot de passe à chaque démarrage, il est possible de la stocker en clair. Toute fois procédez à cette opération en ayant conscience que ca réduit le niveau de sécurité de votre accès. Il ne faut donc pas transférer votre clé privée dans un fichier non chiffré. Avec toutes ces réserves, une fois sur le serveur, OpenSSL permet de déchiffrer ce fichier grace à la commande unix suivante :
-
-    $ openssl rsa -in moninterpro.key  -out moninterpro.nocrypt.key
-
-Si vous choisisez cette option, vous devez modifier le fichier de configuration ``moninterpro.ovpn`` en faisant référence au nouveau fichier (dans notre exemple ``moninterpro.nocrypt.key``).
+Pour obtenir ces informations, il suffit de s'adresser à <vins@24eme.fr>. Lors de cette demande, il est préférablei, afin de rendre l'accès directement opérationnel d'**adresser avec la demande l'adresse ip publique** qui sera utilisé par le client pour accéder à ce VPN afin que les flux soient ouverts chez l'hébergeur.
 
 ##  Lancer OpenVPN
 
