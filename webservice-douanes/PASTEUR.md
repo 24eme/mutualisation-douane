@@ -2,7 +2,7 @@
 
 Les accès à la ligne spécialisée PASTEUR a été mutualisé grace à l'intervention du CNIV. Un serveur offrant un accès mutualisé à l'infrastructure des douanes a été mis en place. La technologie retenue est [OpenVPN](https://openvpn.net/), un projet libre de vpn logiciel qui supporte une dixaine de systèmes d'exploitation.
 
-##  Fichiers livrés
+##  Éléments livrés
 
 Lors de livraison de l'accès, une archive ZIP du fichier ``moninterpro.ovpn`` sera fourni. Il s'agit du fichier de configuration du client OpenVPN qui contient les informations nécessaires à la connexion OpenVPN :
  - le certificat contenant la clé publique permettant à l'OpenVPN de vous identifier ;
