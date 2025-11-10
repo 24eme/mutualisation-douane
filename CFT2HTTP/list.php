@@ -20,7 +20,8 @@ $file = tempnam("/tmp/", "list.date");
 if (isset($_GET['from']) && preg_match('/^[0-9][0-9][0-9][0-9]\-[0-9][0-9]\-[0-9][0-9]$/', $_GET['from'])) {
     exec("touch --date=".$_GET['from']." $file");
 }else{
-    exec("touch --date=2016-01-01 $file");
+    $year = date('Y') - 1;
+    exec("touch --date=".$year."-01-01 $file");
 }
 if (isset($_GET['accise']) && preg_match('/^[A-Z0-9]*$/i',$_GET['accise'])) {
   exec("find $dir -newer $file -type f -name '".$_GET['accise']."*xml'", $output);
