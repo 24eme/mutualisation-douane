@@ -130,6 +130,10 @@ $accise = $_GET['accise'];
 
         }else{
           foreach ($fv as $null => $complex) {
+            if (is_string($complex)) {
+                echo "<p>".$complex."</p>";
+                continue;
+            }
             echo "<p>";
             foreach ($complex as $attr => $value) if ($attr != '@attributes') {
               if ( !is_array($value)) {
