@@ -9,7 +9,7 @@ for($i = count($stats) -1 ; $i > count($stats) - 5 ; $i--) {
 	$ligne = explode(';', $stats[$i]);
 	if( ($ligne[0] == date('Y-m-d')) && ($ligne[1] == 'SFTP archives reçues') ) {
 		$cpt = $ligne[2] * 1;
-		last;
+		break;
 	}
 }
 
